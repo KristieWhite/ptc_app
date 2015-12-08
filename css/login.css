@@ -1,5 +1,27 @@
 @media screen and (min-width: 600px) {
 
+@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
+
+#header {
+	width: 100%;
+	height: 80px;
+	border-bottom: 2px solid black;
+	font-family: 'EraserDust';
+	font-size: 30px;
+	color: white;
+	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") no-repeat;
+	background-position: center;
+}
+
+#header p {
+	margin: 0;
+	position: relative;
+	top: 25px;
+	left: 10px;
+	width: 40%;
+	display: inline-block;
+}
+
 .container {
 	margin: 50px auto;
 	width: 640px;
@@ -118,6 +140,12 @@ input[type=submit]:active {
 	background: #cde5ef;
 	border-color: #9eb9c2 #b3c0c8 #b4ccce;
 	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+#footer {
+	width: 100%;
+	height: 40px;
+	border-top: 2px solid black;
 }
 
 
