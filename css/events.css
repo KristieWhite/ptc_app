@@ -1,14 +1,34 @@
-h1 {
-    text-align: center;
+#header {
+	width: 100%;
+    height: 80px;
+	border-bottom: 2px solid black;
+	font-family: 'EraserDust';
+	font-size: 30px;
+	color: white;
+	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") no-repeat;
+	background-position: center;
 }
+
+#header h1 {
+	margin: 0;
+	position: relative;
+	top: 25px;
+	left: 10px;
+	width: 40%;
+	display: inline-block;
+}
+
 
 #navBar {
-    width: 100%;
-    height: 4em;
+    width: 80%;
+    height: 30px;
+    margin: auto;
+    margin-top: 10px;
 }
 
-#eventsNavBar li {
-    
+#navBar ul {
+    margin: 0;
+    list-style: none;
 }
 
 .navBarLi {
