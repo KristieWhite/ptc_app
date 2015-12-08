@@ -1,6 +1,9 @@
+@media screen and (min-width: 600px) {
+
 .container {
 	margin: 50px auto;
 	width: 640px;
+	height: 900px;
 }
 
 .login {
@@ -8,7 +11,8 @@
 	margin: 0 auto;
 	padding: 20px 20px 20px;
 	width: 310px;
-	background-color: brown; 	
+	background-color: brown;
+	top: 50px;	
 }
 
 .login p.submit {
@@ -120,4 +124,6 @@ input[type=submit]:active {
 body {
 	font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
 	color: #404040;
+}
+
 }
