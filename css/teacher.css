@@ -36,12 +36,19 @@
 	position: relative;
 	display: inline-block;
 	float: right;
+	top: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	overflow: scroll;
 }
 
-.studentList {
-	width: 100%;
-	height: 85px;
-	overflow: scroll;
+.teacherInfo ul {
+	list-style: none;
+	margin: 0;
+}
+
+.teacherInfo li {
+	margin-top: 10px;
 }
 
 .teacherEvents {
