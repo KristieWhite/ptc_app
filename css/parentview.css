@@ -55,9 +55,17 @@
 
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+#footer {
+	width: 100%;
+	height: 40px;
+	border-top: 2px solid black;
+}
+>>>>>>> long
 
 }
