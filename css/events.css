@@ -1,3 +1,5 @@
+@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
+
 #eventsListDiv {
     width: 45%;
     float: left;
@@ -8,6 +10,28 @@
     float: right;
 }
 
+div.sexyLine {
+    margin-top: 50px;
+}
+
+.sexyLine { 
+    display: block;
+    border: none;
+    color: white;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+}
+
 .filler {
     height: 4em;
+}
+
+div.chalkPic {
+    height: 4em;
+    width: 100%;
+    border: 2px solid orange;
+    background-image: ("images/chalkboardBackground.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat-x;
 }
