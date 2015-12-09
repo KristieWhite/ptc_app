@@ -9,10 +9,10 @@
 	background-position: center;
 }
 
-.header h1, p {
+.header h1 {
 	margin: 0;
 	position: relative;
-	top: 25px;
+	top: 15px;
 	left: 10px;
 	width: 40%;
 	display: inline-block;
@@ -26,15 +26,16 @@
 }
 
 .navbar ul {
-	margin: 0;
+	margin: auto;
 	list-style: none;
+    text-align: center;
 }
 
 .navbar li {
 	display: inline-block;
 	position: relative;
 	float: left;
-	margin-left: 50px;
+	width: 15%;
 }
 
 .navbar a {
@@ -44,6 +45,13 @@
 
 .navbar a:hover {
 	border-bottom: 2px solid blue;
+}
+
+.hrSpecial2 {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 .footer {
