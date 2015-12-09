@@ -9,7 +9,7 @@
 	background-position: center;
 }
 
-.header h1 {
+.header h1, p {
 	margin: 0;
 	position: relative;
 	top: 25px;
