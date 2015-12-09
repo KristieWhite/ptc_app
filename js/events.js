@@ -34,21 +34,27 @@ var eventsModel = Backbone.Model.extend({
 
 var eventsCollection = Backbone.Collection.extend({
 	model: eventsModel,
-	url: ''
+	url: ''//api url
 });
 
-var events = new eventsCollection();
-events.fetch({
+var eventsList = new eventsCollection();
+eventsList.fetch({
 	success: function(resp) {
 		console.log(resp);
-		var eventsInfo = {
-			'events': resp.toJSON()
+		var eventsListInfo = {
+			'eventsList': resp.toJSON()
 		};
+		var eventsListTemplate = $("eventsList").text();
+		var eventsListHTML = Mustache.render(eventsListTemplate, eventsListInfo);
+		$("#eventsListDiv").html(eventsListHTML);
+		},
 		error: function(err) {
 			console.log("error", err);
 		}
-	}
-});
+	});
+
+
+
 
 
 

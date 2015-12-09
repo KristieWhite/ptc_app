@@ -19,9 +19,9 @@
         <div class="navbar">
             <ul>
                 <li><a href="Home.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
+                <li><a href="eventsParent.html">Events</a></li>
                 <li><a href="">Fees</a></li>
-                <li><a href="">Waivers</a></li>
+                <li><a href="waiverParent.html">Waivers</a></li>
                 <li><a href="">Assignments</a></li>
                 <li><a href="">My Profile</a></li>
             </ul><br>
@@ -29,8 +29,9 @@
         </div>
         
        <div class="filler"></div>
+
     <!--This is for the mustache list data-->
-        <div id="eventsListDiv"></div>
+         <div id="eventsListDiv"></div>
 
     <!--This is for the mustach event list detail data-->
         <div id="eventsDetailDiv"></div>
@@ -61,10 +62,17 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
     	<script type="text/javascript" src="js/events.js"></script>
 
-    	<script type="x-tmpl-mustache" id="eventsListTemplate">                           <h2>Upcoming Events!</h2>
-            {{#}}
+    	<script type="x-tmpl-mustache" id="eventsListTemplate">    <h2>Upcoming Events!</h2>
+            {{#eventsList}}
                 {{}}
-            {{/}}
+            {{/eventsList}}
+        </script>
+
+        <script type="x-tmpl-mustache" id="eventsDetailTemplate">
+        <h2>Event Details</h2>
+            {{#eventDetail}}
+                {{}}<button class="sexyButton">Sign Up For Event</button>
+            {{/eventDetail}}
         </script>
 
 </body>
