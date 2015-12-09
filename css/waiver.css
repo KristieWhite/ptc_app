@@ -1,15 +1,5 @@
 @font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
 
-#eventsListDiv {
-    width: 45%;
-    float: left;
-}
-
-#eventsDetailDiv {
-    width: 45%;
-    float: right;
-}
-
 div.sexyLine {
     margin-top: 50px;
 }
