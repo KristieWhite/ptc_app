@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Student - Parents View</title>
-	<link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/student.css">
+    <meta charset="UTF-8">
+    <title>Student - Parents View</title>
+    <link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/student.css">
 </head>
 <body>
-	<div id="header">
-		<p>Parent Teacher Connection</p>
-	</div>
-	<div id="studentContainer">
-<!-- 		student profile parents view -->
-		<div class="navbar">
-			<ul>
-				<li><a href="">Home</li></a>
-				<li><a href="">Events Calendar</li></a>
-				<li><a href="">Fees</li></a>
-				<li><a href="">Waivers</li></a>
-				<li><a href="">Assignments</li></a>
-				<li><a href="">My Profile</li></a>
-			</ul><br />
-			<hr class="hrSpecial">
-		</div>
-		<div class="studentImg">
-			<img src="http://placehold.it/200x200" />
-		</div>
-		<div class="studentInfo">
-			<p>Name: </p>
-			<p>Phone: </p>
-			<p>Address: </p>
-			<p>Parents: </p>
-			<p class="teacherList">Teachers: </p>
-		</div>
-		<div class="studentBehavior">
-			<p>Student Behavior: </p>
-			<a href="">Example</a>
-		</div>
-		<div class="studentAttendance">
-			<p>Student Attendance: </p>
-			<a href="">Example</a>
-		</div>
-		<hr class="hrSpecial2">
-		<div class="studentEvents">
-			<p>Upcoming Student Events: </p>
-			<a href="">Example</a>
-		</div>
-	</div>
-<!-- end teacher profile container -->
-	<div id="footer">
-		<p>&copy; 2015 Parent Teacher Connection</p>
-	</div>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/teacherview.js"></script>
+    <div id="header">
+        <h1>Parent Teacher Connection</h1>
+    </div>
+    <div id="studentContainer">
+<!--        student profile parents view -->
+        <div class="navbar">
+            <ul>
+                <li><a href="">Home</li></a>
+                <li><a href="">Events Calendar</li></a>
+                <li><a href="">Fees</li></a>
+                <li><a href="">Waivers</li></a>
+                <li><a href="">Assignments</li></a>
+                <li><a href="">My Profile</li></a>
+            </ul><br />
+            <hr class="hrSpecial">
+        </div>
+        <div class="studentImg">
+            <img src="http://placehold.it/200x200" />
+        </div>
+        <div class="studentInfo">
+          <ul>
+            <li>Student Number: </li>
+            <li>Name: </li>
+            <li>Address: </li>
+            <li>Parents: </li>
+            <li>Teachers: 
+              <ul class="teacherList">
+                <li><a href="">Teacher 1</a></li>
+                <li><a href="">Teacher 1</a></li>
+                <li><a href="">Teacher 1</a></li>
+                <li><a href="">Teacher 1</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="studentBehavior">
+            <p>Student Behavior: </p>
+            <a href="">Example</a>
+        </div>
+        <div class="studentAttendance">
+            <p>Student Attendance: </p>
+            <a href="">Example</a>
+        </div>
+        <hr class="hrSpecial2">
+        <div class="studentEvents">
+            <p>Upcoming Student Events: </p>
+            <a href="">Example</a>
+        </div>
+    </div>
+<!-- end student profile container parents view -->
+    <div id="footer">
+        <p>&copy; 2015 Parent Teacher Connection</p>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+    <script type="text/javascript" src="js/teacherview.js"></script>
 </body>
 </html>
