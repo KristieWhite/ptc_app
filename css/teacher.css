@@ -2,7 +2,7 @@
 
 @font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
 
-#header {
+/*#header {
 	width: 100%;
 	height: 80px;
 	border-bottom: 2px solid black;
@@ -20,7 +20,7 @@
 	left: 10px;
 	width: 40%;
 	display: inline-block;
-}
+}*/
 /*teacher profile*/
 
 #teacherContainer {
@@ -29,7 +29,7 @@
 	margin: auto;
 }
 
-.navbar {
+/*.navbar {
 	width: 80%;
 	height: 30px;
 	margin: auto;
@@ -55,7 +55,7 @@
 
 .navbar a:hover {
 	border-bottom: 2px solid blue;
-}
+}*/
 
 .hrSpecial {
     border: 0;
@@ -108,11 +108,11 @@
 
 
 
-#footer {
+/*#footer {
 	width: 100%;
 	height: 40px;
 	border-top: 2px solid black;
-}
+}*/
 
 
 
