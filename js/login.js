@@ -1,4 +1,10 @@
+//require("models.js"); 
+
 $(document).ready(function($){
+
+if ($.cookie('AuthToken')) {
+	setToken($.cookie('AuthToken'));
+}
 
 $("#logInSubmit").on('submit', function(e) {
 	e.preventDefault();
@@ -11,39 +17,22 @@ $("#logInSubmit").on('submit', function(e) {
 	}).then(function(resp) {
 		if ($('#remember_me').clicked == true) {
 			$.cookie('AuthToken', resp.token);
-			setToken(token);
-			User.set(resp.User)
 		}
+		setToken(resp.token);
+		User.set(resp.User)
 	})
 });
 
-var _sync = Backbone.sync;
-Backbone.sync = function(method, model, options) {
-	if (model && (method === 'create' || method === 'update' || method === 'patch')) {
-		options.contentType = 'application/json';
-		options.data = JSON.stringify(options.attrs || model.toJSON());
+function setToken(token) {
+	var _sync = Backbone.sync;
+	Backbone.sync = function(method, model, options) {
+		if ($.cookie('AuthToken') {
+			options.headers = {
+				'Authorization': 'Token ' + token
+			}
+		})
+		return _sync.call(this, method, model, options);
 	}
-
-	_.extend(options.data, {
-		"access_token": "some-token"
-	});
-	return _sync.call(this, method, model, options);
 }
-
 model.fetch().fail(/*redirect*/);
-
-$.ajaxSetup({
-	headers: {
-		"accept": "application/json",
-		"token": Your_Token
-	}
-});
-
-$.ajaxSend(function(event, request) {
-	var token = App.getAuthToken();
-	if (token) {
-		request.setRequestHeader("token", token);
-	}
-});
-
 });//closes document ready

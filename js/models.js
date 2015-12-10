@@ -1,10 +1,12 @@
+//require("login.js");
+
 $(document).ready(function() {
 
 //login model
 
 var UserParent = Backbone.Model.extend ({
 	initialize: function() {
-		console.log("user parent model");
+		console.log("userParent model initialized");
 	},
 	validate: function(attrs) {
 		if(!attrs.username) {
