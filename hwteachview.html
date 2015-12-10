@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework - Teachers View</title>
+	<link rel="stylesheet" type="text/css" href="css/homework.css">
+</head>
+<body>
+	<div id="header">
+		<h1>Parent Teacher Connection</h1>
+	</div>
+	<div id="assignContainer">
+		<div class="navbar">
+			<ul>
+				<li><a href="">Home</li></a>
+				<li><a href="">Events Calendar</li></a>
+				<li><a href="">Fees</li></a>
+				<li><a href="">Waivers</li></a>
+				<li><a href="">Assignments</li></a>
+				<li><a href="">My Profile</li></a>
+			</ul><br />
+			<hr class="hrSpecial">
+		</div>
+		<div class="assignHeader">
+			<h2>Assignments</h2>
+		</div>
+		<div id="mainAssignments">
+			<div class="assignments">
+				<p>Tonight's Assignment: </p>
+				<button class="upload">Upload Homework</button>	
+				<input type="file" class="file" /><br />
+				<p>Enter Due Date: </p><input type="date" class="dueDate" />
+				<p>Enter Homework Helper Link Below: </p>
+				<input type="url" class="helpLinks" placeholder="Enter URL Here"/> <input type="submit" value="Submit" class="subBtn" /><br />
+			</div>
+			<hr class="hrSpecial">
+			<div class="assignments">
+					<p>Uploaded Assignments: </p>
+					<ul>
+						<li><a href="">Assignment 1</a></li>
+					</ul>
+			</div>
+		</div>
+		<div id="projects">
+			<div class="assignments">
+				<p>Weekend Assigments/Projects: </p>
+				<button class="upload">Upload Project</button>	
+				<input type="file" class="file" /><br />
+				<p>Enter Due Date: </p><input type="date" class="dueDate" />
+				<p>Enter Project Helper Link Below: </p>
+				<input type="url" class="helpLinks" placeholder="Enter URL Here"/> <input type="submit" value="Submit" class="subBtn" /><br />
+			</div>
+			<hr class="hrSpecial">
+			<div class="assignments2">
+				<p>Did student turn in assignment?</p>
+				<ul>
+					<li class="studentAssign">Student 1</li>
+				</ul>
+				<div id="checkBoxContainer">
+					<input type="checkbox" class="checkYes" /> <span>Yes</span><br /><input type="checkbox" value="No" class="checkNo" /> <span>No</span><br/>
+					<input type="submit" class="turnedIn" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>&copy; 2015 Parent Teacher Connection</p>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+	<script type="text/javascript" src="js/hwteachview.js"></script>
+</body>
+</html>

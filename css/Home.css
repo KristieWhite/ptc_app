@@ -6,6 +6,7 @@
 		bottom: 70px;
 		font-size: 20px;
 	}
+
 	figure {
 		width: 800px;
 		height: 130px;
@@ -29,3 +30,4 @@
 		filter: blur(0);
 	}
 }
+

@@ -2,6 +2,10 @@
 
 @font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
 
+
+ a:visited {
+ 	color: white;
+ }
 #header {
 	width: 100%;
 	height: 80px;
@@ -21,44 +25,14 @@
 	width: 40%;
 	display: inline-block;
 }
- a:visited {
-	color:white;
-	}
 
-/*student profile*/
+/*student profile - parent view*/
+
 
 #studentContainer {
 	width: 80%;
 	height: 900px;
 	margin: auto;
-}
-
-.navbar {
-	width: 80%;
-	height: 30px;
-	margin: auto;
-	margin-top: 10px;
-}
-
-.navbar ul {
-	margin: 0;
-	list-style: none;
-}
-
-.navbar li {
-	display: inline-block;
-	position: relative;
-	float: left;
-	margin-left: 50px;
-}
-
-.navbar a {
-	text-decoration: none;
-	color: blue;
-}
-
-.navbar a:hover {
-	border-bottom: 2px solid blue;
 }
 
 .hrSpecial {
@@ -86,12 +60,24 @@
 	position: relative;
 	display: inline-block;
 	float: right;
-	top: 10px;
+	top: 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	overflow: scroll;
+}
+
+.studentInfo ul {
+	list-style: none;
+	margin: 0;
+}
+
+.studentInfo li {
+	margin-top: 10px;
 }
 
 .studentBehavior {
 	width: 49%;
-	height: 200px;
+	height: 250px;
 	display: inline-block;
 	overflow: scroll;
 	border-right: 1px solid black;
@@ -105,7 +91,7 @@
 
 .studentAttendance {
 	width: 49%;
-	height: 200px;
+	height: 250px;
 	display: inline-block;
 	float: right;
 	position: relative;
@@ -118,7 +104,7 @@
 
 .studentEvents {
 	width: 100%;
-	height: 200px;
+	height: 300px;
 	overflow: scroll;
 	position: relative;
 	top: 20px;
@@ -133,22 +119,7 @@
     top: 20px;
 }
 
-/*end student profile*/
-
-
-
-#footer {
-	width: 100%;
-	height: 40px;
-	border-top: 2px solid black;
-}
-
-
-
-
-
-
-
+/*end student profile parent view*/
 
 
 }

@@ -5,39 +5,45 @@
 	<meta charset="UTF-8">
 	<title>Parent Teacher Connection</title>
 	<title>Parent - Parent View</title>
-	<link rel="stylesheet" type="text/css" href="css/parentview.css">
+	<link rel="stylehseet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/parent.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-
 <body>
-	<div id="header">
-		<p>Parent Teacher Connection</p>
+	<div class="header">
+		<h1>Parent Teacher Connection</h1>
 	</div>
 	<div id="parentContainer">
-		<!--parent profile -->
+<!-- 		parent profile parent view-->
 		<div class="navbar">
 			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="">Events Calendar</a></li>
+				<li><a href="Home.html">Home</a></li>
+				<li><a href="eventsParent.html">Events Calendar</a></li>
 				<li><a href="">Fees</a></li>
-				<li><a href="">Waivers</a></li>
+				<li><a href="waiverParent">Waivers</a></li>
 				<li><a href="">Assignments</a></li>
-				<li><a href="">My Profile</a></li>
-
+				<li><a href="parent.html">My Profile</a></li>
 			</ul>
 			<br>
-
-
-
 			<hr class="hrSpecial">
 		</div>
 		<div class="parentImg">
 			<img src="http://placehold.it/200x200" />
 		</div>
 		<div class="parentInfo">
-			<p>Name: </p>
-			<p>Phone: </p>
-			<p>Address: </p>
-			<p>Children: </p>
+      <ul>
+        <li>Name: </li>
+        <li>Phone: </li>
+        <li>Address: </li>
+        <li>Children: 
+          <ul>
+            <li><a href="">Child 1</a></li>
+            <li><a href="">Child 2</a></li>
+            <li><a href="">Child 3</a></li>
+            <li><a href="">Child 1</a></li>
+          </ul>
+        </li>
+      </ul>
 		</div>
 		<div class="parentEvents">
 			<p>Upcoming Student Events: </p>
@@ -50,12 +56,13 @@
 			<a href="">Example</a>
 		</div>
 	</div>
-	<!-- end parent profile container -->
+<!-- end parent profile container parent view-->
 	<div id="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 	<script type="text/javascript" src="js/parentview.js"></script>
 </body>
-
 </html>
