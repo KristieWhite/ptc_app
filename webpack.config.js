@@ -1,3 +1,4 @@
+
 var webpack = require('webpack');
 
 module.exports = {
@@ -14,8 +15,8 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.css$/, loader:'style!css'},
       {test:/\.html$/, loader:'mustache'},
+      {test: /\.css$/, loader:'style!css'},
       {test: /\.json$/, loader:'json'}
     ]
   }

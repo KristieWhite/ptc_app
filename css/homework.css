@@ -1,6 +1,6 @@
+@import "main.css";
 @media screen and (min-width: 600px) {
 
-@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
 
 #assignContainer {
 	width: 90%;
