@@ -1,3 +1,5 @@
+var Backbone = require ('backbone');
+
 $(document).ready(function() {
 
 //login model

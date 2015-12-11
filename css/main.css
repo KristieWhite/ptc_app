@@ -1,9 +1,6 @@
 @media screen and (min-width: 600px;){
 
-@font-face { 
-	font-family: 'EraserDust'; 
-	src: url('../fonts/EraserDust.ttf'); 
-} 
+@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
 
 .header {
 	width: 100%;
