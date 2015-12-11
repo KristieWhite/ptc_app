@@ -1,6 +1,7 @@
-//require("models.js"); 
-
 $(document).ready(function($){
+var UserParent = require('./models');
+
+var model = new UserParent();	
 
 //if ($.cookie('AuthToken')) {
 //	setToken($.cookie('AuthToken'));

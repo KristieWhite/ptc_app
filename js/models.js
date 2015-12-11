@@ -1,6 +1,3 @@
-
-//require("login.js");
-
 $(document).ready(function() {
 
 //login model
@@ -22,5 +19,6 @@ var UserParent = Backbone.Model.extend ({
 var model = new UserParent();
 
 
-
 });//closes document ready
+
+module.exports = UserParent;
