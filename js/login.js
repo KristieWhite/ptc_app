@@ -1,4 +1,5 @@
-//require("models.js"); 
+//var Login = require("./login.js");
+//require("./models.js"); 
 
 $(document).ready(function($){
 
@@ -12,16 +13,36 @@ $("#logInSubmit").on('submit', function(e) {
 	var password = $("#password").val();
 	$.ajax({
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/',
-		data: {username: username, password: password},
+		data: {
+			username: username, 
+			password: password
+		},
 		method: 'post'
 	}).then(function(resp) {
 		if ($('#remember_me').clicked == true) {
 			$.cookie('AuthToken', resp.token);
+			console.log("dropped a cookie");
 		}
 		setToken(resp.token);
 		User.set(resp.User)
 	})
 });
+
+var UserParent = Backbone.Model.extend ({
+	initialize: function() {
+		console.log("userParent model initialized");
+	},
+	validate: function(attrs) {
+		if(!attrs.username) {
+			$("#usernameLogIn").html("username is required");
+			}
+			if (!attrs.password) {
+			$("#passwordLogIn").html("password is required");
+			}
+		}
+	});
+
+var model = new UserParent();
 
 function setToken(token) {
 	var _sync = Backbone.sync;
@@ -35,4 +56,7 @@ function setToken(token) {
 	}
 }
 model.fetch().fail(/*redirect*/);
+
+
+
 });//closes document ready
