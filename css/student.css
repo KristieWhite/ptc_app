@@ -3,6 +3,12 @@
 @font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
 
 
+<<<<<<< HEAD
+=======
+ a:visited {
+ 	color: gray;
+ }
+>>>>>>> I
 #header {
 	width: 100%;
 	height: 80px;

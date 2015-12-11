@@ -24,5 +24,6 @@ var userParentModel = Backbone.Model.extend({
 
 
 
-
 });//closes document ready
+
+module.exports = UserParent;

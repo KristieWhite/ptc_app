@@ -1,4 +1,7 @@
 $(document).ready(function($){
+var UserParent = require('./models');
+
+var model = new UserParent();	
 
 var Model = require('./models.js');
 
