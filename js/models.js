@@ -1,4 +1,3 @@
-var Backbone = require ('backbone');
 
 $(document).ready(function() {
 
@@ -21,5 +20,6 @@ var UserParent = Backbone.Model.extend ({
 var model = new UserParent();
 
 
-
 });//closes document ready
+
+module.exports = UserParent;

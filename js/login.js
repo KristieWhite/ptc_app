@@ -1,4 +1,8 @@
+
 $(document).ready(function($){
+var UserParent = require('./models');
+
+var model = new UserParent();	
 
 $("#logInSubmit").on('submit', function(e) {
 	e.preventDefault();
