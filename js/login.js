@@ -2,9 +2,9 @@
 
 $(document).ready(function($){
 
-if ($.cookie('AuthToken')) {
-	setToken($.cookie('AuthToken'));
-}
+//if ($.cookie('AuthToken')) {
+//	setToken($.cookie('AuthToken'));
+//}
 
 $("#logInSubmit").on('submit', function(e) {
 	e.preventDefault();
@@ -26,11 +26,11 @@ $("#logInSubmit").on('submit', function(e) {
 function setToken(token) {
 	var _sync = Backbone.sync;
 	Backbone.sync = function(method, model, options) {
-		if ($.cookie('AuthToken') {
+		if ($.cookie('AuthToken')) {
 			options.headers = {
 				'Authorization': 'Token ' + token
 			}
-		})
+		}
 		return _sync.call(this, method, model, options);
 	}
 }
