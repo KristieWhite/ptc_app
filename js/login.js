@@ -1,11 +1,12 @@
-//var Login = require("./login.js");
-//require("./models.js"); 
-
 $(document).ready(function($){
 
-//if ($.cookie('AuthToken')) {
-//	setToken($.cookie('AuthToken'));
-//}
+var Model = require('./models.js');
+
+var tokenSetter = function() {
+if ($.cookie('AuthToken')) {
+	setToken($.cookie('AuthToken'));
+	}
+};
 
 $("#logInSubmit").on('submit', function(e) {
 	e.preventDefault();
@@ -19,30 +20,21 @@ $("#logInSubmit").on('submit', function(e) {
 		},
 		method: 'post'
 	}).then(function(resp) {
-		if ($('#remember_me').clicked == true) {
+		if ($('#remember_me').clicked === true) {
 			$.cookie('AuthToken', resp.token);
 			console.log("dropped a cookie");
 		}
 		setToken(resp.token);
-		User.set(resp.User)
-	})
+		User.set(resp.User);
+	});
 });
 
-var UserParent = Backbone.Model.extend ({
-	initialize: function() {
-		console.log("userParent model initialized");
-	},
-	validate: function(attrs) {
-		if(!attrs.username) {
-			$("#usernameLogIn").html("username is required");
-			}
-			if (!attrs.password) {
-			$("#passwordLogIn").html("password is required");
-			}
-		}
-	});
 
-var model = new UserParent();
+
+var userParentModel = Backbone.Collection.extend({
+	model: userParentModel,
+	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+});
 
 function setToken(token) {
 	var _sync = Backbone.sync;
@@ -50,13 +42,11 @@ function setToken(token) {
 		if ($.cookie('AuthToken')) {
 			options.headers = {
 				'Authorization': 'Token ' + token
-			}
+			};
 		}
 		return _sync.call(this, method, model, options);
 	}
 }
 model.fetch().fail(/*redirect*/);
-
-
 
 });//closes document ready
