@@ -1,5 +1,3 @@
-$(document).ready(function() {
-
 //////////////parent login model//////////////////////////////////////////////
 var UserParent = Backbone.Model.extend ({
 	initialize: function() {
@@ -15,15 +13,12 @@ var UserParent = Backbone.Model.extend ({
 		}
 	});
 
-var model = new UserParent();
+var logInParentModel = new UserParent();
 
 var userParentModel = Backbone.Model.extend({
 	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
 });
 
 
-
-
-});//closes document ready
 
 module.exports = UserParent;

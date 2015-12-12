@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 var Router = Backbone.Router.extend({
 	initialize: function() {
@@ -60,4 +60,4 @@ eventsList.fetch({
 
 
 
-});//closes document ready
+});//closes document ready*/

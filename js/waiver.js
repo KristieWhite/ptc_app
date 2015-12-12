@@ -1,4 +1,4 @@
-$(document).ready(function($){
+/*$(document).ready(function($){
 
 //api key for hello sign
 //7456ca56e56b02148aa11e4a100bfc6c1c271682f2bdb277e3893a736dea65c9
@@ -64,4 +64,4 @@ $(document).ready(function($){
     	}
     });
 
-});//closes document ready
+});//closes document ready*/

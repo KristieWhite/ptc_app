@@ -16,7 +16,7 @@ module.exports = {
   module: {
     loaders: [
       {test:/\.html$/, loader:'mustache'},
-      {test: /\.css$/, loader:'style!css'},
+    //{test: /\.css$/, loader:'style!css'},
       {test: /\.json$/, loader:'json'}
     ]
   }

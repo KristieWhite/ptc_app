@@ -1,6 +1,6 @@
 $(document).ready(function($){
 	
-require('./models.js');
+var models = require('./models.js');
 
 var tokenSetter = function(token) {
 if ($.cookie('AuthToken')) {
@@ -32,11 +32,6 @@ $("#logInSubmit").on('submit', function(e) {
 	console.log("logged in");
 });
 
-var userParentModel = Backbone.Collection.extend({
-	model: userParentModel,
-	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
-});
-
 function setToken(token) {
 	var _sync = Backbone.sync;
 	Backbone.sync = function(method, model, options) {
@@ -48,7 +43,13 @@ function setToken(token) {
 		return _sync.call(this, method, model, options);
 	};
 }
-model.fetch().fail(/*redirect*/);
+
+var userParentModel = Backbone.Collection.extend({
+	model: userParentModel,
+	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+});
+
+userParentModel.fetch().fail(/*redirect*/);
 
 });//closes document ready
 
