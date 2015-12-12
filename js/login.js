@@ -1,9 +1,6 @@
 $(document).ready(function($){
-var UserParent = require('./models');
-
-var model = new UserParent();	
-
-var Model = require('./models.js');
+	
+require('./models.js');
 
 var tokenSetter = function() {
 if ($.cookie('AuthToken')) {
@@ -22,6 +19,7 @@ $("#logInSubmit").on('submit', function(e) {
 			password: password
 		},
 		method: 'post'
+		console.log("logged in");
 	}).then(function(resp) {
 		if ($('#remember_me').clicked === true) {
 			$.cookie('AuthToken', resp.token);
@@ -31,8 +29,6 @@ $("#logInSubmit").on('submit', function(e) {
 		User.set(resp.User);
 	});
 });
-
-
 
 var userParentModel = Backbone.Collection.extend({
 	model: userParentModel,
@@ -53,3 +49,5 @@ function setToken(token) {
 model.fetch().fail(/*redirect*/);
 
 });//closes document ready
+
+module.exports = userParentModel;
