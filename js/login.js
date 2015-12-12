@@ -1,5 +1,3 @@
-$(document).ready(function($){
-	
 var models = require('./models.js');
 
 var tokenSetter = function(token) {
@@ -20,6 +18,7 @@ $("#logInSubmit").on('submit', function(e) {
 		},
 		method: 'post'
 	}).then(function(resp) {
+		console.log("logged in, checking for cookie drop");
 		if ($('#remember_me').clicked === true) {
 			$.cookie('AuthToken', resp.token);
 			console.log("dropped a cookie");
@@ -51,6 +50,5 @@ var userParentModel = Backbone.Collection.extend({
 
 userParentModel.fetch().fail(/*redirect*/);
 
-});//closes document ready
 
 module.exports = userParentModel;

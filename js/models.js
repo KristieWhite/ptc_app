@@ -1,3 +1,5 @@
+var Backbone = require('backbone');
+
 //////////////parent login model//////////////////////////////////////////////
 var UserParent = Backbone.Model.extend ({
 	initialize: function() {
