@@ -2,7 +2,7 @@ $(document).ready(function($){
 	
 require('./models.js');
 
-var tokenSetter = function() {
+var tokenSetter = function(token) {
 if ($.cookie('AuthToken')) {
 	setToken($.cookie('AuthToken'));
 	}
@@ -19,7 +19,6 @@ $("#logInSubmit").on('submit', function(e) {
 			password: password
 		},
 		method: 'post'
-		console.log("logged in");
 	}).then(function(resp) {
 		if ($('#remember_me').clicked === true) {
 			$.cookie('AuthToken', resp.token);
@@ -27,7 +26,10 @@ $("#logInSubmit").on('submit', function(e) {
 		}
 		setToken(resp.token);
 		User.set(resp.User);
+	}).then(function() {
+		window.location.href = "../parent.html";
 	});
+	console.log("logged in");
 });
 
 var userParentModel = Backbone.Collection.extend({
@@ -44,7 +46,7 @@ function setToken(token) {
 			};
 		}
 		return _sync.call(this, method, model, options);
-	}
+	};
 }
 model.fetch().fail(/*redirect*/);
 
