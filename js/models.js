@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-//login model
+//////////////parent login model//////////////////////////////////////////////
 var UserParent = Backbone.Model.extend ({
 	initialize: function() {
 		console.log("userParent model initialized");
