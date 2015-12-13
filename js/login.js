@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //var Models = require('./models.js');
 //var LogIn = require('logIn.js');
 //var Underscore = require('underscore');
@@ -8,6 +9,17 @@ if ($.cookie('AuthToken')) {
 	setToken($.cookie('AuthToken'));
 	}
 };
+=======
+$(document).ready(function($){
+require('../css/main.css');
+require('../css/login.css');
+var Models = require('./models');
+
+
+//if ($.cookie('AuthToken')) {
+//	setToken($.cookie('AuthToken'));
+//}
+>>>>>>> velasco
 
 $("#logInForm").submit(function(e) {
 	// alert("hello");

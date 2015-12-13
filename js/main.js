@@ -1,4 +1,6 @@
+
 /*require('../css/main.css');
+
 require('../css/eventDetail.css');
 require('../css/events.css');
 require('../css/FeesList.css');
@@ -12,6 +14,7 @@ require('../css/student.css');
 require('../css/teacher.css');
 require('../css/waiver.css');*/
 /*var LogIn = require('./logIn.js');
+
 var UserParent = require('./models.js');
 var Home = require('./Home.js');
 var Parent = require('./parent.js');
