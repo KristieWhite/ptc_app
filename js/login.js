@@ -31,54 +31,53 @@ $("#logInForm").submit(function(e) {
 			console.log("dropped a cookie");
 		}
 		setToken(resp.token);
-		User.set(resp.User);
+		console.log("logged in");
+		console.log(resp.token);
+		//User.set(resp.User);
 	}).then(function() {
-		window.location.href = "../parent.html";
-	});
-	console.log("logged in");
-	console.log(resp.token);
-
+		window.location.href = "../Home.html";	
 });
-// function setToken(token) {
-// 	var _sync = Backbone.sync;
-// 	Backbone.sync = function(post, model, options) {
-// 		if ($.cookie('AuthToken')) {
-// 			options.headers = {
-// 				'Authorization': 'Token ' + token
-// 			};
-// 		}
-// 		return _sync.call(this, post, model, options);
-// 	};
-// }
 
-// var UserParent = Backbone.Model.extend({
+
+function setToken(token) {
+	var _sync = Backbone.sync;
+	Backbone.sync = function(post, UserParent, options) {
+		if ($.cookie('AuthToken')) {
+			options.headers = {
+				'Authorization': 'Token ' + token
+			};
+		}
+		return _sync.call(this, post, model, options);
+	};
+}
+
+var UserParent = Backbone.Model.extend({
 	
-// 	initialize: function() {
-// 		console.log("userParent model initialized");
-// 	},
-// 	validate: function(attrs) {
-// 		if(!attrs.username) {
-// 			$("#usernameLogIn").html("username is required");
-// 			}
-// 			if (!attrs.password) {
-// 			$("#passwordLogIn").html("password is required");
-// 			}
-// 		}
-		
-// 	}).then(function(){
-// 		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
-// 	});
-	
+	initialize: function() {
+		console.log("UserParent model initialized");
+	},
+	validate: function(attrs) {
+		if(!attrs.username) {
+			$("#usernameLogIn").html("username is required");
+			}
+			if (!attrs.password) {
+			$("#passwordLogIn").html("password is required");
+			}
+		},
+	success: function() {
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'	
+		}
+	});
 
 
-// var logInParentModel = new UserParent();
+var LogInParentModel = new UserParent();
 
-// var userParentCollection = Backbone.Collection.extend({
-// 	model: logInParentModel,
-// 	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
-// });
-
-// logInParentModel.fetch({
+var UserParentCollection = Backbone.Collection.extend({
+	model: LogInParentModel,
+	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+});
+});
+// UserParentCollection.fetch(token) {
 // 	success: function(user) {
 // 		return token;
 // 		console.log(user.toJSON());
