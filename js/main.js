@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 require('../css/main.css');
 require('../css/eventDetail.css');
 require('../css/events.css');
@@ -12,6 +13,8 @@ require('../css/PayFeesT.css');
 require('../css/student.css');
 require('../css/teacher.css');
 require('../css/waiver.css');
+require('../fonts/EraserDust.ttf');
+
 var LogIn = require('./login.js');
 var UserParent = require('./models.js');
 var Home = require('./Home.js');

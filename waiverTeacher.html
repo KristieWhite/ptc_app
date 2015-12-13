@@ -7,7 +7,7 @@
 	<title>Waivers</title>
 	<link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/Twaiver.css">
+	<link rel="stylesheet" type="text/css" href="css/waiver.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
@@ -15,21 +15,21 @@
 	<div class="header">
 		<h1>Waivers</h1>
 	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="Home.html">Home</a></li>
+			<li><a href="eventsParent.html">Events</a></li>
+			<li><a href="">Fees</a></li>
+			<li><a href="waiverParent.html">Waivers</a></li>
+			<li><a href="">Assignments</a></li>
+			<li><a href="parent.html">My Profile</a></li>
+		</ul>
+		<br>
+		<p class="sexyLine"></p>
+	</div>
 
 	<div id="pageContainer">
 
-		<div class="navbar">
-			<ul>
-				<li><a href="Home.html">Home</a></li>
-				<li><a href="eventsParent.html">Events</a></li>
-				<li><a href="">Fees</a></li>
-				<li><a href="waiverParent.html">Waivers</a></li>
-				<li><a href="">Assignments</a></li>
-				<li><a href="parent.html">My Profile</a></li>
-			</ul>
-			<br>
-			<p class="sexyLine"></p>
-		</div>
 
 		<div class="filler"></div>
 
@@ -54,12 +54,7 @@
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
-	<script type="text/javascript" src="//s3.amazonaws.com/cdn.hellofax.com/js/embedded.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
-	<script type="text/javascript" src="js/waiver.js"></script>
+	<script type="text/javascript" src="js/bundle.js"></script>
 
 	<script type="x-tmpl-mustache" id="waiverListTemplate">
 		<h2>Waiver</h2> {{#waiver}} {{}} {{/waiver}}

@@ -20,5 +20,4 @@ var model = new UserParent();
 
 
 });//closes document ready
-
-module.exports = UserParent;
+module.exports = Models;

@@ -1,7 +1,8 @@
 $(document).ready(function($){
-var UserParent = require('./models');
+require('../css/main.css');
+require('../css/login.css');
+var Models = require('./models');
 
-var model = new UserParent();	
 
 //if ($.cookie('AuthToken')) {
 //	setToken($.cookie('AuthToken'));
