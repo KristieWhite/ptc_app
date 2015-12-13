@@ -20,24 +20,24 @@ $("#logInForm").submit(function(e) {
 		method: 'POST',
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/',
 		data: {
-			username: "cesar",
-			password: "123"
+			username: username,
+			password: password
 		}
 		
 	}).done(function(resp) {
 		console.log("logged in, checking for cookie drop");
-	// 	if ($('#remember_me').clicked === true) {
-	// 		$.cookie('AuthToken', resp.token);
-	// 		console.log("dropped a cookie");
-	// 	}
-	// 	setToken(resp.token);
-	// 	User.set(resp.User);
-	// }).then(function() {
-	// 	window.location.href = "../parent.html";
-	// });
-	// console.log("logged in");
-	console.log(resp.token);
+		if ($('#remember_me').clicked === true) {
+			$.cookie('AuthToken', resp.token);
+			console.log("dropped a cookie");
+		}
+		setToken(resp.token);
+		User.set(resp.User);
+	}).then(function() {
+		window.location.href = "../parent.html";
 	});
+	console.log("logged in");
+	console.log(resp.token);
+
 });
 // function setToken(token) {
 // 	var _sync = Backbone.sync;
