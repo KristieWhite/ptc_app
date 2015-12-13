@@ -1,4 +1,4 @@
-  Stripe.setPublishableKey('YOUR_PUBLISHABLE_KEY');
+/*  Stripe.setPublishableKey('YOUR_PUBLISHABLE_KEY');
     var stripeResponseHandler = function(status, response) {
       var $form = $('#payment-form');
       if (response.error) {
@@ -23,4 +23,4 @@
         // Prevent the form from submitting with the default action
         return false;
       });
-    });
+    });*/

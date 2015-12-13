@@ -1,4 +1,4 @@
-function addNewItem(list, itemtext) {
+/*function addNewItem(list, itemtext) {
 	var listItem = document.createElement("li");
 	listItem.innerHTML = itemtext;
 
@@ -21,4 +21,4 @@ inItemText.onkeyup = function (e) {
 	
 	inItemText.focus();
 	inItemText.select();
-};
+};*/
