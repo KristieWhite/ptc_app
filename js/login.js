@@ -1,17 +1,22 @@
+function setToken(token) {
+	var _sync = Backbone.sync;
+	Backbone.sync = function(post, UserParent, options) {
+		if ($.cookie('AuthToken')) {
+			options.headers = {
+				'Authorization': 'Token ' + token
+			};
+		}
+		return _sync.call(this, post, model, options);
+	};
+}
 
-//var Models = require('./models.js');
-//var LogIn = require('logIn.js');
-//var Underscore = require('underscore');
-//var Backbone = require('backbone');
-
-var tokenSetter = function() {
 if ($.cookie('AuthToken')) {
 	setToken($.cookie('AuthToken'));
-	}
 };
 
+
 $("#logInForm").submit(function(e) {
-	// alert("hello");
+	// alert("logInForm");
 	e.preventDefault();
 	var username = $("#username").val();
 	var password = $("#password").val();
@@ -24,12 +29,12 @@ $("#logInForm").submit(function(e) {
 			username: username,
 			password: password
 		}
-		
+
 	}).done(function(resp) {
-		console.log("logged in, checking for cookie drop");
-		if ($('#remember_me').clicked === true) {
+		if ($('#remember_me').is(":checked")) {
 			$.cookie('AuthToken', resp.token);
-			console.log("dropped a cookie");
+			$.cookie('username', resp.username);
+			console.log("created cookies for token and user");
 		}
 		setToken(resp.token);
 		console.log("logged in");
@@ -37,21 +42,10 @@ $("#logInForm").submit(function(e) {
 		//User.set(resp.User);
 		console.log(resp);
 	}).then(function() {
-		window.location.href = "../Home.html";	
+		//window.location.href = "../Home.html";	
 });
 
 
-function setToken(token) {
-	var _sync = Backbone.sync;
-	Backbone.sync = function(post, UserParent, options) {
-		if ($.cookie('AuthToken')) {
-			options.headers = {
-				'Authorization': 'Token ' + token
-			};
-		}
-		return _sync.call(this, post, model, options);
-	};
-}
 
 var UserParent = Backbone.Model.extend({
 	
