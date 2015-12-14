@@ -29,6 +29,7 @@ $("#logInForm").submit(function(e) {
 			username: username,
 			password: password
 		}
+		
 
 	}).done(function(resp) {
 		if ($('#remember_me').is(":checked")) {
@@ -46,7 +47,7 @@ $("#logInForm").submit(function(e) {
 });
 
 
-
+///////////////////////////////////////////token//////////////////////////////////
 var UserParent = Backbone.Model.extend({
 	
 	initialize: function() {
@@ -80,11 +81,7 @@ var UserParentCollection = Backbone.Collection.extend({
 	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
 });
 });
-// UserParentCollection.fetch(token) {
-// 	success: function(user) {
-// 		return token;
-// 		console.log(user.toJSON());
-// 	}
-// });
+
+//////////////////////////////////user validation for parent or teacher/////////////////////////////
 
 
