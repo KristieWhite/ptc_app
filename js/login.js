@@ -86,5 +86,3 @@ var UserParentCollection = Backbone.Collection.extend({
 // 		console.log(user.toJSON());
 // 	}
 // });
-
-

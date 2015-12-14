@@ -47,6 +47,7 @@
 				<li><a>Events 4</a></li>
 				<li><a>Events 5</a></li>
 				<li><a>Events 6</a></li>
+				<div id="eventsListDiv"></div>
 			</ul>
 		</div>
 
@@ -68,18 +69,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
 	<script type="text/javascript" src="js/events.js"></script>
 
-	<script type="x-tmpl-mustache" id="eventsListTemplate">
-		<h2>Upcoming Events!</h2> {{#eventsList}}
-		<li>{{name}}</li>
-		{{/eventsList}}
-	</script>
 
-
-	<script type="x-tmpl-mustache" id="eventsDetailTemplate">
-		<h2>Event Details</h2> {{#eventDetail}} {{}}
-		<button class="sexyButton">Sign Up For Event</button>
-		{{/eventDetail}}
-	</script>
 
 </body>
 
