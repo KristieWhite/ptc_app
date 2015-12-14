@@ -1,6 +1,6 @@
-@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
+/*@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); }*/
 
-#header {
+/*.header {
 	width: 100%;
 	height: 80px;
 	border-bottom: 2px solid black;
@@ -11,7 +11,7 @@
 	background-position: center;
 }
 
-#header h1 {
+.header h1 {
 	margin: 0;
 	position: relative;
 	top: 20px;
@@ -20,7 +20,7 @@
 	display: inline-block;
 	font-weight: normal;
 	font-size: 35px;
-}
+}*/
 
 ] body {
 	position: relative;
