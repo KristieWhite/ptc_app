@@ -1,6 +1,5 @@
 @media screen and (min-width: 600px) {
 
-
 	#assignContainer {
 		width: 90%;
 		height: 100%;
@@ -141,4 +140,3 @@
 	    background: #333;
 	    background-image: linear-gradient(to right, #ccc, #333, #ccc);
 	}
-}
