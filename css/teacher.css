@@ -66,8 +66,48 @@
 
 /*end teacher profile*/
 
+/*start teacher profile - parent view*/
 
+#teacherPView {
+  width: 80%;
+  height: 900px;
+  margin: auto;
+}
 
+.teacherImg {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.teacherImg img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.teachInfoPView {
+  width: 75%;
+  height: 200px;
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+.teachInfoPView ul {
+  list-style: none;
+  margin: 0;
+}
+
+.teachInfoPView li {
+  margin-top: 10px;
+}
 
 
 

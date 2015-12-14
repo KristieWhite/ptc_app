@@ -60,6 +60,36 @@
 
 /*end parent profile*/
 
+/*start parent profile - teacher view*/
+
+
+#parentTView {
+  width: 80%;
+  height: 900px;
+  margin: auto;
+}
+
+.parentInfoTView {
+  width: 75%;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+.parentInfoTView ul {
+  list-style: none;
+  margin: 0;
+}
+
+.parentInfoTView li {
+  margin-top: 10px;
+}
+
 
 
 #footer {
