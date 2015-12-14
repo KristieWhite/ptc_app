@@ -5,20 +5,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
-	<link rel="stylesheet" href="css/Feeslist.css" />
+	<link rel="stylesheet" href="css/feesList.css" />
 	<link rel="stylesheet" href="css/main.css" />
 
 </head>
 
 <body>
-
+	<div class="header">
+		<h1>Fees List</h1>
+	</div>
 	<div id="parentContainer">
 		<!-- 		parent profile parent view-->
 		<div class="navbar">
 			<ul>
 				<li><a href="Home.html">Home</a></li>
 				<li><a href="eventsParent.html">Events Calendar</a></li>
-				<li><a href="">Fees</a></li>
+				<li><a href="feesList.html">Fees</a></li>
 				<li><a href="waiverParent">Waivers</a></li>
 				<li><a href="">Assignments</a></li>
 				<li><a href="parent.html">My Profile</a></li>
@@ -38,13 +40,13 @@
 							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($20.00)" data-image="/128x128.png" data-locale="auto">
 							</script>
 						</form>
-					</div>
-					<!--end .accordion-section-content-->
+					</div><!--end .accordion-section-content-->
+					
 
-				</div>
-				<!--end .accordion-section-content-->
-			</div>
-			<!--end .accordion-section-->
+				</div><!--end .accordion-section-content-->
+				
+			</div><!--end .accordion-section-->
+			
 
 			<div class="accordion-section">
 				<a class="accordion-section-title" href="#accordion-2">Football Cleats</a>
@@ -55,10 +57,10 @@
 						<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($20.00)" data-image="/128x128.png" data-locale="auto">
 						</script>
 					</form>
-				</div>
-				<!--end .accordion-section-content-->
-			</div>
-			<!--end .accordion-section-->
+				</div><!--end .accordion-section-content-->
+				
+			</div><!--end .accordion-section-->
+			
 
 			<div class="accordion-section">
 				<a class="accordion-section-title" href="#accordion-3">Charged 5$ for Lunch</a>
@@ -69,19 +71,20 @@
 						<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($20.00)" data-image="/128x128.png" data-locale="auto">
 						</script>
 					</form>
-				</div>
-				<!--end .accordion-section-content-->
-			</div>
-			<!--end .accordion-section-->
-		</div>
-		<!--end .accordion-->
-	</div>
+				</div><!--end .accordion-section-content-->
+				
+			</div><!--end .accordion-section-->
+			
+		</div><!--end of main div-->
+		
+	</div><!--end parent container-->
 
 	<div id="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
-
-	<script src="js/bundle.js"></script>
+	<script src="js/feesList.js"></script>
+	<script src="js/PayFeesP.js"></script>
+	<!--<script src="js/bundle.js"></script>-->
 </body>
 
 </html>
