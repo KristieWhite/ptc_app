@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //var Models = require('./models.js');
 //var LogIn = require('logIn.js');
 //var Underscore = require('underscore');
@@ -9,17 +9,6 @@ if ($.cookie('AuthToken')) {
 	setToken($.cookie('AuthToken'));
 	}
 };
-=======
-$(document).ready(function($){
-require('../css/main.css');
-require('../css/login.css');
-var Models = require('./models');
-
-
-//if ($.cookie('AuthToken')) {
-//	setToken($.cookie('AuthToken'));
-//}
->>>>>>> velasco
 
 $("#logInForm").submit(function(e) {
 	// alert("hello");
@@ -46,6 +35,7 @@ $("#logInForm").submit(function(e) {
 		console.log("logged in");
 		console.log(resp.token);
 		//User.set(resp.User);
+		console.log(resp);
 	}).then(function() {
 		window.location.href = "../Home.html";	
 });
@@ -67,6 +57,13 @@ var UserParent = Backbone.Model.extend({
 	
 	initialize: function() {
 		console.log("UserParent model initialized");
+	},
+	defaults: {
+		id: null,
+		user_type: null,
+		first_name: null,
+		last_name: null,
+		student_set: null
 	},
 	validate: function(attrs) {
 		if(!attrs.username) {
@@ -95,3 +92,16 @@ var UserParentCollection = Backbone.Collection.extend({
 // 		console.log(user.toJSON());
 // 	}
 // });
+
+
+// var Router = Backbone.Router.extend({
+//   initialize: function(){
+//     Backbone.history.start({pushState: true});
+//   },
+//   routes:{
+//     "": "index"
+//   }
+// });
+
+// var router = new Router();
+
