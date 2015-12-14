@@ -1,144 +1,144 @@
 @media screen and (min-width: 600px) {
 
 
-#assignContainer {
-	width: 90%;
-	height: 100%;
-	margin: auto;
-}
+	#assignContainer {
+		width: 90%;
+		height: 100%;
+		margin: auto;
+	}
 
-#assignContainer a{
-	text-decoration: none;
-}
+	#assignContainer a{
+		text-decoration: none;
+	}
 
-.assignHeader h2 {
-	margin: 0;
-}
+	.assignHeader h2 {
+		margin: 0;
+	}
 
-#mainAssignments {
-	width: 45%;
-	height: 700px;
-	position: relative;
-	display: inline-block;
-	border-right: 1px solid gray;
-}
+	#mainAssignments {
+		width: 45%;
+		height: 700px;
+		position: relative;
+		display: inline-block;
+		border-right: 1px solid gray;
+	}
 
-.assignments {
-	width: 100%;
-	height: 45%;
-	overflow: scroll;
-}
+	.assignments {
+		width: 100%;
+		height: 45%;
+		overflow: scroll;
+	}
 
-.assignments2	 {
-	width: 100%;
-	height: 45%;
-	overflow: scroll;
-}
+	.assignments2	 {
+		width: 100%;
+		height: 45%;
+		overflow: scroll;
+	}
 
-/*teacher view styling*/
+	/*teacher view styling*/
 
-.file {
-	visibility: hidden;
-}
+	.file {
+		visibility: hidden;
+	}
 
-.upload {
-	width: 50%;
-	height: 30px;
-	border: 2px solid gray;
-	border-radius: 10px;
-	font-size: 14px;
-	outline: none;
-}
+	.upload {
+		width: 50%;
+		height: 30px;
+		border: 2px solid gray;
+		border-radius: 10px;
+		font-size: 14px;
+		outline: none;
+	}
 
-.helpLinks {
-	width: 50%;
-	height: 30px;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border: 1px solid gray;
-	padding-left: 10px;
-	outline: none;
-	font-size: 14px;
-}
+	.helpLinks {
+		width: 50%;
+		height: 30px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border: 1px solid gray;
+		padding-left: 10px;
+		outline: none;
+		font-size: 14px;
+	}
 
-.dueDate {
-	width: 25%;
-	height: 25px;
-	border: 1px solid gray;
-	border-radius: 5px;
-	padding-left: 10px;
-}
+	.dueDate {
+		width: 25%;
+		height: 25px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		padding-left: 10px;
+	}
 
-.subBtn {
-	width: 15%;
-	height: 34px;
-	border: 1px solid gray;
-	position: relative;
-	right: 5px;
-	color: white;
-	font-size: 14px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
+	.subBtn {
+		width: 15%;
+		height: 34px;
+		border: 1px solid gray;
+		position: relative;
+		right: 5px;
+		color: white;
+		font-size: 14px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
 
-.studentAssign:hover {
-	background: gray;
-	color: white;
-}
+	.studentAssign:hover {
+		background: gray;
+		color: white;
+	}
 
-#checkBoxContainer {
-	width: 30%;
-	height: 30%;
-	border: 2px solid gray;
-	box-shadow: 5px 5px 5px black;
-	display: inline-block;
-	display: none;
-}
+	#checkBoxContainer {
+		width: 30%;
+		height: 30%;
+		border: 2px solid gray;
+		box-shadow: 5px 5px 5px black;
+		display: inline-block;
+		display: none;
+	}
 
-#checkBoxContainer input[type=checkbox] {
-	width: 20%;
-	height: 20%;
-	position: relative;
-	left: 10px;
-	top: 5px;
-}
+	#checkBoxContainer input[type=checkbox] {
+		width: 20%;
+		height: 20%;
+		position: relative;
+		left: 10px;
+		top: 5px;
+	}
 
-#checkBoxContainer span {
-	margin: 0;
-	position: relative;
-	top: 1px;
-}
+	#checkBoxContainer span {
+		margin: 0;
+		position: relative;
+		top: 1px;
+	}
 
-.turnedIn{
-	width: 50%;
-	height: 20px;
-	border: 1px solid black;
-	border-radius: 20px;
-	background: red;
-	color: white;
-	position: relative;
-	top: 10px;
-	left: 20px;
-}
+	.turnedIn{
+		width: 50%;
+		height: 20px;
+		border: 1px solid black;
+		border-radius: 20px;
+		background: red;
+		color: white;
+		position: relative;
+		top: 10px;
+		left: 20px;
+	}
 
-#projects {
-	width: 45%;
-	height: 700px;
-	position: relative;
-	display: inline-block;
-	left: 10px;
-}
+	#projects {
+		width: 45%;
+		height: 700px;
+		position: relative;
+		display: inline-block;
+		left: 10px;
+	}
 
-#footer {
-	width: 100%;
-	height: 40px;
-	border-top: 2px solid black;
-}
+	#footer {
+		width: 100%;
+		height: 40px;
+		border-top: 2px solid black;
+	}
 
-.hrSpecial {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
-}
+	.hrSpecial {
+	    border: 0;
+	    height: 1px;
+	    background: #333;
+	    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+	}
 }
