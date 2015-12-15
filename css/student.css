@@ -1,33 +1,5 @@
 @media screen and (min-width: 600px) {
 
-@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
-
-
-<<<<<<< HEAD
-=======
- a:visited {
- 	color: gray;
- }
->>>>>>> I
-#header {
-	width: 100%;
-	height: 80px;
-	border-bottom: 2px solid black;
-	font-family: 'EraserDust';
-	font-size: 30px;
-	color: white;
-	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") no-repeat;
-	background-position: center;
-}
-
-#header p {
-	margin: 0;
-	position: relative;
-	top: 25px;
-	left: 10px;
-	width: 40%;
-	display: inline-block;
-}
 
 /*student profile - parent view*/
 
