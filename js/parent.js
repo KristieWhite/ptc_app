@@ -4,6 +4,8 @@ $("#addPhoto").click(function(){
   $(".uploadPic").trigger('click');
 });
 
+// parent view
+
 var ParentModel = Backbone.Model.extend({
   initialize: function(){
   },
@@ -31,6 +33,20 @@ var parent = new ParentModel();
     var parentTemplate = $("#parentInfoTemplate").text();
     var parentHTML = Mustache.render(parentTemplate, parentObj);
     $("#parentInfo").html(parentHTML);
+  }, error: function(err) {
+    console.log('error', err);
+  }
+});
+
+  var parentTeacherView = new ParentModel();
+  parentTeacherView.fetch ({
+    success: function(resp){
+    var teacherViewObj = {
+      "teachersView":resp.toJSON().results
+    };
+    var teacherViewTemplate = $("#parentProTeachTemplate").text();
+    var teacherViewHTML = Mustache.render(teacherViewTemplate, teacherViewObj);
+    $("#parentInfoTView").html(teacherViewHTML);
   }, error: function(err) {
     console.log('error', err);
   }

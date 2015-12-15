@@ -15,7 +15,7 @@
 	</div>
 	<div class="navbar">
 		<ul>
-			<li><a href="Home.html">Home</a></li>
+			<li><a href="homeParent  .html">Home</a></li>
 			<li><a href="eventsParent.html">Events Calendar</a></li>
 			<li><a href="">Fees</a></li>
 			<li><a href="waiverParent.html">Waivers</a></li>
@@ -66,7 +66,7 @@
       <img src="http://placehold.it/200x200" />
     </div>
     <div class="parentInfoTView">
-      <ul>
+<!--  <ul>
         <li>Name: </li>
         <li>Phone: </li>
         <li>Address: </li>
@@ -77,7 +77,8 @@
             <li><a href="">Child 3</a></li>
             <li><a href="">Child 1</a></li>
           </ul>
-        </li>
+        </li> -->
+      <ul>  
         <li>Volunteered Events: 
           <ul>
             <li><a href="">Event 1</a></li>
@@ -105,12 +106,26 @@
       <li>Address: </li>
       <li>Children: 
         <ul>
-          <li><a href="">{{student_set}}</a></li>
+          <li><a href="./student.html">{{student_set}}</a></li>
         </ul>
       </li>
     </ul>
   {{/parents}}
   </script>
-  }
+
+  <script type="x-tmpl-mustache" id="parentProTeachTemplate">
+    {{#teachersView}}
+      <ul>
+        <li>Name: {{first_name}} {{last_name}}</li>
+        <li>Phone: </li>
+        <li>Address: </li>
+        <li>Children: 
+          <ul>
+            <li><a href="./student.html">{{student_set}}</a></li>
+          </ul>
+        </li>
+      </ul>
+    {{/teachersView}}
+  </script>
 </body>
 </html>
