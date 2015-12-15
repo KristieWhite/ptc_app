@@ -36,7 +36,7 @@
 	float: left;
 	margin: auto;
 	margin-left: 60px;
-	left: 105px;
+	left: 100px;
 }
 .navbar a {
 	text-decoration: none;
@@ -61,4 +61,5 @@
 	width: 100%;
 	height: 60px;
 	border-top: 2px solid black;
+  text-align: center;
 }

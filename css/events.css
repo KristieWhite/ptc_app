@@ -29,6 +29,7 @@
   #pageContainer {
     width: 80%;
     height: 900px;
+    margin: auto;
   }
 
   .filler {
@@ -36,7 +37,7 @@
   }
 
   .centerView {
-    width: 40%;
+    width: 60%;
     margin: auto;
     border: 1px solid rgb(62, 62, 62);
   }
