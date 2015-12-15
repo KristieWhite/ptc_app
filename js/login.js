@@ -16,45 +16,6 @@ if ($.cookie('AuthToken')) {
 
 
 $("#logInForm").submit(function(e) {
-<<<<<<< HEAD
-    // alert("logInForm");
-    e.preventDefault();
-    var username = $("#username").val();
-    var password = $("#password").val();
-    console.log(username);
-    console.log(password);
-    $.ajax({
-        method: 'POST',
-        url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/',
-        data: {
-            username: username,
-            password: password,
-            user_type: ""
-        }
-        
-    }).done(function(resp) {
-        if ($('#remember_me').is(":checked")) {
-            $.cookie('AuthToken', resp.token);
-            //$.cookie('username', resp.username);
-            console.log("created cookies for token and user");
-        }
-        setToken(resp.token);
-        console.log("logged in");
-        console.log(resp.token);
-        //User.set(resp.User);
-        console.log(resp);
-    }).then(function() {
-        console.log("user type returned");
-        if ("parent" === true) {
-            document.window.location.href = "../homeParent.html";
-         }
-        // else if ("teacher" === true) {
-        //     window.location.href = "../homeTeacher.html";
-        // }    else {
-        //     alert("You are not a registered user. Please contact an administrative personnel.");
-        // }
-});
-=======
 	// alert("logInForm");
 	e.preventDefault();
 	var username = $("#username").val();
@@ -95,8 +56,6 @@ $("#logInForm").submit(function(e) {
 		 //  	alert("You are not a registered user. Please contact an administrative personnel.");
 		 //  }
 	};
-
->>>>>>> d23837ce7967b72b8b5ee09633605bdbac720506
 
 
 ///////////////////////////////////////////token//////////////////////////////////
