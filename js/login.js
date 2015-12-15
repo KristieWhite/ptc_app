@@ -27,10 +27,10 @@ $("#logInForm").submit(function(e) {
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/',
 		data: {
 			username: username,
-			password: password
+			password: password,
+			user_type: ""
 		}
 		
-
 	}).done(function(resp) {
 		if ($('#remember_me').is(":checked")) {
 			$.cookie('AuthToken', resp.token);
@@ -44,12 +44,14 @@ $("#logInForm").submit(function(e) {
 		console.log(resp);
 	}).then(function(user_type) {
 		console.log("user type returned");
-		if (user_type.parent === true) {
-			window.location.href = "../parentHome.html";
-		}
-		if ("teacher" === true) {
-			window.location.href = "../teacherHome.html";
-		}	
+		if (user_type === "parent") {
+			window.location.href = "./homeParent.html";
+		 }
+		// else if ("teacher" === true) {
+		// 	window.location.href = "../homeTeacher.html";
+		// }	else {
+		// 	alert("You are not a registered user. Please contact an administrative personnel.");
+		// }
 });
 
 
