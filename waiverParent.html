@@ -11,67 +11,66 @@
 </head>
 
 <body>
-    <div class="header">
-       <h1>Waivers</h1>
-    </div>
-    <div class="navbar">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="eventsParent.html">Events</a></li>
-            <li><a href="">Fees</a></li>
-            <li><a href="waiverParent.html">Waivers</a></li>
-            <li><a href="">Assignments</a></li>
-            <li><a href="parent.html">My Profile</a></li>
-        </ul><br>
-        <p class="sexyLine"></p>
-    </div>
-
-    <div id="pageContainer">
-    
-       
-      <div class="filler"></div>
-         
-        
-      <!--waiver list...retrieves from back end via backbone..mustache???-->
-      <div id="waiverListDiv" class="centerView">
-        <ul>  
-          <li><a>Waiver 1</a></li>
-          <li><a>Waiver 2</a></li>
-          <li><a>Waiver 3</a></li>
-          <li><a>Waiver 4</a></li>
-          <li><a>Waiver 5</a></li>
-        </ul>     
-      </div>
-      
-      <!--waiver detail view-->
-      <div id="waiverDetailDiv">
-        <p>Waiver Details Goes Here</p>
-        <button class="sexyButton">Sign This Waiver</button>
-      </div>
-
-    </div><!--closes page container-->
-
+  <div class="header">
+     <h1>Waivers</h1>
+  </div>
+  <div class="navbar">
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="eventsParent.html">Events</a></li>
+      <li><a href="">Fees</a></li>
+      <li><a href="waiverParent.html">Waivers</a></li>
+      <li><a href="">Assignments</a></li>
+      <li><a href="parent.html">My Profile</a></li>
+    </ul><br>
+    <p class="sexyLine"></p>
+  </div>
+  <div id="pageContainer"> 
     <div class="filler"></div>
-       
-    <div class="footer">
-        <p>&copy; 2015 Parent Teacher Connection</p>
+    <!--waiver list...retrieves from back end via backbone..mustache???-->
+    <div id="waiverListDiv" class="centerView">
+      <ul>  
+        <li><a>Waiver 1</a></li>
+        <li><a>Waiver 2</a></li>
+        <li><a>Waiver 3</a></li>
+        <li><a>Waiver 4</a></li>
+        <li><a>Waiver 5</a></li>
+      </ul>     
     </div>
     
-  	
+    <!--waiver detail view-->
+    <div id="waiverDetailDiv">
+      <p>Waiver Details Goes Here</p>
+      <button class="sexyButton">Sign This Waiver</button>
+    </div>
 
-    <script type="x-tmpl-mustache" id="waiverListTemplate">
-        <h2>Waiver</h2>
-        {{#waiver}}
-          {{}}
-        {{/waiver}}
-    </script>
+  </div><!--closes page container-->
 
-    <script type="x-tmpl-mustache" id="waiverDetailTemplate">
-      <h2>Waiver Detail</h2>
-      {{#waiverDetail}}<button class="sexyButton">Sign This Waiver</button>
+  <div class="filler"></div>
+     
+  <div class="footer">
+      <p>&copy; 2015 Parent Teacher Connection</p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/waiver.js"></script>
+
+  <script type="x-tmpl-mustache" id="waiverListTemplate">
+      <h2>Waiver</h2>
+      {{#waiver}}
         {{}}
-      {{/waiverDetail}}
-    </script>
+      {{/waiver}}
+  </script>
+
+  <script type="x-tmpl-mustache" id="waiverDetailTemplate">
+    <h2>Waiver Detail</h2>
+    {{#waiverDetail}}<button class="sexyButton">Sign This Waiver</button>
+      {{}}
+    {{/waiverDetail}}
+  </script>
 
     	
 </body>

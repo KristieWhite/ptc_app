@@ -1,109 +1,124 @@
 @media screen and (min-width: 600px) {
 
-@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
+  /*parent profile*/
 
-/*parent profile*/
+  #parentContainer {
+    width: 80%;
+    height: 900px;
+    margin: auto;
+  }
 
-#parentContainer {
-  width: 80%;
-  height: 900px;
-  margin: auto;
-}
+  #parentProImg {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+  }
 
-.parentImg {
-  position: relative;
-  display: inline-block;
-  margin-top: 15px;
-}
+  #parentProImg img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: inline-block;
+  }
 
-.parentImg img {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  display: inline-block;
-}
+  .uploadPic {
+    visibility: hidden;
+    width: 16%;
+    position: absolute;
+    right: 180px;
+  }
 
-.parentInfo {
-  width: 75%;
-  height: 200px;
-  position: relative;
-  display: inline-block;
-  float: right;
-  top: 15px;
-  border: 1px solid black;
-  border-radius: 5px;
-  overflow: scroll;
-}
+  #addPhoto {
+    position: absolute;
+    font-size: 30px;
+    bottom: 177px;
+  }
 
-.parentInfo ul {
-  list-style: none;
-  margin: 0;
-}
+  #parentProImg:hover {
+    cursor: pointer;
+  }
 
-.parentInfo li {
-  margin-top: 10px;
-}
+  #parentInfo {
+    width: 75%;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    float: right;
+    top: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: scroll;
+  }
 
-.parentEvents {
-  width: 100%;
-  height: 250px;
-  overflow: scroll;
-  margin-top: 20px;
-}
+  #parentInfo ul {
+    list-style: none;
+    margin: 0;
+  }
 
-.hrSpecial2 {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
-}
+  #parentInfo li {
+    margin-top: 10px;
+  }
 
-/*end parent profile*/
+  #parentEvents {
+    width: 100%;
+    height: 250px;
+    overflow: scroll;
+    margin-top: 20px;
+  }
 
-/*start parent profile - teacher view*/
+  .hrSpecial2 {
+      border: 0;
+      height: 1px;
+      background: #333;
+      background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  }
 
+  /*end parent profile*/
 
-#parentTView {
-  width: 80%;
-  height: 900px;
-  margin: auto;
-}
-
-.parentInfoTView {
-  width: 75%;
-  height: 200px;
-  position: relative;
-  display: inline-block;
-  float: right;
-  top: 15px;
-  border: 1px solid black;
-  border-radius: 5px;
-  overflow: scroll;
-}
-
-.parentInfoTView ul {
-  list-style: none;
-  margin: 0;
-}
-
-.parentInfoTView li {
-  margin-top: 10px;
-}
+  /*start parent profile - teacher view*/
 
 
+  #parentTView {
+    width: 80%;
+    height: 900px;
+    margin: auto;
+  }
 
-#footer {
-  width: 100%;
-  height: 40px;
-  border-top: 2px solid black;
-}
+  .parentInfoTView {
+    width: 75%;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    float: right;
+    top: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: scroll;
+  }
 
+  .parentInfoTView ul {
+    list-style: none;
+    margin: 0;
+  }
 
+  .parentInfoTView li {
+    margin-top: 10px;
+  }
 
+  .parentImg {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+  }
 
-
-
-
+  .parentImg img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: inline-block;
+  }
 
 
 }
