@@ -1,6 +1,6 @@
 function setToken(token) {
 	var _sync = Backbone.sync;
-	Backbone.sync = function(post, UserParent, options) {
+	Backbone.sync = function(post, model, options) {
 		if ($.cookie('AuthToken')) {
 			options.headers = {
 				'Authorization': 'Token ' + token
@@ -42,8 +42,14 @@ $("#logInForm").submit(function(e) {
 		console.log(resp.token);
 		//User.set(resp.User);
 		console.log(resp);
-	}).then(function() {
-		//window.location.href = "../Home.html";	
+	}).then(function(user_type) {
+		console.log("user type returned");
+		if (user_type.parent === true) {
+			window.location.href = "../parentHome.html";
+		}
+		if ("teacher" === true) {
+			window.location.href = "../teacherHome.html";
+		}	
 });
 
 
@@ -77,11 +83,39 @@ var UserParent = Backbone.Model.extend({
 var LogInParentModel = new UserParent();
 
 var UserParentCollection = Backbone.Collection.extend({
-	model: LogInParentModel,
-	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
-});
+		model: LogInParentModel,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+	});
 });
 
+////////////////////////////parent teacher validate///////////////////////////////
+/*var userWhoIs = Backbone.Model.extend({
+	initial: function() {
+		console.log("userWhoIs is initialized");
+	},
+	defaults: {
+		user_type: null
+	},
+	success: function() {
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/my_info/'
+	},
+	validate: function() {
+		if (user_type === "parent") {
+			var parent = true;
+		}
+		else if (user_type === "teacher") {
+			var teacher = true;
+		}
+		else {
+			return false;
+		}
+	}
+});
 
-//////////////////////////////////user validation for parent or teacher/////////////////////////////
+var userTypeIs = new userWhoIs();
+
+var userTypeCollection = Backbone.Collection.extend({
+	model: userWhoIs,
+	url: 'https://murmuring-sands-9831.herokuapp.com/api/my_info/'
+});*/
 
