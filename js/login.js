@@ -42,17 +42,21 @@ $("#logInForm").submit(function(e) {
 		console.log(resp.token);
 		//User.set(resp.User);
 		console.log(resp);
-	}).then(function(user_type) {
-		console.log("user type returned");
-		if (user_type === "parent") {
+		ptType();
+	});
+	var ptType = function(user_type) {
+		//if ("parent" === true) {
+		//	console.log("parent user test");
 			window.location.href = "./homeParent.html";
-		 }
-		// else if ("teacher" === true) {
-		// 	window.location.href = "../homeTeacher.html";
-		// }	else {
-		// 	alert("You are not a registered user. Please contact an administrative personnel.");
-		// }
-});
+		 //}
+		 // if ("teacher" === true) {
+		 // 	console.log("teacher user test");
+		 //  	window.location.href = "./homeTeacher.html";
+		 //  }	else {
+		 //  	alert("You are not a registered user. Please contact an administrative personnel.");
+		 //  }
+	};
+
 
 
 ///////////////////////////////////////////token//////////////////////////////////
