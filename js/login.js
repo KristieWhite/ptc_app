@@ -42,6 +42,7 @@ $("#logInForm").submit(function(e) {
 		console.log(resp.token);
 		//User.set(resp.User);
 		console.log(resp);
+<<<<<<< HEAD
 	}).then(function(user_type) {
 		console.log("user type returned");
 		if (user_type.parent === true) {
@@ -54,6 +55,14 @@ $("#logInForm").submit(function(e) {
 
 
 ///////////////////////////////////////////token//////////////////////////////////
+=======
+	}).then(function() {
+		window.location.href = "../eventsParent.html";	
+});
+
+
+
+>>>>>>> master
 var UserParent = Backbone.Model.extend({
 	
 	initialize: function() {
@@ -83,6 +92,7 @@ var UserParent = Backbone.Model.extend({
 var LogInParentModel = new UserParent();
 
 var UserParentCollection = Backbone.Collection.extend({
+<<<<<<< HEAD
 		model: LogInParentModel,
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
 	});
@@ -119,3 +129,15 @@ var userTypeCollection = Backbone.Collection.extend({
 	url: 'https://murmuring-sands-9831.herokuapp.com/api/my_info/'
 });*/
 
+=======
+	model: LogInParentModel,
+	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+});
+});
+// UserParentCollection.fetch(token) {
+// 	success: function(user) {
+// 		return token;
+// 		console.log(user.toJSON());
+// 	}
+// });
+>>>>>>> master
