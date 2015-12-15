@@ -45,16 +45,16 @@ $("#logInForm").submit(function(e) {
 		ptType();
 	});
 	var ptType = function(user_type) {
-		//if ("parent" === true) {
-		//	console.log("parent user test");
+		if (user_type == parent) {
+			console.log("redirect to the parents home page");
 			window.location.href = "./homeParent.html";
-		 //}
-		 // if ("teacher" === true) {
-		 // 	console.log("teacher user test");
-		 //  	window.location.href = "./homeTeacher.html";
-		 //  }	else {
-		 //  	alert("You are not a registered user. Please contact an administrative personnel.");
-		 //  }
+		 }
+		  if (user_type == teacher) {
+		    	console.log("redirect to the teachers home page");
+		     	window.location.href = "./homeTeacher.html";
+		     }	else {
+		     	alert("You are not a registed user. Please contact a administrative personnel.")
+		     }
 	};
 
 
