@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Homework - Teachers View</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="css/homework.css" />
 </head>
@@ -27,8 +28,8 @@
 		</div>
 		<div id="mainAssignments">
 			<div class="assignments">
-				<p>Tonight's Assignment: </p>
-				<input type="button" type="file"/>
+				<p>Daily Assignments: </p>
+				<button class="upload">Upload Daily Assignment</button>
 				<input type="file" class="file" /><br />
 				<p>Enter Due Date: </p><input type="date" class="dueDate" />
 				<p>Enter Homework Helper Link Below: </p>
@@ -64,11 +65,12 @@
 			</div>
 		</div>
 	</div>
-	<div id="footer">
+	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
-
-
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/hwteachview.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
 	
 </body>
 </html>
