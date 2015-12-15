@@ -1,6 +1,6 @@
 function setToken(token) {
 	var _sync = Backbone.sync;
-	Backbone.sync = function(post, UserParent, options) {
+	Backbone.sync = function(post, model, options) {
 		if ($.cookie('AuthToken')) {
 			options.headers = {
 				'Authorization': 'Token ' + token
@@ -42,7 +42,7 @@ $("#logInForm").submit(function(e) {
 		//User.set(resp.User);
 		console.log(resp);
 	}).then(function() {
-		//window.location.href = "../Home.html";	
+		window.location.href = "../eventsParent.html";	
 });
 
 
