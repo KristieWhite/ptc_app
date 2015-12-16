@@ -50,6 +50,7 @@
 			<a href="">Example</a>
 		</div>
 		<hr class="hrSpecial2">
+		<div class="classesApiDiv visibleBorder"></div>
 		<div class="studentEvents">
 			<p>Upcoming Student Events: </p>
 			<a href="">Example</a>
@@ -94,6 +95,7 @@
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/students.js"></script>
+	<script src="js/classes.js"></script>
 
 	<script src="x-tmpl-mustache" id="studentsTemplate">
 		{{#students}}
@@ -103,6 +105,12 @@
 			<p>parents: {{parent}}</p>
 			
 		{{/students}}
+	</script>
+
+	<script type="x-tmpl-mustache" id="classesTemplate">
+		{{#classes}}
+		<p><a href="">{{name}}</a></p>
+		{{/classes}}
 	</script>
 
 </body>
