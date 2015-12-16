@@ -80,8 +80,6 @@ $("#logInForm").submit(function (e) {
 			url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
 		}
 	});
-
-
  
 	var LogInParentModel = new UserParent();
 
