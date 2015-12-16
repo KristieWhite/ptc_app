@@ -1,4 +1,5 @@
 $(document).ready(function(){
+////////////////////////////////ALL classes///////////////////////////////////
 	var classesModel = Backbone.Model.extend({
 		initialize: function() {
 			console.log("classesModel initialized");
@@ -7,13 +8,13 @@ $(document).ready(function(){
 				url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/'
 			}
 	});
-		
-	var classesModel = Backbone.Collection.extend({
+
+	var classesCollection = Backbone.Collection.extend({
 			Model: classesModel,
 			url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/'
 		});
 
-	var classesTaught = new classesModel();
+	var classesTaught = new classesCollection();
 
 		classesTaught.fetch({
 			success: function(resp) {

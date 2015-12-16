@@ -49,9 +49,12 @@ var ParentModel = Backbone.Model.extend({
 //   }
 // });
 
+<<<<<<< HEAD
   $("#addPhoto").click(function () {
     $(".uploadPic").trigger('click');
   });
+=======
+>>>>>>> kristie
 
 });
 

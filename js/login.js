@@ -32,6 +32,7 @@ $("#logInForm").submit(function (e) {
 		}
 
 	}).done(function (resp) {
+		console.log(resp);
 		if ($('#remember_me').is(":checked")) {
 			$.cookie('AuthToken', resp.token);
 
@@ -45,17 +46,14 @@ $("#logInForm").submit(function (e) {
 		console.log(userId);
 		//User.set(resp.User);
 		console.log(resp);
+		$.cookie('UserId', resp.id);
 		if (resp.user_type == "parent") {
 			console.log("redirect to the parents home page");
 			window.location.href = "./homeParent.html";
-
-		} else if (resp.user_type == "teacher") {
-			console.log("redirect to the teachers home page");
-			window.location.href = "./homeTeacher.html";
-		}
-
-		$.cookie('UserId', userId);
-		$.cookie('AuthToken', resp.token);
+		 }  else if (resp.user_type == "teacher") {
+		   	console.log("redirect to the teachers home page when cesar adds it to his api");
+		    window.location.href = "./homeTeacher.html";
+		 }  
 	});
 
 
