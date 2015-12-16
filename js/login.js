@@ -34,12 +34,15 @@ $("#logInForm").submit(function (e) {
 	}).done(function (resp) {
 		if ($('#remember_me').is(":checked")) {
 			$.cookie('AuthToken', resp.token);
+			
 			//$.cookie('username', resp.username);
 			console.log("created cookies for token and user");
 		}
 		setToken(resp.token);
 		console.log("logged in");
 		console.log(resp.token);
+		var userId = resp.id;
+		console.log(userId);
 		//User.set(resp.User);
 		console.log(resp);
 
@@ -50,6 +53,8 @@ $("#logInForm").submit(function (e) {
 			console.log("redirect to the teachers home page");
 			window.location.href = "./homeTeacher.html";
 		}
+	
+		$.cookie('UserId', userId);
 	});
 
 

@@ -34,12 +34,9 @@
 		<div class="studentInfo">
 			<ul>
 				<li>Student Number: </li>
-				<li>Name: </li>
+				<li id="student"></li>
 				<li>Address: </li>
-				<li>Parents: </li>
-				<li>Classes
-					<ul class="teacherList">
-					<div id="student"></div>
+				
 					</ul>
 				</li>
 			</ul>
@@ -100,7 +97,11 @@
 
 	<script src="x-tmpl-mustache" id="studentsTemplate">
 		{{#students}}
-			<p>{{school_class}}</p>
+			<p>Name: {{first_name}}</p>
+			<p>Classes: {{school_class}}</p>
+			<p>Last name :{{last_name}}</p>
+			<p>parents: {{parent}}</p>
+			
 		{{/students}}
 	</script>
 

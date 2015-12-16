@@ -9,11 +9,11 @@ $(document).ready(function () {
 			"classfeepayment_set": null
 		},
 		Model: studentModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/13"
+		url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
 	});
 	var studentCollection = Backbone.Collection.extend({
 		Model: studentModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/13"
+		url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
 	});
 
 	var students = new studentModel();
