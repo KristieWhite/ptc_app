@@ -42,20 +42,16 @@ $("#logInForm").submit(function(e) {
 		console.log(resp.token);
 		//User.set(resp.User);
 		console.log(resp);
-		ptType();
-	});
-	var ptType = function(user_type) {
-		if (user_type == parent) {
+		if (resp.user_type == "parent") {
 			console.log("redirect to the parents home page");
 			window.location.href = "./homeParent.html";
-		 }
-		  if (user_type == teacher) {
+		 } else if (resp.user_type == "teacher") {
 		    	console.log("redirect to the teachers home page");
 		     	window.location.href = "./homeTeacher.html";
 		     }	else {
 		     	alert("You are not a registed user. Please contact a administrative personnel.")
 		     }
-	};
+	});
 
 
 ///////////////////////////////////////////token//////////////////////////////////

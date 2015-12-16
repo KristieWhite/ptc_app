@@ -1,7 +1,25 @@
-.profiles{border: 1px solid black;
+.profiles{
+  border: 1px solid black;
 	border-radius: 5px;
-width:500px;}
+  width:500px;
+}
 
-#table{border-top: 1px solid black;}
+#table{
+  border-top: 1px solid black;
+}
 
-#table th {margin-left: 20px;}
+#table th {
+  margin-left: 20px;
+}
+
+.profiles img {
+  position: relative;
+  left: 70px;
+  
+}
+
+#gradesContainer {
+  width: 80%;
+  height: 900px;
+  margin: auto;
+}
