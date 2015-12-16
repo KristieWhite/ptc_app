@@ -42,18 +42,16 @@ $("#logInForm").submit(function (e) {
 		console.log(resp.token);
 		//User.set(resp.User);
 		console.log(resp);
-
 		if (resp.user_type == "parent") {
 			console.log("redirect to the parents home page");
 			window.location.href = "./homeParent.html";
-		} else if (resp.user_type == "teacher") {
-			console.log("redirect to the teachers home page");
-			window.location.href = "./homeTeacher.html";
-		}
+		 }  else if (resp.user_type == "teacher") {
+		   	console.log("redirect to the teachers home page when cesar adds it to his api");
+		    window.location.href = "./homeTeacher.html";
+		 }  else  {
+		    alert("You are not a registed user. Please contact a administrative personnel.")
+		 }
 	});
-
-
-
 
 	///////////////////////////////////////////token//////////////////////////////////
 	var UserParent = Backbone.Model.extend({
