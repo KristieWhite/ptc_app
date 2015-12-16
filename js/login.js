@@ -42,6 +42,7 @@ $("#logInForm").submit(function (e) {
 		console.log(resp.token);
 		//User.set(resp.User);
 		console.log(resp);
+
 		if (resp.user_type == "parent") {
 			console.log("redirect to the parents home page");
 			window.location.href = "./homeParent.html";
@@ -50,6 +51,7 @@ $("#logInForm").submit(function (e) {
 			window.location.href = "./homeTeacher.html";
 		}
 	});
+
 
 
 
@@ -80,6 +82,7 @@ $("#logInForm").submit(function (e) {
 	});
 
 
+ 
 	var LogInParentModel = new UserParent();
 
 	var UserParentCollection = Backbone.Collection.extend({
