@@ -1,9 +1,0 @@
-//var Backbone = require('backbone');
-
-//////////////parent login model//////////////////////////////////////////////
-
-
-
-
-//module.exports = models.js;
-
