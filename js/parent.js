@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	
 
 var ParentModel = Backbone.Model.extend({
   initialize: function(){
@@ -29,25 +30,12 @@ var ParentModel = Backbone.Model.extend({
 			var parentHTML = Mustache.render(parentTemplate, parentObj);
 			$("#parentInfo").html(parentHTML);
       console.log('success ', resp);
+			console.log(resp.attributes.results[0].student_set);
+		
 		}, error: function (err) {
 			console.log('error', err);
 		}
 	});
-
-
-//   var parentTeacherView = new ParentModel();
-//   parentTeacherView.fetch ({
-//     success: function(resp){
-//     var teacherViewObj = {
-//       "teachersView":resp.toJSON().results
-//     };
-//     var teacherViewTemplate = $("#parentProTeachTemplate").text();
-//     var teacherViewHTML = Mustache.render(teacherViewTemplate, teacherViewObj);
-//     $("#parentInfoTView").html(teacherViewHTML);
-//   }, error: function(err) {
-//     console.log('error', err);
-//   }
-// });
 
   $("#addPhoto").click(function () {
     $(".uploadPic").trigger('click');

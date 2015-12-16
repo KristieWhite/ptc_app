@@ -31,8 +31,7 @@
 		<div class="studentImg">
 			<img src="http://placehold.it/200x200" />
 		</div>
-		<div id="studentInfo">
-		</div>
+		<div id="studentInfo"></div>
 		<div class="studentBehavior">
 			<p>Student Behavior: </p>
 			<a href="">Example</a>
@@ -88,15 +87,17 @@
 	<script src="js/login.js"></script>
 	<script src="js/students.js"></script>
 	<script src="js/classes.js"></script>
+	<script src="js/parent.js"></script>
 
 	<script type="x-tmpl-mustache" id="studentsTemplate">
 		{{#students}}
 			<ul>
 				<li>Student Number: </li>
-				<li>Name: {{first_name}} {{last_name}}</li>
+				<li>Name: <a href="/student/{{id}}">{{first_name}} {{last_name}}</a></li>
 				<li>Address: </li>
 				<li>Parents: {{parent}}</li>
 				<li>School: {{school_name}}</li>
+			</ul>
 		{{/students}}
 	</script>
 
