@@ -20,15 +20,15 @@ $(document).ready(function () {
 	students.fetch({
 		success: function (resp) {
 			var studentsInfo = {
-				"students": resp.toJSON()
+				"students": resp.toJSON().results
 			};
 			var studentsTemplate = $("#studentsTemplate").text();
 			var studentsHTML = Mustache.render(studentsTemplate, studentsInfo);
-			$("#student").html(studentsHTML);
+			$("#studentInfo").html(studentsHTML);
 			console.log(resp);
 		},
 		error: function (err) {
-			console.log(error, err);
+			conole.log(error, err);
 		}
 	})
 

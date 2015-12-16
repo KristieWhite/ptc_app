@@ -31,15 +31,7 @@
 		<div class="studentImg">
 			<img src="http://placehold.it/200x200" />
 		</div>
-		<div class="studentInfo">
-			<ul>
-				<li>Student Number: </li>
-				<li id="student"></li>
-				<li>Address: </li>
-				
-					</ul>
-				</li>
-			</ul>
+		<div id="studentInfo">
 		</div>
 		<div class="studentBehavior">
 			<p>Student Behavior: </p>
@@ -50,6 +42,7 @@
 			<a href="">Example</a>
 		</div>
 		<hr class="hrSpecial2">
+		<div class="classesApiDiv visibleBorder"></div>
 		<div class="studentEvents">
 			<p>Upcoming Student Events: </p>
 			<a href="">Example</a>
@@ -61,7 +54,7 @@
 		<div class="studentImg">
 			<img src="http://placehold.it/200x200" />
 		</div>
-		<div class="studentInfo">
+		<div id="studentInfo">
 			<ul>
 				<li>Student Number: </li>
 				<li>Name: </li>
@@ -94,15 +87,23 @@
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/students.js"></script>
+	<script src="js/classes.js"></script>
 
-	<script src="x-tmpl-mustache" id="studentsTemplate">
+	<script type="x-tmpl-mustache" id="studentsTemplate">
 		{{#students}}
-			<p>Name: {{first_name}}</p>
-			<p>Classes: {{school_class}}</p>
-			<p>Last name :{{last_name}}</p>
-			<p>parents: {{parent}}</p>
-			
+			<ul>
+				<li>Student Number: </li>
+				<li>Name: {{first_name}} {{last_name}}</li>
+				<li>Address: </li>
+				<li>Parents: {{parent}}</li>
+				<li>School: {{school_name}}</li>
 		{{/students}}
+	</script>
+
+	<script type="x-tmpl-mustache" id="classesTemplate">
+		{{#classes}}
+		<p><a href="">{{name}}</a></p>
+		{{/classes}}
 	</script>
 
 </body>

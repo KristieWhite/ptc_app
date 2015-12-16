@@ -54,9 +54,10 @@ $("#logInForm").submit(function (e) {
 				window.location.href = "./homeTeacher.html";
 			}
 
-
 		$.cookie('UserId', userId);
+		$.cookie('AuthToken', resp.token);
 	});
+
 
 ///////////////////////////////////////////token//////////////////////////////////
 var UserParent = Backbone.Model.extend({

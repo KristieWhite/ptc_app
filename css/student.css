@@ -29,7 +29,7 @@
 	display: inline-block;
 }
 
-.studentInfo {
+#studentInfo {
 	width: 75%;
 	height: 200px;
 	position: relative;
@@ -41,12 +41,12 @@
 	overflow: scroll;
 }
 
-.studentInfo ul {
+#studentInfo ul {
 	list-style: none;
 	margin: 0;
 }
 
-.studentInfo li {
+#studentInfo li {
 	margin-top: 10px;
 }
 
@@ -94,6 +94,9 @@
     top: 20px;
 }
 
+.visibleBorder {
+	border: 1px solid blue;
+}
 /*end student profile parent view*/
 
 
