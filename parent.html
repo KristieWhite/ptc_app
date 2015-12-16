@@ -28,64 +28,38 @@
 
 <!-- parent profile parent view-->
   <div id="parentContainer">
-		<div id="parentProImg">
-			<img src="http://placehold.it/200x200" />
+    <div id="parentProImg">
+      <img src="http://placehold.it/200x200" />
       <input class="uploadPic" type="file" />
       <i id="addPhoto" class="fa fa-picture-o"></i>
-		</div>
-    <div id="parentInfo">
-  <ul>
-        <li>Name: </li>
-        <li>Phone: </li>
-        <li>Address: </li>
-        <li>Children: 
-          <ul>
-            <li><a href="">Child 1</a></li>
-            <li><a href="">Child 2</a></li>
-            <li><a href="">Child 3</a></li>
-            <li><a href="">Child 1</a></li>
-          </ul>
-        </li>
-      </ul> 
     </div>
+
+    <div id="parentInfo"></div>
+
     <div id="parentEvents">
       <p>Upcoming Student Events: </p>
       <a href="">Example</a>
     </div>
+
     <hr class="hrSpecial">
+
     <div class="parentEvents">
       <p>My Volunteered Events: </p>
       <a href="">Example</a>
     </div>
+
   </div>
 <!-- end parent profile container parent view-->
 
-
+<!-- start parent profile teacher view ** have to move to a teacher view file **-->
   <div id="parentTView">
+
     <div class="parentImg">
       <img src="http://placehold.it/200x200" />
     </div>
-    <div class="parentInfoTView">
-<!--  <ul>
-        <li>Name: </li>
-        <li>Phone: </li>
-        <li>Address: </li>
-        <li>Children: 
-          <ul>
-            <li><a href="">Child 1</a></li>
-            <li><a href="">Child 2</a></li>
-            <li><a href="">Child 3</a></li>
-            <li><a href="">Child 1</a></li>
-          </ul>
-        </li> -->
-      <ul>  
-        <li>Volunteered Events: 
-          <ul>
-            <li><a href="">Event 1</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+
+    <div class="parentInfoTView"></div>
+
   </div>
 
 	<div class="footer">
@@ -96,36 +70,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
   <script src="js/jquery.cookie.js"></script>
+  <script src="js/login.js"></script>
   <script src="js/parent.js"></script>
 
   <script type="x-tmpl-mustache" id="parentInfoTemplate">
-  {{#parents}}
-    <ul>
-      <li>Name: {{first_name}} {{last_name}}</li>
-      <li>Phone: </li>
-      <li>Address: </li>
-      <li>Children: 
-        <ul>
-          <li><a href="./student.html">{{student_set}}</a></li>
-        </ul>
-      </li>
-    </ul>
-  {{/parents}}
-  </script>
-
-  <script type="x-tmpl-mustache" id="parentProTeachTemplate">
-    {{#teachersView}}
+    {{#parents}}
       <ul>
         <li>Name: {{first_name}} {{last_name}}</li>
         <li>Phone: </li>
         <li>Address: </li>
         <li>Children: 
           <ul>
-            <li><a href="./student.html">{{student_set}}</a></li>
+            <li><a href="">{{student_set}}</a></li>
           </ul>
         </li>
       </ul>
-    {{/teachersView}}
+    {{/parents}}
   </script>
+
 </body>
 </html>

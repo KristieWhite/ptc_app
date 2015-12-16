@@ -32,6 +32,7 @@ $("#logInForm").submit(function (e) {
 		}
 
 	}).done(function (resp) {
+<<<<<<< HEAD
 		if ($('#remember_me').is(":checked")) {
 			$.cookie('AuthToken', resp.token);
 
@@ -56,34 +57,53 @@ $("#logInForm").submit(function (e) {
 
 		$.cookie('UserId', userId);
 	});
+=======
+			if ($('#remember_me').is(":checked")) {
+				$.cookie('AuthToken', resp.token);
 
-
-
-
-	///////////////////////////////////////////token//////////////////////////////////
-	var UserParent = Backbone.Model.extend({
-
-		initialize: function () {
-			console.log("UserParent model initialized");
-		},
-		defaults: {
-			id: null,
-			user_type: null,
-			first_name: null,
-			last_name: null,
-			student_set: null
-		},
-		validate: function (attrs) {
-			if (!attrs.username) {
-				$("#usernameLogIn").html("username is required");
+				//$.cookie('username', resp.username);
+				console.log("created cookies for token and user");
 			}
-			if (!attrs.password) {
-				$("#passwordLogIn").html("password is required");
+			setToken(resp.token);
+			console.log("logged in");
+			console.log(resp.token);
+			var userId = resp.id;
+			console.log(userId);
+			//User.set(resp.User);
+			console.log(resp);
+			if (resp.user_type == "parent") {
+				console.log("redirect to the parents home page");
+				window.location.href = "./homeParent.html";
+>>>>>>> master
+
+			} else if (resp.user_type == "teacher") {
+				console.log("redirect to the teachers home page");
+				window.location.href = "./homeTeacher.html";
 			}
-		},
-		success: function () {
-			url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+
+		$.cookie('UserId', userId);
+		$.cookie('AuthToken', resp.token);
+	});
+
+
+///////////////////////////////////////////token//////////////////////////////////
+var UserParent = Backbone.Model.extend({
+
+	initialize: function () {
+		console.log("UserParent model initialized");
+	},
+	defaults: {
+		id: null,
+		user_type: null,
+		first_name: null,
+		last_name: null,
+		student_set: null
+	},
+	validate: function (attrs) {
+		if (!attrs.username) {
+			$("#usernameLogIn").html("username is required");
 		}
+<<<<<<< HEAD
 	}); 
 	var LogInParentModel = new UserParent();
 
@@ -91,4 +111,20 @@ $("#logInForm").submit(function (e) {
 		model: LogInParentModel,
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
 	});
+=======
+		if (!attrs.password) {
+			$("#passwordLogIn").html("password is required");
+		}
+	},
+	success: function () {
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+	}
+}); 
+var LogInParentModel = new UserParent();
+
+var UserParentCollection = Backbone.Collection.extend({
+	model: LogInParentModel,
+	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+});
+>>>>>>> master
 });

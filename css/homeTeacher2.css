@@ -11,3 +11,6 @@ div.sexyLine {
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
 }
 
+.visibleBorder {
+	border: 1px solid blue;
+}/*remove later, it's just here to see the div before data entry*/

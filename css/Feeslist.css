@@ -2,6 +2,8 @@
 @media screen and (min-width: 600px) {
 @font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
 
+/*fees accordion*/
+
 	#feesAccordion {
 		width: 80%;
 		height: 900px;
