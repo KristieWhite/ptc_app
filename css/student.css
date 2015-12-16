@@ -94,6 +94,9 @@
     top: 20px;
 }
 
+.visibleBorder {
+	border: 1px solid blue;
+}
 /*end student profile parent view*/
 
 

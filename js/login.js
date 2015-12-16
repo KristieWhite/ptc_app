@@ -48,9 +48,7 @@ $("#logInForm").submit(function (e) {
 		 }  else if (resp.user_type == "teacher") {
 		   	console.log("redirect to the teachers home page when cesar adds it to his api");
 		    window.location.href = "./homeTeacher.html";
-		 }  else  {
-		    alert("You are not a registed user. Please contact a administrative personnel.")
-		 }
+		 }  
 	});
 
 	///////////////////////////////////////////token//////////////////////////////////

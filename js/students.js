@@ -28,7 +28,7 @@ $(document).ready(function () {
 			console.log(resp);
 		},
 		error: function (err) {
-			conole.log(error, err);
+			console.log(error, err);
 		}
 	})
 
