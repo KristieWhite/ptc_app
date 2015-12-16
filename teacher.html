@@ -43,7 +43,7 @@
         </li>
       </ul>
     </div>
-    <div class="classesApiDiv"></div>
+    <div id="teacherClassesApiDiv" class="visibleBorder"></div>
     <div class="teacherEvents">
       <p>Upcoming Student Events: </p>
       <a href="">Example</a>
@@ -75,12 +75,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
   <script src="js/jquery.cookie.js"></script>
-  <script src="js/classes.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/teacher.js"></script>
 
-  <script type="x-tmpl-mustache" id="classesTemplate">
-    {{#classes}}
+  <script type="x-tmpl-mustache" id="teacherClassesTemplate">
+    {{#teacherClasses}}
     <p><a href="">{{name}}</a></p>
-    {{/classes}}
+    <p><a href="">{{teacher}}</a></p>
+    <p><a href="">{{school}}</a></p>
+    <p><a href="">{{classevent_set}}</a></p>
+    <p><a href="">{{classfee_set}}</a></p>
+    <p><a href="">{{student_set}}</a></p>
+    {{/teacherClasses}}
   </script>
 
 </body>

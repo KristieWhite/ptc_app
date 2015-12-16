@@ -14,7 +14,7 @@ var ParentModel = Backbone.Model.extend({
     first_name: null,
     last_name: null,
     student_set: null,
-    profile_ picture: null
+    // profile_ picture: null
   },
   Model: ParentModel,
   url: "https://murmuring-sands-9831.herokuapp.com/api/my_info/"
@@ -54,6 +54,7 @@ var ParentModel = Backbone.Model.extend({
 //     console.log('error', err);
 //   }
 // });
+
 
 });
 

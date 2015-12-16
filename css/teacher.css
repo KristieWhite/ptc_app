@@ -108,6 +108,9 @@
   margin-top: 10px;
 }
 
+.visibleBorder {
+  border: 1px solid blue;
+}
 
 
 

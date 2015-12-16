@@ -32,6 +32,7 @@ $("#logInForm").submit(function (e) {
 		}
 
 	}).done(function (resp) {
+		console.log(resp);
 		if ($('#remember_me').is(":checked")) {
 			$.cookie('AuthToken', resp.token);
 			//$.cookie('username', resp.username);
@@ -42,6 +43,7 @@ $("#logInForm").submit(function (e) {
 		console.log(resp.token);
 		//User.set(resp.User);
 		console.log(resp);
+		$.cookie('UserId', resp.id);
 		if (resp.user_type == "parent") {
 			console.log("redirect to the parents home page");
 			window.location.href = "./homeParent.html";
@@ -49,7 +51,7 @@ $("#logInForm").submit(function (e) {
 		   	console.log("redirect to the teachers home page when cesar adds it to his api");
 		    window.location.href = "./homeTeacher.html";
 		 }  
-		 $.cookie('UserId', userId);
+		 
 	});
 
 

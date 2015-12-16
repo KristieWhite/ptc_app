@@ -1,63 +1,36 @@
 $(document).ready(function ($) {
-			var Router = Backbone.Router.extend({
-				initialize: function () {
-					Backbone.history.start({
-						pushState: true
-					});
+///////////////////////////////////classes for teachers/////////////////////////////////
+	var teacherClassesModel = Backbone.Model.extend({
+			initialize: function() {
+				console.log("teacherClassesModel initialized");
+			},
+				success: function() {
+					url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
+				}
+		});
+
+		var teacherClassesCollection = Backbone.Collection.extend({
+				Model: teacherClassesModel,
+				url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
+			});
+
+		var teacherClassesTaught = new teacherClassesCollection();
+
+			teacherClassesTaught.fetch({
+				success: function(resp) {
+					console.log('success' ,resp.toJSON());
+					var teacherClassesObj = {
+						"classes": resp.toJSON()[0].results[0]
+					};
+					var teacherClassesTemplate = $("#teacherClassesTemplate").text();
+					var teacherClassesHTML = Mustache.render(teacherClassesTemplate, teacherClassesObj);
+					$("#teacherClassesApiDiv").html(teacherClassesHTML);
 				},
-				routes: {
-					//"": ""
-					//"": ""
-					//"": "index"
+				error: function(err) {
+					console.log('error', err);
 				}
 			});
-			var router = new Router();
-
-			router.navigate("/");
-
-			router.on(route. /**/ , function () {
-				$("").hide();
-				$("").hide();
-				$("").hide();
-			});
-			router.on(route. /**/ , function () {
-				$("").hide();
-				$("").hide();
-				$("").hide();
-			});
-			router.on(route. /**/ , function () {
-				$("").hide();
-				$("").hide();
-				$("").hide();
-			});
-
-			var somethingModel = Backbone.Model.extend({
-				initialize: function () {},
-				defaults: {
-
-					//"":null
-					//"":null
-					//"":null
-
-				},
-				Model: something,
-				url: ''
-			});
-			var somethingCollection = Backbone.Collection.extend({
-				model: somethingModel,
-				url: ''
-			});
-			/////////////////////////////////////MUSTACHE//////////////////////////
-			var Something = new somethingCollection();
-			some.fetch({
-				success:function(resp){
-					var somethingInfo = {
-						'something':resp
-					}
-				}
-			})
 
 
 
-
-		};
+});//documentready
