@@ -42,20 +42,17 @@ $("#logInForm").submit(function(e) {
 		console.log(resp.token);
 		//User.set(resp.User);
 		console.log(resp);
-		ptType(parent);//add teacher as a parameter after it's in the api
-	});
-	var ptType = function(user_type) {
-		if (user_type == parent) {
+		if (resp.user_type == "parent") {
 			console.log("redirect to the parents home page");
 			window.location.href = "./homeParent.html";
+		 }  else if (resp.user_type == "teacher") {
+		   	console.log("redirect to the teachers home page when cesar adds it to his api");
+		    window.location.href = "./homeTeacher.html";
+		 }  else  {
+		    alert("You are not a registed user. Please contact a administrative personnel.")
 		 }
-		 // if (user_type == teacher) {
-		 //   	console.log("redirect to the teachers home page when cesar adds it to his api");
-		 //    window.location.href = "./homeTeacher.html";
-		 // }  else  {
-		 //    alert("You are not a registed user. Please contact a administrative personnel.")
-		 // }
-	};
+	});
+	
 
 
 ///////////////////////////////////////////token//////////////////////////////////
