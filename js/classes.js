@@ -30,8 +30,4 @@ $(document).ready(function(){
 			}
 		});
 
-});//documentready
-
-
-// Model: classesTaught,
-// 		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/'
+});
