@@ -31,23 +31,16 @@
 		<div class="studentImg">
 			<img src="http://placehold.it/200x200" />
 		</div>
-
-		<div class="studentInfo">
-
-			<div id="studentInfo"></div>
-
+		<div id="studentInfo">
 		</div>
-
 		<div class="studentBehavior">
 			<p>Student Behavior: </p>
 			<a href="">Example</a>
 		</div>
-
 		<div class="studentAttendance">
 			<p>Student Attendance: </p>
 			<a href="">Example</a>
 		</div>
-
 		<hr class="hrSpecial2">
 		<div class="classesApiDiv visibleBorder"></div>
 		<div class="studentEvents">
@@ -87,7 +80,6 @@
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
@@ -99,14 +91,13 @@
 
 	<script type="x-tmpl-mustache" id="studentsTemplate">
 		{{#students}}
-		<ul>
-			<li>Student Number: </li>
-			<li>Name: {{first_name}} {{last_name}}</li>
-			<li>Address: </li>
-			<li>Parents: {{parent}}</li>
-			<li>School: {{school_name}}</li>
-
-			{{/students}}
+			<ul>
+				<li>Student Number: </li>
+				<li>Name: {{first_name}} {{last_name}}</li>
+				<li>Address: </li>
+				<li>Parents: {{parent}}</li>
+				<li>School: {{school_name}}</li>
+		{{/students}}
 	</script>
 
 	<script type="x-tmpl-mustache" id="classesTemplate">
