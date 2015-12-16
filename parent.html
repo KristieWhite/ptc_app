@@ -34,8 +34,9 @@
       <i id="addPhoto" class="fa fa-picture-o"></i>
     </div>
 
-    <div id="parentInfo"></div>
-
+    <div id="parentInfo">
+      <div id="childList"></div>
+    </div>
     <div id="parentEvents">
       <p>Upcoming Student Events: </p>
       <a href="">Example</a>
@@ -52,16 +53,17 @@
 <!-- end parent profile container parent view-->
 
 <!-- start parent profile teacher view ** have to move to a teacher view file **-->
-  <div id="parentTView">
+<!--   <div id="parentTView">
 
     <div class="parentImg">
       <img src="http://placehold.it/200x200" />
     </div>
 
-    <div class="parentInfoTView"></div>
+    <div id="parentInfoTView">
+    </div>
 
   </div>
-
+ -->
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
@@ -75,17 +77,32 @@
 
   <script type="x-tmpl-mustache" id="parentInfoTemplate">
     {{#parents}}
+      <p>Name: {{first_name}} {{last_name}}</p>
+      <p>Phone: </p>
+      <p>Address: </p>
+      {{childPartial}}
+    {{/parents}}
+  </script>
+
+  <script type="x-tmpl-mustache" id="childTemplate">
+    {{#children}}
+      <p>Children: </p>
+      <ul>
+        <li><a href="">{{first_name}} {{last_name}}</a></li>
+      </ul>
+    {{/children}}
+  </script>
+
+
+<!-- needs to be moved into student profile -->
+
+  <script type="x-tmpl-mustache" id="teacherParentTemplate">
+    {{#teachersView}}
       <ul>
         <li>Name: {{first_name}} {{last_name}}</li>
-        <li>Phone: </li>
-        <li>Address: </li>
-        <li>Children: 
-          <ul>
-            <li><a href="">{{student_set}}</a></li>
-          </ul>
-        </li>
+        <li>Email: <a href="mailto:teacher@school.com">Teacher@School.com</a></li>
       </ul>
-    {{/parents}}
+    {{/teachersView}}
   </script>
 
 </body>
