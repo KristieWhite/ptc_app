@@ -23,7 +23,7 @@ $(document).ready(function(){
 				};
 				var classesTemplate = $("#classesTemplate").text();
 				var classesHTML = Mustache.render(classesTemplate, classesObj);
-				$("#classesApiDiv").html(classesHTML);
+				$(".classesApiDiv").html(classesHTML);
 			},
 			error: function(err) {
 				console.log('error', err);
