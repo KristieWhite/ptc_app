@@ -34,7 +34,7 @@ $("#logInForm").submit(function (e) {
 	}).done(function (resp) {
 		if ($('#remember_me').is(":checked")) {
 			$.cookie('AuthToken', resp.token);
-			
+
 			//$.cookie('username', resp.username);
 			console.log("created cookies for token and user");
 		}
@@ -53,7 +53,7 @@ $("#logInForm").submit(function (e) {
 			console.log("redirect to the teachers home page");
 			window.location.href = "./homeTeacher.html";
 		}
-	
+
 		$.cookie('UserId', userId);
 	});
 
@@ -84,8 +84,7 @@ $("#logInForm").submit(function (e) {
 		success: function () {
 			url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
 		}
-	});
- 
+	}); 
 	var LogInParentModel = new UserParent();
 
 	var UserParentCollection = Backbone.Collection.extend({
@@ -93,5 +92,3 @@ $("#logInForm").submit(function (e) {
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
 	});
 });
-
-

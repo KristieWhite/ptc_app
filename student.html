@@ -34,7 +34,7 @@
 		<div class="studentInfo">
 			<ul>
 				<li>Student Number: </li>
-				<li id="student"></li>
+				<p id="student"></p>
 				<li>Address: </li>
 				
 					</ul>
@@ -95,13 +95,12 @@
 	<script src="js/login.js"></script>
 	<script src="js/students.js"></script>
 
-	<script src="x-tmpl-mustache" id="studentsTemplate">
+	<script type="x-tmpl-mustache" id="studentsTemplate">
 		{{#students}}
 			<p>Name: {{first_name}}</p>
 			<p>Classes: {{school_class}}</p>
-			<p>Last name :{{last_name}}</p>
+			<p>Last name: {{last_name}}</p>
 			<p>parents: {{parent}}</p>
-			
 		{{/students}}
 	</script>
 
