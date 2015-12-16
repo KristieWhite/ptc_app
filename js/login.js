@@ -54,11 +54,8 @@ $("#logInForm").submit(function (e) {
 				window.location.href = "./homeTeacher.html";
 			}
 
-		} else {
-			alert("You are not a registed user. Please contact a administrative personnel.")
-		}
-
 		$.cookie('UserId', userId);
+		$.cookie('AuthToken', resp.token);
 	});
 
 ///////////////////////////////////////////token//////////////////////////////////

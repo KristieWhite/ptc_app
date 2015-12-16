@@ -1,20 +1,13 @@
 $(document).ready(function () {
 
-	$("#addPhoto").click(function () {
-		$(".uploadPic").trigger('click');
-	});
-
-// parent view
-
 var ParentModel = Backbone.Model.extend({
   initialize: function(){
   },
   defaults: {
-    id: null,
-    first_name: null,
-    last_name: null,
-    student_set: null,
-    profile_ picture: null
+    "id": null,
+    "first_name": null,
+    "last_name": null,
+    "student_set": null
   },
   Model: ParentModel,
   url: "https://murmuring-sands-9831.herokuapp.com/api/my_info/"
@@ -22,14 +15,15 @@ var ParentModel = Backbone.Model.extend({
 
 	var ParentsCollection = Backbone.Collection.extend({
 		Model: ParentModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/my_info/"
+    url: "https://murmuring-sands-9831.herokuapp.com/api/my_info/"
 	});
 
-	var parent = new ParentsCollection();
+
+	var parent = new ParentModel();
 	parent.fetch({
 		success: function (resp) {
 			var parentObj = {
-				"parents": resp.toJSON()[0].results
+				"parents": resp.toJSON().results
 			};
 			var parentTemplate = $("#parentInfoTemplate").text();
 			var parentHTML = Mustache.render(parentTemplate, parentObj);
@@ -54,6 +48,10 @@ var ParentModel = Backbone.Model.extend({
 //     console.log('error', err);
 //   }
 // });
+
+  $("#addPhoto").click(function () {
+    $(".uploadPic").trigger('click');
+  });
 
 });
 
