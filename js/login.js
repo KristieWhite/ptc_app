@@ -32,71 +32,64 @@ $("#logInForm").submit(function (e) {
 		}
 
 	}).done(function (resp) {
-		if ($('#remember_me').is(":checked")) {
-			$.cookie('AuthToken', resp.token);
-			
-			//$.cookie('username', resp.username);
-			console.log("created cookies for token and user");
+			if ($('#remember_me').is(":checked")) {
+				$.cookie('AuthToken', resp.token);
+
+				//$.cookie('username', resp.username);
+				console.log("created cookies for token and user");
+			}
+			setToken(resp.token);
+			console.log("logged in");
+			console.log(resp.token);
+			var userId = resp.id;
+			console.log(userId);
+			//User.set(resp.User);
+			console.log(resp);
+			if (resp.user_type == "parent") {
+				console.log("redirect to the parents home page");
+				window.location.href = "./homeParent.html";
+
+			} else if (resp.user_type == "teacher") {
+				console.log("redirect to the teachers home page");
+				window.location.href = "./homeTeacher.html";
+			}
+
+		} else {
+			alert("You are not a registed user. Please contact a administrative personnel.")
 		}
-		setToken(resp.token);
-		console.log("logged in");
-		console.log(resp.token);
-		var userId = resp.id;
-		console.log(userId);
-		//User.set(resp.User);
-		console.log(resp);
-		if (resp.user_type == "parent") {
-			console.log("redirect to the parents home page");
-			window.location.href = "./homeParent.html";
-<<<<<<< HEAD
-		 }  else if (resp.user_type == "teacher") {
-		   	console.log("redirect to the teachers home page when cesar adds it to his api");
-		    window.location.href = "./homeTeacher.html";
-		 }  else  {
-		    alert("You are not a registed user. Please contact a administrative personnel.")
-		 }
-=======
-		} else if (resp.user_type == "teacher") {
-			console.log("redirect to the teachers home page");
-			window.location.href = "./homeTeacher.html";
-		}
-	
+
 		$.cookie('UserId', userId);
->>>>>>> laken
 	});
 
-	///////////////////////////////////////////token//////////////////////////////////
-	var UserParent = Backbone.Model.extend({
+///////////////////////////////////////////token//////////////////////////////////
+var UserParent = Backbone.Model.extend({
 
-		initialize: function () {
-			console.log("UserParent model initialized");
-		},
-		defaults: {
-			id: null,
-			user_type: null,
-			first_name: null,
-			last_name: null,
-			student_set: null
-		},
-		validate: function (attrs) {
-			if (!attrs.username) {
-				$("#usernameLogIn").html("username is required");
-			}
-			if (!attrs.password) {
-				$("#passwordLogIn").html("password is required");
-			}
-		},
-		success: function () {
-			url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+	initialize: function () {
+		console.log("UserParent model initialized");
+	},
+	defaults: {
+		id: null,
+		user_type: null,
+		first_name: null,
+		last_name: null,
+		student_set: null
+	},
+	validate: function (attrs) {
+		if (!attrs.username) {
+			$("#usernameLogIn").html("username is required");
 		}
-	});
- 
-	var LogInParentModel = new UserParent();
-
-	var UserParentCollection = Backbone.Collection.extend({
-		model: LogInParentModel,
+		if (!attrs.password) {
+			$("#passwordLogIn").html("password is required");
+		}
+	},
+	success: function () {
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
-	});
+	}
+}); 
+var LogInParentModel = new UserParent();
+
+var UserParentCollection = Backbone.Collection.extend({
+	model: LogInParentModel,
+	url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
 });
-
-
+});
