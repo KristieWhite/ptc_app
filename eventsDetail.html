@@ -28,10 +28,8 @@
 	</div>
 	<div class="head">
 		<div class="eventInfo">
-			<h2><a href="">Iron Pints</a></h2>
-			<p>this event will be taking place on 08/06/1996</p>
-			<p> Come to the Fundome </p>
-			<p>Starts at 4:00PM</p>
+			<div id="name"></div>
+			
 
 			<input type="button" value="Sign Me up">
 		</div>
@@ -45,6 +43,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
   <script src="js/jquery.cookie.js"></script>
 	<script src="js/events.js"></script>
+	
+	<script type="x-tmpl=mustache" id="namesTemplate">
+	{{#names}}
+	<p>{{name}}</p>
+	{{/names}}
+	</script>
 
 
 </body>
