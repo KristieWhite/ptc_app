@@ -1,24 +1,23 @@
 $(document).ready(function () {
 //****Parent Profile - Parent View****//
+	
 var counter = 0;
-
 var ParentModel = Backbone.Model.extend({
   initialize: function(){
   },
   defaults: {
     "id": null,
-    "user_type": null,
     "first_name": null,
     "last_name": null,
     "student_set": null
   },
   Model: ParentModel,
-  url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId')
+  url: "https://murmuring-sands-9831.herokuapp.com/api/my_info/"
 });
 
 	var ParentsCollection = Backbone.Collection.extend({
 		Model: ParentModel,
-    url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId')
+    url: "https://murmuring-sands-9831.herokuapp.com/api/my_info/"
 	});
 
 
@@ -26,7 +25,7 @@ var ParentModel = Backbone.Model.extend({
 	parent.fetch({
 		success: function (resp) {
 			var parentObj = {
-				"parents": resp.toJSON()
+				"parents": resp.toJSON().results
 			};
 			var parentTemplate = $("#parentInfoTemplate").text();
 			var parentHTML = Mustache.render(parentTemplate, parentObj);
@@ -40,7 +39,6 @@ var ParentModel = Backbone.Model.extend({
 			console.log('error', err);
 		}
 	});
-
 
 //**List of their children**//
 
