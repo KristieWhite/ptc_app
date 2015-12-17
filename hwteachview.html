@@ -37,8 +37,8 @@
 				<input type="url" class="helpLinks" placeholder="Enter URL Here"/> <input type="submit" value="Submit" class="subBtn" /><br />
 			</div>
 			<hr class="hrSpecial">
-			<div class="assignments">
-					<p>Uploaded Assignments: </p>
+			<div id="hwApiDiv" class="assignments">
+					<p>Uploaded Assignments: </p><!--homework api is coded, api is empty from backend-->
 					<ul>
 						<li><a href="">Assignment 1</a></li>
 					</ul>
@@ -75,7 +75,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script type="text/javascript" src="js/hwteachview.js"></script>
+	<script type="text/javascript" src="js/hwParentView.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+	<script type="x-tmpl-mustache" id="assignmentListTemplate">
+    {{#students}}
+    <p><a href="">{{name}}</a></p>
+    {{/students}}
+  </script>
 	
 </body>
 </html>

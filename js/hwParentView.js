@@ -21,8 +21,8 @@ $(document).ready(function () {
 				var homeworkObj = {
 					"homework": resp.toJSON().results
 				};
-				var PViewHomeworkTemplate = $("#PViewHomeworkTemplate").text();
-				var pHomeworkHTML = Mustache.render(PViewHomeworkTemplate, homeworkObj);
+				var assignmentListTemplate = $("#assignmentListTemplate").text();
+				var pHomeworkHTML = Mustache.render(assignmentListTemplate, homeworkObj);
 				console.log("homeworkObj", homeworkObj);
 				console.log("pHomeworkHTML", pHomeworkHTML);
 				$("#hwApiDiv").html(pHomeworkHTML);
