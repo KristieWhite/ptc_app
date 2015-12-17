@@ -80,10 +80,12 @@ $(document).ready(function () {
 				success: function(resp) {
 					console.log('success' ,resp.toJSON());
 					var teacherClassesObj = {
-						"classes": resp.toJSON()[0].results[0]
+						"classes": resp.toJSON()[0].results
 					};
 					var teacherClassesTemplate = $("#teacherClassesTemplate").text();
 					var teacherClassesHTML = Mustache.render(teacherClassesTemplate, teacherClassesObj);
+					console.log("teacherClassesObj", teacherClassesObj);
+					console.log("teacherClassesHTML", teacherClassesHTML);
 					$("#teacherClassesApiDiv").html(teacherClassesHTML);
 				},
 				error: function(err) {

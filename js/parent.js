@@ -112,6 +112,7 @@ var ParentModel = Backbone.Model.extend({
 // });
 
 
+<<<<<<< HEAD
 //****ROUTES****//
 
   $("body").on('click', 'a', function (e) {
