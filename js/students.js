@@ -24,7 +24,7 @@ $(document).ready(function () {
 		$("#studentAttendance").show();
 		$("#studentEvents").show();
 		$("#studentContainers").show();
-		$("#studentInfo").hide();
+		$("#studentInfo").show();
 
 	});
 

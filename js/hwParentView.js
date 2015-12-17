@@ -1,35 +1,36 @@
 $(document).ready(function () {
-		var hwParentViewModel = Backbone.Model.extend({
-			initialize: function() {
-				console.log("hwParentViewModel initialized");
-			},
-			success: function() {
-				url: 'https://murmuring-sands-9831.herokuapp.com/api/students/' + $.cookie('UserId') + '/homework'
-			}
-		});
-
-		var hwParentViewCollection = Backbone.Model.extend({
-			Model: hwParentViewModel,
+	
+	var hwParentViewModel = Backbone.Model.extend({
+		initialize: function () {
+			console.log("hwParentViewModel initialized");
+		},
+		success: function () {
 			url: 'https://murmuring-sands-9831.herokuapp.com/api/students/' + $.cookie('UserId') + '/homework'
-		});
+		}
+	});
 
-	var homeworkAssigned = new hwParentViewCollection();	
+	var hwParentViewCollection = Backbone.Model.extend({
+		Model: hwParentViewModel,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/students/' + $.cookie('UserId') + '/homework'
+	});
 
-		homeworkAssigned.fetch({
-			success: function(resp) {
-				console.log('success' ,resp.toJSON());
-				var homeworkObj = {
-					"homework": resp.toJSON().results
-				};
-				var assignmentListTemplate = $("#assignmentListTemplate").text();
-				var pHomeworkHTML = Mustache.render(assignmentListTemplate, homeworkObj);
-				console.log("homeworkObj", homeworkObj);
-				console.log("pHomeworkHTML", pHomeworkHTML);
-				$("#hwApiDiv").html(pHomeworkHTML);
-			},
-			error: function(err) {
-				console.log('error', err);
-			}
-		});
+	var homeworkAssigned = new hwParentViewCollection();
 
-});//documentready
+	homeworkAssigned.fetch({
+		success: function (resp) {
+			console.log('success', resp.toJSON());
+			var homeworkObj = {
+				"homework": resp.toJSON().results
+			};
+			var assignmentListTemplate = $("#assignmentListTemplate").text();
+			var pHomeworkHTML = Mustache.render(assignmentListTemplate, homeworkObj);
+			console.log("homeworkObj", homeworkObj);
+			console.log("pHomeworkHTML", pHomeworkHTML);
+			$("#hwApiDiv").html(pHomeworkHTML);
+		},
+		error: function (err) {
+			console.log('error', err);
+		}
+	});
+
+});
