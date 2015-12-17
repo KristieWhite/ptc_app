@@ -42,10 +42,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="classesApiDiv"></div>
-
-
-
+		<div id="teacherClassesApiDiv" class="visibleBorder"></div>
 		<div class="teacherEvents">
 			<p>Upcoming Student Events: </p>
 			<a href="">Example</a>
@@ -73,7 +70,7 @@
 			</ul>
 		</div>
 	</div>
-
+  
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
@@ -94,14 +91,9 @@
 	</script>
 
 	<script type="x-tmpl-mustache" id="teacherClassesTemplate">
-    {{#teacherClasses}}
+    {{#classes}}
     <p><a href="">{{name}}</a></p>
-    <p><a href="">{{teacher}}</a></p>
-    <p><a href="">{{school}}</a></p>
-    <p><a href="">{{classevent_set}}</a></p>
-    <p><a href="">{{classfee_set}}</a></p>
-    <p><a href="">{{student_set}}</a></p>
-    {{/teacherClasses}}
+    {{/classes}}
   </script>
 	
 	<script type="x-tmpl-mustache" id="eventsTemplate">
