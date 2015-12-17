@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Student - Parents View</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/student.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+	<div class="header">
+		<h1>Parent Teacher Connection</h1>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="Home.html">Home</a></li>
+			<li><a href="">Events Calendar</a></li>
+			<li><a href="">Fees</a></li>
+			<li><a href="">Waivers</a></li>
+			<li><a href="">Assignments</a></li>
+			<li><a href="">My Profile</a></li>
+		</ul>
+		<br />
+		<hr class="hrSpecial">
+	</div>
+	<!-- 		student profile parents view -->
+	<div id="studentContainer">
+		<div class="studentImg">
+			<img src="http://placehold.it/200x200" />
+		</div>
+		<div id="studentInfo">
+		</div>
+		<div class="studentBehavior">
+			<p>Student Behavior: </p>
+			<a href="">Example</a>
+		</div>
+		<div class="studentAttendance">
+			<p>Student Attendance: </p>
+			<a href="">Example</a>
+		</div>
+		<hr class="hrSpecial2">
+		<div class="classesApiDiv visibleBorder"></div>
+		<div class="studentEvents">
+			<p>Upcoming Student Events: </p>
+			<a href="">Example</a>
+		</div>
+	</div>
+	<!-- end student profile container -->
+	<!-- start student profile teacher view -->
+	<div id="studentContainer">
+		<div class="studentImg">
+			<img src="http://placehold.it/200x200" />
+		</div>
+		<div id="studentInfo">
+			<ul>
+				<li>Student Number: </li>
+				<li>Name: </li>
+				<li>Address: </li>
+				<li>Parents: </li>
+			</ul>
+		</div>
+		<div class="studentBehavior">
+			<p>Student Behavior: </p>
+			<input type="text" class="behavior" placeholder="Enter Description Here" />
+		</div>
+		<div class="studentAttendance">
+			<p>Student Attendance: </p>
+		</div>
+		<hr class="hrSpecial2">
+		<div class="studentEvents">
+			<p>Upcoming Student Events: </p>
+			<a href="">Example</a>
+		</div>
+	</div>
+	<!-- end student profile teacher view -->
+
+	<div class="footer">
+		<p>&copy; 2015 Parent Teacher Connection</p>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/students.js"></script>
+	<script src="js/classes.js"></script>
+
+	<script type="x-tmpl-mustache" id="studentsTeacherViewsTemplate">
+		{{#students}}
+			<ul>
+				<li>Student Number: </li>
+				<li>Name: {{first_name}} {{last_name}}</li>
+				<li>Address: </li>
+				<li>Parents: {{parent}}</li>
+				<li>School: {{school_name}}</li>
+		{{/students}}
+	</script>
+
+	<script type="x-tmpl-mustache" id="classesTemplate">
+		{{#classes}}
+			<p><a href="">{{name}}</a></p>
+		{{/classes}}
+	</script>
+
+</body>
+
+</html>
