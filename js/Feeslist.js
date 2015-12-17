@@ -34,12 +34,12 @@ $(document).ready(function () {
 				"student_set": null
 			},
 			Model: feeModel,
-			url: "https://murmuring-sands-9831.herokuapp.com/api/" + $.cookie('UserId') + "/class_fees/"
+			url: "https://murmuring-sands-9831.herokuapp.com/api/" + $.cookie('StudentId') + "/class_fees/"
 		});
 
 		var feesCollection = Backbone.Collection.extend({
 			Model: feeModel,
-			url: "https://murmuring-sands-9831.herokuapp.com/api/" + $.cookie('UserId') + "/class_fees/"
+			url: "https://murmuring-sands-9831.herokuapp.com/api/" + $.cookie('StudentId') + "/class_fees/"
 		});
 
 

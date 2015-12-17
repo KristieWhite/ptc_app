@@ -43,6 +43,7 @@ $("#logInForm").submit(function (e) {
 		console.log(resp.token);
 		var userId = resp.id;
 		console.log(userId);
+	
 		//User.set(resp.User);
 		console.log(resp);
 		if (resp.user_type == "parent") {

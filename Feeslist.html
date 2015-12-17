@@ -33,10 +33,8 @@
 					<a class="accordion-section-title" href="#accordion-1">Supplies for Peggy</a>
 					<div id="accordion-1" class="accordion-section-content">
 						<div id="feeInfo"></div>
-
-						<form action="" method="POST">
-							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($20.00)" data-image="/128x128.png" data-locale="auto">
-							</script>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sapiente deleniti adipisci, reiciendis? Fugit perferendis voluptatibus hic amet facere perspiciatis quis, magnam cum, ratione eaque et, ad iste provident vel!</p>
+			
 						</form>
 					</div>
 					<!--end .accordion-section-content-->
@@ -49,11 +47,9 @@
 				<div class="accordion-section">
 					<a class="accordion-section-title" href="#accordion-2">Football Cleats</a>
 					<div id="accordion-2" class="accordion-section-content">
-						<p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
 
-						<form action="" method="POST">
-							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($20.00)" data-image="/128x128.png" data-locale="auto">
-							</script>
+
+			
 						</form>
 					</div>
 					<!--end .accordion-section-content-->
@@ -64,11 +60,8 @@
 					<div class="accordion-section">
 						<a class="accordion-section-title" href="#accordion-3">Charged 5$ for Lunch</a>
 						<div id="accordion-3" class="accordion-section-content">
-							<p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
 
-							<form action="" method="POST">
-								<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($20.00)" data-image="/128x128.png" data-locale="auto">
-								</script>
+
 							</form>
 						</div>
 						<!--end .accordion-section-content-->
@@ -85,12 +78,14 @@
 	</div>
 
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js">
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 	<script src="js/feesList.js"></script>
-	<!--<script src="js/PayFeesP.js"></script>-->
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/students.js"></script>
+	<script src="js/PayFeesP.js"></script>
 
 	<script type="x-tmpl-mustache" id="feeInfoTemplate">
 		{{#fees}}

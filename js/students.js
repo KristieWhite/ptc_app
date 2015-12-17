@@ -1,34 +1,35 @@
 $(document).ready(function () {
-	
-	$("body").on('click', 'a', function (e) {
-		e.preventDefault();
-		var href = $(this).attr('href');
-		href = href.substr(1);
-		router.navigate(href, {
-			trigger: true
-		});
-	});
+
+
 
 	var Router = Backbone.Router.extend({
 
-			initialize: function () {
-				Backbone.history.start({
-					pushState: true
-				});
-			},
-		
-			routes: {
-				"student/:id": "student"
+		initialize: function () {
+			Backbone.history.start({
+				pushState: true
+			});
+		},
 
-			}
+		routes: {
+			"student/:id": "student"
+
+		}
 	});
 	var router = new Router();
 
 
 	router.on('route:student', function (id) {
-		$("#studentContainer").hide();
-		
+		$("#studentContainer").show();
+		$("#studentBehavior").show();
+		$("#studentAttendance").show();
+		$("#studentEvents").show();
+		$("#studentContainers").show();
+		$("#studentInfo").hide();
+
 	});
+
+
+
 
 	var studentModel = Backbone.Model.extend({
 		initialize: function () {},
@@ -59,8 +60,23 @@ $(document).ready(function () {
 			$("#studentInfo").html(studentsHTML);
 			console.log(resp);
 		},
-
+		error: function (err) {
+			console.log("error", err);
+		}
 	});
+	$("#studentContainer").hide();
+	$("#studentBehavior").hide();
+	$("#studentAttendance").hide();
+	$("#studentEvents").hide
+	$("#studentContainer").hide();
 
-
+	
+		$("body").on('click', 'a', function (e) {
+		e.preventDefault();
+		var href = $(this).attr('href');
+		href = href.substr(1);
+		router.navigate(href, {
+			trigger: true
+		});
+	});
 });

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	
-
+var counter = 0;
 var ParentModel = Backbone.Model.extend({
   initialize: function(){
   },
@@ -31,7 +31,9 @@ var ParentModel = Backbone.Model.extend({
 			$("#parentInfo").html(parentHTML);
       console.log('success ', resp);
 			console.log(resp.attributes.results[0].student_set);
-		
+			var studentIds = resp.attributes.results[0].student_set;
+			$.cookie('studentIds', studentIds);
+			
 		}, error: function (err) {
 			console.log('error', err);
 		}
