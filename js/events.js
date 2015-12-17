@@ -7,11 +7,12 @@ $(document).ready(function () {
 			"description": null
 		},
 		Model:namesModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
+		//will show a classes events
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' + $.cookie('UserId') + 'events'
 	});
 	var namesCollection = Backbone.Collection.extend({
 		Model: namesModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' + $.cookie('UserId') + 'events'
 	});
 
 	var names = new namesCollection();

@@ -4,47 +4,55 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Fees List</title>
-	<link rel="stylesheet" href="css/PayFeesT.css">
+	<title>Events Detail</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/events.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
-
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
 	</div>
 	<div class="navbar">
 		<ul>
 			<li><a href="./index.html">Home</a></li>
-			<li><a href="./eventsTeacher.html">Events Calendar</a></li>
+			<li><a href="./eventsParent.html">Events Calendar</a></li>
 			<li><a href="./Feeslist.html">Fees</a></li>
-			<li><a href="./waiverTeacher.html">Waivers</a></li>
-			<li><a href="./hwteachview.html">Assignments</a></li>
-			<li><a href="./teacher.html">My Profile</a></li>
+			<li><a href="./waiverParent.html">Waivers</a></li>
+			<li><a href="./hwparentview.html">Assignments</a></li>
+			<li><a href="./parent.html">My Profile</a></li>
 		</ul>
 		<br>
-		<hr class="hrSpecial">
+		<hr class="hrSpecial"></hr>
 	</div>
+	<div class="head">
+		<div class="eventInfo">
+			<div id="name"></div>
+			
 
-	<div>
-
-		<h1>TODo</h1>
-		<p>
-			<input type="text" id="inItemText" />
-
-		</p>
-		<ul id="todoList"></ul>
+			<input type="button" value="Sign Me up">
+		</div>
 	</div>
-	
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
   <script src="js/jquery.cookie.js"></script>
+	<script src="js/events.js"></script>
+	
+	<script type="x-tmpl=mustache" id="namesTemplate">
+	{{#names}}
+	<p>{{name}}</p>
+	<p>{{description}}</p>
+	<p>{{date}}</p>
+	<p><img src="{{image}}"/></p>
+	{{/names}}
+	</script>
+
 
 </body>
 
