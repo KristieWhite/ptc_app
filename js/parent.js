@@ -32,7 +32,7 @@ var ParentModel = Backbone.Model.extend({
 			var parentTemplate = $("#parentInfoTemplate").text();
 			var parentHTML = Mustache.render(parentTemplate, parentObj);
 			$("#parentInfo").html(parentHTML);
-      console.log('success ', resp);
+      console.log(parentHTML);
 		}, error: function (err) {
 			console.log('error', err);
 		}
@@ -41,8 +41,10 @@ var ParentModel = Backbone.Model.extend({
 //**List of their children**//
 
   var studentModel = Backbone.Model.extend({
-    initialize: function () {},
+    initialize: function () {
+    },
     defaults: {
+      "id": null,
       "first_name": null,
       "last_name": null,
       "parent": null,
@@ -52,6 +54,7 @@ var ParentModel = Backbone.Model.extend({
     Model: studentModel,
     url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
   });
+
   var studentCollection = Backbone.Collection.extend({
     Model: studentModel,
     url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
@@ -60,15 +63,14 @@ var ParentModel = Backbone.Model.extend({
   var child = new studentModel();
   child.fetch({
     success: function (resp) {
-      var childPartial = $("#childTemplate").html();
-      var mainTemplate = $("#parentInfo").html();
-      var childrenList = {
+      var childData = {
         "children": resp.toJSON().results
       };
-      // var childTemplate = $("#childTemplate").text();
-      var childHTML = Mustache.render(mainTemplate, childrenList, childPartial);
+      console.log('resp', resp.toJSON());
+      var childTemplate = $("#childTemplate").text();
+      var childHTML = Mustache.render(childTemplate, childData);
       $("#childList").html(childHTML);
-      console.log('success ', resp);
+      console.log(childHTML);
     },
     error: function (err) {
       console.log('error ', err);
@@ -114,14 +116,14 @@ var ParentModel = Backbone.Model.extend({
 
 //****ROUTES****//
 
-  $("body").on('click', 'a', function (e) {
-      e.preventDefault();
-      var href = $(this).attr('href');
-      href = href.substr(1);
-      router.navigate(href, {
-          trigger: true
-      });
-    });
+  // $("body").on('click', 'a', function (e) {
+  //     e.preventDefault();
+  //     var href = $(this).attr('href');
+  //     href = href.substr(1);
+  //     router.navigate(href, {
+  //         trigger: true
+  //     });
+  //   });
     
     // var Router = Backbone.Router.extend({
 

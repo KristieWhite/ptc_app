@@ -39,7 +39,7 @@
     cursor: pointer;
   }
 
-  #parentInfo {
+  #parentInfoDiv {
     width: 75%;
     height: 200px;
     position: relative;
