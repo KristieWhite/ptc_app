@@ -15,7 +15,7 @@
 	</div>
 	<div class="navbar">
 		<ul>
-			<li><a href="homeParent  .html">Home</a></li>
+			<li><a href="homeParent.html">Home</a></li>
 			<li><a href="eventsParent.html">Events Calendar</a></li>
 			<li><a href="">Fees</a></li>
 			<li><a href="waiverParent.html">Waivers</a></li>
@@ -34,9 +34,11 @@
       <i id="addPhoto" class="fa fa-picture-o"></i>
     </div>
 
-    <div id="parentInfo">
+    <div id="parentInfoDiv">
+      <div id="parentInfo"></div>
       <div id="childList"></div>
     </div>
+
     <div id="parentEvents">
       <p>Upcoming Student Events: </p>
       <a href="">Example</a>
@@ -80,17 +82,17 @@
       <p>Name: {{first_name}} {{last_name}}</p>
       <p>Phone: </p>
       <p>Address: </p>
-      {{childPartial}}
+      <p>Children: </p>
     {{/parents}}
   </script>
 
   <script type="x-tmpl-mustache" id="childTemplate">
-    {{#children}}
-      <p>Children: </p>
-      <ul>
-        <li><a href="">{{first_name}} {{last_name}}</a></li>
-      </ul>
-    {{/children}}
+      {{#children}}
+        <ul>
+          <li><a href="./student.html">{{first_name}} {{last_name}}</a></li>
+        </ul>
+      {{/children}}
+
   </script>
 
 
