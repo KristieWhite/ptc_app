@@ -14,7 +14,7 @@ $(document).ready(function () {
 		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
 	});
 
-	var names = new namesModel();
+	var names = new namesCollection();
 	names.fetch({
 		success: function (resp) {
 			var namesInfo = {
