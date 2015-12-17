@@ -31,8 +31,8 @@
 			<h2>Assignments</h2>
 		</div>
 		<div id="mainAssignments">
-			<div class="assignments">
-				<p>Tonight's Assignment: </p>
+			<div id="hwApiDiv" class="assignments">
+				<p>Tonight's Assignment: </p><!--The code is set, but the api is currently empty-->
 				<ul>
 					<li><a href="">Assignment 1</a></li>
 				</ul>
@@ -51,7 +51,7 @@
 		</div>
 		<div id="projects">
 			<div class="assignments">
-				<p>Weekend Assigments/Projects: </p>
+				<p>Weekend Assigments/Projects:</p>
 				<ul>
 					<li><a href="">Project 1</a></li>
 				</ul>
@@ -73,7 +73,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
   <script src="js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="js/hwteachview.js"></script>
+  <script src="js/login.js"></script>
+  <!--<script type="text/javascript" src="js/hwteachview.js"></script>-->
+  <script type="text/javascript" src="js/hwParentView.js"></script>
+
+    <script type="x-tmpl-mustache" id="PViewHomeworkTemplate">
+    {{#students}}
+    <p><a href="">{{name}}</a></p>
+    {{/students}}
+  </script>
 
 </body>
 
