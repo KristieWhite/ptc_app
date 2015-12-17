@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+	<a href="./homeParent.html">dgfdgvbdggd</a>
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
 	</div>
@@ -27,11 +27,10 @@
 		<hr class="hrSpecial">
 	</div>
 	<!-- 		student profile parents view -->
+	<div id="studentInfo"></div>
 	<div id="studentContainer">
 		<div class="studentImg">
 			<img src="http://placehold.it/200x200" />
-		</div>
-		<div id="studentInfo">
 		</div>
 		<div class="studentBehavior">
 			<p>Student Behavior: </p>
@@ -40,6 +39,7 @@
 		<div class="studentAttendance">
 			<p>Student Attendance: </p>
 			<a href="">Example</a>
+				<a href="./Feeslist.html">Student Fees</a>
 		</div>
 		<hr class="hrSpecial2">
 		<div class="classesApiDiv visibleBorder"></div>
@@ -48,20 +48,23 @@
 			<a href="">Example</a>
 		</div>
 	</div>
+
 	<!-- end student profile container -->
 	<!-- start student profile teacher view -->
-	<div id="studentContainer">
+	<div id="studentContainers">
+		<div id="studentInfo">
+			<div id="fee"><a href="./Feeslist.html">Student Fees</a></div>
+		</div>
 		<div class="studentImg">
 			<img src="http://placehold.it/200x200" />
 		</div>
-		<div id="studentInfo">
-			<ul>
-				<li>Student Number: </li>
-				<li>Name: </li>
-				<li>Address: </li>
-				<li>Parents: </li>
-			</ul>
-		</div>
+		<ul>
+			<li>Student Number: </li>
+			<li>Name: </li>
+			<li>Address: </li>
+			<li>Parents: </li>
+		</ul>
+
 		<div class="studentBehavior">
 			<p>Student Behavior: </p>
 			<input type="text" class="behavior" placeholder="Enter Description Here" />
@@ -88,15 +91,17 @@
 	<script src="js/login.js"></script>
 	<script src="js/students.js"></script>
 	<script src="js/classes.js"></script>
+	<script src="js/parent.js"></script>
 
 	<script type="x-tmpl-mustache" id="studentsTemplate">
 		{{#students}}
-			<ul>
-				<li>Student Number: </li>
-				<li>Name: {{first_name}} {{last_name}}</li>
-				<li>Address: </li>
-				<li>Parents: {{parent}}</li>
-				<li>School: {{school_name}}</li>
+		<ul>
+			<li>Student Number: </li>
+			<li>Name: <a href="/student/{{id}}">{{first_name}} {{last_name}}</a></li>
+			<li>Address: </li>
+			<li>Parents: {{parent}}</li>
+			<li>School: {{school_name}}</li>
+		</ul>
 		{{/students}}
 	</script>
 

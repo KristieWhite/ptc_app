@@ -21,4 +21,48 @@ $(document).ready(function () {
 
 		e.preventDefault();
 	});
+
+	$(document).ready(function () {
+
+
+		var feeModel = Backbone.Model.extend({
+			initialize: function () {},
+			defaults: {
+				"id": null,
+				"first_name": null,
+				"last_name": null,
+				"student_set": null
+			},
+			Model: feeModel,
+			url: "https://murmuring-sands-9831.herokuapp.com/api/" + $.cookie('StudentId') + "/class_fees/"
+		});
+
+		var feesCollection = Backbone.Collection.extend({
+			Model: feeModel,
+			url: "https://murmuring-sands-9831.herokuapp.com/api/" + $.cookie('StudentId') + "/class_fees/"
+		});
+
+
+		var fee = new feeModel();
+		fee.fetch({
+			success: function (resp) {
+				var feeObj = {
+					"fees": resp.toJSON().results
+				};
+				var feeTemplate = $("#feeInfoTemplate").text();
+				var feeHTML = Mustache.render(feeTemplate, feeObj);
+				$("#feeInfo").html(feeHTML);
+				console.log('success ', resp);
+
+
+			},
+			error: function (err) {
+				console.log('error', err);
+			}
+		});
+
+	});
+
+
+
 });

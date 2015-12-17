@@ -1,7 +1,6 @@
 $(document).ready(function () {
-
-
 //****Parent Profile - Parent View****//
+var counter = 0;
 
 var ParentModel = Backbone.Model.extend({
   initialize: function(){
@@ -33,10 +32,15 @@ var ParentModel = Backbone.Model.extend({
 			var parentHTML = Mustache.render(parentTemplate, parentObj);
 			$("#parentInfo").html(parentHTML);
       console.log('success ', resp);
+			console.log(resp.attributes.results[0].student_set);
+			var studentIds = resp.attributes.results[0].student_set;
+			$.cookie('studentIds', studentIds);
+			
 		}, error: function (err) {
 			console.log('error', err);
 		}
 	});
+
 
 //**List of their children**//
 
@@ -112,7 +116,7 @@ var ParentModel = Backbone.Model.extend({
 // });
 
 
-<<<<<<< HEAD
+
 //****ROUTES****//
 
   $("body").on('click', 'a', function (e) {
@@ -146,6 +150,7 @@ var ParentModel = Backbone.Model.extend({
 
 
 //***click functionality***//
+
 
   $("#addPhoto").click(function () {
     $(".uploadPic").trigger('click');

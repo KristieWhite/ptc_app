@@ -100,7 +100,17 @@
     {{#teachersView}}
       <ul>
         <li>Name: {{first_name}} {{last_name}}</li>
+
         <li>Email: <a href="mailto:teacher@school.com">Teacher@School.com</a></li>
+
+        <li>Phone: </li>
+        <li>Address: </li>
+        <li>Children: 
+          <ul>
+            <li><a href="student.html">{{student_set}}</a></li>
+          </ul>
+        </li>
+
       </ul>
     {{/teachersView}}
   </script>
