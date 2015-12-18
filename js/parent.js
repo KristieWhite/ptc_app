@@ -11,7 +11,7 @@ var ParentModel = Backbone.Model.extend({
     "last_name": null,
     "student_set": null
   },
-  Model: ParentModel,
+
   url: "https://murmuring-sands-9831.herokuapp.com/api/my_info/"
 });
 
@@ -46,10 +46,11 @@ var ParentModel = Backbone.Model.extend({
       "first_name": null,
       "last_name": null,
       "parent": null,
-      "school_name": null,
-      "classfeepayment_set": null
+      "school_class": null,
+      "classfeepayment_set": null,
+      "studenthomework_set": null
     },
-    Model: studentModel,
+   
     url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
   });
 
@@ -58,22 +59,24 @@ var ParentModel = Backbone.Model.extend({
     url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
   });
 
-  var child = new studentModel();
-  child.fetch({
+  var studentParent = new studentModel();
+  studentParent.fetch({
     success: function (resp) {
-      var childData = {
-        "children": resp.toJSON().results
+      var studentParentData = {
+        "students": resp.toJSON().results
       };
       console.log('resp', resp.toJSON());
-      var childTemplate = $("#childTemplate").text();
-      var childHTML = Mustache.render(childTemplate, childData);
-      $("#childList").html(childHTML);
-      console.log(childHTML);
+      var studentParentTemplate = $("#studentParentTemplate").text();
+      var studentParentHTML = Mustache.render(studentParentTemplate, studentParentData);
+      $("#studentInfo").html (studentParentHTML);
+      console.log (studentParentHTML);
     },
     error: function (err) {
       console.log('error ', err);
     }
   });
+	
+	
 
 
 //*****Teacher Profile - Parent View*****//
@@ -86,15 +89,15 @@ var ParentModel = Backbone.Model.extend({
 //     "user_type": null,
 //     "first_name": null,
 //     "last_name": null,
-//     "student_set": null
+//     "studentParent_set": null
 //   },
 //   Model: TeacherModel,
-//   url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')
+//   url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')+ "
 // });
 
 //   var TeachersCollection = Backbone.Collection.extend({
 //     Model: ParentModel,
-//     url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')
+//     url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')+"
 //   });
 
 //   var teacher = new TeacherModel();

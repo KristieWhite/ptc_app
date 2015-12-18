@@ -26,9 +26,7 @@ $(document).ready(function () {
 			$("#name").html(namesHTML);
 			console.log(resp);
 		},
-		error: function (err) {
-			conole.log(error, err);
-		}
+	
 	})
 
 })
