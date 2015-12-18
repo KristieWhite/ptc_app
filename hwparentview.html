@@ -32,14 +32,14 @@
 		</div>
 		<div id="mainAssignments">
 			<div id="hwApiDiv" class="assignments">
-				<p>Tonight's Assignment: </p><!--The code is set, but the api is currently empty-->
+				<!--<p>Tonight's Assignment: </p>
 				<ul>
 					<li><a href="">Assignment 1</a></li>
 				</ul>
 				<p>Helpful Links: </p>
 				<ul>
 					<li><a href="">A,B,C's and 1,2,3's</a></li>
-				</ul>
+				</ul>-->
 			</div>
 			<hr class="hrSpecial">
 			<div class="assignments">
@@ -50,11 +50,11 @@
 			</div>
 		</div>
 		<div id="projects">
-			<div class="assignments">
-				<p>Weekend Assigments/Projects:</p>
+			<div id="hwDetailParentDiv" class="assignments">
+				<!--<p>Weekend Assigments/Projects:</p>
 				<ul>
 					<li><a href="">Project 1</a></li>
-				</ul>
+				</ul>-->
 			</div>
 			<hr class="hrSpecial">
 			<div class="assignments">
@@ -74,14 +74,33 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
   <script src="js/jquery.cookie.js"></script>
   <script src="js/login.js"></script>
-  <script type="text/javascript" src="js/hwteachview.js"></script>
+  <!--<script type="text/javascript" src="js/hwteachview.js"></script>-->
   <script type="text/javascript" src="js/hwParentView.js"></script>
 
-    <script type="x-tmpl-mustache" id="PViewHomeworkTemplate">
-    {{#students}}
-    <p><a href="">{{name}}</a></p>
-    {{/students}}
+    <script type="x-tmpl-mustache" id="assignmentListTemplate">
+   	 {{#homework}}
+	    <p><a href="">{{name}}</a></p>
+	    <p><a href="">{{student}}</a></p>
+	    <p><a href="">{{title}}</a></p>
+	    <p><a href="">{{description}}</a></p>
+	    <p><a href="">{{image}}</a></p>
+	    <p><a href="">{{due_date}}</a></p>
+	    <p><a href="">{{points}}<a/></p>
+    {{/homework}}
   </script>
+
+  <script type="x-tmpl-mustache" id="assignmentDetailTemplate">
+    {{#student_homework}}
+	    <p><a href="">Assignments: {{name}}</a></p>
+	    <p><a href="">Assignments: {{title}}</a></p>
+	    <p><a href="">Assignments: {{description}}</a></p>
+	    <p><a href="">Assignments: {{image}}</a></p>
+	    <p><a href="">Assignments: {{due_date}}</a></p>
+	    <p><a href="">Assignments: {{points}}</a></p>
+    {{/student_homework}}
+  </script>
+
+
 
 </body>
 

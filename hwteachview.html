@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Homework - Teachers View</title>
@@ -7,21 +8,23 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="css/homework.css" />
 </head>
+
 <body>
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
 	</div>
-  <div class="navbar">
-    <ul>
-      <li><a href="./homeTeacher.html">Home</a></li>
-      <li><a href="./eventsParent.html">Events</a></li>
-      <li><a href="./Feeslist.html">Fees</a></li>
-      <li><a href="./waiverTeacher.html">Waivers</a></li>
-      <li><a href="./hwteachview.html">Assignments</a></li>
-      <li><a href="./teacher.html">My Profile</a></li>
-    </ul><br />
-    <hr class="hrSpecial">
-  </div>
+	<div class="navbar">
+		<ul>
+			<li><a href="./homeTeacher.html">Home</a></li>
+			<li><a href="./eventsTeacher.html">Events</a></li>
+			<li><a href="./feeslistParent.html">Fees</a></li>
+			<li><a href="./waiverTeacher.html">Waivers</a></li>
+			<li><a href="./hwteachview.html">Assignments</a></li>
+			<li><a href="./teacher.html">My Profile</a></li>
+		</ul>
+		<br />
+		<hr class="hrSpecial">
+	</div>
 
 	<div id="assignContainer">
 		<div class="assignHeader">
@@ -31,27 +34,36 @@
 			<div class="assignments">
 				<p>Daily Assignments: </p>
 				<button class="upload">Upload Daily Assignment</button>
-				<input type="file" class="file" /><br />
-				<p>Enter Due Date: </p><input type="date" class="dueDate" />
+				<input type="file" class="file" />
+				<br />
+				<p>Enter Due Date: </p>
+				<input type="date" class="dueDate" />
 				<p>Enter Homework Helper Link Below: </p>
-				<input type="url" class="helpLinks" placeholder="Enter URL Here"/> <input type="submit" value="Submit" class="subBtn" /><br />
+				<input type="url" class="helpLinks" placeholder="Enter URL Here" />
+				<input type="submit" value="Submit" class="subBtn" />
+				<br />
 			</div>
 			<hr class="hrSpecial">
 			<div id="hwApiDiv" class="assignments">
-					<p>Uploaded Assignments: </p><!--homework api is coded, api is empty from backend-->
-					<ul>
-						<li><a href="">Assignment 1</a></li>
-					</ul>
+				<p>Uploaded Assignments: </p>
+				<!--homework api is coded, api is empty from backend-->
+				<ul>
+					<li><a href="">Assignment 1</a></li>
+				</ul>
 			</div>
 		</div>
 		<div id="projects">
 			<div class="assignments">
 				<p>Weekend Assigments/Projects: </p>
-				<button class="upload">Upload Project</button>	
-				<input type="file" class="file" /><br />
-				<p>Enter Due Date: </p><input type="date" class="dueDate" />
+				<button class="upload">Upload Project</button>
+				<input type="file" class="file" />
+				<br />
+				<p>Enter Due Date: </p>
+				<input type="date" class="dueDate" />
 				<p>Enter Project Helper Link Below: </p>
-				<input type="url" class="helpLinks" placeholder="Enter URL Here"/> <input type="submit" value="Submit" class="subBtn" /><br />
+				<input type="url" class="helpLinks" placeholder="Enter URL Here" />
+				<input type="submit" value="Submit" class="subBtn" />
+				<br />
 			</div>
 			<hr class="hrSpecial">
 			<div class="assignments2">
@@ -60,29 +72,33 @@
 					<li class="studentAssign">Student 1</li>
 				</ul>
 				<div id="checkBoxContainer">
-					<input type="checkbox" class="checkYes" /> <span>Yes</span><br /><input type="checkbox" value="No" class="checkNo" /> <span>No</span><br/>
+					<input type="checkbox" class="checkYes" /> <span>Yes</span>
+					<br />
+					<input type="checkbox" value="No" class="checkNo" /> <span>No</span>
+					<br/>
 					<input type="submit" class="turnedIn" />
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script type="text/javascript" src="js/hwteachview.js"></script>
 	<script type="text/javascript" src="js/hwParentView.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
 
-	<script type="x-tmpl-mustache" id="assignmentListTemplate">
-    {{#students}}
-    <p><a href="">{{name}}</a></p>
-    {{/students}}
-  </script>
-	
+	<script type="x-tmpl-mustache" id="studentsTemplate">
+		{{#students}}
+		<p><a href="">{{name}}</a></p>
+		{{/students}}
+	</script>
+
 </body>
+
 </html>

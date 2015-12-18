@@ -26,54 +26,39 @@
 		<br />
 		<hr class="hrSpecial">
 	</div>
-	<!-- 		student profile parents view -->
-	<div id="studentContainer">
-		<div class="studentImg">
-			<img src="http://placehold.it/200x200" />
-		</div>
-		<div id="studentInfo">
-		</div>
-		<div class="studentBehavior">
-			<p>Student Behavior: </p>
-			<a href="">Example</a>
-		</div>
-		<div class="studentAttendance">
-			<p>Student Attendance: </p>
-			<a href="">Example</a>
-		</div>
-		<hr class="hrSpecial2">
-		<div class="classesApiDiv visibleBorder"></div>
-		<div class="studentEvents">
-			<p>Upcoming Student Events: </p>
-			<a href="">Example</a>
-		</div>
-	</div>
-	<!-- end student profile container -->
+
 	<!-- start student profile teacher view -->
+
 	<div id="studentContainer">
 		<div class="studentImg">
 			<img src="http://placehold.it/200x200" />
 		</div>
+
 		<div id="studentInfo">
-			<ul>
+			<!--<ul>
 				<li>Student Number: </li>
 				<li>Name: </li>
 				<li>Address: </li>
 				<li>Parents: </li>
-			</ul>
+			</ul>-->
 		</div>
+
 		<div class="studentBehavior">
 			<p>Student Behavior: </p>
 			<input type="text" class="behavior" placeholder="Enter Description Here" />
 		</div>
+
 		<div class="studentAttendance">
 			<p>Student Attendance: </p>
 		</div>
+
 		<hr class="hrSpecial2">
+
 		<div class="studentEvents">
 			<p>Upcoming Student Events: </p>
 			<a href="">Example</a>
 		</div>
+		
 	</div>
 	<!-- end student profile teacher view -->
 
@@ -89,7 +74,7 @@
 	<script src="js/students.js"></script>
 	<script src="js/classes.js"></script>
 
-	<script type="x-tmpl-mustache" id="studentsTeacherViewsTemplate">
+	<script type="x-tmpl-mustache" id="studentsTeacherViewTemplate">
 		{{#students}}
 			<ul>
 				<li>Student Number: </li>

@@ -34,14 +34,25 @@ a:visited{
     display: inline-block;
 }
 
-
-#studentInfo ul {
-    list-style: none;
-    margin: 0;
+#studentInfoDiv {
+  width: 75%;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: scroll;
 }
 
-#studentInfo li {
-    margin-top: 10px;
+#studentInfo p {
+	margin-left: 10px;
+}
+
+.classesApiDiv p {
+  margin-left: 10px;
+
 }
 
 .studentBehavior {
@@ -88,9 +99,6 @@ a:visited{
    top: 20px;
 }
 
-.visibleBorder {
-    border: 1px solid black;
-}
 /*end student profile parent view*/
 
 
