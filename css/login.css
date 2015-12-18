@@ -35,13 +35,15 @@
 	position: relative;
 	margin: 0 auto;
 	padding: 20px 20px 20px;
-	width: 310px;
-	background-color: brown;
+	width: 410px;
+	height: 200px;
+	background-color: grey;
 	top: 50px;	
 }
 
 .login p.submit {
 	text-align: right;
+	
 }
 
 
@@ -53,14 +55,14 @@
 	bottom: -8px;
 	left: -8px;
 	z-index: -1;
-	background-color: brown;
+	background-color: black;
 	border-radius: 4px;
 }
 
 .login h1 {
 	margin: -20px -20px 21px;
 	line-height: 40px;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
 	color: #555;
 	text-align: center;
@@ -76,7 +78,7 @@
 
 .login input[type=text],
 .login input[type=password] {
-	width: 278px;
+	width: 378px;
 }
 
 .login p.remember_me {
@@ -126,7 +128,7 @@ input[type=password]:focus {
 
 input[type=submit] {
 	padding: 0 18px;
-	height: 29px;
+	height: 40px;
 	font-size: 12px;
 	font-weight: bold;
 	color: #527881;

@@ -28,7 +28,7 @@ $(document).ready(function () {
 		error: function (err) {
 			conole.log(error, err);
 		}
-	})
+	});
 
 
 	////////////////////////////Student Events/////////////////////////////////

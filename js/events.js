@@ -1,32 +1,32 @@
 $(document).ready(function () {
-	var namesModel = Backbone.Model.extend({
+	var studentsModel = Backbone.Model.extend({
 		initialize: function () {},
 		defaults: {
 			"name": null,
 			"school_class": null,
 			"description": null
 		},
-		Model:namesModel,
-		//will show a classes events
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' + $.cookie('UserId') + 'events'
+		Model: studentsModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
 	});
-	var namesCollection = Backbone.Collection.extend({
-		Model: namesModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' + $.cookie('UserId') + 'events'
+	var studentsCollection = Backbone.Collection.extend({
+		Model: studentsModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
 	});
 
-	var names = new namesCollection();
-	names.fetch({
+	var students = new studentsModel();
+	students.fetch({
 		success: function (resp) {
-			var namesInfo = {
-				"names": resp.toJSON().results
+			var studentsInfo = {
+				"students": resp.toJSON().results
 			};
-			var namesTemplate = $("#namesTemplate").text();
-			var namesHTML = Mustache.render(namesTemplate, namesInfo);
-			$("#name").html(namesHTML);
+			var studentsTemplate = $("#studentsTemplate").text();
+			var studentsHTML = Mustache.render(studentsTemplate, studentsInfo);
+			$("#student").html(studentsHTML);
 			console.log(resp);
 		},
-	
-	})
+		error: function (err) {
+			conole.log(error, err);
+		}
+	});
 
-})

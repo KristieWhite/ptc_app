@@ -1,6 +1,23 @@
 /*@media screen and (min-width: 600px;){}*/
 
-@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
+@font-face {
+	font-family: 'EraserDust';
+	src: url('../fonts/EraserDust.ttf');
+}
+
+a:visited{
+	color: white;
+}
+a:link {
+	color: white;
+}
+body {
+	background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
+	background-size: 100% 100%;
+	font-family: 'EraserDust';src: url('../fonts/EraserDust.ttf');
+	color: white;
+	text-transform: uppercase;
+}
 
 .header {
 	width: 100%;
@@ -8,58 +25,97 @@
 	border-bottom: 2px solid black;
 	font-family: 'EraserDust';
 	color: white;
-	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") no-repeat;
+	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
 	background-position: center;
+	
 }
+
 .header h1 {
 	margin: 0;
 	position: relative;
-  font-size: 40px;
+	font-size: 4em;
 	top: 40px;
 	left: 45px;
 	width: 50%;
 	display: inline-block;
 }
-.navbar {
-	width: 80%;
-	height: 40px;
-	margin: auto;
-	margin-top: 10px;
-  font-family: serif;
-}
+
 .navbar ul {
 	list-style: none;
+	background-color: black;
+	text-align: center;
+	padding: 0;
+	margin: 0;
 }
+
 .navbar li {
-	display: inline-block;
-	position: relative;
-	float: left;
-	margin: auto;
-	margin-left: 60px;
-	left: 100px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	line-height: 40px;
+	height: 40px;
+	border-bottom: 1px solid #888;
 }
+
 .navbar a {
 	text-decoration: none;
-	color: blue;
+	color: #fff;
+	display: block;
+	transition: .3s background-color;
 }
+
+.navbar a:hover {
+	background-color: #141010;
+}
+
+@media screen and (min-width: 600px) {
+	.navbar li {
+		width: 15%;
+		border-bottom: none;
+		height: 90px;
+		line-height: 70px;
+		font-size: 1.9em;
+		font-family: 'EraserDust';src: url('../fonts/EraserDust.ttf');
+	}
+	/* Option 1 - Display Inline */
+	.navbar li {
+		display: inline-block;
+	}
+	/* Options 2 - Float
+  .nav li {
+    float: left;
+  }
+  .nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  .nav {
+    background-color: #444;
+  }
+  */
+}
+
 .navbar a:hover {
 	border-bottom: 2px solid blue;
 }
+
 .hrSpecial {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+	border: -50;
+	height: 1px;
+	background: #333;
+	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+
 .hrSpecial2 {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+	border: 0;
+	height: 1px;
+	background: #333;
+	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+
 .footer {
 	width: 100%;
 	height: 60px;
 	border-top: 2px solid black;
-  text-align: center;
+	text-align: center;
 }

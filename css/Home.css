@@ -1,9 +1,9 @@
 @media screen and (min-width: 600px) {
 
 	#homeContainer {
-		width: 80%;
+		width: 100%;
 		height: 100%;
-		margin: auto;
+		margin-left:450px;
 	}
 	#homeContainer p {
 		position: relative;
@@ -17,6 +17,7 @@
 		padding-left: 15px;
 		font-family: 'Sigmar One', cursive;
 	}
+	
 	figure {
 		width: 800px;
 		height: 200px;
@@ -24,21 +25,25 @@
 		left: 80px;
 		border: 1px solid gray;
 		overflow: hidden;
+		text-align: center;
 	}
 	/* image */
 	.hover07 figure img {
 		background-position: center;
-		width: 800px;
+		width: 100%;
 		height: 200px;
 		-webkit-filter: blur(1px);
 		filter: blur(2px);
 		-webkit-transition: .3s ease-in-out;
 		transition: .3s ease-in-out;
+		text-align: center;
+		margin: auto;
 	}
 	.hover07 figure:hover img {
 		-webkit-filter: blur(0);
 		filter: blur(0);
 	}
+
 }
 
 
