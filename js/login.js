@@ -80,6 +80,12 @@ $("#logInForm").submit(function (e) {
 			if (!attrs.password) {
 				$("#passwordLogIn").html("password is required");
 			}
+			if (attrs.password) {
+				return student_set;
+			}
+			if (attrs.password) {
+				return student_set;
+			}
 		},
 		success: function () {
 			url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
 	</div>
@@ -89,7 +90,9 @@
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
@@ -97,12 +100,24 @@
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/Teacher.js"></script>
+    <script src="js/events.js"></script>
 
 	<script type="X-tmpl-mustache" id="eventsTemplate">
 		{{#events}}
 		<p><a href="">{{name}}<a></p>
 		{{/events}}
 	</script>
+
+  <script type="X-tmpl-mustache" id="eventsListTeacherTemplate">
+    {{#events}}
+    <p><a href="">{{id}}<a></p>
+    <p><a href="">{{name}}<a></p>
+    <p><a href="">{{school_class}}<a></p>
+    <p><a href="">{{description}}<a></p>
+    <p><a href="">{{date}}<a></p>
+    <p><a href="">{{image}}<a></p>
+    {{/events}}
+  </script>
 
 </body>
 </html>

@@ -68,38 +68,23 @@ $(document).ready(function () {
 			success: function (resp) {
 				var studentsInfo = {
 				"students": resp.toJSON().results
-				};
-				console.log(resp.toJSON().results);
-				var studentsTemplate = $("#studentsTemplate").text();
-				var studentsHTML = Mustache.render(studentsTemplate, studentsInfo);
-				$("#studentInfo").html(studentsHTML);
-				console.log(studentsHTML);
-			}
-		});
+			};
+			var studentsTeacherViewTemplate = $("#studentsTeacherViewTemplate").text();
+			var studentsHTML = Mustache.render(studentsTeacherViewTemplate, studentsInfo);
+			$("#studentInfo").html(studentsHTML);
+			console.log(resp);
+		},
+		error: function (err) {
+			console.log("error", err);
+		}
+	});
 
+	// $("#studentContainer").hide();
+	// $("#studentBehavior").hide();
+	// $("#studentAttendance").hide();
+	// $("#studentEvents").hide
+	// $("#studentContainer").hide();
 
-	// var studentIdModel = Backbone.Model.extend({
-	// 	initialize: function () {
-	// 	},
-	// 	defaults: {
-	// 		"id": null,
-	// 		"first_name": null,
-	// 		"last_name": null,
-	// 		"parent": null,
-	// 		"school_name": null,
-	// 		"classfeepayment_set": null
-	// 	},
-	// 	idAttribute: "id",
-	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + id
-	// });
-
-	// var studentIdCollection = Backbone.Collection.extend({
-	// 	Model: studentModel,
-	// 	idAttribute: "id",
-	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + id
-	// });
-
-});
 
 	
 	// 	$("body").on('click', 'a', function (e) {
