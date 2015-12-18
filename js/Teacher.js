@@ -31,20 +31,20 @@ $(document).ready(function () {
 	});
 
 	////////////////////////////Student Events/////////////////////////////////
-	
-		
-	
-	
+
+
+
+
 	var studentEventsModel = Backbone.Model.extend({
 		initialize: function () {},
 		defaults: {
 			"name": null,
 			"school_class": null,
 			"description": null,
-			"school_class":null,
-			"date":null,
-			"image":null,
-			"id":null
+			"school_class": null,
+			"date": null,
+			"image": null,
+			"id": null
 		},
 		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
 	});
@@ -65,15 +65,15 @@ $(document).ready(function () {
 			var eventsHTML = Mustache.render(eventsTemplate, eventsInfo);
 			$("#event").html(eventsHTML);
 			console.log(resp);
-		
-		
+
+
 		},
 
 		error: function (err) {
 			console.log(error, err);
 		}
 	});
-	
+
 	$("#addEvent").on('click', function (e) {
 		e.preventDefault();
 		var eventSave = new studentEventsModel();
@@ -81,18 +81,18 @@ $(document).ready(function () {
 			name: $("#name").val(),
 			date: $("#date").val(),
 			description: $("#description").val(),
-			school_class:$("#class").val(),
-			image:$("#image").val()
+			school_class: $("#class").val(),
+			image: $("#image").val()
 		})
 		$("#name").val(""),
-		$("#date").val(""),
-		$("#description").val(""),
-		$("#class").val(""),
-		$("#image").val("");
+			$("#date").val(""),
+			$("#description").val(""),
+			$("#class").val(""),
+			$("#image").val("");
 		eventSave.save(null, {
 			success: function (response) {
 				studentEventsCollection.fetch({
-					success:function(){
+					success: function () {
 						console.log("success");
 					}
 				})
@@ -133,6 +133,22 @@ $(document).ready(function () {
 			console.log("teacherClassesObj", teacherClassesObj);
 			console.log("teacherClassesHTML", teacherClassesHTML);
 			$("#teacherClassesApiDiv").html(teacherClassesHTML);
+		},
+		error: function (err) {
+			console.log('error', err);
+		}
+	});
+
+	var image = new teacherClassesModel();
+	image.fetch({
+		success: function (resp) {
+			var imageObj = {
+				"ProImg": resp.toJSON()
+			};
+			var imageTemplate = $("#imageProfileTemplate").text();
+			var imageHTML = Mustache.render(imageTemplate, imageObj);
+			$("#imageProfile").html(imageHTML);
+			console.log(imageHTML);
 		},
 		error: function (err) {
 			console.log('error', err);
