@@ -29,7 +29,7 @@
 <!-- parent profile parent view-->
   <div id="parentContainer">
     <div id="parentProImg">
-      <img src="http://placehold.it/200x200" />
+  <div id="imageInfo"></div>
       <input class="uploadPic" type="file" />
       <i id="addPhoto" class="fa fa-picture-o"></i>
     </div>
@@ -85,6 +85,12 @@
       <p>Address: 1234 Abc St <br/> Las Vegas, NV 89110</p>
       <p>Children: </p>
     {{/parents}}
+  </script>
+  
+	 <script type="x-tmpl-mustache" id="imageInfoTemplate">
+    {{#images}}
+	<img src="{{picture_url}}">
+    {{/images}}
   </script>
 
   <script type="x-tmpl-mustache" id="childTemplate">

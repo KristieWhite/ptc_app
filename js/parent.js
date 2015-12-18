@@ -10,7 +10,8 @@ var ParentModel = Backbone.Model.extend({
     "id": null,
     "first_name": null,
     "last_name": null,
-    "student_set": null
+    "student_set": null,
+	  "picture_url":null
   },
   Model: ParentModel,
   url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') 
@@ -32,6 +33,23 @@ var ParentModel = Backbone.Model.extend({
 			var parentHTML = Mustache.render(parentTemplate, parentObj);
 			$("#parentInfo").html(parentHTML);
       console.log(parentHTML);
+		}, error: function (err) {
+			console.log('error', err);
+		}
+	});
+	
+	
+	
+	var image = new ParentModel();
+	image.fetch({
+		success: function (resp) {
+			var imageObj = {
+				"images": resp.toJSON()
+			};
+			var imageTemplate = $("#imageInfoTemplate").text();
+			var imageHTML = Mustache.render(imageTemplate, imageObj);
+			$("#imageInfo").html(imageHTML);
+      console.log(imageHTML);
 		}, error: function (err) {
 			console.log('error', err);
 		}

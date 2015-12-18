@@ -28,7 +28,7 @@
 	<!-- 		teacher profile / teacher's view-->
 	<div id="teacherContainer">
 		<div class="teacherImg">
-			<img src="http://placehold.it/200x200" />
+			<div id="imageProfile"></div>
 		</div>
 		<div class="teacherInfo">
 			<ul>
@@ -89,14 +89,20 @@
 		{{/students}}
 	</script>
 
+	<!-- Teacher-->
 	<script type="x-tmpl-mustache" id="teacherClassesTemplate">
-
 		{{#classes}}
 		<p><a href="">{{name}}</a></p>
 		{{/classes}}
-
 	</script>
-
+	
+		<script type="x-tmpl-mustache" id="imageProfileTemplate">
+		{{#ProImg}}
+		<img src="{{picture_url}}"/>
+		{{/ProImg}}
+	</script>
+	
+	<!---->
 	<script type="x-tmpl-mustache" id="eventsTemplate">
 		{{#events}}
 		<li>{{name}}</li>
