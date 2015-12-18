@@ -4,10 +4,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Parent</title>
+<<<<<<< HEAD
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/parent.css">
+=======
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/parent.css">
+>>>>>>> b692466982a39bbef02ab86423636313cbb6828a
 </head>
 
 <body>
@@ -16,11 +23,19 @@
 	</div>
 	<div class="navbar">
 		<ul>
+<<<<<<< HEAD
 			<li><a href="./homeParent.html">Home</a></li>
 			<li><a href="./eventsParent.html">Events</a></li>
 			<li><a href="./feeslistParent.html">Fees</a></li>
 			<li><a href="./waiverParent.html">Waivers</a></li>
 			<li><a href="./hwparentview.html">Assignments</a></li>
+=======
+			<li id="homeParent">Home</li>
+			<li><a href="./eventsParent.html">Events Calendar</a></li>
+			<li><a href="./Feeslist.html">Fees</a></li>
+			<li><a href="./waiverParent.html">Waivers</a></li>
+			<li><a href="./HomeworkDetail.html">Assignments</a></li>
+>>>>>>> velasco
 			<li><a href="./parent.html">My Profile</a></li>
 		</ul>
 		<br />
@@ -69,6 +84,7 @@
 	<div class="footer ">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
+<<<<<<< HEAD
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js "></script>
@@ -80,6 +96,19 @@
   <script src="js/students.js "></script>
 
   <script type="x-tmpl-mustache " id="parentInfoTemplate ">
+=======
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/routers.js"></script>
+  <script src="js/parent.js"></script>
+  <script src="js/students.js"></script>
+
+  <script type="x-tmpl-mustache" id="parentInfoTemplate">
+>>>>>>> b692466982a39bbef02ab86423636313cbb6828a
     {{#parents}}
       <p>Name: {{first_name}} {{last_name}}</p>
       <p>Phone: 702-555-5555</p>
@@ -94,10 +123,17 @@
     {{/images}}
   </script>
 
+<<<<<<< HEAD
   <script type="x-tmpl-mustache " id="childTemplate ">
     {{#children}}
       <ul>
         <li id="idSave "><a href="/./student/{{id}}/ " class="studentId " value="{{id}} ">{{first_name}} {{last_name}}</a></li>
+=======
+  <script type="x-tmpl-mustache" id="childTemplate">
+    {{#children}}
+      <ul>
+        <li id="idSave"><a href="/student/{{id}}/" class="studentId" value="{{id}}">{{first_name}} {{last_name}}</a></li>
+>>>>>>> b692466982a39bbef02ab86423636313cbb6828a
       </ul>
     {{/children}}
   </script>
@@ -106,7 +142,11 @@
 
 <!-- needs to be moved into student profile -->
 <!--
+<<<<<<< HEAD
   <script type="x-tmpl-mustache " id="teacherParentTemplate ">
+=======
+  <script type="x-tmpl-mustache" id="teacherParentTemplate">
+>>>>>>> b692466982a39bbef02ab86423636313cbb6828a
     {{#teachersView}}
       <ul>
         <li>Name: {{first_name}} {{last_name}}</li>

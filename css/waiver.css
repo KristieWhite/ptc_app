@@ -42,5 +42,21 @@ button:hover {
         background-color: rgba(255, 204, 0, 0, 8);
  }
 
+#waiverDetailDiv {
+    width: 60%;
+    margin: auto;
+}
 
+ .center {
+    text-align: center;
+ }
 
+#waiverBtnDiv {
+    width:30%;
+    margin: auto;
+}
+
+#signThisWaiver {
+    width: 18%;
+    margin: auto;
+}
