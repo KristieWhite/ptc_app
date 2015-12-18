@@ -55,8 +55,8 @@ $(document).ready(function () {
 			var studentsInfo = {
 				"students": resp.toJSON().results
 			};
-			var studentsTemplate = $("#studentsTemplate").text();
-			var studentsHTML = Mustache.render(studentsTemplate, studentsInfo);
+			var studentsTeacherViewTemplate = $("#studentsTeacherViewTemplate").text();
+			var studentsHTML = Mustache.render(studentsTeacherViewTemplate, studentsInfo);
 			$("#studentInfo").html(studentsHTML);
 			console.log(resp);
 		},
@@ -65,11 +65,11 @@ $(document).ready(function () {
 		}
 	});
 
-	$("#studentContainer").hide();
-	$("#studentBehavior").hide();
-	$("#studentAttendance").hide();
-	$("#studentEvents").hide
-	$("#studentContainer").hide();
+	// $("#studentContainer").hide();
+	// $("#studentBehavior").hide();
+	// $("#studentAttendance").hide();
+	// $("#studentEvents").hide
+	// $("#studentContainer").hide();
 
 	
 		$("body").on('click', 'a', function (e) {

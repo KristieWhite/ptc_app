@@ -39,12 +39,7 @@
     <div id="eventsDetailDiv"></div>
       
   <!--This is the tester dummy list below-->
-    <div class="centerView">
-      <ul>
-        <p><a href="eventsDetail"></a></p>
-   <div id="name"></div>
-      </ul>
-    </div>
+    <div class="classEventsTeacherDiv"></div>
 
   
 
@@ -83,12 +78,24 @@
 	<script type="text/javascript" src="js/events.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
+  <script src="js/events.js"></script>
 
 	<script type="X-tmpl-mustache" id="namesTemplate">
 		{{#names}}
 		<p><a href="">{{name}}<a></p>
 		{{/names}}
 	</script>
+
+  <script type="X-tmpl-mustache" id="eventsListTeacherTemplate">
+    {{#events}}
+    <p><a href="">{{id}}<a></p>
+    <p><a href="">{{name}}<a></p>
+    <p><a href="">{{school_class}}<a></p>
+    <p><a href="">{{description}}<a></p>
+    <p><a href="">{{date}}<a></p>
+    <p><a href="">{{image}}<a></p>
+    {{/events}}
+  </script>
 
 </body>
 </html>
