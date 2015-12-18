@@ -105,56 +105,37 @@ $(document).ready(function () {
 		location.href = "./eventsTeacher.html";
 	});
 
-	///////////////////////////////////classes for teachers/////////////////////////////////
-	var teacherClassesModel = Backbone.Model.extend({
-		initialize: function () {
-			console.log("teacherClassesModel initialized");
+	///////////////////////////////////teacher detail/////////////////////////////////
+	var TeacherModel = Backbone.Model.extend({
+		initialize: function () {},
+		defaults: {
+			"first_name": null,
+			"last_name": null,
+			"picture_url": null
 		},
-		success: function () {
-			url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
-		}
+		Model:TeacherModel,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId')
 	});
 
-	var teacherClassesCollection = Backbone.Collection.extend({
-		Model: teacherClassesModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
+	var TeacherCollection = Backbone.Collection.extend({
+		Model: TeacherModel,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId')
 	});
 
-	var teacherClassesTaught = new teacherClassesCollection();
+	var TeacherTaught = new TeacherModel();
 
-	teacherClassesTaught.fetch({
+	TeacherTaught.fetch({
 		success: function (resp) {
 			console.log('success', resp.toJSON());
-			var teacherClassesObj = {
-				"classes": resp.toJSON()[0].results
+			var TeacherObj = {
+				"ProImg": resp.toJSON().results
 			};
-			var teacherClassesTemplate = $("#teacherClassesTemplate").text();
-			var teacherClassesHTML = Mustache.render(teacherClassesTemplate, teacherClassesObj);
-			console.log("teacherClassesObj", teacherClassesObj);
-			console.log("teacherClassesHTML", teacherClassesHTML);
-			$("#teacherClassesApiDiv").html(teacherClassesHTML);
+			var TeacherTemplate = $("#imageProfileTemplate").text();
+			var TeacherHTML = Mustache.render(TeacherTemplate, TeacherObj);
+			$("#TeacherImg").html(TeacherHTML);
 		},
 		error: function (err) {
 			console.log('error', err);
 		}
 	});
-
-	var image = new teacherClassesModel();
-	image.fetch({
-		success: function (resp) {
-			var imageObj = {
-				"ProImg": resp.toJSON()
-			};
-			var imageTemplate = $("#imageProfileTemplate").text();
-			var imageHTML = Mustache.render(imageTemplate, imageObj);
-			$("#imageProfile").html(imageHTML);
-			console.log(imageHTML);
-		},
-		error: function (err) {
-			console.log('error', err);
-		}
-	});
-
-
-
 }); //documentready

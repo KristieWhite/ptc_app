@@ -21,8 +21,7 @@ var ParentModel = Backbone.Model.extend({
 		Model: ParentModel,
     url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId')
 	});
-
-
+	
 	var parent = new ParentModel();
 	parent.fetch({
 		success: function (resp) {

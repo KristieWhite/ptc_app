@@ -27,9 +27,9 @@
 	</div>
 	<!-- 		teacher profile / teacher's view-->
 	<div id="teacherContainer">
-		<div class="teacherImg">
-			<div id="imageProfile"></div>
-		</div>
+<img src="https://s-media-cache-ak0.pinimg.com/236x/5c/f5/3c/5cf53c7d2c875340b731cf555e9de570.jpg" />
+			<div id="TeacherImg"></div>
+
 		<div class="teacherInfo">
 			<ul>
 
@@ -60,7 +60,7 @@
 	<!-- start teacher profile parent view -->
 	<div id="teacherPView">
 		<div class="teacherImg">
-			<img src="http://placehold.it/200x200" />
+			
 		</div>
 
 		<div class="teachInfoPView">
@@ -81,7 +81,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<script src="js/teacher.js"></script>
+	<script src="js/Teacher.js"></script>
 
 	<script type="x-tmpl-mustache" id="studentsTemplate">
 		{{#students}}
@@ -89,7 +89,7 @@
 		{{/students}}
 	</script>
 
-	<!-- Teacher-->
+
 	<script type="x-tmpl-mustache" id="teacherClassesTemplate">
 		{{#classes}}
 		<p><a href="">{{name}}</a></p>
@@ -98,16 +98,16 @@
 	
 		<script type="x-tmpl-mustache" id="imageProfileTemplate">
 		{{#ProImg}}
-		<img src="{{picture_url}}"/>
+		<img src="{{picture_url}}">
 		{{/ProImg}}
 	</script>
 	
-	<!---->
+
 	<script type="x-tmpl-mustache" id="eventsTemplate">
 		{{#events}}
 		<li>{{name}}</li>
 		<li>{{description}}</li>
-		<img src="{{image}}" />
+		
 		<li>{{/events}}</li>
 	</script>
 
