@@ -1,7 +1,8 @@
 $(document).ready(function () {
-//****Parent Profile - Parent View****//
-	
-var counter = 0;
+
+
+///////////////****Parent Profile Model****///////////////////////////
+
 var ParentModel = Backbone.Model.extend({
   initialize: function(){
   },
@@ -12,12 +13,12 @@ var ParentModel = Backbone.Model.extend({
     "student_set": null
   },
   Model: ParentModel,
-  url: "https://murmuring-sands-9831.herokuapp.com/api/my_info/"
+  url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') 
 });
 
 	var ParentsCollection = Backbone.Collection.extend({
 		Model: ParentModel,
-    url: "https://murmuring-sands-9831.herokuapp.com/api/my_info/"
+    url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId')
 	});
 
 
@@ -25,7 +26,7 @@ var ParentModel = Backbone.Model.extend({
 	parent.fetch({
 		success: function (resp) {
 			var parentObj = {
-				"parents": resp.toJSON().results
+				"parents": resp.toJSON()
 			};
 			var parentTemplate = $("#parentInfoTemplate").text();
 			var parentHTML = Mustache.render(parentTemplate, parentObj);
@@ -36,44 +37,52 @@ var ParentModel = Backbone.Model.extend({
 		}
 	});
 
-//**List of their children**//
+/////////////////**List of children Model**//////////////////////////////////
 
-  var studentModel = Backbone.Model.extend({
+  var childModel = Backbone.Model.extend({
     initialize: function () {
     },
     defaults: {
-      "id": null,
       "first_name": null,
       "last_name": null,
       "parent": null,
       "school_name": null,
       "classfeepayment_set": null
     },
-    Model: studentModel,
+    idAttribute: "id",
     url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
   });
 
-  var studentCollection = Backbone.Collection.extend({
-    Model: studentModel,
-    url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
+  var childCollection = Backbone.Collection.extend({
+    Model: childModel,
+    idAttribute: "id",
+    url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students" 
   });
 
-  var child = new studentModel();
-  child.fetch({
-    success: function (resp) {
-      var childData = {
-        "children": resp.toJSON().results
-      };
-      console.log('resp', resp.toJSON());
-      var childTemplate = $("#childTemplate").text();
-      var childHTML = Mustache.render(childTemplate, childData);
-      $("#childList").html(childHTML);
-      console.log(childHTML);
-    },
-    error: function (err) {
-      console.log('error ', err);
-    }
-  });
+
+    var child = new childModel();
+      
+      child.fetch({
+        success: function (resp) {
+          var id = $('.studentId').val();
+          var childData = {
+            "children": resp.toJSON().results
+          };
+          console.log('resp', resp.toJSON());
+          var childTemplate = $("#childTemplate").text();
+          var childHTML = Mustache.render(childTemplate, childData, id);
+          $("#childList").html(childHTML);
+          console.log(childHTML);
+          //   $('#idSave').click(function(e){
+          //     e.target.value
+          //     var id = $(e.currentTarget).data("id");
+          //     window.location.replace("../studentsParentView.html");
+          //     console.log(id);
+          //     });
+          //   }
+          }
+      });
+
 
 
 //*****Teacher Profile - Parent View*****//
@@ -115,37 +124,14 @@ var ParentModel = Backbone.Model.extend({
 
 //****ROUTES****//
 
-  // $("body").on('click', 'a', function (e) {
-  //     e.preventDefault();
-  //     var href = $(this).attr('href');
-  //     href = href.substr(1);
-  //     router.navigate(href, {
-  //         trigger: true
-  //     });
-  //   });
-    
-    // var Router = Backbone.Router.extend({
-
-    //     initialize: function () {
-    //         Backbone.history.start({
-    //             pushState: true
-    //         });
-    //     },
-    //     routes: {
-    //         "student/:id": "student"
-
-    //     }
-    // });
-    // var router = new Router();
-
-
-    // router.on('route:student', function (id) {
-    //     $("#studentContainer").hide();
-    // });
 
 
 
 //***click functionality***//
+
+  $("#homeParent").on('click', function(){
+    window.location.replace("./homeParent.html");
+  });
 
 
   $("#addPhoto").click(function () {

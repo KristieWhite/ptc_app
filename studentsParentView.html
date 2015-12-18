@@ -15,7 +15,7 @@
 	</div>
 	<div class="navbar">
 		<ul>
-			<li><a href="Home.html">Home</a></li>
+			<li><a href="homeParent.html">Home</a></li>
 			<li><a href="">Events Calendar</a></li>
 			<li><a href="">Fees</a></li>
 			<li><a href="">Waivers</a></li>
@@ -25,59 +25,40 @@
 		<br />
 		<hr class="hrSpecial">
 	</div>
+
+
 	<!-- 		student profile parents view -->
-	<div id="studentInfo"></div>
 	<div id="studentContainer">
+
 		<div class="studentImg">
 			<img src="http://placehold.it/200x200" />
 		</div>
+
+		<div id="studentInfoDiv">
+			<div id="studentInfo"></div>
+			<div class="classesApiDiv"></div>
+		</div>
+
 		<div class="studentBehavior">
 			<p>Student Behavior: </p>
 			<a href="">Example</a>
 		</div>
+
 		<div class="studentAttendance">
 			<p>Student Attendance: </p>
-			<a href="">Example</a>
 			<a href="./Feeslist.html">Student Fees</a>
 		</div>
+
 		<hr class="hrSpecial2">
-		<div class="classesApiDiv visibleBorder"></div>
+
 		<div class="studentEvents">
 			<p>Upcoming Student Events: </p>
 			<a href="">Example</a>
 		</div>
+
 	</div>
 
 	<!-- end student profile container -->
-	<!-- start student profile teacher view -->
-	<div id="studentContainers">
-		<div id="studentInfo">
-			<div id="fee"><a href="./Feeslist.html">Student Fees</a></div>
-		</div>
-		<div class="studentImg">
-			<img src="http://placehold.it/200x200" />
-		</div>
-		<ul>
-			<li>Student Number: </li>
-			<li>Name: </li>
-			<li>Address: </li>
-			<li>Parents: </li>
-		</ul>
-
-		<div class="studentBehavior">
-			<p>Student Behavior: </p>
-			<input type="text" class="behavior" placeholder="Enter Description Here" />
-		</div>
-		<div class="studentAttendance">
-			<p>Student Attendance: </p>
-		</div>
-		<hr class="hrSpecial2">
-		<div class="studentEvents">
-			<p>Upcoming Student Events: </p>
-			<a href="">Example</a>
-		</div>
-	</div>
-	<!-- end student profile teacher view -->
 
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
@@ -88,23 +69,25 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
+	<script stc="js/routers.js"></script>
 	<script src="js/students.js"></script>
 	<script src="js/classes.js"></script>
-	<script src="js/parent.js"></script>
 
 	<script type="x-tmpl-mustache" id="studentsTemplate">
 		{{#students}}
-		<ul>
-			<li>Student Number: </li>
-			<li>Name: <a href="/student/{{id}}">{{first_name}} {{last_name}}</a></li>
-			<li>School: {{school_name}}</li>
-		</ul>
+				<p>Student Number: {{id}}</p>
+				<p class="studentId" value={{id}}>Name: {{first_name}} {{last_name}}</p>
+				<p>School: {{school_name}}</p>
 		{{/students}}
 	</script>
 
+
 	<script type="x-tmpl-mustache" id="classesTemplate">
+		<p>Classes: </p>
 		{{#classes}}
-		<p><a href="">{{name}}</a></p>
+			<ul>
+				<li><a href="">{{name}}</a></li>
+			</ul>
 		{{/classes}}
 	</script>
 
