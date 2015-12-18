@@ -47,7 +47,7 @@
 
 				<div id="name"></div>
 
-				<div id="eventsListDiv"></div>
+				<div id="event"></div>
 			</ul>
 		</div>
 
@@ -71,11 +71,12 @@
 	<script type="text/javascript" src="js/events.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
+	<script src="js/Teacher.js"></script>
 
-	<script type="X-tmpl-mustache" id="namesTemplate">
-		{{#names}}
+	<script type="X-tmpl-mustache" id="eventsTemplate">
+		{{#events}}
 		<p><a href="">{{name}}<a></p>
-		{{/names}}
+		{{/events}}
 	</script>
 
 
