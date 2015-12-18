@@ -93,6 +93,7 @@
 		font: normal 13px/100% Verdana, Tahoma, sans-serif;
 		width: 400px;
 		background: #ffffff;
+		color: aqua;
 	}
 	textarea {
 		width: 400px;
@@ -108,8 +109,8 @@
 		-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
 	}
 	.form label {
+		c
 		margin-left: 10px;
-		color: white;
 		/*#999999*/
 	}
 	

@@ -28,7 +28,7 @@
 	</div>
 	<div id="pageContainer">
 		<h2>Events Calendar</h2>
-	
+
 		<div class="filler"></div>
 
 		<!--This is for the mustache list data-->
@@ -55,17 +55,28 @@
 		<form class="addEventForm">
 			<div id="formContainer">
 				<p class="name">
-					<input type="text" name="name" id="name" />
+					<input type="text" name="name" id="name" value="" />
 					<label for="name">Name</label>
 				</p>
-				<p class="date">
-					<input type="text" name="date" id="date" />
+
+				<p class="school_class">
+					<input type="text" name="date" id="class" value="" />
 					<label for="date">Date</label>
 				</p>
-				<p class="text">
-					<textarea name="text"></textarea>
-					<label for="description">Description</label>
+
+				<p>
+					<textarea id="description" value=""></textarea>
 				</p>
+
+				<p class="date">
+					<input type="text" name="date" id="date" value="" />
+					<label for="date">Date</label>
+				</p>
+				<p class="date">
+					<input type="date" name="date" id="image" value="" />
+					<label for="date">Date</label>
+				</p>
+
 				<div class="eventsAdd">
 					<button id="addEvent" class="sexyButton">Add An Event</button>
 					<p class="clearFloat"></p>
