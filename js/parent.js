@@ -37,8 +37,6 @@ var ParentModel = Backbone.Model.extend({
 		}
 	});
 	
-	
-	
 	var image = new ParentModel();
 	image.fetch({
 		success: function (resp) {

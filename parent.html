@@ -29,7 +29,9 @@
 <!-- parent profile parent view-->
   <div id="parentContainer">
     <div id="parentProImg">
+    
   <div id="imageInfo"></div>
+     
       <input class="uploadPic" type="file" />
       <i id="addPhoto" class="fa fa-picture-o"></i>
     </div>
@@ -41,14 +43,17 @@
 
     <div id="parentEvents">
       <p>Upcoming Student Events: </p>
-      <a href="">Example</a>
+      <p><a href="">History Field Trip</a></p>
+      <p><a href="">Science Fair</a></p>
+      <p><a href="">Bring a Parent</a></p>
+
     </div>
 
     <hr class="hrSpecial">
 
     <div class="parentEvents">
       <p>My Volunteered Events: </p>
-      <a href="">Example</a>
+       <p><a href="">Clean the Road</a></p>
     </div>
   </div>
 <!-- end parent profile container parent view-->
@@ -77,6 +82,7 @@
   <script src="js/routers.js"></script>
   <script src="js/parent.js"></script>
   <script src="js/students.js"></script>
+  
 
   <script type="x-tmpl-mustache" id="parentInfoTemplate">
     {{#parents}}
@@ -100,6 +106,7 @@
       </ul>
     {{/children}}
   </script>
+  
 
 
 <!-- needs to be moved into student profile -->
