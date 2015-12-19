@@ -12,8 +12,7 @@ a:link {
 	color: white;
 }
 body {
-	background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
-	background-size: 100% 100%;
+	background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png") repeat;
 	font-family: 'EraserDust';src: url('../fonts/EraserDust.ttf');
 	color: white;
 	text-transform: uppercase;
@@ -25,9 +24,8 @@ body {
 	border-bottom: 2px solid black;
 	font-family: 'EraserDust';
 	color: white;
-	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
-	background-position: center;
-	
+	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat-x;
+	background-position: center;	
 }
 
 .header h1 {

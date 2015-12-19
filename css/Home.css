@@ -2,7 +2,6 @@
 
 	#homeContainer {
 		width: 100%;
-		height: 100%;
 		margin-left:450px;
 	}
 	#homeContainer p {
@@ -42,6 +41,11 @@
 	.hover07 figure:hover img {
 		-webkit-filter: blur(0);
 		filter: blur(0);
+	}
+
+	.center {
+		width: 70%;
+		margin: 0;
 	}
 
 }
