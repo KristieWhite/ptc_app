@@ -16,12 +16,12 @@
 	</div>
 	<div class="navbar">
 		<ul>
-			<li><a href="./homeTeacher.html">Home</a></li>
-			<li><a href="./eventsTeacher.html">Events</a></li>
-			<li><a href="./Feeslist.html">Fees</a></li>
-			<li><a href="./waiverTeacher.html">Waivers</a></li>
-			<li><a href="./hwteachview.html">Assignments</a></li>
-			<li><a href="./teacher.html">My Profile</a></li>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./eventsParent.html">Events</a></li>
+			<li><a href="./feeslistParent.html">Fees</a></li>
+			<li><a href="./waiverParent.html">Waivers</a></li>
+			<li><a href="./hwparentview.html">Assignments</a></li>
+			<li><a href="./parent.html">My Profile</a></li>
 		</ul>
 		<br />
 		<hr class="hrSpecial">
@@ -31,7 +31,7 @@
 
 	<div id="studentContainer">
 		<div class="studentImg">
-			<img src="http://placehold.it/200x200" />
+
 		</div>
 
 		<div id="studentInfo">
@@ -48,9 +48,7 @@
 			<input type="text" class="behavior" placeholder="Enter Description Here" />
 		</div>
 
-		<div class="studentAttendance">
-			<p>Student Attendance: </p>
-		</div>
+
 
 		<hr class="hrSpecial2">
 
@@ -58,7 +56,7 @@
 			<p>Upcoming Student Events: </p>
 			<a href="">Example</a>
 		</div>
-		
+
 	</div>
 	<!-- end student profile teacher view -->
 
@@ -76,18 +74,19 @@
 
 	<script type="x-tmpl-mustache" id="studentsTeacherViewTemplate">
 		{{#students}}
-			<ul>
-				<li>Student Number: </li>
-				<li>Name: {{first_name}} {{last_name}}</li>
-				<li>Address: </li>
-				<li>Parents: {{parent}}</li>
-				<li>School: {{school_name}}</li>
+		<ul>
+			<li><a href="">Student Number: </a></li>
+			<li><a href="">Name: {{first_name}} {{last_name}}</a></li>
+			<li><a href="">Address: </a></li>
+			<li><a href="">Parents: {{parent}}</a></li>
+			<li><a href="">School: {{school_name}}</a></li>
+		</ul>
 		{{/students}}
 	</script>
 
 	<script type="x-tmpl-mustache" id="classesTemplate">
 		{{#classes}}
-			<p><a href="">{{name}}</a></p>
+		<p><a href="">{{name}}</a></p>
 		{{/classes}}
 	</script>
 

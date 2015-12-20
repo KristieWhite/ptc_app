@@ -15,22 +15,28 @@
 	</div>
 	<div class="navbar">
 		<ul>
+
 			<li><a href="./homeParent.html">Home</a></li>
+
 			<li><a href="./eventsParent.html">Events</a></li>
-			<li><a href="./Feeslist.html">Fees</a></li>
+			<li><a href="./feeslistParent.html">Fees</a></li>
 			<li><a href="./waiverParent.html">Waivers</a></li>
 			<li><a href="./hwparentview.html">Assignments</a></li>
 			<li><a href="./parent.html">My Profile</a></li>
 		</ul>
 	</div>
-	
+
 	<div id="assignContainer">
 		<div class="assignHeader">
 			<h2>Assignments</h2>
 		</div>
 		<div id="mainAssignments">
 			<div id="hwApiDiv" class="assignments">
+
 				<p>Tonight's Assignment: </p>
+
+				<p>Bobby Hill </p>
+
 				<ul>
 					<li><a href="">Assignment 1</a></li>
 				</ul>
@@ -49,10 +55,10 @@
 		</div>
 		<div id="projects">
 			<div id="hwDetailParentDiv" class="assignments">
-				<!--<p>Weekend Assigments/Projects:</p>
+				<p>Weekend Assigments/Projects:</p>
 				<ul>
-					<li><a href="">Project 1</a></li>
-				</ul>-->
+					<li><a href="">Science Fair Project </a></li>
+				</ul>
 			</div>
 			<hr class="hrSpecial">
 			<div class="assignments">
@@ -66,37 +72,35 @@
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-  <script src="js/jquery.cookie.js"></script>
-  <script src="js/login.js"></script>
-  <!--<script type="text/javascript" src="js/hwteachview.js"></script>-->
-  <script type="text/javascript" src="js/hwParentView.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/login.js"></script>
+	<!--<script type="text/javascript" src="js/hwteachview.js"></script>-->
+	<script type="text/javascript" src="js/hwParentView.js"></script>
 
-    <script type="x-tmpl-mustache" id="assignmentListTemplate">
-   	 {{#homework}}
-	    <p><a href="">{{name}}</a></p>
-	    <p><a href="">{{student}}</a></p>
-	    <p><a href="">{{title}}</a></p>
-	    <p><a href="">{{description}}</a></p>
-	    <p><a href="">{{image}}</a></p>
-	    <p><a href="">{{due_date}}</a></p>
-	    <p><a href="">{{points}}<a/></p>
-    {{/homework}}
-  </script>
+	<script type="x-tmpl-mustache" id="assignmentListTemplate">
+		{{#homework}}
 
-  <script type="x-tmpl-mustache" id="assignmentDetailTemplate">
-    {{#student_homework}}
-	    <p><a href="">Assignments: {{name}}</a></p>
-	    <p><a href="">Assignments: {{title}}</a></p>
-	    <p><a href="">Assignments: {{description}}</a></p>
-	    <p><a href="">Assignments: {{image}}</a></p>
-	    <p><a href="">Assignments: {{due_date}}</a></p>
-	    <p><a href="">Assignments: {{points}}</a></p>
-    {{/student_homework}}
-  </script>
+		<p><a href="">{{student}}</a></p>
+		<p><a href="">{{title}}</a></p>
+		<p><a href="">{{description}}</a></p>
+		<p><a href="">{{due_date}}</a></p>
+		{{/homework}}
+	</script>
+
+	<script type="x-tmpl-mustache" id="assignmentDetailTemplate">
+		{{#student_homework}}
+		<p><a href="">Assignments: {{name}}</a></p>
+		<p><a href="">Assignments: {{title}}</a></p>
+		<p><a href="">Assignments: {{description}}</a></p>
+		<p><a href="">Assignments: {{image}}</a></p>
+		<p><a href="">Assignments: {{due_date}}</a></p>
+		<p><a href="">Assignments: {{points}}</a></p>
+		{{/student_homework}}
+	</script>
 
 
 

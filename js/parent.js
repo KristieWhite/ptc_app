@@ -42,8 +42,7 @@ var ParentModel = Backbone.Model.extend({
     url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId')
 >>>>>>> b692466982a39bbef02ab86423636313cbb6828a
 	});
-
-
+	
 	var parent = new ParentModel();
 	parent.fetch({
 		success: function (resp) {
@@ -59,8 +58,6 @@ var ParentModel = Backbone.Model.extend({
 			console.log('error', err);
 		}
 	});
-	
-	
 	
 	var image = new ParentModel();
 	image.fetch({
