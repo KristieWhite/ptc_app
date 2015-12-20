@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/parent.css">
+  <link rel="stylesheet" type="text/css" href="css/student.css">
 </head>
 <body>
 	<div class="header">
@@ -22,11 +23,10 @@
 			<li><a href="./hwparentview.html">Assignments</a></li>
 			<li><a href="./parent.html">My Profile</a></li>
 		</ul>
-    <br />
-    <hr class="hrSpecial" />
   </div>
 
 <!-- parent profile parent view-->
+
   <div id="parentContainer">
     <div id="parentProImg">
       <img src="http://placehold.it/200x200" />
@@ -51,7 +51,35 @@
       <a href="">Example</a>
     </div>
   </div>
+
 <!-- end parent profile container parent view-->
+
+<!-- Start Student Profile -->
+
+<!--   <div id="studentContainer">
+      <div class="studentImg">
+          <img src="http://placehold.it/200x200" />
+      </div>
+      <div id="studentInfoDiv">
+          <div id="studentInfo"></div>
+          <div class="classesApiDiv"></div>
+      </div>
+      <div class="studentBehavior">
+          <p>Student Behavior: </p>
+          <a href="">Example</a>
+      </div>
+      <div class="studentAttendance">
+          <p>Student Attendance: </p>
+          <a href="">Example</a>
+
+      </div>
+      <hr class="hrSpecial2">
+      <div class="studentEvents">
+          <p>Upcoming Student Events: </p>
+          <a href="">Example</a>
+      </div>
+  </div> -->
+
 
 <!-- start parent profile teacher view ** have to move to a teacher view file **-->
 <!--   <div id="parentTView">
@@ -74,26 +102,50 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
   <script src="js/jquery.cookie.js"></script>
   <script src="js/login.js"></script>
-  <script src="js/routers.js"></script>
   <script src="js/parent.js"></script>
   <script src="js/students.js"></script>
+
+  <!-- Parent Data -->
 
   <script type="x-tmpl-mustache" id="parentInfoTemplate">
     {{#parents}}
       <p>Name: {{first_name}} {{last_name}}</p>
-      <p>Phone: 702-555-5555</p>
-      <p>Address: 1234 Abc St <br/> Las Vegas, NV 89110</p>
-      <p>Children: </p>
     {{/parents}}
   </script>
 
   <script type="x-tmpl-mustache" id="childTemplate">
+    <p>Children: </p>
     {{#children}}
       <ul>
-        <li id="idSave"><a href="/student/{{id}}/" class="studentId" value="{{id}}">{{first_name}} {{last_name}}</a></li>
+        <li id="idSave"><a href="./studentsParentView.html" class="studentId" value={{id}}>{{first_name}} {{last_name}}</a></li>
       </ul>
     {{/children}}
   </script>
+
+  <!-- End Parent Data -->
+
+  <!-- Start Student Data for Route to Profile -->
+
+<!-- 
+      <script type="x-tmpl-mustache" id="studentParentTemplate">
+      {{#students}}
+        <ul>
+          <li>Student Number: {{id}}</li>
+          <li value={{id}}>Name: {{first_name}} {{last_name}}</li>
+          <li>School: {{school_class}}</li>
+          <li>Classes: </li>
+        </ul>
+      {{/students}}
+    </script>
+
+  <script type="x-tmpl-mustache" id="classesTemplate">
+    {{#classes}}
+      <ul>
+        <li><a href="">{{name}}</a></li>
+      </ul>
+    {{/classes}}
+  </script>
+ -->
 
 
 <!-- needs to be moved into student profile -->

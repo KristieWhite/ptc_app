@@ -22,7 +22,6 @@ $(document).ready(function () {
 		e.preventDefault();
 	});
 
-	$(document).ready(function () {
 
 
 		var feeModel = Backbone.Model.extend({

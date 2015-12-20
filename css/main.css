@@ -1,12 +1,17 @@
+
 /*below is for mobile query*/
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+/*@media screen and (max-width: 600px;){*/
+
+
 }/*closes mobile query*/
 /****************************************************************************************************/
 /*below is for tablet*/
+
 
 @media only screen 
   and (min-device-width: 768px) 
@@ -28,55 +33,113 @@
     }
 
     a:visited{
-        color: white;
+    	color: white;
     }
     a:link {
-        color: white;
+    	color: white;
     }
     body {
-        background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png") repeat;
-        font-family: 'EraserDust';src: url('../fonts/EraserDust.ttf');
-        color: white;
-        text-transform: uppercase;
+    	background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
+    	background-size: 100% 100%;
+    	font-family: serif;
+    	color: white;
+    	text-transform: uppercase;
     }
 
     .header {
-        width: 100%;
-        height: 130px;
-        border-bottom: 2px solid black;
-        font-family: 'EraserDust';
-        color: white;
-        background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat-x;
-        background-position: center;	
+    	width: 100%;
+    	height: 100px;
+    	border-bottom: 2px solid black;
+    	font-family: 'EraserDust';
+    	color: white;
+    	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+    	background-position: center;
+    	
     }
 
     .header h1 {
-        margin: 0;
-        position: relative;
-        font-size: 4em;
-        top: 40px;
-        left: 45px;
-        width: 100%;
-        display: inline-block;
+    	margin: 0;
+    	position: relative;
+    	font-size: 3.5em;
+    	top: 20px;
+    	left: 40px;
+    	width: 80%;
+    	display: inline-block;
+    }
+
+    .navbar {
+    	width: 100%;
+    	height: 80px;
+    	background: black;
+    	margin: 0;
+    	padding:0;
     }
 
     .navbar ul {
-        list-style: none;
-        background-color: black;
-        text-align: center;
-        padding: 0;
-        margin: 0;
+    	height: 80px;
+    	list-style: none;
+    	text-align: center;
+    	padding: 0;
+    	margin: 0;
     }
 
     .navbar li {
-        font-family: 'Oswald', sans-serif;
-        font-size: 1.2em;
-        line-height: 40px;
-        height: 40px;
-        border-bottom: 1px solid #888;
+    	border-bottom: none;
+    	line-height: 70px;
+    	font-size: 2em;
+    	font-family: 'EraserDust';
+    	display: inline-block;
+    	margin: 10px;
+    	margin-left: 20px;
     }
 
     .navbar a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        transition: .3s background-color;
+    }
+
+
+    .navbar a:hover {
+    	border-bottom: 2px solid blue;
+    	background-color: #141010;
+    }
+
+/*@media screen and (min-width: 600px) {*/
+/*	.navbar li {
+		width: 15%;
+		border-bottom: none;
+		height: 90px;
+		line-height: 70px;
+		font-size: 1.9em;
+		font-family: 'EraserDust';src: url('../fonts/EraserDust.ttf');
+	}*/
+	/* Option 1 - Display Inline */
+/*	.navbar li {
+		display: inline-block;
+	}*/
+	/* Options 2 - Float
+  .nav li {
+    float: left;
+  }
+  .nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  .nav {
+    background-color: #444;
+  }
+  */
+/*}
+
+.navbar a:hover {
+	border-bottom: 2px solid blue;
+}*/
+
+
+/*    .navbar a {
         text-decoration: none;
         color: #fff;
         display: block;
@@ -95,11 +158,11 @@
             line-height: 70px;
             font-size: 1.9em;
             font-family: 'EraserDust';src: url('../fonts/EraserDust.ttf');
-        }
+        }*/
         /* Option 1 - Display Inline */
-        .navbar li {
+/*        .navbar li {
             display: inline-block;
-        }
+        }*/
         /* Options 2 - Float
       .nav li {
         float: left;
@@ -115,6 +178,7 @@
       */
     }
 
+/*
     .navbar a:hover {
         border-bottom: 2px solid blue;
     }
@@ -138,10 +202,19 @@
         height: 60px;
         border-top: 2px solid black;
         text-align: center;
-    }
+    }*/
 }/*closes laptop query*/
 /************************************************************************************************/
 /*below is for large screens*/
 @media only screen  and (min-width : 1824px) {
 
 }
+
+.footer {
+	width: 100%;
+	height: 60px;
+	border-top: 2px solid black;
+	text-align: center;
+}
+/*}*/
+

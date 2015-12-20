@@ -62,18 +62,25 @@ var ParentModel = Backbone.Model.extend({
 
 
     var child = new childModel();
-      
+      var counter = 0;
       child.fetch({
         success: function (resp) {
           var id = $('.studentId').val();
           var childData = {
             "children": resp.toJSON().results
           };
+        //   function createDocument(html, title) {
+        //     var doc = document.implementation.createHTMLDocument(title)
+        //     doc.documentElement.innerHTML = html
+        //     return doc
+        // }
           console.log('resp', resp.toJSON());
           var childTemplate = $("#childTemplate").text();
           var childHTML = Mustache.render(childTemplate, childData, id);
           $("#childList").html(childHTML);
           console.log(childHTML);
+
+
           //   $('#idSave').click(function(e){
           //     e.target.value
           //     var id = $(e.currentTarget).data("id");
