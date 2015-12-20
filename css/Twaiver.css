@@ -1,45 +1,69 @@
-@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
+/*mobile query starts here*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+     
+      
 
-div.sexyLine {
-    margin-top: 50px;
-}
-
-.sexyLine { 
-    display: block;
-    border: none;
-    color: white;
-    height: 1px;
-    background: black;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
-}
-
-.filler {
-    height: 4em;
-}
+}/*closes mobile query*/
+/****************************************************************************************************/
+/*tablet query starts here*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
 
-.sexyButton {
-    color: #08233e;
-    font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
-    padding: 8px;
-    border: 1px solid #ffcc00;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    border-bottom: 1px solid #9f9f9f;
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    background-color: rgba(255, 204, 0, 1);
- }
-button:hover {
-        background-color: rgba(255, 204, 0, 0, 8);
- }
 
-#FILE{
-	color:brown;
-}
+}/*closes tablet query*/
+/*****************************************************************************************************/
+/*laptop query starts here*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {    
+
+    @font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
+
+    div.sexyLine {
+        margin-top: 50px;
+    }
+
+    .sexyLine { 
+        display: block;
+        border: none;
+        color: white;
+        height: 1px;
+        background: black;
+        background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+    }
+
+    .filler {
+        height: 4em;
+    }
 
 
+    .sexyButton {
+        color: #08233e;
+        font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
+        padding: 8px;
+        border: 1px solid #ffcc00;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border-bottom: 1px solid #9f9f9f;
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        -webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        background-color: rgba(255, 204, 0, 1);
+     }
+    button:hover {
+            background-color: rgba(255, 204, 0, 0, 8);
+     }
+
+    #FILE{
+    	color:brown;
+    }
+
+}/*closes laptop query*/
+/************************************************************************************************/
+/*large screen query starts here*/
+@media only screen  and (min-width : 1824px) {
+
+
+
+}/*closes large screen query*/
 

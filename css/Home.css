@@ -1,22 +1,20 @@
 /*mobile query starts here*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
      
-      #homeContainer {
-          width: 100%;
-      }
       
-      
+
 }/*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+
 
 }/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
-
+  
   #homeContainer {
     width: 100%;
     height: 100%;
@@ -81,7 +79,6 @@
 /************************************************************************************************/
 /*large screen query starts here*/
 @media only screen  and (min-width : 1824px) {
-
 
 
 
