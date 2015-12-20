@@ -3,7 +3,13 @@
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-
+     
+      #homeContainer {
+          width: 100%;
+      }
+      
+      
+      
 }/*closes mobile query*/
 /****************************************************************************************************/
 /*below is for tablet*/
