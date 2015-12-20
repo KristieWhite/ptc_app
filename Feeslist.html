@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	<title>Upcoming Fees</title>
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/feesList.css" />
 	<link rel="stylesheet" href="css/main.css" />
 
@@ -12,21 +13,22 @@
 
 <body>
 
-	<div id="parentContainer">
-		<!-- 		parent profile parent view-->
-		<div class="navbar">
-			<ul><!--links are sent to parents pages-->
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="./eventsParent.html">Events Calendar</a></li>
-				<li><a href="./Feeslist.html">Fees</a></li>
-				<li><a href="./waiverParent.html">Waivers</a></li>
-				<li><a href="./hwparentview.html">Assignments</a></li>
-				<li><a href="./parent.html">My Profile</a></li>
-			</ul>
-			<br>
-			<hr class="hrSpecial">
-		</div>
-
+	<div class="header">
+		<h1>Parent Teacher Connection</h1>
+	</div>
+	<div class="navbar">
+		<ul><!--links are sent to parents pages-->
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./eventsParent.html">Events Calendar</a></li>
+			<li><a href="./Feeslist.html">Fees</a></li>
+			<li><a href="./waiverParent.html">Waivers</a></li>
+			<li><a href="./hwparentview.html">Assignments</a></li>
+			<li><a href="./parent.html">My Profile</a></li>
+		</ul>
+		<br>
+		<hr class="hrSpecial">
+	</div>
+	<div id="feesAccordion">
 		<div class="main">
 			<div class="accordion">
 				<div class="accordion-section">
@@ -34,8 +36,6 @@
 					<div id="accordion-1" class="accordion-section-content">
 						<div id="feeInfo"></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sapiente deleniti adipisci, reiciendis? Fugit perferendis voluptatibus hic amet facere perspiciatis quis, magnam cum, ratione eaque et, ad iste provident vel!</p>
-			
-						</form>
 					</div>
 					<!--end .accordion-section-content-->
 
@@ -47,29 +47,21 @@
 				<div class="accordion-section">
 					<a class="accordion-section-title" href="#accordion-2">Football Cleats</a>
 					<div id="accordion-2" class="accordion-section-content">
-
-
-			
-						</form>
 					</div>
 					<!--end .accordion-section-content-->
 				</div>
 				<!--end .accordion-section-->
-
-				<div class="accordion">
-					<div class="accordion-section">
-						<a class="accordion-section-title" href="#accordion-3">Charged 5$ for Lunch</a>
-						<div id="accordion-3" class="accordion-section-content">
-
-
-							</form>
-						</div>
-						<!--end .accordion-section-content-->
-					</div>
-					<!--end .accordion-section-->
-				</div>
-				<!--end .accordion-->
 			</div>
+			<div class="accordion">
+				<div class="accordion-section">
+					<a class="accordion-section-title" href="#accordion-3">Charged 5$ for Lunch</a>
+					<div id="accordion-3" class="accordion-section-content">
+					</div>
+					<!--end .accordion-section-content-->
+				</div>
+				<!--end .accordion-section-->
+			</div>
+			<!--end .accordion-->
 		</div>
 	</div>
 

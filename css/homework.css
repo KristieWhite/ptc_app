@@ -4,14 +4,11 @@
 		width: 80%;
 		height: 100%;
 		margin: auto;
+		margin-top: 40px;
 	}
 
 	#assignContainer a{
 		text-decoration: none;
-	}
-
-	.assignHeader h2 {
-		margin: 0;
 	}
 
 	#mainAssignments {

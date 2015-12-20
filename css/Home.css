@@ -3,14 +3,13 @@
 	#homeContainer {
 		width: 100%;
 		height: 100%;
-		margin-left:450px;
 	}
 	#homeContainer p {
 		position: relative;
 		margin: 0;
-		width: 40%;
-		left: 120px;
-		bottom: 48px;
+		width: 85%;
+		left: 18px;
+		bottom: 46px;
 		background: black;
 		color: white;
 		font-size: 20px;
@@ -18,20 +17,20 @@
 		font-family: 'Sigmar One', cursive;
 	}
 	
-	figure {
-		width: 800px;
-		height: 200px;
+	#homeContainer figure {
+		width: 90%;
+		height: 220px;
 		position: relative;
-		left: 80px;
 		border: 1px solid gray;
 		overflow: hidden;
 		text-align: center;
+		margin: 10px;
 	}
 	/* image */
 	.hover07 figure img {
 		background-position: center;
 		width: 100%;
-		height: 200px;
+		height: 220px;
 		-webkit-filter: blur(1px);
 		filter: blur(2px);
 		-webkit-transition: .3s ease-in-out;
@@ -42,6 +41,23 @@
 	.hover07 figure:hover img {
 		-webkit-filter: blur(0);
 		filter: blur(0);
+	}
+
+	.leftContainer {
+		width: 45%;
+		height: 100%;
+		display: inline-block;
+		position: relative;
+		left: 5%;
+	}
+
+	.rightContainer {
+		width: 45%;
+		height: 100%;
+		display: inline-block;
+		float: right;
+		position: relative;
+		right: 3%;
 	}
 
 }

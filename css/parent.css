@@ -11,7 +11,7 @@
   #parentProImg {
     position: relative;
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 25px;
   }
 
   #parentProImg img {
@@ -45,8 +45,8 @@
     position: relative;
     display: inline-block;
     float: right;
-    top: 15px;
-    border: 1px solid black;
+    top: 25px;
+    border: 1px solid white;
     border-radius: 5px;
     overflow: scroll;
   }

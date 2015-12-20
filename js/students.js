@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-		var studentDetailModel = Backbone.Model.extend({
+	var studentDetailModel = Backbone.Model.extend({
 		initialize: function () {
 		},
 		defaults: {
@@ -14,24 +14,25 @@ $(document).ready(function () {
 			"studenthomework_set":null
 	},
 		Model:studentDetailModel,
+		idAttribute: "id",
 		url: "https://murmuring-sands-9831.herokuapp.com/api/students/"
 	});
 	var studentDetailCollection = Backbone.Collection.extend({
 		Model: studentDetailModel,
+		idAttribute: "id",
 		url: "https://murmuring-sands-9831.herokuapp.com/api/students/"
 	});
-
-	var studentDetail = new studentDetailCollection();
+	var studentDetail = new studentDetailModel();
 
 	studentDetail.fetch({
 		success: function (resp) {
-			console.log(resp);
 			var studentDetailInfo = {
-				'studentDetail': resp.toJSON()
+				'students': resp.toJSON().results
 			};
-			var studentDetailTemplate = $("#studentDetailTemplate").text();
-			var studentDetailHTML = Mustache.render(studentDetailTemplate, studentDetailInfo)
-			$("#studentDetail").html(studentDetailHTML);
+			console.log(resp.toJSON().results);
+			var studentDetailTemplate = $("#studentParentTemplate").text();
+			var studentDetailHTML = Mustache.render(studentDetailTemplate, studentDetailInfo);
+			$("#studentInfo").html(studentDetailHTML);
 		},
 
 		error: function (err) {
@@ -41,41 +42,7 @@ $(document).ready(function () {
 
 });
 
-	var studentModel = Backbone.Model.extend({
-		initialize: function () {
-		},
-		defaults: {
-			"id": null,
-			"first_name": null,
-			"last_name": null,
-			"parent": null,
-			"school_name": null,
-			"classfeepayment_set": null
-		},
-		Model: studentModel,	
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/",
-		idAttribute: "id"
-	});
 
-	var studentCollection = Backbone.Collection.extend({
-		Model: studentModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" 
-	});
-
-
-	var students = new studentModel();
-		students.fetch({
-			success: function (resp) {
-				var studentsInfo = {
-				"students": resp.toJSON().results
-				};
-				console.log(resp.toJSON().results);
-				var studentsTemplate = $("#studentsTemplate").text();
-				var studentsHTML = Mustache.render(studentsTemplate, studentsInfo);
-				$("#studentInfo").html(studentsHTML);
-				console.log(studentsHTML);
-			}
-		});
 
 
 	// var studentIdModel = Backbone.Model.extend({
@@ -99,7 +66,6 @@ $(document).ready(function () {
 	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + id
 	// });
 
-});
 
 	
 	// 	$("body").on('click', 'a', function (e) {
