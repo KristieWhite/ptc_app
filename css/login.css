@@ -1,25 +1,24 @@
-/*below is for mobile query*/
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+/*mobile query starts here*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+        @font-face { 
+            font-family: 'EraserDust'; 
+            src: url('../fonts/EraserDust.ttf'); 
+        } 
+
+        
+
 
 }/*closes mobile query*/
 /****************************************************************************************************/
-/*below is for tablet*/
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+/*tablet query starts here*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
 }/*closes tablet query*/
 /*****************************************************************************************************/
-/*below is for laptop*/
+/*laptop query starts here*/
 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
 
     @font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
     #header {
@@ -157,12 +156,13 @@
         font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
         color: #404040;
     }
-    Add Comment Collapse
+    /*Add Comment Collapse*/
+
 }/*closes laptop query*/
 /****************************************************************************************/
-/*below is for large screens*/
+/*large screen query starts here*/
 @media only screen  and (min-width : 1824px) {
 
-}
+}/*closes large screen query*/
 
 
