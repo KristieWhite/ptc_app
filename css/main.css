@@ -5,6 +5,13 @@
         font-family: 'EraserDust';
         src: url('../fonts/EraserDust.ttf');
     }
+
+    body {
+        background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
+        background-size: 100%;
+        font-family: serif;
+        color: white;
+    }
       
     .header {
         width: 100%;
@@ -17,7 +24,7 @@
 
     .header h1 {
         margin: 0;
-        padding: 1em;
+        padding: .5em 0;
         text-align: center;
     }
 
@@ -54,7 +61,7 @@
     }
     body {
     	background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
-    	background-size: 100% 100%;
+    	background-size: 100%;
     	font-family: serif;
     	color: white;
     	text-transform: uppercase;
