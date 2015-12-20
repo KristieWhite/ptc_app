@@ -1,8 +1,26 @@
+/*mobile query starts here*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+     
+      
 
-@media screen and (min-width: 600px) {
-@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
+}/*closes mobile query*/
+/****************************************************************************************************/
+/*tablet query starts here*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
-/*fees accordion*/
+
+
+}/*closes tablet query*/
+/*****************************************************************************************************/
+/*laptop query starts here*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+
+	@font-face { 
+		font-family: 'EraserDust'; 
+		src: url('../fonts/EraserDust.ttf'); 
+	} 
+
+	/*fees accordion*/
 
 	#feesAccordion {
 		width: 80%;
@@ -80,4 +98,12 @@
 		text-align: center;
 		display: none;
 	}
-}
+	
+}/*closes laptop query*/
+/************************************************************************************************/
+/*large screen query starts here*/
+@media only screen  and (min-width : 1824px) {
+
+
+
+}/*closes large screen query*/

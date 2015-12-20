@@ -1,17 +1,29 @@
-@media screen and (min-width: 600px) {
+/*mobile query starts here*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+     
+      
+
+}/*closes mobile query*/
+/****************************************************************************************************/
+/*tablet query starts here*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+
+
+}/*closes tablet query*/
+/*****************************************************************************************************/
+/*laptop query starts here*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
 
 	#assignContainer {
 		width: 80%;
 		height: 100%;
 		margin: auto;
+		margin-top: 40px;
 	}
 
 	#assignContainer a{
 		text-decoration: none;
-	}
-
-	.assignHeader h2 {
-		margin: 0;
 	}
 
 	#mainAssignments {
@@ -131,5 +143,11 @@
 
 	/*detail styling*/
 
+}/*closes laptop query*/
+/************************************************************************************************/
+/*large screen query starts here*/
+@media only screen  and (min-width : 1824px) {
 
-}
+
+
+}/*closes large screen query*/

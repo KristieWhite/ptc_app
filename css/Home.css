@@ -1,50 +1,88 @@
-@media screen and (min-width: 600px) {
+/*mobile query starts here*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+     
+      
 
-	#homeContainer {
-		width: 100%;
-		height: 100%;
-		margin-left:450px;
-	}
-	#homeContainer p {
-		position: relative;
-		margin: 0;
-		width: 40%;
-		left: 120px;
-		bottom: 48px;
-		background: black;
-		color: white;
-		font-size: 20px;
-		padding-left: 15px;
-		font-family: 'Sigmar One', cursive;
-	}
-	
-	figure {
-		width: 800px;
-		height: 200px;
-		position: relative;
-		left: 80px;
-		border: 1px solid gray;
-		overflow: hidden;
-		text-align: center;
-	}
-	/* image */
-	.hover07 figure img {
-		background-position: center;
-		width: 100%;
-		height: 200px;
-		-webkit-filter: blur(1px);
-		filter: blur(2px);
-		-webkit-transition: .3s ease-in-out;
-		transition: .3s ease-in-out;
-		text-align: center;
-		margin: auto;
-	}
-	.hover07 figure:hover img {
-		-webkit-filter: blur(0);
-		filter: blur(0);
-	}
+}/*closes mobile query*/
+/****************************************************************************************************/
+/*tablet query starts here*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
-}
+
+
+}/*closes tablet query*/
+/*****************************************************************************************************/
+/*laptop query starts here*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+  
+  #homeContainer {
+    width: 100%;
+    height: 100%;
+  }
+  #homeContainer p {
+    position: relative;
+    margin: 0;
+    width: 85%;
+    left: 18px;
+    bottom: 46px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+    font-family: 'Sigmar One', cursive;
+  }
+  
+  #homeContainer figure {
+    width: 90%;
+    height: 220px;
+    position: relative;
+    border: 1px solid gray;
+    overflow: hidden;
+    text-align: center;
+    margin: 10px;
+  }
+  /* image */
+  .hover07 figure img {
+    background-position: center;
+    width: 100%;
+    height: 220px;
+    -webkit-filter: blur(1px);
+    filter: blur(2px);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    text-align: center;
+    margin: auto;
+  }
+  .hover07 figure:hover img {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+
+  .leftContainer {
+    width: 45%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    left: 5%;
+  }
+
+  .rightContainer {
+    width: 45%;
+    height: 100%;
+    display: inline-block;
+    float: right;
+    position: relative;
+    right: 3%;
+  }
+
+}/*closes laptop query*/
+/************************************************************************************************/
+/*large screen query starts here*/
+@media only screen  and (min-width : 1824px) {
+
+
+
+}/*closes large screen query*/
 
 
 
