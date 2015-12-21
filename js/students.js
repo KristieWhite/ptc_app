@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
 	var studentDetailModel = Backbone.Model.extend({
 		initialize: function () {
 		},
@@ -22,8 +21,8 @@ $(document).ready(function () {
 		idAttribute: "id",
 		url: "https://murmuring-sands-9831.herokuapp.com/api/students/"
 	});
+	
 	var studentDetail = new studentDetailModel();
-
 	studentDetail.fetch({
 		success: function (resp) {
 			var studentDetailInfo = {
@@ -42,9 +41,7 @@ $(document).ready(function () {
 
 });
 
-
-
-	var students = new studentModel();
+	/*var students = new  studentDetailModel();
 		students.fetch({
 			success: function (resp) {
 				var studentsInfo = {
@@ -58,7 +55,7 @@ $(document).ready(function () {
 		error: function (err) {
 			console.log("error", err);
 		}
-	});
+	});*/
 
 
 

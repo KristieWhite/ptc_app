@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-
-<<<<<<< HEAD
 	///////////////****Parent Profile Model****///////////////////////////
 
 	var ParentModel = Backbone.Model.extend({
@@ -20,27 +18,7 @@ $(document).ready(function () {
 	var ParentsCollection = Backbone.Collection.extend({
 		Model: ParentModel,
 		url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId')
-=======
-///////////////****Parent Profile Model****///////////////////////////
 
-var ParentModel = Backbone.Model.extend({
-  initialize: function(){
-  },
-  defaults: {
-    "id": null,
-    "first_name": null,
-    "last_name": null,
-    "student_set": null,
-	  "picture_url":null
-  },
-  Model: ParentModel,
-  url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') 
-});
-
-	var ParentsCollection = Backbone.Collection.extend({
-		Model: ParentModel,
-    url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId')
->>>>>>> b692466982a39bbef02ab86423636313cbb6828a
 	});
 	
 	var parent = new ParentModel();
@@ -74,23 +52,6 @@ var ParentModel = Backbone.Model.extend({
 		}
 	});
 
-<<<<<<< HEAD
-	/////////////////**List of children Model**//////////////////////////////////
-
-	var childModel = Backbone.Model.extend({
-		initialize: function () {},
-		defaults: {
-			"first_name": null,
-			"last_name": null,
-			"parent": null,
-			"school_class": null,
-			"classfeepayment_set": null,
-			"studenthomework_set": null
-		},
-		idAttribute: "id",
-		url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
-	});
-=======
 /////////////////**List of children Model**//////////////////////////////////
 
   var childModel = Backbone.Model.extend({
@@ -186,8 +147,6 @@ var ParentModel = Backbone.Model.extend({
 
 //****ROUTES****//
 
->>>>>>> b692466982a39bbef02ab86423636313cbb6828a
-
 	var childCollection = Backbone.Collection.extend({
 		Model: childModel,
 		idAttribute: "id",
@@ -196,8 +155,6 @@ var ParentModel = Backbone.Model.extend({
 
 
 	var child = new childModel();
-
-<<<<<<< HEAD
 	child.fetch({
 		success: function (resp) {
 			var id = $('.studentId').val();
@@ -303,13 +260,6 @@ var ParentModel = Backbone.Model.extend({
 
 	$("#homeParent").on('click', function () {
 		window.location.replace("./homeParent.html");
-	});
-=======
-  $("#homeParent").on('click', function(){
-    window.location.replace("./homeParent.html");
-  });
-
->>>>>>> b692466982a39bbef02ab86423636313cbb6828a
 
 
 	$("#addPhoto").click(function () {
@@ -317,4 +267,5 @@ var ParentModel = Backbone.Model.extend({
 	});
 	$("#parentTView").hide();
 
+});
 });

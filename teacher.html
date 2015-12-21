@@ -10,6 +10,8 @@
 </head>
 
 <body>
+<div id="TeacherImg"></div>
+
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
 	</div>
@@ -23,11 +25,11 @@
 			<li><a href="./teacher.html">My Profile</a></li>
 		</ul>
 		<br />
-		<hr class="hrSpecial">
+
 	</div>
 	<!-- 		teacher profile / teacher's view-->
 	<div id="teacherContainer">
-<img src="https://s-media-cache-ak0.pinimg.com/236x/5c/f5/3c/5cf53c7d2c875340b731cf555e9de570.jpg" />
+
 			<div id="TeacherImg"></div>
 
 		<div class="teacherInfo">
@@ -60,20 +62,14 @@
 	<!-- start teacher profile parent view -->
 	<div id="teacherPView">
 		<div class="teacherImg">
-			
 		</div>
-
-		<div class="teachInfoPView">
-			<ul>
-				<li>Name: </li>
-				<li>Email: </li>
-			</ul>
-		</div>
-	</div>
 
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
+
+
+
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
@@ -98,16 +94,14 @@
 
 	<script type="x-tmpl-mustache" id="imageProfileTemplate">
 		{{#ProImg}}
-		<img src="{{picture_url}}">
+		<img src={{picture_url}}>
 		{{/ProImg}}
 	</script>
 	
 	<script type="x-tmpl-mustache" id="eventsTemplate">
 		{{#events}}
-		<li>{{name}}</li>
-		<li>{{description}}</li>
-		
-		<li>{{/events}}</li>
+		<p>{{name}}</p>
+		<p>{{/events}}</p>
 	</script>
 
 </body>

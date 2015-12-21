@@ -31,10 +31,6 @@ $(document).ready(function () {
 	});
 
 	////////////////////////////Student Events/////////////////////////////////
-
-
-
-
 	var studentEventsModel = Backbone.Model.extend({
 		initialize: function () {},
 		defaults: {

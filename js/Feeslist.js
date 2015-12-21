@@ -33,12 +33,12 @@ $(document).ready(function () {
 				"student_set": null
 			},
 			Model: feeModel,
-			url: "https://murmuring-sands-9831.herokuapp.com/api/" + $.cookie('StudentId') + "/class_fees/"
+			url: "https://murmuring-sands-9831.herokuapp.com/api/class_fees/"
 		});
 
 		var feesCollection = Backbone.Collection.extend({
 			Model: feeModel,
-			url: "https://murmuring-sands-9831.herokuapp.com/api/" + $.cookie('StudentId') + "/class_fees/"
+			url: "https://murmuring-sands-9831.herokuapp.com/api/class_fees/"
 		});
 
 
@@ -52,8 +52,6 @@ $(document).ready(function () {
 				var feeHTML = Mustache.render(feeTemplate, feeObj);
 				$("#feeInfo").html(feeHTML);
 				console.log('success ', resp);
-
-
 			},
 			error: function (err) {
 				console.log('error', err);
@@ -64,4 +62,3 @@ $(document).ready(function () {
 
 
 
-});
