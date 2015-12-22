@@ -109,7 +109,7 @@
     	font-size: 2em;
     	font-family: 'EraserDust';
     	display: inline-block;
-    	margin: 10px;
+    	margin: 8px;
     	margin-left: 20px;
     }
 
@@ -125,104 +125,6 @@
     	border-bottom: 2px solid blue;
     	background-color: #141010;
     }
-
-
-/*	.navbar li {
-		width: 15%;
-		border-bottom: none;
-		height: 90px;
-		line-height: 70px;
-		font-size: 1.9em;
-		font-family: 'EraserDust';src: url('../fonts/EraserDust.ttf');
-	}*/
-	/* Option 1 - Display Inline */
-/*	.navbar li {
-		display: inline-block;
-	}*/
-	/* Options 2 - Float
-  .nav li {
-    float: left;
-  }
-  .nav ul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .nav {
-    background-color: #444;
-  }
-  */
-/*}
-
-.navbar a:hover {
-	border-bottom: 2px solid blue;
-}*/
-
-
-/*    .navbar a {
-        text-decoration: none;
-        color: #fff;
-        display: block;
-        transition: .3s background-color;
-    }
-
-    .navbar a:hover {
-        background-color: #141010;
-    }
-
-    @media screen and (min-width: 600px) {
-        .navbar li {
-            width: 15%;
-            border-bottom: none;
-            height: 90px;
-            line-height: 70px;
-            font-size: 1.9em;
-            font-family: 'EraserDust';src: url('../fonts/EraserDust.ttf');
-        }*/
-        /* Option 1 - Display Inline */
-/*        .navbar li {
-            display: inline-block;
-        }*/
-        /* Options 2 - Float
-      .nav li {
-        float: left;
-      }
-      .nav ul {
-        overflow: auto;
-        width: 600px;
-        margin: 0 auto;
-      }
-      .nav {
-        background-color: #444;
-      }
-      */
-    
-
-/*
-    .navbar a:hover {
-        border-bottom: 2px solid blue;
-    }
-
-    .hrSpecial {
-        border: -50;
-        height: 1px;
-        background: #333;
-        background-image: linear-gradient(to right, #ccc, #333, #ccc);
-    }
-
-    .hrSpecial2 {
-        border: 0;
-        height: 1px;
-        background: #333;
-        background-image: linear-gradient(to right, #ccc, #333, #ccc);
-    }
-
-    .footer {
-        width: 100%;
-        height: 60px;
-        border-top: 2px solid black;
-        text-align: center;
-    }*/
 
 
     .footer {
