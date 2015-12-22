@@ -36,7 +36,6 @@
     <div id="parentProImg">
 		<div id="imageInfo"></div>
       <input class="uploadPic" type="file" />
- 
     </div>
     
     <div id="parentEvents">
@@ -134,6 +133,7 @@
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
 		<p>Name: {{first_name}} {{last_name}}</p>
+		<p>Children: {{student_set}}</p>
 		{{/parents}}
 	</script>
 
@@ -146,6 +146,9 @@
 	<script type="x-tmpl-mustache " id="childTemplate ">
 		{{#children}}
 		<ul>
+			<p>ID: {{id}}</p>
+			<p>Name: {{first_name}} {{last_name}}</p>
+			<p>Children: {{student_set}}</p>
 			<li id="idSave "><a href="/./student/{{id}}/ " class="studentId " value="{{id}} ">{{first_name}} {{last_name}}</a></li>
 		</ul>
 		{{/children}}
