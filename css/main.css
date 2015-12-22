@@ -19,10 +19,11 @@
         font-family: 'EraserDust';
         color: white;
         background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+        background-image: repeat;
         background-position: center;   
     }
 
-    .header h1 {
+    h1 {
         margin: 0;
         padding: .5em 0;
         text-align: center;
@@ -45,12 +46,12 @@
         src: url('../fonts/EraserDust.ttf');
     }
 
-    a:visited{
+    /*a:visited{
         color: white;
     }
     a:link {
         color: white;
-    }
+    }*/
     body {
         background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
         background-size: 100%;
@@ -87,6 +88,7 @@
         border-top: 2px solid black;
         text-align: center;
     }
+
 }/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
