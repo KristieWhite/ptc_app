@@ -1,4 +1,5 @@
 $(document).ready(function () {
+<<<<<<< HEAD
 
 	/////////////////////***********Parent Profile Model**************/////////////////////////////
 
@@ -16,11 +17,8 @@ $(document).ready(function () {
 	});
 
 	var ParentsCollection = Backbone.Collection.extend({
-		Model: ParentModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId')
-
+    url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId')
 	});
-	
 	var parent = new ParentModel();
 	parent.fetch({
 		success: function (resp) {
@@ -30,33 +28,13 @@ $(document).ready(function () {
 			var parentTemplate = $("#parentInfoTemplate").text();
 			var parentHTML = Mustache.render(parentTemplate, parentObj);
 			$("#parentInfo").html(parentHTML);
-			console.log(parentHTML);
-		},
-		error: function (err) {
-			console.log('error', err);
-		}
-	});
-	
-	var image = new ParentModel();
-	image.fetch({
-		success: function (resp) {
-			var imageObj = {
-				"images": resp.toJSON()
-			};
-			var imageTemplate = $("#imageInfoTemplate").text();
-			var imageHTML = Mustache.render(imageTemplate, imageObj);
-			$("#imageInfo").html(imageHTML);
-      console.log(imageHTML);
+      console.log(parentHTML);
 		}, error: function (err) {
 			console.log('error', err);
 		}
 	});
 
-
-
-
-////////////////////////***********List of children Model***********s*//////////////////////////////////
-
+/////////////////**List of children Model**//////////////////////////////////
   var childModel = Backbone.Model.extend({
     initialize: function () {
     },
@@ -71,13 +49,11 @@ $(document).ready(function () {
     idAttribute: "id",
     url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
   });
-
   var childCollection = Backbone.Collection.extend({
     Model: childModel,
     idAttribute: "id",
     url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students" 
   });
-
 
     var child = new childCollection();
       child.fetch({
@@ -90,13 +66,11 @@ $(document).ready(function () {
         //     doc.documentElement.innerHTML = html
         //     return doc
         // }
-          console.log('resp', resp.toJSON());
+          console.log('resp children', resp.toJSON());
           var childTemplate = $("#childTemplate").text();
           var childHTML = Mustache.render(childTemplate, childData);
           $("#childList").html(childHTML);
           console.log(childHTML);
-
-
           //   $('#idSave').click(function(e){
           //     e.target.value
           //     var id = $(e.currentTarget).data("id");
@@ -121,6 +95,7 @@ $(document).ready(function () {
   //     "classfeepayment_set": null,
   //     "studenthomework_set":null
   // },
+
   //   Model:studentInfoModel,
   //   idAttribute: "id",
   //   url: "https://murmuring-sands-9831.herokuapp.com/api/students/?_fields=id, first_name"
@@ -163,12 +138,10 @@ $(document).ready(function () {
 //   Model: TeacherModel,
 //   url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')+ "
 // });
-
 //   var TeachersCollection = Backbone.Collection.extend({
 //     Model: ParentModel,
 //     url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')+"
 //   });
-
 //   var teacher = new TeacherModel();
 //   teacher.fetch ({
 //     success: function(resp){
@@ -182,9 +155,6 @@ $(document).ready(function () {
 //     console.log('error', err);
 //   }
 // });
-
-
-
 //****ROUTES****//
 
   var Router = Backbone.Router.extend({
@@ -232,3 +202,4 @@ $(document).ready(function () {
 
 
 });
+
