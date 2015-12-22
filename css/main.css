@@ -5,8 +5,6 @@
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-/*@media screen and (max-width: 600px;){*/
-
 
 }/*closes mobile query*/
 /****************************************************************************************************/
@@ -89,7 +87,7 @@
     	font-size: 2em;
     	font-family: 'EraserDust';
     	display: inline-block;
-    	margin: 10px;
+    	margin: 8px;
     	margin-left: 20px;
     }
 
@@ -105,8 +103,7 @@
     	border-bottom: 2px solid blue;
     	background-color: #141010;
     }
-
-/*@media screen and (min-width: 600px) {*/
+/*@media screen and (min-width: 600px) {}*/
 /*	.navbar li {
 		width: 15%;
 		border-bottom: none;
@@ -176,7 +173,6 @@
         background-color: #444;
       }
       */
-    }
 
 /*
     .navbar a:hover {

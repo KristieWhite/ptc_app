@@ -61,13 +61,11 @@ var ParentModel = Backbone.Model.extend({
   });
 
 
-    var child = new childModel();
-      var counter = 0;
+    var child = new childCollection();
       child.fetch({
         success: function (resp) {
-          var id = $('.studentId').val();
           var childData = {
-            "children": resp.toJSON().results
+            "children": resp.toJSON()[0].results
           };
         //   function createDocument(html, title) {
         //     var doc = document.implementation.createHTMLDocument(title)
@@ -76,7 +74,7 @@ var ParentModel = Backbone.Model.extend({
         // }
           console.log('resp', resp.toJSON());
           var childTemplate = $("#childTemplate").text();
-          var childHTML = Mustache.render(childTemplate, childData, id);
+          var childHTML = Mustache.render(childTemplate, childData);
           $("#childList").html(childHTML);
           console.log(childHTML);
 
@@ -91,7 +89,46 @@ var ParentModel = Backbone.Model.extend({
           }
       });
 
+//****************** Student Detail Info ***************************//
 
+  // var studentInfoModel = Backbone.Model.extend({
+  //   initialize: function () {
+  //   },
+  //   defaults: {
+  //     "id": null,
+  //     "first_name": null,
+  //     "last_name": null,
+  //     "parent": null,
+  //     "school_class": null,
+  //     "classfeepayment_set": null,
+  //     "studenthomework_set":null
+  // },
+  //   Model:studentInfoModel,
+  //   idAttribute: "id",
+  //   url: "https://murmuring-sands-9831.herokuapp.com/api/students/?_fields=id, first_name"
+  // });
+  // var studentInfoCollection = Backbone.Collection.extend({
+  //   Model: studentInfoModel,
+  //   idAttribute: "id",
+  //   url: "https://murmuring-sands-9831.herokuapp.com/api/students/?_fields=id, first_name" 
+  // });
+  // var student = new studentInfoCollection();
+  // student.fetch({
+  //   success: function (resp) {
+  //     var studentInfo = {
+  //       'students': resp.toJSON()[0].results
+  //     };
+  //     console.log(resp.toJSON()[0].results);
+  //     var studentInfoTemplate = $("#studentInfoTemplate").text();
+  //     var studentInfoHTML = Mustache.render(studentInfoTemplate, studentInfo);
+  //     $("#studentInfo").html(studentInfoHTML);
+  //     console.log(studentInfoTemplate);
+  //   },
+
+  //   error: function (err) {
+  //     console.log("error", err);
+  //   }
+  // });
 
 //*****Teacher Profile - Parent View*****//
 
@@ -132,6 +169,35 @@ var ParentModel = Backbone.Model.extend({
 
 //****ROUTES****//
 
+  var Router = Backbone.Router.extend({
+    initialize:function(){
+      Backbone.history.start({pushState: true});
+    },
+    routes:{
+      "students/:id/:first_name": "students",
+      "": "index"
+    }
+  });
+
+  var router = new Router();
+
+  router.on("route:students", function(id){
+    var student = new childCollection({id: id});
+      student.fetch({
+        success: function (resp) {
+          var studentData = {
+            "students": resp.toJSON()[0].results
+          };
+          console.log('resp', resp.toJSON());
+          var studentTemplate = $("#studentInfoTemplate").text();
+          var studentHTML = Mustache.render(studentTemplate, studentData);
+          $("#studentInfo").html(studentHTML);
+          console.log(studentHTML);
+          $("#parentContainer").hide();
+          $("#studentContainer").show();
+        }
+    });
+    });
 
 
 
