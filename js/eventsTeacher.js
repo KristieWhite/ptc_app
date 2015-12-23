@@ -42,10 +42,10 @@ $(document).ready(function () {
 		},
 		url: "https://murmuring-sands-9831.herokuapp.com/api/school_events/#{id}"
 	});
-	var SchoolEventsDetailCollection = Backbone.Collection.extend({
-		Model: SchoolEventsDetailModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/school_events/#{id}"
-	});
+	// var SchoolEventsDetailCollection = Backbone.Collection.extend({
+	// 	Model: SchoolEventsDetailModel,
+	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/school_events/#{id}"
+	// });
 
 	var SchoolEventsDetail = new SchoolEventsDetailModel();
 	SchoolEventsDetail.fetch({
@@ -123,13 +123,13 @@ $(document).ready(function () {
 			image: null
 		},
 		success: function() {
-			url: 'https://murmuring-sands-9831.herokuapp.com/api/class_event/#{id}'
+			url: 'https://murmuring-sands-9831.herokuapp.com/api/class_events/#{id}'
 		}
 	});
 
 	var EventsDetailTeacherCollection = Backbone.Collection.extend({
 		model: EventsDetailTeacherModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_event/#{id}'
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_events/#{id}'
 	});
 
 	var EventDetailListTeacher = new EventsDetailTeacherCollection();
@@ -144,7 +144,7 @@ $(document).ready(function () {
 			var eventsDetailListTeacherHTML = Mustache.render(eventsDetailListTeacherTemplate, eventListTeacherObj);
 			console.log("eventDetailListTeacherObj", eventDetailListTeacherObj);
 			console.log("eventsDetailListTeacherHTML", eventsDetailListTeacherHTML)
-			$("#classEventsDetailTeacherDiv").html(eventsDetailListTeacherHTML);
+			$("#classEventsDetailDiv").html(eventsDetailListTeacherHTML);
 		},
 		error: function(err) {
 			console.log('error classes', err);
