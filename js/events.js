@@ -1,28 +1,30 @@
 $(document).ready(function () {
-	var studentsModel = Backbone.Model.extend({
+	//all school events
+	var SchoolEventsModel = Backbone.Model.extend({
 		initialize: function () {},
 		defaults: {
 			"name": null,
 			"school_class": null,
 			"description": null
 		},
-		Model: studentsModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
+		url: "https://murmuring-sands-9831.herokuapp.com/api/schools/#{id}/events"
 	});
-	var studentsCollection = Backbone.Collection.extend({
-		Model: studentsModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
-	});
+	// var SchoolEventsCollection = Backbone.Collection.extend({
+	// 	Model: SchoolEventsModel,
+	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/schools/#{id}/events"
+	// });
 
-	var students = new studentsModel();
-	students.fetch({
+	var SchoolEvents = new SchoolEventsModel();
+	SchoolEvents.fetch({
 		success: function (resp) {
-			var studentsInfo = {
-				"students": resp.toJSON().results
+			var schoolEventsInfo = {
+				"events": resp.toJSON().results
 			};
-			var studentsTemplate = $("#studentsTemplate").text();
-			var studentsHTML = Mustache.render(studentsTemplate, studentsInfo);
-			$("#student").html(studentsHTML);
+			var schoolEventsTemplate = $("#schoolEventsTemplate").text();
+			var schoolEventsHTML = Mustache.render(schoolEventsTemplate, schoolEventsInfo);
+			console.log("schoolEventsInfo", schoolEventsInfo);
+			console.log("schoolEventsHTML", schoolEventsHTML);
+			$("#schoolEventsDiv").html(schoolEventsHTML);
 			console.log(resp);
 		},
 		error: function (err) {
@@ -30,38 +32,40 @@ $(document).ready(function () {
 		}
 	});
 
-$(document).ready(function () {
-	var NamesModel = Backbone.Model.extend({
+////////////////////////////school events detail////////////////////
+	var SchoolEventsDetailModel = Backbone.Model.extend({
 		initialize: function () {},
 		defaults: {
 			"name": null,
 			"school_class": null,
 			"description": null
 		},
-		Model:NamesModel,
-		//will show a classes events
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/11/events'
+		url: "https://murmuring-sands-9831.herokuapp.com/api/school_events/#{id}"
 	});
-	var NamesCollection = Backbone.Collection.extend({
-		Model: NamesModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/11/events'
+	var SchoolEventsDetailCollection = Backbone.Collection.extend({
+		Model: SchoolEventsDetailModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/school_events/#{id}"
 	});
 
-	var Names = new NamesCollection();
-	Names.fetch({
+	var SchoolEventsDetail = new SchoolEventsDetailModel();
+	SchoolEventsDetail.fetch({
 		success: function (resp) {
-			var namesInfo = {
-				"names": resp.toJSON().results
+			var schoolEventsDetailInfo = {
+				"events": resp.toJSON().results
 			};
-			var namesTemplate = $("#namesTemplate").text();
-			var namesHTML = Mustache.render(namesTemplate, namesInfo);
-			$("#name").html(namesHTML);
+			var schoolEventsDetailTemplate = $("#schoolEventsDetailTemplate").text();
+			var schoolEventsDetailHTML = Mustache.render(schoolEventsDetailTemplate, schoolEventsDetailInfo);
+			console.log("schoolEventsDetailInfo", schoolEventsDetailInfo);
+			console.log("schoolEventsDetailHTML", schoolEventsDetailHTML);
+			$("#schoolEventsDetailDiv").html(schoolEventsDetailHTML);
 			console.log(resp);
 		},
 		error: function (err) {
-			console.log('error names', err);
+			conole.log(error, err);
 		}
 	});
+
+	
 
 	/////////////shows class events//////////////////////
 	var EventsTeacherModel = Backbone.Model.extend({
@@ -69,7 +73,7 @@ $(document).ready(function () {
 			console.log("EventsTeacherModel intialized");
 		},
 		defaults: {
-			14: null,
+			id: null,
 			name: null,
 			school_class: null,
 			description: null,
@@ -77,13 +81,13 @@ $(document).ready(function () {
 			image: null
 		},
 		success: function() {
-			url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/id/events'
+			url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/#{id}/events'
 		}
 	});
 
 	var EventsTeacherCollection = Backbone.Collection.extend({
 		model: EventsTeacherModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/id/events'
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/#{id}/events'
 	});
 
 	var EventListTeacher = new EventsTeacherCollection();
@@ -92,11 +96,12 @@ $(document).ready(function () {
 		success: function(resp) {
 			console.log('success', resp.toJSON());
 			var eventListTeacherObj = {
-				"classes": resp.toJSON()[0].results
+				"events": resp.toJSON()[0].results
 			};
 			var eventsListTeacherTemplate = $("#eventsListTeacherTemplate").text();
 			var eventsListTeacherHTML = Mustache.render(eventsListTeacherTemplate, eventListTeacherObj);
 			console.log("eventListTeacherObj", eventListTeacherObj);
+			console.log("eventsListTeacherHTML", eventsListTeacherHTML)
 			$("#classEventsTeacherDiv").html(eventsListTeacherHTML);
 		},
 		error: function(err) {
@@ -104,7 +109,49 @@ $(document).ready(function () {
 		}
 	});
 
-});
+////////////////////////shows class event detail////////////////////////////////////////
+	var EventsDetailTeacherModel = Backbone.Model.extend({
+		initialize: function(){
+			console.log("EventsTeacherModel intialized");
+		},
+		defaults: {
+			id: null,
+			name: null,
+			school_class: null,
+			description: null,
+			date: null,
+			image: null
+		},
+		success: function() {
+			url: 'https://murmuring-sands-9831.herokuapp.com/api/class_event/#{id}'
+		}
+	});
+
+	var EventsDetailTeacherCollection = Backbone.Collection.extend({
+		model: EventsDetailTeacherModel,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_event/#{id}'
+	});
+
+	var EventDetailListTeacher = new EventsDetailTeacherCollection();
+
+	EventDetailListTeacher.fetch({
+		success: function(resp) {
+			console.log('success', resp.toJSON());
+			var eventDetailListTeacherObj = {
+				"events": resp.toJSON().results
+			};
+			var eventsDetailListTeacherTemplate = $("#eventsDetailListTeacherTemplate").text();
+			var eventsDetailListTeacherHTML = Mustache.render(eventsDetailListTeacherTemplate, eventListTeacherObj);
+			console.log("eventDetailListTeacherObj", eventDetailListTeacherObj);
+			console.log("eventsDetailListTeacherHTML", eventsDetailListTeacherHTML)
+			$("#classEventsDetailTeacherDiv").html(eventsDetailListTeacherHTML);
+		},
+		error: function(err) {
+			console.log('error classes', err);
+		}
+	});
+
+
 	
 });	//documentready
 

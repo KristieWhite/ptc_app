@@ -14,12 +14,12 @@
     }
       
     .header {
+        background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+        background-repeat: repeat-x;
         width: 100%;
         border-bottom: 2px solid black;
         font-family: 'EraserDust';
         color: white;
-        background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
-        background-image: repeat;
         background-position: center;   
     }
 
