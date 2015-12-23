@@ -6,6 +6,7 @@
 	<title>Parent</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/parent.css">
@@ -26,56 +27,45 @@
 			<li><a href="./hwparentview.html">Assignments</a></li>
 			<li><a href="./parent.html">My Profile</a></li>
 		</ul>
-		<br />
-		<hr class="hrSpecial" />
 	</div>
 
 
 <!-- parent profile parent view-->
+
   <div id="parentContainer">
     <div id="parentProImg">
-		<div id="imageInfo"></div>
+      <div id="imageInfo"></div>
       <input class="uploadPic" type="file" />
- 
+      <i id="addPhoto" class="fa fa-picture-o"></i>
     </div>
-    
+
+    <div id="parentInfoDiv">
+      <div id="parentInfo"></div>
+      <div id="childList"></div>
+    </div>
+
     <div id="parentEvents">
       <p>Upcoming Student Events: </p>
       <p><a href="">History Field Trip</a></p>
       <p><a href="">Science Fair</a></p>
       <p><a href="">Bring a Parent</a></p>
-
     </div>
-
-
-	<div id="parentContainer">
-		<div id="parentProImg">
-			<div id="imageInfo"></div>
-			<input class="uploadPic" type="file" />
-
-		</div>
-
-
-		<div id="parentInfoDiv ">
-			<div id="parentInfo "></div>
-			<div id="childList "></div>
-		</div>
-
-		<div id="parentEvents ">
-			<p>Upcoming Student Events: </p>
-			<a href=" ">Example</a>
-		</div>
+    
+    <hr class="hrSpecial2">
+    <br />
 
     <div class="parentEvents">
       <p>My Volunteered Events: </p>
        <p><a href="">Clean the Road</a></p>
     </div>
+
   </div>
 <!-- end parent profile container parent view-->
 
 	<!-- Start Student Profile -->
-
+<!-- 
   <div id="studentContainer">
+
     <div class="studentImg">
       <img src="http://placehold.it/200x200" />
     </div>
@@ -101,21 +91,10 @@
       <a href="">Example</a>
     </div>
 
-  </div>
+  </div> -->
 
+  <!--End Student Profile -->
 
-	<!-- start parent profile teacher view ** have to move to a teacher view file **-->
-	<!--   <div id="parentTView ">
-
-    <div class="parentImg ">
-      <img src="http://placehold.it/200x200 " />
-    </div>
-
-    <div id="parentInfoTView ">
-    </div>
-
-  </div>
- -->
 	<div class="footer ">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
@@ -127,13 +106,16 @@
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/parent.js"></script>
-	<script src="js/students.js"></script>
+  <script src="js/students.js"></script>
 
 	<!-- Parent Data -->
 
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
-		{{#parents}}
-		<p>Name: {{first_name}} {{last_name}}</p>
+		<p>Name: </p>
+    {{#parents}}
+      <ul>
+        <li>{{first_name}} {{last_name}}</li>
+      </ul>
 		{{/parents}}
 	</script>
 
@@ -146,42 +128,40 @@
   <script type="x-tmpl-mustache" id="childTemplate">
     <p>Children: </p>
     {{#children}}
+    <form action="./parentStudents.html" method="GET">
+    <input type="hidden" name="student" value={{id}} />
       <ul>
-        <li><a href="/students/{{id}}/{{first_name}}" class="studentId" value={{id}}>{{first_name}} {{last_name}}</a></li>
+        <li><a href="./parentStudents.html?id={{id}}" class="studentId" value={{id}} data={{id}}>{{first_name}} {{last_name}}</a></li>
       </ul>
+    </form>
     {{/children}}
   </script>
 
-
-
 	<!-- End Parent Data -->
 
-
 	<!-- Start Student Data for Route to Profile -->
+<!-- 
+  <script type="x-tmpl-mustache" id="studentInfoTemplate">
+    {{#students}}
+      <ul>
+        <li>Student Number: {{id}}</li>
+        <li value={{id}}>Name: {{first_name}} {{last_name}}</li>
+        <li>School: Walter V Long Elementary School</li>
+        <li>School Address: 2000 S Walnut Rd, Las Vegas, NV 89104</li>
+        <li>Teachers: </li>
+        <li>Classes: </li>
+      </ul>
+    {{/students}}
+  </script>
 
-	<!-- 
-
-    <script type="x-tmpl-mustache" id="studentInfoTemplate">
-      {{#students}}
-        <ul>
-          <li>Student Number: {{id}}</li>
-          <li value={{id}}>Name: {{first_name}} {{last_name}}</li>
-          <li>School: {{school_class}}</li>
-          <li>Classes: </li>
-        </ul>
-      {{/students}}
-    </script>
-
-    <script type="x-tmpl-mustache" id="classesTemplate">
-      {{#classes}}
-        <ul>
-          <li><a href="">{{name}}</a></li>
-        </ul>
-      {{/classes}}
-    </script> -->
-
-
-
+  <script type="x-tmpl-mustache" id="classesTemplate">
+    {{#classes}}
+      <ul>
+        <li><a href="">{{name}}</a></li>
+      </ul>
+    {{/classes}}
+  </script>
+ -->
 
 	<!-- needs to be moved into student profile -->
 	<!--

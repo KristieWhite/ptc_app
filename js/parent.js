@@ -61,6 +61,7 @@ $(document).ready(function () {
     initialize: function () {
     },
     defaults: {
+      "id": null,
       "first_name": null,
       "last_name": null,
       "parent": null,
@@ -79,33 +80,21 @@ $(document).ready(function () {
   });
 
 
-    var child = new childCollection();
+    var child = new childModel();
       child.fetch({
         success: function (resp) {
           var childData = {
-            "children": resp.toJSON()[0].results
+            "children": resp.toJSON().results
           };
-        //   function createDocument(html, title) {
-        //     var doc = document.implementation.createHTMLDocument(title)
-        //     doc.documentElement.innerHTML = html
-        //     return doc
-        // }
-          console.log('resp', resp.toJSON());
+          console.log('resp', resp.toJSON().results);
           var childTemplate = $("#childTemplate").text();
           var childHTML = Mustache.render(childTemplate, childData);
           $("#childList").html(childHTML);
           console.log(childHTML);
-
-
-          //   $('#idSave').click(function(e){
-          //     e.target.value
-          //     var id = $(e.currentTarget).data("id");
-          //     window.location.replace("../studentsParentView.html");
-          //     console.log(id);
-          //     });
-          //   }
           }
-      });
+        });
+
+
 
 ////////////////////****************** Student Detail Info ***************************///////////////////////
 
@@ -123,13 +112,31 @@ $(document).ready(function () {
   // },
   //   Model:studentInfoModel,
   //   idAttribute: "id",
-  //   url: "https://murmuring-sands-9831.herokuapp.com/api/students/?_fields=id, first_name"
+  //   url: "https://murmuring-sands-9831.herokuapp.com/api/students/"
   // });
   // var studentInfoCollection = Backbone.Collection.extend({
   //   Model: studentInfoModel,
   //   idAttribute: "id",
-  //   url: "https://murmuring-sands-9831.herokuapp.com/api/students/?_fields=id, first_name" 
+  //   url: "https://murmuring-sands-9831.herokuapp.com/api/students/" 
   // });
+
+
+  //   var student = new studentInfoModel({id: id});
+  //   student.fetch({
+  //     success: function (resp) {
+  //       var studentInfo = {
+  //         'students': resp.toJSON().results.id
+  //       };
+  //       console.log(resp.toJSON().results.id);
+  //       var studentInfoTemplate = $("#studentInfoTemplate").text();
+  //       var studentInfoHTML = Mustache.render(studentInfoTemplate, studentInfo);
+  //       $("#studentInfo").html(studentInfoHTML);
+  //       console.log(studentInfoTemplate);
+  //     },
+  //     error: function (err) {
+  //       console.log("error", err);
+  //     }
+  //   });
   // var student = new studentInfoCollection();
   // student.fetch({
   //   success: function (resp) {
@@ -148,6 +155,9 @@ $(document).ready(function () {
   //   }
   // });
 
+  
+
+
 ////////////////////////***********Teacher Profile - Parent View**********/////////////////////////////////
 
 // var TeacherModel = Backbone.Model.extend({
@@ -161,12 +171,12 @@ $(document).ready(function () {
 //     "studentParent_set": null
 //   },
 //   Model: TeacherModel,
-//   url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')+ "
+//   url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')
 // });
 
 //   var TeachersCollection = Backbone.Collection.extend({
 //     Model: ParentModel,
-//     url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')+"
+//     url: "https://murmuring-sands-9831.herokuapp.com/api/teachers/" + $.cookie('UserId')
 //   });
 
 //   var teacher = new TeacherModel();
@@ -185,50 +195,19 @@ $(document).ready(function () {
 
 
 
-//****ROUTES****//
-
-  var Router = Backbone.Router.extend({
-    initialize:function(){
-      Backbone.history.start({pushState: true});
-    },
-    routes:{
-      "students/:id/:first_name": "students",
-      "": "index"
-    }
-  });
-
-  var router = new Router();
-
-  router.on("route:students", function(id){
-    var student = new childCollection({id: id});
-      student.fetch({
-        success: function (resp) {
-          var studentData = {
-            "students": resp.toJSON()[0].results
-          };
-          console.log('resp', resp.toJSON());
-          var studentTemplate = $("#studentInfoTemplate").text();
-          var studentHTML = Mustache.render(studentTemplate, studentData);
-          $("#studentInfo").html(studentHTML);
-          console.log(studentHTML);
-          $("#parentContainer").hide();
-          $("#studentContainer").show();
-        }
-    });
-    });
 
 
-
-
-
-	//***click functionality***//
+	//////////////////***click functionality***///////////////////
 
 	$("#addPhoto").click(function () {
 		$(".uploadPic").trigger('click');
 	});
-	$("#parentTView").hide();
-  });
 
-
+  
+  // $(".studentId").on('click', function(){
+  //   var studentId = $(".studentId").val();
+  //   $.cookie('studentId', studentId);
+  //   alert(student_val);
+  // });
 
 });
