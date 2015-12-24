@@ -28,9 +28,7 @@
 		<p class="hrSpecial"></p>
 	</div>
 	<div id="pageContainer">
-		<h2>Events Calendar</h2>
-
-		<div class="filler"></div>
+		<h2>EVENTS CALENDAR</h2>
 
 		<!--This is for the mustache school events list, api/schools/id/events-->
 		<div id="schoolEventsDiv"><span class="yellow">school events, api/schools/id/events goes here</span></div>
@@ -81,9 +79,8 @@
 					<p class="clearFloat"></p>
 				</div>
 			</form>
-		</div>
-	</div>
-	<!--closes page container-->
+		</div><!--closes form container-->
+	</div><!--closes page container-->
 
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
@@ -94,37 +91,38 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
-	<script type="text/javascript" src="js/events.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<script src="js/events.js"></script>
+	<script src="js/eventsTeacher.js"></script>
 
 
 	<script type="X-tmpl-mustache" id="schoolEventsTemplate">
-		<h3 class="yellow">school events list, api/schools/id/events</h3>
+		<h3 class="black uppercase">school events list, api/schools/id/events</h3>
 		{{#events}}
-		<p><a href="">{{name}}<a></p>
+		<h3 class="yellow uppercase">{{name}}</h3>
 		{{/events}}
 	</script>
 
 	<script type="X-tmpl-mustache" id="schoolEventsDetailTemplate">
-		<h3 class="yellow">school event detail, api/school_events/id</h3>
+		<h3 class="black uppercase">school event detail, api/school_events/id</h3>
 		{{#events}}
-		<p><a href="">{{name}}<a></p>
+		<h3 class="yellow uppercase">{{name}}</h3>
+		<p>{{description}}</p>
 		{{/events}}
 	</script>
 
 	  <script type="X-tmpl-mustache" id="eventsListTeacherTemplate">
-	    <h3 class="yellow">class events for teacher, api/classes/id/events</h3>
+	    <h3 class="black uppercase">class events for teacher, api/classes/id/events</h3>
 	    {{#events}}
-	    <p><a href="">{{name}}<a></p>
+	    <h3 class="yellow uppercase">{{name}}</h3>
 	    {{/events}}
 	  </script>
 
 	  <script type="X-tmpl-mustache" id="eventsDetailListTeacherTemplate">
-	    <h3 class="yellow">teachers class event detail, api/class_events/id</h3>
+	    <h3 class="black uppercase">teachers class event detail, api/class_events/id</h3>
 	    {{#events}}
-	    <p><a href="">{{name}}<a></p>
+	    <h3 class="yellow uppercase">{{name}}</h3>
+	    <p>{{description}}</p>
 	    {{/events}}
 	  </script>
 
