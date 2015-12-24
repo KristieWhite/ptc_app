@@ -17,15 +17,28 @@ $(document).ready(function () {
 	var SchoolEvents = new SchoolEventsModel();
 	SchoolEvents.fetch({
 		success: function (resp) {
-			var schoolEventsInfo = {
+			var schoolEventsObj = {
 				"events": resp.toJSON().results
 			};
 			var schoolEventsTemplate = $("#schoolEventsTemplate").text();
-			var schoolEventsHTML = Mustache.render(schoolEventsTemplate, schoolEventsInfo);
-			console.log("schoolEventsInfo", schoolEventsInfo);
-			console.log("schoolEventsHTML", schoolEventsHTML);
+			var schoolEventsHTML = Mustache.render(schoolEventsTemplate, schoolEventsObj);
+			console.log("schoolEventsObj", schoolEventsObj);
+			//console.log("schoolEventsHTML", schoolEventsHTML);
 			$("#schoolEventsDiv").html(schoolEventsHTML);
 			console.log(resp);
+			function getURIParameter(param, asArray) {
+				return document.location.search.substring(1).split('&').reduce(function(p,c) {
+					var parts = c.split('=', 2).map(function(param) {
+						return decodeURIComponent(param);
+					});
+					if(parts.length == 0 || parts[0] != param) 
+						return (p instanceof Array) && !asArray ? null : p;
+						return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
+					},
+					[]);
+			}
+			getURIParameter("id")
+			getURIParameter("id", true)
 		},
 		error: function (err) {
 			conole.log(error, err);
@@ -50,15 +63,28 @@ $(document).ready(function () {
 	var SchoolEventsDetail = new SchoolEventsDetailModel();
 	SchoolEventsDetail.fetch({
 		success: function (resp) {
-			var schoolEventsDetailInfo = {
+			var schoolEventsDetailObj = {
 				"events": resp.toJSON().results
 			};
 			var schoolEventsDetailTemplate = $("#schoolEventsDetailTemplate").text();
-			var schoolEventsDetailHTML = Mustache.render(schoolEventsDetailTemplate, schoolEventsDetailInfo);
-			console.log("schoolEventsDetailInfo", schoolEventsDetailInfo);
-			console.log("schoolEventsDetailHTML", schoolEventsDetailHTML);
+			var schoolEventsDetailHTML = Mustache.render(schoolEventsDetailTemplate, schoolEventsDetailObj);
+			console.log('schoolEventsDetailObj', schoolEventsDetailObj);
+			//console.log("schoolEventsDetailHTML", schoolEventsDetailHTML);
 			$("#schoolEventsDetailDiv").html(schoolEventsDetailHTML);
 			console.log(resp);
+			function getURIParameter(param, asArray) {
+				return document.location.search.substring(1).split('&').reduce(function(p,c) {
+					var parts = c.split('=', 2).map(function(param) {
+						return decodeURIComponent(param);
+					});
+					if(parts.length == 0 || parts[0] != param) 
+						return (p instanceof Array) && !asArray ? null : p;
+						return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
+					},
+					[]);
+			}
+			getURIParameter("id")
+			getURIParameter("id", true)
 		},
 		error: function (err) {
 			conole.log(error, err);
@@ -101,8 +127,21 @@ $(document).ready(function () {
 			var eventsListTeacherTemplate = $("#eventsListTeacherTemplate").text();
 			var eventsListTeacherHTML = Mustache.render(eventsListTeacherTemplate, eventListTeacherObj);
 			console.log("eventListTeacherObj", eventListTeacherObj);
-			console.log("eventsListTeacherHTML", eventsListTeacherHTML)
+			//console.log("eventsListTeacherHTML", eventsListTeacherHTML)
 			$("#classEventsTeacherDiv").html(eventsListTeacherHTML);
+			function getURIParameter(param, asArray) {
+				return document.location.search.substring(1).split('&').reduce(function(p,c) {
+					var parts = c.split('=', 2).map(function(param) {
+						return decodeURIComponent(param);
+					});
+					if(parts.length == 0 || parts[0] != param) 
+						return (p instanceof Array) && !asArray ? null : p;
+						return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
+					},
+					[]);
+			}
+			getURIParameter("id")
+			getURIParameter("id", true)
 		},
 		error: function(err) {
 			console.log('error classes', err);
@@ -138,18 +177,34 @@ $(document).ready(function () {
 		success: function(resp) {
 			console.log('success', resp.toJSON());
 			var eventDetailListTeacherObj = {
-				"events": resp.toJSON().results
+				"events": resp.toJSON()[0].results
 			};
 			var eventsDetailListTeacherTemplate = $("#eventsDetailListTeacherTemplate").text();
-			var eventsDetailListTeacherHTML = Mustache.render(eventsDetailListTeacherTemplate, eventListTeacherObj);
+			var eventsDetailListTeacherHTML = Mustache.render(eventsDetailListTeacherTemplate, eventDetailListTeacherObj);
 			console.log("eventDetailListTeacherObj", eventDetailListTeacherObj);
-			console.log("eventsDetailListTeacherHTML", eventsDetailListTeacherHTML)
+			//console.log("eventsDetailListTeacherHTML", eventsDetailListTeacherHTML)
 			$("#classEventsDetailDiv").html(eventsDetailListTeacherHTML);
-		},
-		error: function(err) {
-			console.log('error classes', err);
-		}
+			function getURIParameter(param, asArray) {
+				return document.location.search.substring(1).split('&').reduce(function(p,c) {
+					var parts = c.split('=', 2).map(function(param) {
+						return decodeURIComponent(param);
+					});
+					if(parts.length == 0 || parts[0] != param) 
+						return (p instanceof Array) && !asArray ? null : p;
+						return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
+					},
+					[]);
+			}
+			getURIParameter("id")
+			getURIParameter("id", true)
+			},
+			error: function(err) {
+				console.log('error classes', err);
+			}
 	});
+
+
+//////////////url decoder////////////////////////////
 
 
 	

@@ -16,6 +16,12 @@
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
 	}
+	.uppercase {
+		text-transform: uppercase;
+	}
+	.black {
+		color: black;
+	}
 	a:visited {
 		color: white;
 	}
