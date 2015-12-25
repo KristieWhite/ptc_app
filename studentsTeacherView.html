@@ -28,18 +28,9 @@
 	<!-- start student profile teacher view -->
 
 	<div id="studentContainer">
-		<div class="studentImg">
+		<div class="studentImg"></div>
 
-		</div>
-
-		<div id="studentInfo">
-			<!--<ul>
-				<li>Student Number: </li>
-				<li>Name: </li>
-				<li>Address: </li>
-				<li>Parents: </li>
-			</ul>-->
-		</div>
+		<div id="studentsTeacherDetailDiv"></div>
 
 		<div class="studentBehavior">
 			<p>Student Behavior: </p>
@@ -69,16 +60,12 @@
 	<script src="js/login.js"></script>
 	<script src="js/students.js"></script>
 	<script src="js/classes.js"></script>
+	<script src="js/studentsTeacherView.js"></script>
 
-	<script type="x-tmpl-mustache" id="studentsTeacherViewTemplate">
+	<script type="x-tmpl-mustache" id="studentsTeacherDetailTemplate">
+		<h3>List of the students for teachers, api/students/id</h3>
 		{{#students}}
-		<ul>
-			<li><a href="">Student Number: </a></li>
-			<li><a href="">Name: {{first_name}} {{last_name}}</a></li>
-			<li><a href="">Address: </a></li>
-			<li><a href="">Parents: {{parent}}</a></li>
-			<li><a href="">School: {{school_name}}</a></li>
-		</ul>
+			<p>{{first_name}} {{last_name}}</p>
 		{{/students}}
 	</script>
 

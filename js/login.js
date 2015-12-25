@@ -34,8 +34,7 @@ $("#logInForm").submit(function (e) {
 	}).done(function (resp) {
 		if ($('#remember_me').is(":checked")) {
 			$.cookie('AuthToken', resp.token);
-
-			//$.cookie('username', resp.username);
+			$.cookie('username', resp.username);
 			console.log("created cookies for token and user");
 		}
 		setToken(resp.token);
@@ -43,8 +42,7 @@ $("#logInForm").submit(function (e) {
 		console.log(resp.token);
 		var userId = resp.id;
 		console.log(userId);
-	
-		//User.set(resp.User);
+		// User.set(resp.User);
 		console.log(resp);
 		if (resp.user_type == "parent") {
 			console.log("redirect to the parents home page");
@@ -63,7 +61,7 @@ $("#logInForm").submit(function (e) {
 	///////////////////////////////////////////token//////////////////////////////////
 	var UserParent = Backbone.Model.extend({
 
-		initialize: function () {
+		initialize: function() {
 			console.log("UserParent model initialized");
 		},
 		defaults: {
@@ -80,14 +78,14 @@ $("#logInForm").submit(function (e) {
 			if (!attrs.password) {
 				$("#passwordLogIn").html("password is required");
 			}
-			if (attrs.password) {
+			if (attrs.username) {
 				return student_set;
 			}
 			if (attrs.password) {
 				return student_set;
 			}
 		},
-		success: function () {
+		success: function() {
 			url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
 		}
 	});
