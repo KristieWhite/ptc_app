@@ -82,23 +82,26 @@
 	<script type="text/javascript" src="js/hwParentView.js"></script>
 
 	<script type="x-tmpl-mustache" id="assignmentListTemplate">
+		<h3>student homework list, api/students/id/homework</h3>
 		{{#homework}}
-
-		<p><a href="">{{student}}</a></p>
-		<p><a href="">{{title}}</a></p>
-		<p><a href="">{{description}}</a></p>
-		<p><a href="">{{due_date}}</a></p>
+		<p>{{student}}</p>
+		<p>{{first_name}} {{last_name}}</p>
+		<p>{{title}}</p>
+		<p>{{description}}</p>
+		<p>{{due_date}}</p>
 		{{/homework}}
 	</script>
 
 	<script type="x-tmpl-mustache" id="assignmentDetailTemplate">
+		<h3>student homework detail, api/student_homework/id</h3>
 		{{#student_homework}}
-		<p><a href="">Assignments: {{name}}</a></p>
-		<p><a href="">Assignments: {{title}}</a></p>
-		<p><a href="">Assignments: {{description}}</a></p>
-		<p><a href="">Assignments: {{image}}</a></p>
-		<p><a href="">Assignments: {{due_date}}</a></p>
-		<p><a href="">Assignments: {{points}}</a></p>
+		<p>{{name}}</p>
+		<p>{{"name"}}</p>
+		<p>{{title}}</p>
+		<p>{{description}}</p>
+		<p>{{image}}</p>
+		<p>{{due_date}}</p>
+		<p>{{points}}</p>
 		{{/student_homework}}
 	</script>
 

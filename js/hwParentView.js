@@ -14,13 +14,13 @@ $(document).ready(function () {
 			points: "Not Graded Yet!"
 		},
 		success: function () {
-			url: 'https://murmuring-sands-9831.herokuapp.com/api/students/14/homework'
+			url: 'https://murmuring-sands-9831.herokuapp.com/api/students/#{id}/homework'
 		}
 	});
 
 	var HwParentViewCollection = Backbone.Model.extend({
 		Model: HwParentViewModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/students/14/homework'
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/students/#{id}homework'
 	});
 
 	var HomeworkAssigned = new HwParentViewCollection();
@@ -34,8 +34,21 @@ $(document).ready(function () {
 			var assignmentListTemplate = $("#assignmentListTemplate").text();
 			var pHomeworkHTML = Mustache.render(assignmentListTemplate, homeworkListObj);
 			console.log("homeworkListObj", homeworkListObj);
-			console.log("pHomeworkHTML", pHomeworkHTML);
+			//console.log("pHomeworkHTML", pHomeworkHTML);
 			$("#hwApiDiv").html(pHomeworkHTML);
+			function getURIParameter(param, asArray) {
+				return document.location.search.substring(1).split('&').reduce(function(p,c) {
+					var parts = c.split('=', 2).map(function(param) {
+						return decodeURIComponent(param);
+					});
+					if(parts.length == 0 || parts[0] != param) 
+						return (p instanceof Array) && !asArray ? null : p;
+						return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
+					},
+					[]);
+			}
+			getURIParameter("id")
+			getURIParameter("id", true)
 		},
 		error: function (err) {
 			console.log('error homeworkList', err);
@@ -48,13 +61,13 @@ $(document).ready(function () {
 			console.log("hwDetailParentModel initialized");
 		},
 		success: function() {
-			url: 'https://murmuring-sands-9831.herokuapp.com/api/student_homework/4'
+			url: 'https://murmuring-sands-9831.herokuapp.com/api/student_homework/#{id}'
 		}
 	});
 
 	var HwDetailParentCollection = Backbone.Model.extend({
 		Model: HwDetailParentModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/student_homework/4'
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/student_homework/#{id}'
 	});
 
 	var HomeworkDetailParent = new HwDetailParentCollection();
