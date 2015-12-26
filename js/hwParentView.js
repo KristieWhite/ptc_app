@@ -14,12 +14,14 @@ $(document).ready(function () {
 		// 	points: "Not Graded Yet!"
 		// },
 		success: function () {
+			//url: https://murmuring-sands-9831.herokuapp.com/api/students/id/homework
 			url: 'https://murmuring-sands-9831.herokuapp.com/api/students/#{id}/homework'
 		}
 	});
 
 	var HwParentViewCollection = Backbone.Collection.extend({
 		Model: HwParentViewModel,
+		//url: https://murmuring-sands-9831.herokuapp.com/api/students/id/homework
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/students/#{id}/homework'
 	});
 
@@ -51,13 +53,16 @@ $(document).ready(function () {
 			console.log("hwDetailParentModel initialized");
 		},
 		success: function() {
-			url: 'https://murmuring-sands-9831.herokuapp.com/api/student_homework'
+			//url: 'https://murmuring-sands-9831.herokuapp.com/api/student_homework/id'
+			url: 'https://murmuring-sands-9831.herokuapp.com/api/student_homework/#{id}'
 		}
 	});
 
 	var HwDetailParentCollection = Backbone.Collection.extend({
 		Model: HwDetailParentModel,
+		//url: 'https://murmuring-sands-9831.herokuapp.com/api/student_homework/id',
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/student_homework/#{id}',
+
 		parse: function(data) {
 			return data.student_homework;
 		}
@@ -66,9 +71,9 @@ $(document).ready(function () {
 	var HomeworkDetailParent = new HwDetailParentCollection();
 
 	HomeworkDetailParent.fetch({
-		data: $.param({ 
-			id: 13
-		}),
+		// data: $.param({ 
+		// 	id: 13
+		// }),
 		success: function(resp) {
 			console.log('success', resp.toJSON());
 			var homeworkDetailObj = {
