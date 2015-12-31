@@ -29,15 +29,16 @@
 
 	<div id="assignContainer">
 		<div class="assignHeader">
-			<h2>Assignments</h2>
+			<h2 class="yellow">ASSIGNMENTS</h2>
 		</div>
-		<div id="studentsDiv" class="assignments"></div>
-		<div id="studentsDiv2" class="assignments"></div>
-		<div id="homeworkDiv" class="assignments"></div>
-		<div id="mainAssignments">
-			<div id="hwApiDiv" class="assignments">
+		<div id="studentsDiv2" class=""></div>
+		<div id="homeworkDiv" class=""></div>
+		<p class="clearFloat"></p>
+		<div id="studentsDiv" class=""></div>
+		<!-- <div id="mainAssignments">
+			<div id="hwApiDiv" class="">
 
-				<!--<p>Tonight's Assignment: </p>
+				<p>Tonight's Assignment: </p>
 
 				<p>Bobby Hill </p>
 
@@ -47,31 +48,31 @@
 				<p>Helpful Links: </p>
 				<ul>
 					<li><a href="">A,B,C's and 1,2,3's</a></li>
-				</ul>-->
+				</ul>
 			</div>
 			<hr class="hrSpecial">
-			<div class="assignments">
+			<div class="">
 				<p>Past Assignments: </p>
 				<ul>
 					<li><a href="">Assignment 1</a></li>
 				</ul>
 			</div>
-		</div>
-		<div id="projects">
-			<div id="hwDetailParentDiv" class="assignments">
+		</div> -->
+		<!-- <div id="projects">
+			<div id="hwDetailParentDiv" class="">
 				<p>Weekend Assigments/Projects:</p>
 				<ul>
 					<li><a href="">Science Fair Project </a></li>
 				</ul>
 			</div>
 			<hr class="hrSpecial">
-			<div class="assignments">
+			<div class="">
 				<p>Missed Assignments: </p>
 				<ul>
 					<li><a href="">Assignment 1</a></li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
@@ -94,33 +95,21 @@
 		<p>{{description}}</p>
 		<p>{{due_date}}</p>
 		{{/homework}}
-	</script>
-
-	<script type="x-tmpl-mustache" id="assignmentDetailTemplate">
-		<h3>student homework detail, api/student_homework/id</h3>
-		{{#student_homework}}
-		<p>{{name}}</p>
-		<p>{{"name"}}</p>
-		<p>{{title}}</p>
-		<p>{{description}}</p>
-		<p>{{image}}</p>
-		<p>{{due_date}}</p>
-		<p>{{points}}</p>
-		{{/student_homework}}
 	</script>-->
 
 	<script type="x-tmpl-mustache" id="studentTpl">
 		<p>{{picture_url}}</p>
-		<p class="uppercase">{{first_name}} {{last_name}}  </p>
+		<p><span class="uppercase">{{first_name}} {{last_name}}</span>  
 		
-		<a class="StudentListItem-homeworkLink link">Show My Homework</a>
+		<a class="StudentListItem-homeworkLink link"> - <i>Show My Homework</i></a></p>
+
 	</script>
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
+		<p img src="{{picture_url}}"></p>
 		<h4>Homework Assignment:</h4>
-		<h5>Title: {{title}}</h5>
-		<h6>Description:</h6>
-		<p>{{description}}</p>
+		<h5>Title: {{title}} {{due_date}}</h5>
+		<h6>Description: {{description}}</h6>
 	</script>
 
 
