@@ -1,3 +1,5 @@
+//var id = window.location.search.match(/\d+/)[0];
+
 function setToken(token) {
 	var _sync = Backbone.sync;
 	Backbone.sync = function (post, model, options) {

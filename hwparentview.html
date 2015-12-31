@@ -8,7 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="css/homework.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-
+<style>
+</style>
 <body>
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
@@ -30,10 +31,13 @@
 		<div class="assignHeader">
 			<h2>Assignments</h2>
 		</div>
+		<div id="studentsDiv" class="assignments"></div>
+		<div id="studentsDiv2" class="assignments"></div>
+		<div id="homeworkDiv" class="assignments"></div>
 		<div id="mainAssignments">
 			<div id="hwApiDiv" class="assignments">
 
-				<p>Tonight's Assignment: </p>
+				<!--<p>Tonight's Assignment: </p>
 
 				<p>Bobby Hill </p>
 
@@ -43,7 +47,7 @@
 				<p>Helpful Links: </p>
 				<ul>
 					<li><a href="">A,B,C's and 1,2,3's</a></li>
-				</ul>
+				</ul>-->
 			</div>
 			<hr class="hrSpecial">
 			<div class="assignments">
@@ -79,13 +83,13 @@
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<!--<script type="text/javascript" src="js/hwteachview.js"></script>-->
-	<script type="text/javascript" src="js/hwParentView.js"></script>
+	<script type="text/javascript" src="js/appModels/StudentCollection.js"></script>
+	<script type="text/javascript" src="js/hwParentView3.js"></script>
 
-	<script type="x-tmpl-mustache" id="assignmentListTemplate">
+	<!--<script type="x-tmpl-mustache" id="assignmentListTemplate">
 		<h3>student homework list, api/students/id/homework</h3>
 		{{#homework}}
-		<p>{{student}}</p>
-		<p>{{first_name}} {{last_name}}</p>
+		<p><a href="HomeworkDetailParent.html?id={{id}}">{{first_name}} {{last_name}}</a></p>
 		<p>{{title}}</p>
 		<p>{{description}}</p>
 		<p>{{due_date}}</p>
@@ -103,6 +107,20 @@
 		<p>{{due_date}}</p>
 		<p>{{points}}</p>
 		{{/student_homework}}
+	</script>-->
+
+	<script type="x-tmpl-mustache" id="studentTpl">
+		<p>{{picture_url}}</p>
+		<p class="uppercase">{{first_name}} {{last_name}}  </p>
+		
+		<a class="StudentListItem-homeworkLink link">Show My Homework</a>
+	</script>
+
+	<script type="x-tmpl-mustache" id="homeworkTpl">
+		<h4>Homework Assignment:</h4>
+		<h5>Title: {{title}}</h5>
+		<h6>Description:</h6>
+		<p>{{description}}</p>
 	</script>
 
 

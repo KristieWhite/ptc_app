@@ -22,8 +22,9 @@
 		margin-top: 40px;
 	}
 
-	#assignContainer a{
+	#assignContainer a {
 		text-decoration: none;
+		color: lightblue;
 	}
 
 	#mainAssignments {
@@ -37,7 +38,7 @@
 	.assignments {
 		width: 100%;
 		height: 45%;
-		overflow: scroll;
+		/*overflow: scroll;*/
 	}
 
 	.assignments2	 {
