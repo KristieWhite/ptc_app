@@ -57,7 +57,6 @@
         background-size: 100%;
         font-family: serif;
         color: white;
-        text-transform: uppercase;
     }
 
     .header {
@@ -105,6 +104,9 @@
     }
     a:link {
     	color: white;
+    }
+    .uppercase {
+        text-transform: uppercase;
     }
     body {
     	background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
