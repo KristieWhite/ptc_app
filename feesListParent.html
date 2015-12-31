@@ -4,31 +4,31 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
-	<link rel="stylesheet" href="css/feesList.css" />
+	<title>Fees List</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/Feeslist.css" />
 	<link rel="stylesheet" href="css/main.css" />
-
+	<link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' />
 </head>
 
 <body>
-<div class="header">
+	<div class="header">
 		<h1>Parent Teacher Connection</h1>
 	</div>
 		<!-- 		parent profile parent view-->
-		<div class="navbar">
-			<ul>
-				<!--links are sent to parents pages-->
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="./eventsParent.html">Events</a></li>
-				<li><a href="./feeslistParent.html">Fees</a></li>
-				<li><a href="./waiverParent.html">Waivers</a></li>
-				<li><a href="./hwparentview.html">Assignments</a></li>
-				<li><a href="./parent.html">My Profile</a></li>
-			</ul>
-			<br>
-			<hr class="hrSpecial">
-		</div>
+	<div class="navbar">
+		<ul>
+			<!--links are sent to parents pages-->
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./eventsParent.html">Events</a></li>
+			<li><a href="./feeslistParent.html">Fees</a></li>
+			<li><a href="./waiverParent.html">Waivers</a></li>
+			<li><a href="./hwparentview.html">Assignments</a></li>
+			<li><a href="./parent.html">My Profile</a></li>
+		</ul>
+	</div>
 
+	<div id="feesAccordion">
 		<div class="main">
 			<div class="accordion">
 				<div class="accordion-section">
@@ -44,11 +44,11 @@
 						</form>
 					</div>
 					<!--end .accordion-section-content-->
-
 				</div>
 				<!--end .accordion-section-content-->
 			</div>
 			<!--end .accordion-section-->
+
 			<div class="accordion">
 				<div class="accordion-section">
 					<a class="accordion-section-title" href="#accordion-2">Football Cleats For Jeff</a>
@@ -57,9 +57,6 @@
 						<form action="" method="POST">
 							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($80.00)" data-image="/128x128.png" data-locale="auto">
 							</script>
-						</form>
-
-
 						</form>
 					</div>
 					<!--end .accordion-section-content-->
@@ -70,12 +67,11 @@
 					<div class="accordion-section">
 						<a class="accordion-section-title" href="#accordion-3">Account has reached a negative of $5</a>
 						<div id="accordion-3" class="accordion-section-content">
-							<p>This account was charged with 0.00$ in this account please pay this fee</p>
-
-						<form action="" method="POST">
-							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($5.00)" data-image="/128x128.png" data-locale="auto">
-							</script>
-						</form>
+							<p>This account was charged with $0.00 in this account please pay this fee</p>
+							<form action="" method="POST">
+								<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($5.00)" data-image="/128x128.png" data-locale="auto">
+								</script>
+							</form>
 						</div>
 						<!--end .accordion-section-content-->
 					</div>

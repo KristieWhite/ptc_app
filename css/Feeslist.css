@@ -15,18 +15,14 @@
 /*laptop query starts here*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
 
-	@font-face { 
-		font-family: 'EraserDust'; 
-		src: url('../fonts/EraserDust.ttf'); 
-	} 
 
 	/*fees accordion*/
 
 	#feesAccordion {
-		width: 80%;
+		width: 90%;
 		height: 900px;
 		margin: auto;
-
+		margin-top: 20px;
 	}
 
 	.main:before {
@@ -69,15 +65,15 @@
 		padding:25px;
 		padding-left:400px;
 		display: inline-block;
-		border-bottom: 1px solid #1a1a1a;
+		border-bottom: 1px solid white;
 		background: #333;
 		transition: all linear 0.15s;
 		/* Type */
 		font-size: 1.500em;
-		font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf');
+		font-family: 'Walter Turncoat', cursive;
 		text-shadow: 0px 1px 0px #1a1a1a;
 		color: #fff;
-
+		text-decoration: none;
 	}
 
 	.accordion-section-title.active,
