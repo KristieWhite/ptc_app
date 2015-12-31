@@ -30,10 +30,12 @@
     }
 
     .footer {
+        position: fixed;
         width: 100%;
         height: 60px;
         border-top: 2px solid black;
         text-align: center;
+        bottom: 0;
     }
 
 }/*closes mobile query*/
@@ -97,6 +99,10 @@
     @font-face {
         font-family: 'EraserDust';
         src: url('../fonts/EraserDust.ttf');
+    }
+
+    .yellow {
+        color: yellow;
     }
 
     a:visited{
@@ -175,6 +181,8 @@
     }
 
     .footer {
+        position: fixed;
+        bottom: 0;
         width: 100%;
         height: 60px;
         border-top: 2px solid black;
@@ -269,15 +277,6 @@
         background: #333;
         background-image: linear-gradient(to right, #ccc, #333, #ccc);
     }
-
-    .footer {
-        width: 100%;
-        height: 60px;
-        border-top: 2px solid black;
-        text-align: center;
-    }
->>>>>>> kristie
-
 
     .footer {
         width: 100%;
