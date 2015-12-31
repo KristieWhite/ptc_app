@@ -187,6 +187,7 @@
         height: 60px;
         border-top: 2px solid black;
         text-align: center;
+        background-color: black;
     }
 /*	.navbar li {
 		width: 15%;

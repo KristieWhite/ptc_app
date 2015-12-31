@@ -101,15 +101,16 @@
 		<p>{{picture_url}}</p>
 		<p><span class="uppercase">{{first_name}} {{last_name}}</span>  
 		
-		<a class="StudentListItem-homeworkLink link"> - <i>Show My Homework</i></a></p>
+		<a class="StudentListItem-homeworkLink link"> - <span class="underline"><i>Show My Homework</i></span></a></p>
 
 	</script>
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
 		<p img src="{{picture_url}}"></p>
-		<h4>Homework Assignment:</h4>
-		<h5>Title: {{title}} {{due_date}}</h5>
-		<h6>Description: {{description}}</h6>
+		<p><i>DATE</i>: {{due_date}}</p>
+		<p><span class="lightBlue"><i>Title</i>:</span> {{title}}</p>
+		<p><i>Description</i>: {{description}}</p>
+		<div class="borderBottom"></div>
 	</script>
 
 
