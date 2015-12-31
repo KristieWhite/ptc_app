@@ -1,21 +1,5 @@
 $(document).ready(function () {
 
-	  function getTokens(){
-    var tokens = [];
-    var query = location.search;
-    query = query.slice(1);
-    query = query.split('&');
-    $.each(query, function(i,value){    
-        var token = value.split('=');   
-        var key = decodeURIComponent(token[0]);     
-        var data = decodeURIComponent(token[1]);
-        tokens[key] = data;
-    });
-    return tokens;
-}
-
-	var tokens = getTokens();
-
 	var studentInfoModel = Backbone.Model.extend({
 		initialize: function () {
 		},
@@ -30,12 +14,12 @@ $(document).ready(function () {
 	},
 		Model:studentInfoModel,
 		idAttribute: "id",
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + (tokens['id'])
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId
 	});
 	var studentInfoCollection = Backbone.Collection.extend({
 		Model: studentInfoModel,
 		idAttribute: "id",
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + (tokens['id'])
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId
 	});
 		var student = new studentInfoModel();
 		student.fetch({

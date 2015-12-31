@@ -60,42 +60,8 @@
     </div>
 
   </div>
-<!-- end parent profile container parent view-->
 
-	<!-- Start Student Profile -->
-<!-- 
-  <div id="studentContainer">
-
-    <div class="studentImg">
-      <img src="http://placehold.it/200x200" />
-    </div>
-
-    <div id="studentInfoDiv">
-      <div id="studentInfo"></div>
-      <div class="classesApiDiv"></div>
-    </div>
-
-    <div class="studentBehavior">
-      <p>Student Behavior: </p>
-      <a href="">Example</a>
-    </div>
-
-    <div class="studentAttendance">
-      <p>Student Attendance: </p>
-      <a href="">Example</a>
-    </div>
-    <hr class="hrSpecial2">
-
-    <div class="studentEvents">
-      <p>Upcoming Student Events: </p>
-      <a href="">Example</a>
-    </div>
-
-  </div> -->
-
-  <!--End Student Profile -->
-
-	<div class="footer ">
+	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
 
@@ -128,12 +94,9 @@
   <script type="x-tmpl-mustache" id="childTemplate">
     <p>Children: </p>
     {{#children}}
-    <form action="./parentStudents.html" method="GET">
-    <input type="hidden" name="student" value={{id}} />
       <ul>
-        <li><a href="./parentStudents.html?id={{id}}" class="studentId" value={{id}} data={{id}}>{{first_name}} {{last_name}}</a></li>
+        <li><a href="student.html?id={{id}}" class="studentId">{{first_name}} {{last_name}}</a></li>
       </ul>
-    </form>
     {{/children}}
   </script>
 

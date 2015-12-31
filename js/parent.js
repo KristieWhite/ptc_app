@@ -184,20 +184,6 @@ $(document).ready(function () {
 		$(".uploadPic").trigger('click');
 	});
 
-  function getTokens(){
-    var tokens = [];
-    var query = location.search;
-    query = query.slice(1);
-    query = query.split('&');
-    $.each(query, function(i,value){    
-        var token = value.split('=');   
-        var key = decodeURIComponent(token[0]);     
-        var data = decodeURIComponent(token[1]);
-        tokens[key] = data;
-    });
-    return tokens;
-}
-
   
   // $(".studentId").on('click', function(){
   //   var studentId = $(".studentId").val();
