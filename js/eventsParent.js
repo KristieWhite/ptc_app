@@ -19,7 +19,7 @@ $(document).ready(function() {
 		},
 		parse: parseEventListResponse,
 		url: function() {
-			return API_EVENT_ROOT + 'api/events' + this.studentId + '/events';
+			return API_EVENT_ROOT + 'api/events' + this.studentId + '/class_events';
 		}
 	})
 
@@ -66,6 +66,47 @@ $(document).ready(function() {
 				return view.$el;
 			}));
 		}
+	});
+
+	var eventDetailView = Backbone.View.extend({
+		tpl: $('eventParentDetailTpl').html(),
+		initialize: function() {
+			this.collection.on('sync', this.render, this);
+		},
+		render: function() {
+			var tpl = this.tpl;
+			function makeEventSingleHtml(item) {
+				return Mustache.render(tpl, item.attributes);
+			}
+			var rendered = this.collection.map(makeEventSingleHtml);
+			$('#eventParentDetailDiv').html('').append(rendered);
+		}
+	});
+
+	var App = Backbone.Model.extend({
+		initialize: function(options) {
+			this.class_events = new appModelsEvent.UniversalEventsCollection([], {
+				ownerId: options.id,
+				ownerType: 'parent'
+			});
+			var eventsView = new EventParentsView({
+				collection: this.class_events,
+				app: this,
+				targetDivId: '#eventsParentDiv'
+			});
+
+			this.events.fetch();
+		},
+		clickOnStudent: function(eventModel) {
+			var eventCollection = new EventListCollection([], {
+				studentId: eventModel.get('id')
+			});
+			eventCollection.fetch();
+		}
+	});
+
+	var app = new App({
+		id: $.cookie('UserId')
 	});
 
 });//document ready

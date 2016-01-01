@@ -21,6 +21,10 @@
 		padding: 0;
 	}
 
+	body {
+		margin-top: 220px;
+	}
+
 	#studentsDiv2 {
 		/*border: 1px solid blue;*/
 		position: fixed;

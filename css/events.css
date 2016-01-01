@@ -16,6 +16,11 @@
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
 	}
+
+	body {
+		margin-top: 220px;
+	}
+
 	.uppercase {
 		text-transform: uppercase;
 	}
@@ -52,11 +57,11 @@
 	}
 	
 	#formContainer {
-		margin: auto;
+		/*margin: auto;*/
 		width: 100%;
 		margin-right: 0;
 		background-color: black;
-		padding: 1em 0;
+		padding: 1em 0 5em 0;
 	}
 
 	.addEventForm {

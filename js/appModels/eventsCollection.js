@@ -1,5 +1,7 @@
 (function(window){
+	
 	window.appModelsEvent = window.appModelsEvent || {};
+
 	var API_EVENT_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 
 		function parseListResponse(response) {
@@ -22,7 +24,7 @@
 			parse: parseEventListResponse,
 
 			url: function() {
-				return API_EVENT_ROOT + 'api/events/' + this.parentId + '/events';
+				return API_EVENT_ROOT + 'api/events/' + this.parentId + '/class_events';
 			}
 		});
 
@@ -46,7 +48,7 @@
 					type = 'events';
 					break;
 				}
-			return API_EVENT_ROOT + 'api/' + type + '/' + this.ownerId + '/events';
+			return API_EVENT_ROOT + 'api/' + type + '/' + this.ownerId + '/class_events';
 		}
 	});
 		window.appModelsEvent.EventCollection = EventCollection;
