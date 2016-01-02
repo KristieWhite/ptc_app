@@ -66,27 +66,27 @@ $(document).ready(function () {
 		events: {
 			// This adds an event listener to the click event, on anything matching '.StudentListItem-homeworkLink'
 			// on the this.$el(). It will run this.clickOnStudent().
-			"click .StudentListItem-homeworkLink": "clickOnStudent",
-			"click p": "alertMe",
-			'keyup input': 'onInput'
-		},
-		clickOnStudent: function (argument) {
-			this.app.clickOnStudent(this.model);
-		},
-		// onInput:function (event) {
-		// 	this.model.set('first_name', this.$el.find('input').val());
-		// }
-		// alertMe:function(){
-		// 	window.alert('me');
-		// },
-		render: function () {
-			this.$el.html('').append(Mustache.render(this.tpl, this.model.attributes));
-			//this.$el.find('input').val(this.model.get('first_name'));
-			// Model attributes
-			// {id, etc, first_name}
-			// Model
-			// {attributes, some, backbone, thing}
-		}
+			"click .StudentListItem-homeworkLink" : "clickOnStudent",
+			// "click p": "alertMe",
+			// 'keyup input': 'onInput'
+    	},
+    	clickOnStudent: function (argument) {
+    		this.app.clickOnStudent(this.model);
+  	 	},
+  	 	// onInput:function (event) {
+  	 	// 	this.model.set('first_name', this.$el.find('input').val());
+  	 	// }
+  	 	// alertMe:function(){
+  	 	// 	window.alert('me');
+  	 	// },
+    	render: function() {
+    		this.$el.html('').append(Mustache.render(this.tpl, this.model.attributes));
+    		//this.$el.find('input').val(this.model.get('first_name'));
+    		// Model attributes
+    		// {id, etc, first_name}
+    		// Model
+    		// {attributes, some, backbone, thing}
+    	}
 	});
 
 	// binding a view to a model
@@ -97,24 +97,23 @@ $(document).ready(function () {
 
 	*/
 
-	var ButtonView = Backbone.View.extend({
+// 	var ButtonView = Backbone.View.extend({
+// 		render: function(){
+// 			this.$el.html('<button></button>');
+// 		}
+// 	});
 
-		render: function () {
-			this.$el.html('<button></button>');
-		}
-	});
+// // Two 'buttons'
+// 	var button1 = new ButtonView();
+// 	var button2 = new ButtonView();
 
-	// Two 'buttons'
-	var button1 = new ButtonView();
-	var button2 = new ButtonView();
+// // Let's put it in the dom
+// var myDomRecepticle = $('<div></div>');
+// myDomRecepticle
+// 	.append(button1.$el)
+// 	.append(button2.$el);
 
-	// Let's put it in the dom
-	var myDomRecepticle = $('<div></div>');
-	myDomRecepticle
-		.append(button1.$el)
-		.append(button2.$el);
-
-	$('body').append(myDomRecepticle);
+// 	$('body').append(myDomRecepticle);
 
 
 	// View for the Students who are accesible by the parent

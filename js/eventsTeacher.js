@@ -26,19 +26,6 @@ $(document).ready(function () {
 			//console.log("schoolEventsHTML", schoolEventsHTML);
 			$("#schoolEventsDiv").html(schoolEventsHTML);
 			console.log(resp);
-			function getURIParameter(param, asArray) {
-				return document.location.search.substring(1).split('&').reduce(function(p,c) {
-					var parts = c.split('=', 2).map(function(param) {
-						return decodeURIComponent(param);
-					});
-					if(parts.length == 0 || parts[0] != param) 
-						return (p instanceof Array) && !asArray ? null : p;
-						return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
-					},
-					[]);
-			}
-			getURIParameter("id")
-			getURIParameter("id", true)
 		},
 		error: function (err) {
 			conole.log(error, err);
@@ -72,22 +59,12 @@ $(document).ready(function () {
 			//console.log("schoolEventsDetailHTML", schoolEventsDetailHTML);
 			$("#schoolEventsDetailDiv").html(schoolEventsDetailHTML);
 			console.log(resp);
-			function getURIParameter(param, asArray) {
-				return document.location.search.substring(1).split('&').reduce(function(p,c) {
-					var parts = c.split('=', 2).map(function(param) {
-						return decodeURIComponent(param);
-					});
-					if(parts.length == 0 || parts[0] != param) 
-						return (p instanceof Array) && !asArray ? null : p;
-						return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
-					},
-					[]);
-			}
-			getURIParameter("id")
-			getURIParameter("id", true)
 		},
 		error: function (err) {
 			conole.log(error, err);
+		},
+		onInput:function(event) {
+			this.model.set('name', this.$el.find('input').val());
 		}
 	});
 
@@ -129,19 +106,6 @@ $(document).ready(function () {
 			console.log("eventListTeacherObj", eventListTeacherObj);
 			//console.log("eventsListTeacherHTML", eventsListTeacherHTML)
 			$("#classEventsTeacherDiv").html(eventsListTeacherHTML);
-			function getURIParameter(param, asArray) {
-				return document.location.search.substring(1).split('&').reduce(function(p,c) {
-					var parts = c.split('=', 2).map(function(param) {
-						return decodeURIComponent(param);
-					});
-					if(parts.length == 0 || parts[0] != param) 
-						return (p instanceof Array) && !asArray ? null : p;
-						return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
-					},
-					[]);
-			}
-			getURIParameter("id")
-			getURIParameter("id", true)
 		},
 		error: function(err) {
 			console.log('error classes', err);
@@ -184,29 +148,39 @@ $(document).ready(function () {
 			console.log("eventDetailListTeacherObj", eventDetailListTeacherObj);
 			//console.log("eventsDetailListTeacherHTML", eventsDetailListTeacherHTML)
 			$("#classEventsDetailDiv").html(eventsDetailListTeacherHTML);
-			function getURIParameter(param, asArray) {
-				return document.location.search.substring(1).split('&').reduce(function(p,c) {
-					var parts = c.split('=', 2).map(function(param) {
-						return decodeURIComponent(param);
-					});
-					if(parts.length == 0 || parts[0] != param) 
-						return (p instanceof Array) && !asArray ? null : p;
-						return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
-					},
-					[]);
-			}
-			getURIParameter("id")
-			getURIParameter("id", true)
 			},
 			error: function(err) {
 				console.log('error classes', err);
+			},
+			onInput: function(event) {
+			this.model.set('title', this.$el.fnd('input').val());
+			},
+			render: function() {
+				this.$el.find('input').val(this.model.get('title'));
 			}
 	});
 
+	// EventDetailListTeacher.push(model, [options]){
 
-//////////////url decoder////////////////////////////
+	// };
+
+	//teacher add event via form
+	var addEvent = Backbone.View.extend({
+		render: function() {
+			this.$el.html('<addEventBtn></addEventBtn>');
+		}
+	});
+
+	var addEvent = new addEvent();
+
+	var eventToDom = $('<div></div>');
+	eventToDom.append(addEvent.$el);
+
+	$('addEventDiv').append(eventToDom);
+
+
 
 
 	
-});	//documentready
+});//documentready
 

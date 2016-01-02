@@ -31,6 +31,9 @@
 		<div class="studentImg"></div>
 
 		<div id="studentsTeacherDetailDiv"></div>
+		
+		<div id"classesDiv"></div>
+		<div id="classesDiv2"></div>
 
 		<div class="studentBehavior">
 			<p>Student Behavior: </p>
@@ -58,8 +61,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<script src="js/students.js"></script>
-	<script src="js/classes.js"></script>
+	<!-- // <script src="js/students.js"></script> -->
+	// <script src="js/classes.js"></script>
+	<script src="js/classesCollection.js"></script>
 	<script src="js/studentsTeacherView.js"></script>
 
 	<script type="x-tmpl-mustache" id="studentsTeacherDetailTemplate">
@@ -73,6 +77,16 @@
 		{{#classes}}
 		<p><a href="">{{name}}</a></p>
 		{{/classes}}
+	</script>
+
+	<script type="x-tmpl-mustache" id="classTpl">
+		<h4>List of Classes</h4>
+		<p>{{name}}</p>
+	</script>
+
+	<script type="x-tmpl-mustache" id="studentsTpl">
+		<h4>Students in that class</h4>
+		<p>{{first_name}} {{last_name}}</p>
 	</script>
 
 </body>
