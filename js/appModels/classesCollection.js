@@ -15,18 +15,18 @@ var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 		return response.results;
 	};
 
-	var StudentModel = Backbone.Model.extend({
+	var ClassModel = Backbone.Model.extend({
 		url: function(){
-			return API_ROOT + 'api/students/' + this.get('id');
+			return API_ROOT + 'api/classes/' + this.get('id');
 		}
 	});
 
-	/////////////////////lists of students homework///////////////////////////////
-	var StudentCollection = Backbone.Collection.extend({
-		model: StudentModel,
+	/////////////////////list of classes for teacher///////////////////////////////
+	var ClassCollection = Backbone.Collection.extend({
+		model: ClassModel,
 		initialize: function (attributes, options) {
-			console.log("hwParentViewModel initialized");
-			this.parentId = options.parentId;
+			console.log("classCollection initialized");
+			this.teacherId = options.teacherId;
 			//this.xyz = '123';
 		},
 		parse: parseListResponse,
@@ -42,14 +42,14 @@ var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 		// },
 		url: function () {
 			//console.log(this.xyz);
-			//url: https://murmuring-sands-9831.herokuapp.com/api/students/id/homework
-			return API_ROOT + 'api/parents/' + this.parentId + '/students';
+			//url: https://murmuring-sands-9831.herokuapp.com/api/classes/id/students
+			return API_ROOT + 'api/classes/' + this.teacherId + '/students';
 		}
 	});
 
-	/////////////////////lists of students homework///////////////////////////////
-	var UniversalStudentCollection = Backbone.Collection.extend({
-		model: StudentModel,
+	/////////////////////lists of students in each class///////////////////////////////
+	var UniversalClassCollection = Backbone.Collection.extend({
+		model: ClassModel,
 		initialize: function (attributes, options) {
 			this.ownerId = options.ownerId;
 			this.ownerType = options.ownerType;
@@ -81,8 +81,8 @@ var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 			return API_ROOT + 'api/' + type + '/' + this.ownerId + '/students';
 		}
 	});
-	window.appModels.StudentCollection = StudentCollection;
-	window.appModels.UniversalStudentCollection = UniversalStudentCollection;
+	window.appModels.ClassCollection = ClassCollection;
+	window.appModels.UniversalClassCollection = UniversalClassCollection;
 
 
 })(window);

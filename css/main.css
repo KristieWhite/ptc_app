@@ -7,7 +7,7 @@
     }
 
     body {
-        background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
+        background: url("images/greenChalkBoard.jpg");
         background-size: 100%;
         font-family: serif;
         color: white;
@@ -119,7 +119,8 @@
     	background-size: 100%;
         /*font-family: 'Walter Turncoat', cursive;*/
     	color: white;
-        margin-top: 220px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+        margin-top: 150px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+        margin-bottom: 50px;
     }
 
     .header {

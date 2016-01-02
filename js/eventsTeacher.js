@@ -151,8 +151,18 @@ $(document).ready(function () {
 			},
 			error: function(err) {
 				console.log('error classes', err);
+			},
+			onInput: function(event) {
+			this.model.set('title', this.$el.fnd('input').val());
+			},
+			render: function() {
+				this.$el.find('input').val(this.model.get('title'));
 			}
 	});
+
+	// EventDetailListTeacher.push(model, [options]){
+
+	// };
 
 	//teacher add event via form
 	var addEvent = Backbone.View.extend({
