@@ -32,22 +32,8 @@
 
 		<div id="studentsTeacherDetailDiv"></div>
 		
-		<div id"classesDiv"></div>
+		<div id="classesDiv"></div>
 		<div id="classesDiv2"></div>
-
-		<div class="studentBehavior">
-			<p>Student Behavior: </p>
-			<input type="text" class="behavior" placeholder="Enter Description Here" />
-		</div>
-
-
-
-		<hr class="hrSpecial2">
-
-		<div class="studentEvents">
-			<p>Upcoming Student Events: </p>
-			<a href="">Example</a>
-		</div>
 
 	</div>
 	<!-- end student profile teacher view -->
@@ -61,9 +47,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<!-- // <script src="js/students.js"></script> -->
-	// <script src="js/classes.js"></script>
-	<script src="js/classesCollection.js"></script>
+	<!--<script src="js/students.js"></script>-->
+	<!--<script src="js/classes.js"></script>-->
+	<script src="js/appModels/classesCollection.js"></script>
 	<script src="js/studentsTeacherView.js"></script>
 
 	<script type="x-tmpl-mustache" id="studentsTeacherDetailTemplate">
@@ -80,8 +66,7 @@
 	</script>
 
 	<script type="x-tmpl-mustache" id="classTpl">
-		<h4>List of Classes</h4>
-		<p>{{name}}</p>
+		<p><a href="">{{name}}</a></p>
 	</script>
 
 	<script type="x-tmpl-mustache" id="studentsTpl">

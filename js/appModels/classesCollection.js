@@ -3,8 +3,6 @@
 
 // ES6, AMD, CommonJS
 
-
-
 (function(window){
 
 window.appModels = window.appModels || {};
@@ -41,9 +39,9 @@ var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 		// 	points: "Not Graded Yet!"
 		// },
 		url: function () {
-			//console.log(this.xyz);
+			console.log(this.xyz);
 			//url: https://murmuring-sands-9831.herokuapp.com/api/classes/id/students
-			return API_ROOT + 'api/classes/' + this.teacherId + '/students';
+			return API_ROOT + 'api/classes/' + this.get('id');
 		}
 	});
 
@@ -69,8 +67,8 @@ var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 
 			var type = '';
 			switch (this.ownerType){
-				case 'parent':
-				type = 'parents';
+				case 'class':
+				type = 'classes';
 				break;
 
 				case 'class':
@@ -78,7 +76,7 @@ var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 				break;
 			}
 			
-			return API_ROOT + 'api/' + type + '/' + this.ownerId + '/students';
+			return API_ROOT + 'api/' + "classes" + '/' ;
 		}
 	});
 	window.appModels.ClassCollection = ClassCollection;
