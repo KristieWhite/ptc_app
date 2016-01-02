@@ -14,12 +14,12 @@ $(document).ready(function () {
 	},
 		Model:studentInfoModel,
 		idAttribute: "id",
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" 
 	});
 	var studentInfoCollection = Backbone.Collection.extend({
 		Model: studentInfoModel,
 		idAttribute: "id",
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" 
 	});
 		var student = new studentInfoModel();
 		student.fetch({
