@@ -1,26 +1,35 @@
 /*mobile query starts here*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 
-        
-}/*closes mobile query*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+/*closes mobile query*/
+
+
 /****************************************************************************************************/
+
+
 /*tablet query starts here*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
 
 
-}/*closes tablet query*/
+/*closes tablet query*/
+
+
 /*****************************************************************************************************/
+
+
 /*laptop query starts here*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 	@font-face {
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
 	}
-
 	body {
 		margin-top: 220px;
 	}
-
 	.uppercase {
 		text-transform: uppercase;
 	}
@@ -39,7 +48,7 @@
 		float: right;
 	}
 	div.sexyLine {
-		margin-top: 50px;
+		margin-top: 10px;
 	}
 	.sexyLine {
 		display: block;
@@ -52,10 +61,9 @@
 	.yellow {
 		color: yellow;
 	}
-	.eventsAdd{
+	.eventsAdd {
 		margin-top: 30px;
 	}
-	
 	#formContainer {
 		/*margin: auto;*/
 		width: 100%;
@@ -63,13 +71,11 @@
 		background-color: black;
 		padding: 1em 0 5em 0;
 	}
-
 	.addEventForm {
 		background-color: black;
 		width: 50%;
 		margin: auto;
 	}
-	
 	#pageContainer {
 		width: 80%;
 		/*height: 900px;*/
@@ -100,9 +106,7 @@
 	button:hover {
 		background-color: rgba(255, 204, 0, 0, 8);
 	}
-	#addEvent {
-		
-	}
+	#addEvent {}
 	.head {
 		width: 80%;
 		height: 900px;
@@ -143,12 +147,18 @@
 	.form label {
 		margin-left: 10px;
 	}
+}
 
-}/*closes laptop query*/
+
+/*closes laptop query*/
+
+
 /****************************************************************************************/
+
+
 /*large screen query starts here*/
-@media only screen  and (min-width : 1824px) {
+
+@media only screen and (min-width: 1824px) {}
 
 
-}/*closes large screen query*/	
-	
+/*closes large screen query*/

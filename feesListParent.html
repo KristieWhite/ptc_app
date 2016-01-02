@@ -1,108 +1,85 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Fees List</title>
-	<link rel="stylesheet" href="css/normalize.css" />
-	<link rel="stylesheet" href="css/Feeslist.css" />
-	<link rel="stylesheet" href="css/main.css" />
-	<link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' />
+	<meta charset="UTF-8">
+	<title>PTC - Homework</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/homework.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+<style>
+
+</style>
 
 <body>
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
 	</div>
-		<!-- 		parent profile parent view-->
 	<div class="navbar">
 		<ul>
-			<!--links are sent to parents pages-->
-			<li><a href="./index.html">Home</a></li>
+
+			<li><a href="./homeParent.html">Home</a></li>
+
 			<li><a href="./eventsParent.html">Events</a></li>
-			<li><a href="./feeslistParent.html">Fees</a></li>
+			<li><a href="./feesListParent.html">Fees</a></li>
 			<li><a href="./waiverParent.html">Waivers</a></li>
 			<li><a href="./hwparentview.html">Assignments</a></li>
 			<li><a href="./parent.html">My Profile</a></li>
 		</ul>
 	</div>
 
-	<div id="feesAccordion">
-		<div class="main">
-			<div class="accordion">
-				<div class="accordion-section">
-					<a class="accordion-section-title" href="#accordion-1">Colors for Peggy</a>
-					<div id="accordion-1" class="accordion-section-content">
-						<div id="feeInfo"></div>
-						<p>Peggy need crayons</p>
-						<form action="" method="POST">
-							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($5.00)" data-image="/128x128.png" data-locale="auto">
-							</script>
-						</form>
-
-						</form>
-					</div>
-					<!--end .accordion-section-content-->
-				</div>
-				<!--end .accordion-section-content-->
-			</div>
-			<!--end .accordion-section-->
-
-			<div class="accordion">
-				<div class="accordion-section">
-					<a class="accordion-section-title" href="#accordion-2">Football Cleats For Jeff</a>
-					<div id="accordion-2" class="accordion-section-content">
-						<p>Nike Thunder CHIEFS XII Cleats</p>
-						<form action="" method="POST">
-							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($80.00)" data-image="/128x128.png" data-locale="auto">
-							</script>
-						</form>
-					</div>
-					<!--end .accordion-section-content-->
-				</div>
-				<!--end .accordion-section-->
-
-				<div class="accordion">
-					<div class="accordion-section">
-						<a class="accordion-section-title" href="#accordion-3">Account has reached a negative of $5</a>
-						<div id="accordion-3" class="accordion-section-content">
-							<p>This account was charged with $0.00 in this account please pay this fee</p>
-							<form action="" method="POST">
-								<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($5.00)" data-image="/128x128.png" data-locale="auto">
-								</script>
-							</form>
-						</div>
-						<!--end .accordion-section-content-->
-					</div>
-					<!--end .accordion-section-->
-				</div>
-				<!--end .accordion-->
-			</div>
+	<div id="assignContainer">
+		<div class="assignHeader">
+			<h2 id="fixedH2" class="yellow">ASSIGNMENTS</h2>
 		</div>
-	</div>
+		<div id="studentsDiv2" class=""></div>
+		<div id="homeworkDiv" class=""></div>
+		<p class="clearFloat"></p>
+		<div id="studentsDiv" class=""></div>
 
-	<div id="footer">
+	</div>
+	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
-
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
-	<script src="js/feesList.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<script src="js/students.js"></script>
-	<script src="js/PayFeesP.js"></script>
+	<!--<script type="text/javascript" src="js/hwteachview.js"></script>-->
+	<script type="text/javascript" src="js/appModels/StudentCollection.js"></script>
+	<script type="text/javascript" src="js/Feeslist.js"></script>
 
-	<script type="x-tmpl-mustache" id="feeInfoTemplate">
-		{{#fees}}
-		<li>{{payment_amount}}</li>
-		<li>{{amount_needed}}</li>
-		{{/fees}}
+	<!--<script type="x-tmpl-mustache" id="assignmentListTemplate">
+		<h3>student homework list, api/students/id/homework</h3>
+		{{#homework}}
+		<p><a href="HomeworkDetailParent.html?id={{id}}">{{first_name}} {{last_name}}</a></p>
+		<p>{{title}}</p>
+		<p>{{description}}</p>
+		<p>{{due_date}}</p>
+		{{/homework}}
+	</script>-->
+
+	<script type="x-tmpl-mustache" id="studentTpl">
+		<p>{{picture_url}}</p>
+		<p><span class="uppercase">{{first_name}} {{last_name}}</span>
+
+			<a class="StudentListItem-homeworkLink link"> - <span class="underline"><i>Show My Homework</i></span></a></p>
+
 	</script>
+
+	<script type="x-tmpl-mustache" id="homeworkTpl">
+		<p img src="{{picture_url}}"></p>
+		<p><i>Payment</i>: {{payment_amount}}</p>
+		<p><span class="lightBlue"><i>amount needed</i>:</span> {{amount_needed}}</p>
+		<p><i>Description</i>: {{description}}</p>
+		<div class="borderBottom"></div>
+	</script>
+
+
+
 </body>
 
 </html>
-

@@ -15,7 +15,7 @@ $(document).ready(function () {
 	// });
 
 	var HomeworkModel = Backbone.Model.extend({
-		url: function  (argument) {
+		url: function (argument) {
 			return '';
 		}
 	});
@@ -26,7 +26,7 @@ $(document).ready(function () {
 			this.studentId = options.studentId;
 		},
 		parse: parseListResponse,
-		url: function() {
+		url: function () {
 			return API_ROOT + 'api/students/' + this.studentId + '/homework';
 		}
 	})
@@ -66,27 +66,27 @@ $(document).ready(function () {
 		events: {
 			// This adds an event listener to the click event, on anything matching '.StudentListItem-homeworkLink'
 			// on the this.$el(). It will run this.clickOnStudent().
-			"click .StudentListItem-homeworkLink" : "clickOnStudent",
+			"click .StudentListItem-homeworkLink": "clickOnStudent",
 			"click p": "alertMe",
 			'keyup input': 'onInput'
-    	},
-    	clickOnStudent: function (argument) {
-    		this.app.clickOnStudent(this.model);
-  	 	},
-  	 	// onInput:function (event) {
-  	 	// 	this.model.set('first_name', this.$el.find('input').val());
-  	 	// }
-  	 	// alertMe:function(){
-  	 	// 	window.alert('me');
-  	 	// },
-    	render: function() {
-    		this.$el.html('').append(Mustache.render(this.tpl, this.model.attributes));
-    		//this.$el.find('input').val(this.model.get('first_name'));
-    		// Model attributes
-    		// {id, etc, first_name}
-    		// Model
-    		// {attributes, some, backbone, thing}
-    	}
+		},
+		clickOnStudent: function (argument) {
+			this.app.clickOnStudent(this.model);
+		},
+		// onInput:function (event) {
+		// 	this.model.set('first_name', this.$el.find('input').val());
+		// }
+		// alertMe:function(){
+		// 	window.alert('me');
+		// },
+		render: function () {
+			this.$el.html('').append(Mustache.render(this.tpl, this.model.attributes));
+			//this.$el.find('input').val(this.model.get('first_name'));
+			// Model attributes
+			// {id, etc, first_name}
+			// Model
+			// {attributes, some, backbone, thing}
+		}
 	});
 
 	// binding a view to a model
@@ -99,20 +99,20 @@ $(document).ready(function () {
 
 	var ButtonView = Backbone.View.extend({
 
-		render: function(){
+		render: function () {
 			this.$el.html('<button></button>');
 		}
 	});
 
-// Two 'buttons'
+	// Two 'buttons'
 	var button1 = new ButtonView();
 	var button2 = new ButtonView();
 
-// Let's put it in the dom
-var myDomRecepticle = $('<div></div>');
-myDomRecepticle
-	.append(button1.$el)
-	.append(button2.$el);
+	// Let's put it in the dom
+	var myDomRecepticle = $('<div></div>');
+	myDomRecepticle
+		.append(button1.$el)
+		.append(button2.$el);
 
 	$('body').append(myDomRecepticle);
 
@@ -120,7 +120,7 @@ myDomRecepticle
 	// View for the Students who are accesible by the parent
 	var ParentStudentsView = Backbone.View.extend({
 		initialize: function (options) {
-			this.collection.on('sync',  this.render, this);
+			this.collection.on('sync', this.render, this);
 			this.app = options.app;
 			this.targetDivId = options.targetDivId || '#studentsDiv';
 		},
@@ -129,16 +129,16 @@ myDomRecepticle
 			var divId = this.targetDivId;
 			// This is the same as
 			// _.map( this.collection.models, ... fn);
-			var views = this.collection.map(function(model){
+			var views = this.collection.map(function (model) {
 				var view = new StudentView({
-					model:model,
+					model: model,
 					app: app
 				});
 				view.render();
 				return view;
 			});
 			$(divId).html('');
-			$(divId).append(_.map(views, function(view){
+			$(divId).append(_.map(views, function (view) {
 				return view.$el;
 			}));
 		}
@@ -147,12 +147,13 @@ myDomRecepticle
 
 	var HomeworkView = Backbone.View.extend({
 		tpl: $('#homeworkTpl').html(),
-		initialize: function(){
+		initialize: function () {
 			this.collection.on('sync', this.render, this);
 		},
-		render: function() {
-			var tpl =this.tpl;
-			function makeSingleHtml (item){
+		render: function () {
+			var tpl = this.tpl;
+
+			function makeSingleHtml(item) {
 				return Mustache.render(tpl, item.attributes);
 			}
 			var rendered = this.collection.map(makeSingleHtml);
@@ -160,10 +161,10 @@ myDomRecepticle
 		}
 	});
 
-// Make a new one of these for every single page.
-// 
+	// Make a new one of these for every single page.
+	// 
 	var App = Backbone.Model.extend({
-		initialize: function(options) { 
+		initialize: function (options) {
 			this.students = new appModels.UniversalStudentCollection([], {
 				ownerId: options.id,
 				ownerType: 'parent'
@@ -188,9 +189,9 @@ myDomRecepticle
 		}
 	});
 
-var app = new App({
-	id: $.cookie('UserId')
-});
+	var app = new App({
+		id: $.cookie('UserId')
+	});
 
 
-});//document ready
+}); //document ready
