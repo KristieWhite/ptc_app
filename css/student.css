@@ -16,12 +16,12 @@
 /*laptop query starts here*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
 
-  a:visited{
+/*  a:visited{
   	color: white;
   }
   	a:link {
   	color: white;
-  }
+  }*/
 
   /*student profile - parent view*/
 
@@ -33,7 +33,38 @@
       font-family: 'Walter Turncoat', cursive;
   }
 
-  .studentImg {
+  #studentContainer a {
+    color: black;
+    text-decoration: none;
+  }
+
+/*  .clearFloat {
+    clear: both;
+    margin: 0;
+    padding: 0;
+  }*/
+
+  #childList {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  #childList ul {
+    list-style: none;
+  }
+
+  #childList a {
+    text-decoration: underline;
+    font-size: 25px;
+    font-family: 'Walter Turncoat';
+  }
+
+  #childList a:hover{
+    cursor: pointer;
+  }
+
+/*  .studentImg {
       position: relative;
       display: inline-block;
       margin-top: 15px;
@@ -44,16 +75,17 @@
       height: 200px;
       border-radius: 10px;
       display: inline-block;
-  }
+  }*/
 
   #studentInfoDiv {
     width: 75%;
     height: 200px;
+    margin: auto;
     position: relative;
     display: inline-block;
-    float: right;
     top: 15px;
-    border: 1px solid white;
+    float: right;
+    border: 1px solid black;
     border-radius: 5px;
     overflow: scroll;
   }
@@ -108,6 +140,10 @@
       overflow: scroll;
       position: relative;
       top: 20px;
+  }
+
+  .color {
+    color: #006495;
   }
 
   .hrSpecial2 {

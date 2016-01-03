@@ -67,8 +67,8 @@ $(document).ready(function () {
 			// This adds an event listener to the click event, on anything matching '.StudentListItem-homeworkLink'
 			// on the this.$el(). It will run this.clickOnStudent().
 			"click .StudentListItem-homeworkLink" : "clickOnStudent",
-			"click p": "alertMe",
-			'keyup input': 'onInput'
+			// "click p": "alertMe",
+			// 'keyup input': 'onInput'
     	},
     	clickOnStudent: function (argument) {
     		this.app.clickOnStudent(this.model);
@@ -191,6 +191,5 @@ myDomRecepticle
 var app = new App({
 	id: $.cookie('UserId')
 });
-
 
 });//document ready

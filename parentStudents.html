@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Student - Parents View</title>
+	<title>Student Profile</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/student.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -19,46 +19,45 @@
   <div class="navbar">
     <ul>
       <li><a href="./homeParent.html">Home</a></li>
-      <li><a href="./eventsParent.html">Events</a></li>
-      <li><a href="./feeslistParent.html">Fees</a></li>
-      <li><a href="./waiverParent.html">Waivers</a></li>
       <li><a href="./hwparentview.html">Assignments</a></li>
-      <li><a href="./parent.html">My Profile</a></li>
+      <li><a href="./waiverParent.html">Waivers</a></li>
+      <li><a href="./feeslistParent.html">Fees</a></li>
+      <li><a href="./eventsParent.html">Events</a></li>
     </ul>
   </div>
 
   <!--  student profile parents view -->
 
-  <div id="studentContainer">
 
+  <div id="studentContainer">
+<!-- 
     <div class="studentImg">
       <img src="http://placehold.it/200x200" />
-    </div>
+    </div> -->
 
+    <div id="childList"></div>
     <div id="studentInfoDiv">
       <div id="studentInfo"></div>
+      <div id="teacherDiv"></div>
       <div class="classesApiDiv"></div>
     </div>
 
     <div class="studentBehavior">
-      <p>Student Behavior: </p>
-      <a href="">Example</a>
+      <p class="color">Student Behavior: </p>
     </div>
 
     <div class="studentAttendance">
-      <p>Student Attendance: </p>
-      <a href="">Example</a>
+      <p class="color">Student Attendance: </p>
     </div>
     <hr class="hrSpecial2">
 
     <div class="studentEvents">
-      <p>Upcoming Student Events: </p>
-      <a href="">Example</a>
+      <p class="color">Upcoming Student Events: </p>
     </div>
 
   </div>
 
-	<!-- end student profile teacher view -->
+	<!-- end student profile parent view -->
 
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
@@ -68,34 +67,37 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+  <script src="js/appModels/StudentCollection.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/students.js"></script>
 	<script src="js/classes.js"></script>
 
-
-  <script type="x-tmpl-mustache" id="studentInfoTemplate">
-    {{#students}}
-      <ul>
-        <li>Student Number: {{id}}</li>
-        <li value={{id}}>Name: {{first_name}} {{last_name}}</li>
-        <li>School: Walter V Long Elementary School</li>
-        <li>School Address: 2000 S Walnut Rd, Las Vegas, NV 89104</li>
-        <li>Teachers: </li>
-        <li>Classes: </li>
-      </ul>
-    {{/students}}
+  <script type="x-tmpl-mustache" id="childTemplate">
+    <ul>
+      <li><a class="studentName link">{{first_name}} {{last_name}}</a></li>
+    </ul>
   </script>
 
+  <script type="x-tmpl-mustache" id="studentInfoTemplate">
+      <ul>
+        <li><i class="color">Student Number:</i> {{id}}</li>
+        <li><i class="color">Name:</i> {{first_name}} {{last_name}}</li>
+        <li><i class="color">School:</i> Walter V Long Elementary School</li>
+        <li><i class="color">School Address:</i> 2000 S Walnut Rd, Las Vegas, NV 89104</li>
+        <li><i class="color">Teachers:</i> </li>
+      </ul>
+  </script>
 
+<!-- 
 	<script type="x-tmpl-mustache" id="classesTemplate">
-		{{#classes}}
+		{{#classes}} 
 		<ul>
 			<li>{{name}}</li>
 		</ul>
 		{{/classes}}
 	</script>
-
+ -->
 </body>
 
 </html>
