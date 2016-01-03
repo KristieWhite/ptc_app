@@ -16,116 +16,27 @@
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
 
   /*parent profile*/
-  #parentContainer {
-    width: 80%;
-    height: 1000px;
-    margin: auto;
-    font-size: 20px;
-  }
 
-  #parentProImg {
-    position: relative;
-    display: inline-block;
-    top: 25px;
-    width: 200px;
-    height: 200px;
-    border: 1px solid gray;
-    border-radius: 5px;
-  }
+	#parentInfo{
+		position: fixed;
+		left: 1100px;
+		bottom: 545px;
 
-  #imageInfo img {
-  width: 200px;
-  height: 200px;
-  border-radius: 5px;
-  }
+	}
+	
+	#parentInfo p{
+		position: absolute;
+		left:60px;
+		bottom: 10px;
+		font-size: 15px;
 
-  .uploadPic {
-    visibility: hidden;
-    width: 16%;
-    position: absolute;
-    right: 180px;
-  }
-
-  #addPhoto {
-    position: absolute;
-    font-size: 25px;
-    background: black;
-    color: white;
-    bottom: 177px;
-  }
-
-  #addPhoto:hover {
-    cursor: pointer;
-  }
-
-  #parentInfoDiv {
-    width: 75%;
-    height: 200px;
-    position: relative;
-    display: inline-block;
-    float: right;
-    top: 25px;
-    border: 1px solid white;
-    border-radius: 5px;
-    overflow: scroll;
-  }
-
-  #parentInfo p {
-    margin: 0;
-    margin-top: 10px;
-    margin-left: 20px;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  #parentInfo ul {
-    list-style: none;
-    margin: 0;
-  }
-
-  #parentInfo li {
-    margin-left: 20px;
-  }
-
-  #childList p {
-    margin: 0;
-    margin-left: 20px;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  #childList ul {
-    list-style: none;
-    margin: 0;
-  }
-
-  #childList li {
-    margin-left: 20px;
-  }
-
-  #childList a {
-    text-decoration: none;
-  }
-
-  #childList a:hover {
-    cursor: pointer;
-    background: black;
-    border-bottom: 2px solid white;
-  }
-
-  #parentEvents {
-    width: 100%;
-    height: 325px;
-    overflow: scroll;
-    margin-top: 30px;
-  }
-
-  .hrSpecial2 {
-      border: 0;
-      height: 1px;
-      background: #333;
-      background-image: linear-gradient(to right, #ccc, #333, #ccc);
-  }
+	}
+	
+	#parentInfo img{
+		width: 50px;
+		height: 50px;
+		
+	}
 
   /*end parent profile*/
 
@@ -133,46 +44,6 @@
   /***************************start parent profile - teacher view************************/
 
 
-  #parentTView {
-    width: 80%;
-    height: 900px;
-    margin: auto;
-  }
-
-  #parentInfoTView {
-    width: 75%;
-    height: 200px;
-    position: relative;
-    display: inline-block;
-    float: right;
-    top: 15px;
-    border: 1px solid black;
-    border-radius: 5px;
-    overflow: scroll;
-  }
-
-  #parentInfoTView ul {
-    list-style: none;
-    margin: 0;
-  }
-
-  #parentInfoTView li {
-    margin-top: 10px;
-  }
-
-  .parentImg {
-    position: relative;
-    display: inline-block;
-    margin-top: 15px;
-  }
-
-  .parentImg img {
-    width: 200px;
-    height: 200px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    display: inline-block;
-  }
 
 }/*closes laptop query*/
 /************************************************************************************************/

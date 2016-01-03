@@ -7,12 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/homework.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/parent.css">
 </head>
 <style>
+
 </style>
+
 <body>
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
+		<div id="parentInfo"></div>
 	</div>
 	<div class="navbar">
 		<ul>
@@ -35,44 +39,8 @@
 		<div id="homeworkDiv" class=""></div>
 		<p class="clearFloat"></p>
 		<div id="studentsDiv" class=""></div>
-		<!-- <div id="mainAssignments">
-			<div id="hwApiDiv" class="">
 
-				<p>Tonight's Assignment: </p>
 
-				<p>Bobby Hill </p>
-
-				<ul>
-					<li><a href="">Assignment 1</a></li>
-				</ul>
-				<p>Helpful Links: </p>
-				<ul>
-					<li><a href="">A,B,C's and 1,2,3's</a></li>
-				</ul>
-			</div>
-			<hr class="hrSpecial">
-			<div class="">
-				<p>Past Assignments: </p>
-				<ul>
-					<li><a href="">Assignment 1</a></li>
-				</ul>
-			</div>
-		</div> -->
-		<!-- <div id="projects">
-			<div id="hwDetailParentDiv" class="">
-				<p>Weekend Assigments/Projects:</p>
-				<ul>
-					<li><a href="">Science Fair Project </a></li>
-				</ul>
-			</div>
-			<hr class="hrSpecial">
-			<div class="">
-				<p>Missed Assignments: </p>
-				<ul>
-					<li><a href="">Assignment 1</a></li>
-				</ul>
-			</div>
-		</div> -->
 	</div>
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
@@ -86,6 +54,14 @@
 	<!--<script type="text/javascript" src="js/hwteachview.js"></script>-->
 	<script type="text/javascript" src="js/appModels/StudentCollection.js"></script>
 	<script type="text/javascript" src="js/hwParentView3.js"></script>
+	<script src="js/parent.js"></script>
+
+	<!-- Parent Data -->
+	<script type="x-tmpl-mustache" id="parentInfoTemplate">
+		{{#parents}}
+		<p>{{first_name}} {{last_name}}</p>
+		<img src="{{picture_url}}"> {{/parents}}
+	</script>
 
 	<!--<script type="x-tmpl-mustache" id="assignmentListTemplate">
 		<h3>student homework list, api/students/id/homework</h3>
@@ -99,9 +75,9 @@
 
 	<script type="x-tmpl-mustache" id="studentTpl">
 		<p>{{picture_url}}</p>
-		<p><span class="uppercase">{{first_name}} {{last_name}}</span>  
-		
-		<a class="StudentListItem-homeworkLink link"> - <span class="underline"><i>Show My Homework</i></span></a></p>
+		<p><span class="uppercase">{{first_name}} {{last_name}}</span>
+
+			<a class="StudentListItem-homeworkLink link"> - <span class="underline"><i>Show My Homework</i></span></a></p>
 
 	</script>
 

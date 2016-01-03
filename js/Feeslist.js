@@ -4,15 +4,8 @@ $(document).ready(function () {
 		return response.results;
 	};
 
-	//var LOGGED_IN_ID = 36;
 
 	var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
-
-	// var StudentModel = Backbone.Model.extend({
-	// 	url: function(){
-	// 		return API_ROOT + 'api/students/' + this.get('id');
-	// 	}
-	// });
 
 	var HomeworkModel = Backbone.Model.extend({
 		url: function (argument) {
@@ -31,29 +24,7 @@ $(document).ready(function () {
 		}
 	});
 
-	/////////////////////lists of students homework///////////////////////////////
-	// var ParentStudentCollection = Backbone.Collection.extend({
-	// 	model: StudentModel,
-	// 	initialize: function (attributes, options) {
-	// 		console.log("hwParentViewModel initialized");
-	// 		this.parentId = options.parentId;
-	// 	},
-	// 	parse: parseListResponse,
-
-	// 	// defaults: {
-	// 	// 	name: null,
-	// 	// 	student: null,
-	// 	// 	title: null,
-	// 	// 	description: null,
-	// 	// 	image: null,
-	// 	// 	due_date: null,
-	// 	// 	points: "Not Graded Yet!"
-	// 	// },
-	// 	url: function () {
-	// 		//url: https://murmuring-sands-9831.herokuapp.com/api/students/id/homework
-	// 		return API_ROOT + 'api/parents/' + this.parentId + '/students';
-	// 	}
-	// });
+	
 
 	// View for the Student
 	var StudentView = Backbone.View.extend({

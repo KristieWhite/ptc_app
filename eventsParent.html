@@ -8,13 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/events.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/parent.css">
 </head>
 
 <body>
-	<!--This Page also needs waivers if they are doing something that requires a waiver-->
 
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
+		<div id="parentInfo"></div>
 	</div>
 	<div class="navbar">
 		<ul>
@@ -28,6 +29,28 @@
 		<br>
 		<p class="hrSpecial"></p>
 	</div>
+	<div id="pageContainer">
+		<h2>EVENTS CALENDAR</h2>
+
+		<!--This is for the mustache school events list, api/schools/id/events-->
+		<div id="schoolEventsDiv"></div>
+
+		<!--This is for the mustache school event id, api/school_events/id-->
+		<div id="schoolEventsDetailDiv"></div>
+
+		<!--This is for the mustache list data, api/classes/id/events-->
+		<div id="classEventsTeacherDiv"></div>
+
+		<!--This is for the mustach event list detail data, api/class_events/id-->
+		<div id="classEventsDetailDiv"></div>
+
+		<div id="addEventDiv"></div>
+
+
+		<div class="filler"></div>
+
+	</div>
+	<!--closes page container-->
 
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
@@ -41,30 +64,32 @@
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/eventsTeacher.js"></script>
+	<script src="js/parent.js"></script>
 
-
-	<script type="X-tmpl-mustache" id="schoolEventsTemplate">
-		<h3 class="black uppercase">school events list, api/schools/id/events</h3> {{#events}}
-		<h3 class="yellow uppercase">{{name}}</h3> {{/events}}
+	<!-- Parent Data -->
+	<script type="x-tmpl-mustache" id="parentInfoTemplate">
+		{{#parents}}
+		<p>{{first_name}} {{last_name}}</p>
+		<img src="{{picture_url}}"> {{/parents}}
 	</script>
 
+
 	<script type="X-tmpl-mustache" id="schoolEventsDetailTemplate">
-		<h3 class="black uppercase">school event detail, api/school_events/id</h3> {{#events}}
+		{{#events}}
 		<h3 class="yellow uppercase">{{name}}</h3>
 		<p>{{description}}</p>
 		{{/events}}
 	</script>
 
-	<script type="X-tmpl-mustache" id="eventsListTeacherTemplate">
-		<h3 class="black uppercase">class events for teacher, api/classes/id/events</h3> {{#events}}
-		<h3 class="yellow uppercase">{{name}}</h3> {{/events}}
-	</script>
-
 	<script type="X-tmpl-mustache" id="eventsDetailListTeacherTemplate">
-		<h3 class="black uppercase">teachers class event detail, api/class_events/id</h3> {{#events}}
+		{{#events}}
 		<h3 class="yellow uppercase">{{name}}</h3>
-		<p><i>{{date}}</i></p>
-		<p>{{description}}</p>
+		<p>{{date}}
+			<br>
+			<br> {{description}}
+			<br>
+			<input id="button" type="button" value="Sign this Event" />
+		</p>
 		{{/events}}
 	</script>
 

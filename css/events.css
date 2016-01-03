@@ -39,6 +39,9 @@
 	a:visited {
 		color: white;
 	}
+	h2{
+		margin-left: 50px;
+	}
 	#eventsListDiv {
 		width: 45%;
 		float: left;
@@ -47,6 +50,13 @@
 		width: 45%;
 		float: right;
 	}
+	#schoolEventsDetailDiv{
+		margin-left: 50px;
+	}
+	#classEventsDetailDiv{
+		margin-left: 50px;
+	}
+	
 	div.sexyLine {
 		margin-top: 10px;
 	}
@@ -146,6 +156,14 @@
 	}
 	.form label {
 		margin-left: 10px;
+	}
+	#button {
+		width: 200px;
+		margin: 10px;
+	}
+	#classEventsDetailDiv p {
+		border: 1px solid blue;
+		border-radius: 5px;
 	}
 }
 
