@@ -67,16 +67,16 @@ var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 
 			var type = '';
 			switch (this.ownerType){
-				case 'class':
-				type = 'classes';
+				case 'teacher':
+				type = 'teachers';
 				break;
 
 				case 'class':
 				type = 'classes';
 				break;
-			}
-			
-			return API_ROOT + 'api/' + "classes" + '/' ;
+			}	
+
+			return API_ROOT + 'api/' + type + '/' + this.ownerId + '/classes';
 		}
 	});
 	window.appModels.ClassCollection = ClassCollection;

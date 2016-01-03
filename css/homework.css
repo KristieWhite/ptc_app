@@ -39,20 +39,29 @@
 		margin-left: 1em;
 	}
 
-	#homeworkDiv {
-		/*border: 1px solid red;*/
-		margin: 0 0 0 25em;
-		float: left;
-		width: 45%;
-	}
-
-	.lightBlue {
-		color: lightblue;
-	}
-
-	.underline {
+	.assignHeader h2{
+		color: #006495;
 		text-decoration: underline;
 	}
+
+	.color {
+		color: #006495;
+	}
+
+	#homeworkDiv {
+		/*border: 1px solid red;*/
+		position: relative;
+		bottom: 40px;
+		float: right;
+		width: 45%;
+		height: 400px;
+		top: 10px;
+		overflow: scroll;
+	}
+
+/*	.lightBlue {
+		color: lightblue;
+	}*/
 
 	.borderBottom {
 		border-bottom: 1px solid rgb(44, 44, 44);
@@ -69,9 +78,9 @@
 		margin-top: 40px;
 	}
 
-	#assignContainer a {
-		/*text-decoration: none;*/
-		color: lightblue;
+	.StudentListItem-homeworkLink:hover {
+		text-decoration: underline;
+		cursor: pointer;
 	}
 
 	#mainAssignments {
@@ -94,7 +103,7 @@
 		overflow: scroll;
 	}
 
-	/*teacher view styling*/
+	/*///////////teacher view styling//////////*/
 
 	.file {
 		visibility: hidden;

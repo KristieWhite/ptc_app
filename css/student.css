@@ -1,26 +1,197 @@
-
 /*mobile query starts here*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-     
-      
+  
+  a:visited { color: white; }
+  a:link { color: white; }
+
+  .black { color: black; }
+  .lightBlue { color: lightBlue;}
+  
+  #studentContainer {
+      width: 80%;
+      margin: auto;
+  }
+
+
 
 }/*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
+  a:visited { color: white; }
+  a:link { color: white; }
 
+  .black { color: black; }
+  .lightBlue { color: lightBlue; }
+
+  #studentContainer {
+    width: 80%;
+    margin: auto;
+  }
 
 }/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
 
-  a:visited{
-  	color: white;
+  a:visited { color: white; }
+  a:link { color: white; }
+
+  .black { color: black; }
+  .lightBlue { color: lightBlue; }
+
+  body {
+    margin-top: 200px;
+    margin-bottom: 100px;
   }
-  	a:link {
-  	color: white;
+
+  /*student profile - parent view*/
+
+  #studentContainer {
+      width: 80%;
+      margin: auto;
+      /*font-family: 'Walter Turncoat', cursive;*/
+  }
+
+  #studentContainer a {
+    color: black;
+    text-decoration: none;
+  }
+
+/*  .clearFloat {
+    clear: both;
+    margin: 0;
+    padding: 0;
+  }*/
+
+  #childList {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  #childList ul {
+    list-style: none;
+  }
+
+  #childList a {
+    text-decoration: underline;
+    font-size: 25px;
+    font-family: 'Walter Turncoat';
+  }
+
+  #childList a:hover{
+    cursor: pointer;
+  }
+
+/*  .studentImg {
+      position: relative;
+      display: inline-block;
+      margin-top: 15px;
+  }
+
+  .studentImg img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      display: inline-block;
+  }*/
+
+  #studentInfoDiv {
+    width: 75%;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    display: inline-block;
+    top: 15px;
+    float: right;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: scroll;
+  }
+
+  #studentInfo ul {
+    list-style: none;
+  }
+
+  #studentInfo li {
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  .classesApiDiv ul {
+    list-style: none;
+  }
+
+  .classesApiDiv li {
+    margin-left: 30px;
+  }
+
+  .studentBehavior {
+      width: 50%;
+      /*height: 325px;*/
+      /*display: inline-block;*/
+      /*overflow: scroll;*/
+      /*border-right: 1px solid black;*/
+      /*position: relative;*/
+      /*top: 30px;*/
+  }
+
+  .studentBehavior p {
+      margin: 0;
+  }
+
+  .studentAttendance {
+      width: 49%;
+      height: 325px;
+      display: inline-block;
+      float: right;
+      position: relative;
+      top: 30px;
+  }
+
+  .studentAttendance p {
+      margin: 0;
+  }
+
+  .studentEvents {
+      width: 50%%;
+      /*height: 300px;*/
+      /*overflow: scroll;*/
+      /*position: relative;*/
+      /*top: 20px;*/
+  }
+
+  .color {
+    color: #006495;
+  }
+
+  .hrSpecial2 {
+     border: 0;
+     height: 1px;
+     background: #333;
+     background-image: linear-gradient(to right, #ccc, #333, #ccc);
+     position: relative;
+     top: 20px;
+  }
+
+  /*end student profile parent view*/
+  
+}/*closes laptop query*/
+/************************************************************************************************/
+/*large screen query starts here*/
+@media only screen  and (min-width : 1824px) {
+
+  a:visited { color: white; }
+  a:link { color: white; }
+
+  .black { color: black; }
+  .lightBlue { color: lightBlue; }
+
+  body {
+    margin-top: 200px;
+    margin-bottom: 100px;
   }
 
   /*student profile - parent view*/
@@ -28,9 +199,8 @@
 
   #studentContainer {
       width: 80%;
-      height: 1000px;
       margin: auto;
-      font-family: 'Walter Turncoat', cursive;
+      /*font-family: 'Walter Turncoat', cursive;*/
   }
 
   .studentImg {
@@ -76,13 +246,13 @@
   }
 
   .studentBehavior {
-      width: 49%;
-      height: 325px;
-      display: inline-block;
-      overflow: scroll;
-      border-right: 1px solid black;
-      position: relative;
-      top: 30px;
+      width: 50%;
+      /*height: 325px;*/
+      /*display: inline-block;*/
+      /*overflow: scroll;*/
+      /*border-right: 1px solid black;*/
+      /*position: relative;*/
+      /*top: 30px;*/
   }
 
   .studentBehavior p {
@@ -103,11 +273,11 @@
   }
 
   .studentEvents {
-      width: 100%;
-      height: 300px;
-      overflow: scroll;
-      position: relative;
-      top: 20px;
+      width: 50%%;
+      /*height: 300px;*/
+      /*overflow: scroll;*/
+      /*position: relative;*/
+      /*top: 20px;*/
   }
 
   .hrSpecial2 {
@@ -118,14 +288,5 @@
      position: relative;
      top: 20px;
   }
-
-  /*end student profile parent view*/
-  
-}/*closes laptop query*/
-/************************************************************************************************/
-/*large screen query starts here*/
-@media only screen  and (min-width : 1824px) {
-
-
 
 }/*closes large screen query*/

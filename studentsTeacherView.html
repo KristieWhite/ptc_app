@@ -5,8 +5,9 @@
 	<meta charset="UTF-8">
 	<title>Student - Parents View</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/student.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/student.css">
 </head>
 
 <body>
@@ -16,24 +17,38 @@
 	</div>
 	<div class="navbar">
 		<ul>
-			<li><a href="./homeParent.html">Home</a></li>
-			<li><a href="./eventsParent.html">Events</a></li>
-			<li><a href="./Feeslist.html">Fees</a></li>
-			<li><a href="./waiversTeacher.html">Waivers</a></li>
+			<li><a href="./homeTeacher.html">Home</a></li>
 			<li><a href="./hwteachview.html">Assignments</a></li>
-			<li><a href="./teacher.html">My Profile</a></li>
+			<li><a href="./waiverTeacher.html">Waivers</a></li>
+			<li><a href="./FeesListTeacher.html">Fees</a></li>
+			<li><a href="./eventsTeacher.html">Events</a></li>
 		</ul>
 	</div>
 
 	<!-- start student profile teacher view -->
 
-	<div id="studentContainer">
+	<div id="studentContainer" class="opaDiv">
 		<div class="studentImg"></div>
 
 		<div id="studentsTeacherDetailDiv"></div>
 		
-		<div id="classesDiv"></div>
-		<div id="classesDiv2"></div>
+		<div id="classesDiv" class=""></div>
+		<div id="classesDiv2" class=""></div>
+		<div id="studentsDiv" class=""></div>
+
+		<div class="studentBehavior">
+			<!-- <p>Student Behavior: </p>
+			<input type="text" class="behavior" placeholder="Enter Description Here" /> -->
+		</div>
+
+
+
+		<!-- <hr class="hrSpecial2"> -->
+
+		<div class="studentEvents">
+			<!-- <p>Upcoming Student Events: </p>
+			<a href="">Example</a> -->
+		</div>
 
 	</div>
 	<!-- end student profile teacher view -->
@@ -47,13 +62,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<!--<script src="js/students.js"></script>-->
-	<!--<script src="js/classes.js"></script>-->
+	<!--<script src="js/students.js"></script> -->
+	<script src="js/classes.js"></script>
 	<script src="js/appModels/classesCollection.js"></script>
 	<script src="js/studentsTeacherView.js"></script>
 
 	<script type="x-tmpl-mustache" id="studentsTeacherDetailTemplate">
-		<h3>List of the students for teachers, api/students/id</h3>
+		<h3 class="black">List of the students for teachers, api/students/id</h3>
 		{{#students}}
 			<p>{{first_name}} {{last_name}}</p>
 		{{/students}}
@@ -66,7 +81,9 @@
 	</script>
 
 	<script type="x-tmpl-mustache" id="classTpl">
-		<p><a href="">{{name}}</a></p>
+		<h4 class="yellow">LIST OF CLASSES</h4>
+		<p class="lightBlue">{{name}}</p>
+		<p><a class="ClassListItem-studentsLink"> - <span class="underline"><i>Show students for this class</i></span></a></p>
 	</script>
 
 	<script type="x-tmpl-mustache" id="studentsTpl">
