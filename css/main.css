@@ -5,17 +5,21 @@
         font-family: 'EraserDust';
         src: url('../fonts/EraserDust.ttf');
     }
-/*
+
+    .yellow { color: rgba(255, 225, 0, 1); }
+
     body {
-        background: url("images/greenChalkBoard.jpg");
+        background: url("../images/greenChalkBoard.jpg");
+        background-attachment: fixed;
         background-size: 100%;
         font-family: serif;
         color: white;
-    }*/
+        margin-top: 200px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+        margin-bottom: 50px;
+    }
       
     .header {
-        background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
-        background-repeat: repeat-x;
+        background: url("../images/blackChalkBoard.jpg") repeat;
         width: 100%;
         border-bottom: 2px solid black;
         font-family: 'EraserDust';
@@ -23,19 +27,70 @@
         background-position: center;   
     }
 
+    .header h1 {
+        margin: 0;
+        position: relative;
+        font-size: 3.5em;
+        text-align: center;
+        top: 20px;
+        left: 40px;
+        width: 80%;
+        display: inline-block;
+    }
+
     h1 {
         margin: 0;
         padding: .5em 0;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 101px;
+        width: 100%;
+        height: 80px;
+        background: black;
+        z-index: 2;
+    }
+
+    .navbar ul {
+        height: 80px;
+        list-style: none;
         text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar li {
+        border-bottom: none;
+        line-height: 70px;
+        font-size: 2em;
+        font-family: 'EraserDust';
+        display: inline-block;
+        margin: 8px;
+        margin-left: 20px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        transition: .3s background-color;
+    }
+
+
+    .navbar a:hover {
+        border-bottom: 2px solid blue;
+        background-color: #141010;
     }
 
     .footer {
         position: fixed;
+        bottom: 0;
         width: 100%;
         height: 60px;
         border-top: 2px solid black;
         text-align: center;
-        bottom: 0;
+        background-color: black;
     }
 
 }/*closes mobile query*/
@@ -48,46 +103,94 @@
         src: url('../fonts/EraserDust.ttf');
     }
 
-    /*a:visited{
-        color: white;
-    }
-    a:link {
-        color: white;
-    }*/
+    a:visited { color: white; }
+    a:link { color: white; }
+
+    .yellow { color: rgba(255, 225, 0, 0.10); }
+
+
     body {
-        background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
+        background: url("../images/greenChalkBoard.jpg");
+        background-attachment: fixed;
         background-size: 100%;
         font-family: serif;
         color: white;
+        margin-top: 200px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+        margin-bottom: 50px;
     }
 
     .header {
+        position: fixed;
+        top: 0;
         width: 100%;
         height: 100px;
         border-bottom: 2px solid black;
         font-family: 'EraserDust';
         color: white;
-        background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+        text-align: center;
+        background: url("../images/blackChalkBoard.jpg") repeat;
         background-position: center;
+        z-index: 2;
     }
 
     .header h1 {
-        /*margin-top: 50px;*/
-        padding: 1em;
-        /*position: relative;*/
+        margin: 0;
+        position: relative;
+        font-size: 3.5em;
+        top: 20px;
+        left: 40px;
+        width: 80%;
+        display: inline-block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 101px;
+        width: 100%;
+        height: 80px;
+        background: black;
+        z-index: 2;
+    }
+
+    .navbar ul {
+        height: 80px;
+        list-style: none;
         text-align: center;
-        font-size: 3em;
-        /*top: 20px;*/
-        /*left: 40px;*/
-        /*width: 80%;*/
-        /*display: inline-block;*/
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar li {
+        border-bottom: none;
+        line-height: 70px;
+        font-size: 2em;
+        font-family: 'EraserDust';
+        display: inline-block;
+        margin: 8px;
+        margin-left: 20px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        transition: .3s background-color;
+    }
+
+
+    .navbar a:hover {
+        border-bottom: 2px solid blue;
+        background-color: #141010;
     }
 
     .footer {
+        position: fixed;
+        bottom: 0;
         width: 100%;
         height: 60px;
         border-top: 2px solid black;
         text-align: center;
+        background-color: black;
     }
 
 }/*closes tablet query*/
@@ -101,22 +204,29 @@
         src: url('../fonts/EraserDust.ttf');
     }
 
-    .yellow {
-        color: rgba(255, 225, 0, 1);
-    }
+    .yellow { color: rgba(255, 225, 0, 1); }
 
-/*    a:visited{
-    	color: white;
-    }
-    a:link {
-    	color: white;
-    }*/
-    .uppercase {
-        text-transform: uppercase;
-    }
+    /*color-border classes below this (3) are for testing the design, we can delete later*/
+    .blueBorder { border: 1px solid blue; }
+    .redBorder { border: 1px solid red; }
+    .orangeBorder { border: 1px solid orange; }
+
+    a:visited{ color: white; }
+    a:link { color: white; }
+
+    .uppercase { text-transform: uppercase; }
+    .pointer { cursor: pointer; }
+
     body {
-        font-family: 'Walter Turncoat', cursive;
-        margin-top: 220px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+        /*font-family: 'Walter Turncoat', cursive;*/
+    	/*background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");*/
+    	background-image: url("../images/greenChalkBoard.jpg");
+        background-attachment: fixed;
+        background-size: 100%;
+        /*font-family: 'Walter Turncoat', cursive;*/
+    	color: white;
+        margin-top: 150px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+        margin-bottom: 50px;
     }
 
     .header {
@@ -127,7 +237,7 @@
     	border-bottom: 2px solid black;
     	font-family: 'EraserDust';
     	color: white;
-    	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+    	background: url("../images/blackChalkBoard.jpg") repeat;
     	background-position: center;
         z-index: 2;
     }

@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<title>PTC - Homework</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/homework.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
   <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/homework.css">
 </head>
 <style>
 </style>
@@ -95,8 +95,10 @@
 	</script>-->
 
 	<script type="x-tmpl-mustache" id="studentTpl">
-		<p><span class="uppercase">{{first_name}} {{last_name}} - </span>
-		<span><a class="StudentListItem-homeworkLink link">Show My Homework</a></span></p>
+		<p>{{picture_url}}</p>
+		<p><span class="uppercase">{{first_name}} {{last_name}}</span>  
+		
+		<a class="StudentListItem-homeworkLink link"> - <span class="underline pointer"><i>Show My Homework</i></span></a></p>
 
 	</script>
 
