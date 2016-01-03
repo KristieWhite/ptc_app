@@ -5,13 +5,13 @@
         font-family: 'EraserDust';
         src: url('../fonts/EraserDust.ttf');
     }
-
+/*
     body {
         background: url("images/greenChalkBoard.jpg");
         background-size: 100%;
         font-family: serif;
         color: white;
-    }
+    }*/
       
     .header {
         background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
@@ -105,22 +105,18 @@
         color: rgba(255, 225, 0, 1);
     }
 
-    a:visited{
+/*    a:visited{
     	color: white;
     }
     a:link {
     	color: white;
-    }
+    }*/
     .uppercase {
         text-transform: uppercase;
     }
     body {
-    	background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
-    	background-size: 100%;
-        /*font-family: 'Walter Turncoat', cursive;*/
-    	color: white;
-        margin-top: 150px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
-        margin-bottom: 50px;
+        font-family: 'Walter Turncoat', cursive;
+        margin-top: 220px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
     }
 
     .header {
@@ -151,7 +147,7 @@
         top: 101px;
     	width: 100%;
     	height: 80px;
-    	background: black;
+        background: #B4B4B4;
         z-index: 2;
     }
 
@@ -167,7 +163,7 @@
     	border-bottom: none;
     	line-height: 70px;
     	font-size: 2em;
-    	font-family: 'EraserDust';
+    	font-family: 'Walter Turncoat';
     	display: inline-block;
     	margin: 8px;
     	margin-left: 20px;
@@ -175,7 +171,7 @@
 
     .navbar a {
         text-decoration: none;
-        color: #fff;
+        color: white;
         display: block;
         transition: .3s background-color;
     }
@@ -183,6 +179,7 @@
 
     .navbar a:hover {
     	border-bottom: 2px solid blue;
+        color: white;
     	background-color: #141010;
     }
 
@@ -194,6 +191,7 @@
         border-top: 2px solid black;
         text-align: center;
         background-color: black;
+        color: white;
     }
 /*	.navbar li {
 		width: 15%;

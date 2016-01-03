@@ -4,14 +4,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Parent</title>
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/parent.css">
 	<link rel="stylesheet" type="text/css" href="css/student.css">
-
 </head>
 
 <body>
@@ -41,7 +39,9 @@
 
     <div id="parentInfoDiv">
       <div id="parentInfo"></div>
-      <div id="childList"></div>
+      <div id="childList">
+        <a href="parentStudents.html">Click here to see your children's profiles</a>
+      </div>
     </div>
 
     <div id="parentEvents">
@@ -77,11 +77,8 @@
 	<!-- Parent Data -->
 
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
-		<p>Name: </p>
     {{#parents}}
-      <ul>
-        <li>{{first_name}} {{last_name}}</li>
-      </ul>
+		  <p>Hello, {{first_name}} {{last_name}}.</p>
 		{{/parents}}
 	</script>
 
@@ -91,40 +88,7 @@
 		{{/images}}
 	</script>
 
-  <script type="x-tmpl-mustache" id="childTemplate">
-    <p>Children: </p>
-    {{#children}}
-      <ul>
-        <li><a href="student.html?id={{id}}" class="studentId">{{first_name}} {{last_name}}</a></li>
-      </ul>
-    {{/children}}
-  </script>
-
 	<!-- End Parent Data -->
-
-	<!-- Start Student Data for Route to Profile -->
-<!-- 
-  <script type="x-tmpl-mustache" id="studentInfoTemplate">
-    {{#students}}
-      <ul>
-        <li>Student Number: {{id}}</li>
-        <li value={{id}}>Name: {{first_name}} {{last_name}}</li>
-        <li>School: Walter V Long Elementary School</li>
-        <li>School Address: 2000 S Walnut Rd, Las Vegas, NV 89104</li>
-        <li>Teachers: </li>
-        <li>Classes: </li>
-      </ul>
-    {{/students}}
-  </script>
-
-  <script type="x-tmpl-mustache" id="classesTemplate">
-    {{#classes}}
-      <ul>
-        <li><a href="">{{name}}</a></li>
-      </ul>
-    {{/classes}}
-  </script>
- -->
 
 	<!-- needs to be moved into student profile -->
 	<!--

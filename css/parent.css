@@ -21,6 +21,7 @@
     height: 1000px;
     margin: auto;
     font-size: 20px;
+    font-family: 'Walter Turncoat';
   }
 
   #parentProImg {
@@ -71,19 +72,9 @@
   }
 
   #parentInfo p {
+    font-size: 30px;
     margin: 0;
     margin-top: 10px;
-    margin-left: 20px;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  #parentInfo ul {
-    list-style: none;
-    margin: 0;
-  }
-
-  #parentInfo li {
     margin-left: 20px;
   }
 
@@ -94,17 +85,11 @@
     text-decoration: underline;
   }
 
-  #childList ul {
-    list-style: none;
-    margin: 0;
-  }
-
-  #childList li {
-    margin-left: 20px;
-  }
-
   #childList a {
+    position: relative;
     text-decoration: none;
+    left: 20px;
+    top: 20px;
   }
 
   #childList a:hover {

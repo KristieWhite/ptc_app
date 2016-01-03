@@ -18,6 +18,8 @@
   #homeContainer {
     width: 100%;
     height: 100%;
+    position: relative;
+    bottom: 80px;
   }
   #homeContainer p {
     position: relative;
@@ -29,7 +31,7 @@
     color: white;
     font-size: 20px;
     padding-left: 15px;
-    font-family: 'Sigmar One', cursive;
+    font-family: 'Walter Turncoat', cursive;
   }
   
   #homeContainer figure {
@@ -46,8 +48,8 @@
     background-position: center;
     width: 100%;
     height: 220px;
-    -webkit-filter: blur(1px);
-    filter: blur(2px);
+/*    -webkit-filter: blur(1px);
+    filter: blur(2px);*/
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     text-align: center;
@@ -56,6 +58,19 @@
   .hover07 figure:hover img {
     -webkit-filter: blur(0);
     filter: blur(0);
+  }
+
+  #parentInfo {
+    width: 90%;
+    margin: auto;
+    font-family: 'Walter Turncoat';
+    font-weight: normal;
+    font-size: 22px;
+  }
+
+  .centerContainer {
+    width: 45%;
+    margin: auto;
   }
 
   .leftContainer {
