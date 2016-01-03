@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<title>Student - Parents View</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/student.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/student.css">
 </head>
 
 <body>
@@ -27,26 +27,27 @@
 
 	<!-- start student profile teacher view -->
 
-	<div id="studentContainer">
+	<div id="studentContainer" class="opaDiv">
 		<div class="studentImg"></div>
 
 		<div id="studentsTeacherDetailDiv"></div>
 		
-		<div id"classesDiv"></div>
-		<div id="classesDiv2"></div>
+		<div id="classesDiv" class=""></div>
+		<div id="classesDiv2" class=""></div>
+		<div id="studentsDiv" class=""></div>
 
 		<div class="studentBehavior">
-			<p>Student Behavior: </p>
-			<input type="text" class="behavior" placeholder="Enter Description Here" />
+			<!-- <p>Student Behavior: </p>
+			<input type="text" class="behavior" placeholder="Enter Description Here" /> -->
 		</div>
 
 
 
-		<hr class="hrSpecial2">
+		<!-- <hr class="hrSpecial2"> -->
 
 		<div class="studentEvents">
-			<p>Upcoming Student Events: </p>
-			<a href="">Example</a>
+			<!-- <p>Upcoming Student Events: </p>
+			<a href="">Example</a> -->
 		</div>
 
 	</div>
@@ -61,13 +62,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<!-- // <script src="js/students.js"></script> -->
-	// <script src="js/classes.js"></script>
-	<script src="js/classesCollection.js"></script>
+	<!--<script src="js/students.js"></script> -->
+	<script src="js/classes.js"></script>
+	<script src="js/appModels/classesCollection.js"></script>
 	<script src="js/studentsTeacherView.js"></script>
 
 	<script type="x-tmpl-mustache" id="studentsTeacherDetailTemplate">
-		<h3>List of the students for teachers, api/students/id</h3>
+		<h3 class="black">List of the students for teachers, api/students/id</h3>
 		{{#students}}
 			<p>{{first_name}} {{last_name}}</p>
 		{{/students}}
@@ -80,8 +81,10 @@
 	</script>
 
 	<script type="x-tmpl-mustache" id="classTpl">
-		<h4>List of Classes</h4>
-		<p>{{name}}</p>
+		<h4 class="yellow">LIST OF CLASSES</h4>
+		<p class="lightBlue">{{name}}</p>
+		<p><a class="ClassListItem-studentsLink"> - <span class="underline"><i>Show students for this class</i></span></a></p>
+
 	</script>
 
 	<script type="x-tmpl-mustache" id="studentsTpl">

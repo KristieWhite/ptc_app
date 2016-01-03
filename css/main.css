@@ -7,14 +7,15 @@
     }
 
     body {
-        background: url("images/greenChalkBoard.jpg");
+        background: url("../images/greenChalkBoard.jpg");
+        background-attachment: fixed;
         background-size: 100%;
         font-family: serif;
         color: white;
     }
       
     .header {
-        background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+        background: url("../images/blackChalkBoard.jpg") repeat;
         background-repeat: repeat-x;
         width: 100%;
         border-bottom: 2px solid black;
@@ -55,7 +56,8 @@
         color: white;
     }*/
     body {
-        background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
+        background: url("../images/greenChalkBoard.jpg");
+        background-attachment: fixed;
         background-size: 100%;
         font-family: serif;
         color: white;
@@ -67,7 +69,7 @@
         border-bottom: 2px solid black;
         font-family: 'EraserDust';
         color: white;
-        background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+        background: url("../images/blackChalkBoard.jpg") repeat;
         background-position: center;
     }
 
@@ -105,6 +107,16 @@
         color: rgba(255, 225, 0, 1);
     }
 
+    /*color classes below this are for testing the design, we can delete later*/
+    .blueBorder {
+        border: 1px solid blue;
+    }
+    .redBorder {
+        border: 1px solid red;
+    }
+    .orangeBorder {
+        border: 1px solid orange;
+    }
     a:visited{
     	color: white;
     }
@@ -115,8 +127,10 @@
         text-transform: uppercase;
     }
     body {
-    	background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
-    	background-size: 100%;
+    	/*background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");*/
+    	background-image: url("../images/greenChalkBoard.jpg");
+        background-attachment: fixed;
+        background-size: 100%;
         /*font-family: 'Walter Turncoat', cursive;*/
     	color: white;
         margin-top: 150px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
@@ -131,7 +145,7 @@
     	border-bottom: 2px solid black;
     	font-family: 'EraserDust';
     	color: white;
-    	background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+    	background: url("../images/blackChalkBoard.jpg") repeat;
     	background-position: center;
         z-index: 2;
     }

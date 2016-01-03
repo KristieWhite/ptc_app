@@ -69,8 +69,8 @@ var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 
 			var type = '';
 			switch (this.ownerType){
-				case 'parent':
-				type = 'parents';
+				case 'teacher':
+				type = 'teachers';
 				break;
 
 				case 'class':
@@ -78,7 +78,7 @@ var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 				break;
 			}
 			
-			return API_ROOT + 'api/' + type + '/' + this.ownerId + '/students';
+			return API_ROOT + 'api/' + type + '/' + this.ownerId + '/classes';
 		}
 	});
 	window.appModels.ClassCollection = ClassCollection;

@@ -65,7 +65,7 @@ $(document).ready(function () {
 		},
 		parse: parseListResponse,
 		url: function() {
-			return API_ROOT + 'api/classes/' + this.studentId + '/students';
+			return API_ROOT + 'api/classes' + this.teacherId;
 		}
 	})
 
@@ -118,6 +118,7 @@ $(document).ready(function () {
   	 	// 	window.alert('me');
   	 	// },
     	render: function() {
+    		console.log("look here for classTpl", this.tpl, this.model);
     		this.$el.html('').append(Mustache.render(this.tpl, this.model.attributes));
     		//this.$el.find('input').val(this.model.get('first_name'));
     		// Model attributes
