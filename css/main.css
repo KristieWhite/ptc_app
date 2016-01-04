@@ -164,11 +164,8 @@
 	.navbar li {
 		background: black;
 		border-bottom: none;
-		line-height: 4.9em;
+		line-height: 5.9em;
 		font-size: 1em;
-		font-family: 'Walter Turncoat', cursive;
-		src: url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
-
 		margin-left: -1px;
 	}
 	.navbar a {
@@ -179,7 +176,7 @@
 		transition: .3s background-color;
 	}
 	.navbar a:hover {
-		border-bottom: 2px solid blue;
+	
 		background-color: #141010;
 	}
 	.footer {
