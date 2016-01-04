@@ -33,13 +33,13 @@
 		width: 45%;
 	}
 
-	#fixedH2 {
+	h2 {
 		position: fixed;
 	}
 
 	.assignHeader h2{
-		color: #006495;
-		text-decoration: underline;
+		/*color: #006495;*/
+		/*text-decoration: underline;*/
 	}
 
 	.color {
@@ -54,12 +54,12 @@
 		width: 45%;
 		height: 400px;
 		top: 10px;
-		overflow: scroll;
+		/*overflow: scroll;*/
 	}
 
-/*	.lightBlue {
+	.lightBlue {
 		color: lightblue;
-	}*/
+	}
 
 	.borderBottom {
 		border-bottom: 1px solid rgb(44, 44, 44);
