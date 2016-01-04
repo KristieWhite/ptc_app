@@ -145,13 +145,29 @@
 		width: 80%;
 		display: inline-block;
 	}
+	#parentInfo {
+		position: relative;
+		left: 60em;
+		top: -30px;
+		width: 200px;
+	}
+	#parentInfo p {
+		position: absolute;
+		left: 60px;
+		bottom: 5px;
+		font-size: 20px;
+	}
+	#parentInfo img {
+		border-radius: 5px;
+		width: 50px;
+		height: 50px;
+	}
 	.navbar {
-		position:fixed;
+		position: fixed;
 		top: 100px;
 		width: 10%;
 		height: 0px;
 		z-index: 2;
-
 	}
 	.navbar ul {
 		height: 100px;
@@ -159,7 +175,6 @@
 		text-align: center;
 		padding: 0;
 		margin: 0;
-		
 	}
 	.navbar li {
 		background: black;
@@ -176,7 +191,6 @@
 		transition: .3s background-color;
 	}
 	.navbar a:hover {
-	
 		background-color: #141010;
 	}
 	.footer {
@@ -187,6 +201,23 @@
 		border-top: 2px solid black;
 		text-align: center;
 		background-color: black;
+	}
+	#parentInfo {
+		position: relative;
+		left: 60em;
+		top: -30px;
+		width: 200px;
+	}
+	#parentInfo p {
+		position: absolute;
+		left: 60px;
+		bottom: 5px;
+		font-size: 20px;
+	}
+	#parentInfo img {
+		border-radius: 5px;
+		width: 50px;
+		height: 50px;
 	}
 }
 
