@@ -53,6 +53,7 @@
 	<script type="text/javascript" src="js/Feeslist.js"></script>
 	<script type="text/javascript" src="Details/FeesDetail.js"></script>
 	<script src="js/parent.js"></script>
+	<script src="js/url.min.js"></script>
 
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
@@ -71,18 +72,11 @@
 	</script>
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
-		<p img src="{{picture_url}}"></p>
 		<p>Payment: {{payment_amount}}</p>
 		<p>amount needed: {{amount_needed}}</p>
-
-		<a href="FeesListDetail.html">Details</a>
+		<a href="FeesListDetail.html?id={{id}}">Details</a>
 		<div class="borderBottom"></div>
 	</script>
-
-
-
-
-
 
 </body>
 

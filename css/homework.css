@@ -57,6 +57,7 @@
 		height: 400px;
 		top: 10px;
 		overflow: scroll;
+		-webkit-scrollbar:red;
 	}
 
 /*	.lightBlue {
@@ -205,6 +206,187 @@
 /*large screen query starts here*/
 @media only screen  and (min-width : 1824px) {
 
+	.clearFloat {
+		clear: both;
+		margin: 0;
+		padding: 0;
+	}
 
+	body {
+		margin-top: 220px;
+	}
+
+	#studentsDiv2 {
+		/*border: 1px solid blue;*/
+		position: fixed;
+		margin-left:1em;
+		margin-top: 3.5em;
+		float: left;
+		width: 45%;
+	}
+
+	#fixedH2 {
+		position: fixed;
+		margin-left: 1em;
+	}
+
+	.assignHeader h2{
+		color: #006495;
+		text-decoration: underline;
+	}
+
+	.color {
+		color: #006495;
+	}
+
+	#homeworkDiv {
+		/*border: 1px solid red;*/
+		position: relative;
+		bottom: 40px;
+		float: right;
+		width: 45%;
+		height: 400px;
+		top: 10px;
+		overflow: scroll;
+	}
+
+/*	.lightBlue {
+		color: lightblue;
+	}*/
+
+	.borderBottom {
+		border-bottom: 1px solid rgb(44, 44, 44);
+	}
+
+	#studentsDiv{
+		/*border: 1px solid yellow;*/
+	}
+	
+	#assignContainer {
+		width: 80%;
+		height: 100%;
+		margin: auto;
+		margin-top: 40px;
+	}
+
+	.StudentListItem-homeworkLink:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	#mainAssignments {
+		width: 45%;
+		height: 800px;
+		position: relative;
+		display: inline-block;
+		border-right: 1px solid gray;
+	}
+
+	.assignments {
+		width: 100%;
+		height: 45%;
+		/*overflow: scroll;*/
+	}
+
+	.assignments2	 {
+		width: 100%;
+		height: 45%;
+		overflow: scroll;
+	}
+
+	/*///////////teacher view styling//////////*/
+
+	.file {
+		visibility: hidden;
+	}
+
+	.upload {
+		width: 40%;
+		height: 40px;
+		border: 2px solid gray;
+		border-radius: 10px;
+		font-size: 14px;
+		outline: none;
+	}
+
+	.helpLinks {
+		width: 50%;
+		height: 30px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border: 1px solid gray;
+		padding-left: 10px;
+		outline: none;
+		font-size: 14px;
+	}
+
+	.dueDate {
+		width: 35%;
+		height: 25px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		padding-left: 20px;
+	}
+
+	.subBtn {
+		width: 15%;
+		height: 34px;
+		border: 1px solid gray;
+		position: relative;
+		right: 6px;
+		bottom: 1px;
+		color: white;
+		font-size: 14px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	.studentAssign:hover {
+		background: gray;
+		color: white;
+	}
+
+	#checkBoxContainer {
+		width: 30%;
+		height: 30%;
+		border: 2px solid gray;
+		box-shadow: 5px 5px 5px black;
+		display: inline-block;
+		display: none;
+	}
+
+	#checkBoxContainer input[type=checkbox] {
+		width: 20%;
+		height: 20%;
+		position: relative;
+		left: 10px;
+		top: 5px;
+	}
+
+	#checkBoxContainer span {
+		margin: 0;
+		position: relative;
+		top: 1px;
+	}
+
+	.turnedIn{
+		width: 60%;
+		height: 30px;
+		border: 1px solid black;
+		border-radius: 20px;
+		background: red;
+		color: white;
+		position: relative;
+		top: 10px;
+		left: 20px;
+	}
+
+	#projects {
+		width: 45%;
+		height: 800px;
+		position: relative;
+		display: inline-block;
+		left: 10px;
+	}
 
 }/*closes large screen query*/

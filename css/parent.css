@@ -52,6 +52,26 @@
 /*large screen query starts here*/
 @media only screen  and (min-width : 1824px) {
 
+	#parentInfo{
+		position: fixed;
+		left: 1500px;
+		top: 10px;
+
+	}
+	
+	#parentInfo p{
+		position: absolute;
+		left:80px;
+		bottom: -15px;
+		font-size: 20px;
+
+	}
+	
+	#parentInfo img{
+		width: 70px;
+		height: 70px;
+		
+	}
 
 
 }/*closes large screen query*/
