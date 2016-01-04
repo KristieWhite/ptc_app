@@ -31,7 +31,7 @@
 
 	<div id="assignContainer">
 		<div class="assignHeader">
-			<h2 id="fixedH2">ASSIGNMENTS</h2>
+			<h2 class="">ASSIGNMENTS</h2>
 		</div>
 		<div id="studentsDiv2" class=""></div>
 		<div id="homeworkDiv" class=""></div>
@@ -72,17 +72,15 @@
 
 	<script type="x-tmpl-mustache" id="studentTpl">
 		<p>{{picture_url}}</p>
-		<p><span class="uppercase">{{first_name}} {{last_name}}</span>
-			<a class="StudentListItem-homeworkLink link"> - <span class="underline"><i>Show My Homework</i></span></a></p>
-
-
+		<p><span class="uppercase">{{first_name}} {{last_name}}</span>  
+		<a class="StudentListItem-homeworkLink link"> - <span class="lightBlue underline pointer"><i>Show My Homework</i></span></a></p>
 	</script>
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
 		<p img src="{{picture_url}}"></p>
-		<p><u class="color">DATE</u>: {{due_date}}</p>
-		<p><u class="color">Title</u>: {{title}}</p>
-		<p><u class="color">Description</u>: {{description}}</p>
+		<p>DATE: {{due_date}}</p>
+		<p><a href="parentHomeworkDetail.html?id={{id}}"<span class="lightBlue"><i>Title</i></span>: {{title}}</a></p>
+		<p>Description: {{description}}</p>
 		<div class="borderBottom"></div>
 	</script>
 
