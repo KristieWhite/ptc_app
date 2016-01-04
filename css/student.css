@@ -12,6 +12,11 @@
       margin: auto;
   }
 
+  #studentsTeacherDetailDiv {
+      padding: 5em;
+  }
+
+
 
 
 }/*closes mobile query*/
