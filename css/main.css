@@ -197,7 +197,7 @@
 /*****************************************************************************************************/
 /*laptop query starts here*/
 
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600) and (-webkit-min-device-pixel-ratio: 1) { 
 
     @font-face {
         font-family: 'EraserDust';
@@ -220,35 +220,41 @@
     body {
         /*font-family: 'Walter Turncoat', cursive;*/
     	background-image: url("../images/greenChalkBoard.jpg");
+        /*background-color: rgb(230, 230, 230);*/
         background-attachment: fixed;
         background-size: 100%;
-    	color: white;
+    	/*color: white;*/
         margin-top: 150px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
         margin-bottom: 50px;
     }
 
+    /*body.img {
+        opacity: 0.20;
+    }*/
+
     .header {
         position: fixed;
         top: 0;
-    	width: 100%;
-    	height: 100px;
-    	border-bottom: 2px solid black;
-    	font-family: 'EraserDust';
-    	color: white;
-    	background: url("../images/blackChalkBoard.jpg") repeat;
-    	background-position: center;
+        width: 100%;
+        height: 100px;
+        border-bottom: 2px solid black;
+        font-family: 'EraserDust';
+        color: white;
+        background: url("../images/blackChalkBoard.jpg") repeat;
+        background-position: center;
         z-index: 2;
     }
 
     .header h1 {
-    	margin: 0;
-    	position: relative;
-    	font-size: 3.5em;
-    	top: 20px;
-    	left: 40px;
-    	width: 80%;
-    	display: inline-block;
+        margin: 0;
+        position: relative;
+        font-size: 3.5em;
+        top: 20px;
+        left: 40px;
+        width: 80%;
+        display: inline-block;
     }
+
 
     .navbar {
         position: fixed;
@@ -404,6 +410,109 @@
 /*large screen query starts here*/
 @media only screen  and (min-width: 1824px) {
 
+    @font-face {
+        font-family: 'EraserDust';
+        src: url('../fonts/EraserDust.ttf');
+    }
+
+    .yellow { color: rgba(255, 225, 0, 0.90); }
+
+    /*color-border classes below this (3) are for testing the design, we can delete later*/
+    .blueBorder { border: 1px solid blue; }
+    .redBorder { border: 1px solid red; }
+    .orangeBorder { border: 1px solid orange; }
+
+    a:visited{ color: white; }
+    a:link { color: white; }
+
+    .uppercase { text-transform: uppercase; }
+    .pointer { cursor: pointer; }
+
+    body {
+        /*font-family: 'Walter Turncoat', cursive;*/
+        /*background-image: url("../images/greenChalkBoard.jpg");*/
+        background-color: rgb(230, 230, 230);
+        background-attachment: fixed;
+        background-size: 100%;
+        /*color: white;*/
+        margin-top: 150px;/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+        margin-bottom: 50px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        border-bottom: 2px solid black;
+        font-family: 'EraserDust';
+        color: white;
+        background: url("../images/blackChalkBoard.jpg") repeat;
+        background-position: center;
+        z-index: 2;
+    }
+
+    .header h1 {
+        margin: 0;
+        position: relative;
+        font-size: 3.5em;
+        top: 20px;
+        left: 40px;
+        width: 80%;
+        display: inline-block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 101px;
+        width: 100%;
+        height: 80px;
+        /*background: #B4B4B4;*/
+        background: black;
+        z-index: 2;
+    }
+
+    .navbar ul {
+        height: 80px;
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar li {
+        border-bottom: none;
+        line-height: 70px;
+        font-size: 2em;
+        font-family: 'Walter Turncoat';
+        display: inline-block;
+        margin: 8px;
+        margin-left: 20px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        transition: .3s background-color;
+    }
+
+    .navbar a:hover {
+        border-bottom: 2px solid blue;
+        color: white;
+        background-color: #141010;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        border-top: 2px solid black;
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
 
 }/*closes large screen query*/
 

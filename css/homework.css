@@ -55,6 +55,7 @@
 
 	#studentsDiv2 {
 		/*border: 1px solid black;*/
+		/*background-color: rgba(100, 200, 200, 0.20);*/
 	}
 
 	#studentsDiv {
@@ -207,6 +208,9 @@
 
 	#studentsDiv2 {
 		/*border: 1px solid black;*/
+		background-color: rgba(200, 200, 200, 0.20);
+		border-radius: 5px;
+		padding: 1em;
 	}
 
 	#studentsDiv {

@@ -27,7 +27,7 @@
 
 	<div id="assignContainer">
 		<div class="assignHeader">
-			<h2 class="yellow">ASSIGNMENTS</h2>
+			<h2 class="">ASSIGNMENTS</h2>
 		</div>
 		<div id="studentsDiv2" class=""></div>
 		<div id="homeworkDiv" class=""></div>
@@ -105,7 +105,7 @@
 	<script type="x-tmpl-mustache" id="homeworkTpl">
 		<p img src="{{picture_url}}"></p>
 		<p>DATE: {{due_date}}</p>
-		<p><span class="lightBlue"><i>Title</i></span>: {{title}}</p>
+		<p><a href="parentHomeworkDetail.html?id={{id}}"<span class="lightBlue"><i>Title</i></span>: {{title}}</a></p>
 		<p>Description: {{description}}</p>
 		<div class="borderBottom"></div>
 	</script>
