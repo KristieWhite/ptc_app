@@ -7,13 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/student.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-  <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
+			<div id="parentInfo"></div>
 	</div>
 
   <div class="navbar">
@@ -72,6 +72,7 @@
 	<script src="js/login.js"></script>
 	<script src="js/students.js"></script>
 	<script src="js/classes.js"></script>
+  	<script src="js/parent.js"></script>
 
   <script type="x-tmpl-mustache" id="childTemplate">
     <ul>
@@ -89,15 +90,12 @@
       </ul>
   </script>
 
-<!-- 
-	<script type="x-tmpl-mustache" id="classesTemplate">
-		{{#classes}} 
-		<ul>
-			<li>{{name}}</li>
-		</ul>
-		{{/classes}}
+<script type="x-tmpl-mustache" id="parentInfoTemplate">
+		{{#parents}}
+			<p>{{first_name}} {{last_name}}</p>
+			<img src="{{picture_url}}"> 
+		{{/parents}}
 	</script>
- -->
 </body>
 
 </html>
