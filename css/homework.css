@@ -162,27 +162,42 @@
 	}
 
 	body {
-		margin-top: 220px;
+		margin-top: 180px;
+        color: #f2f2f2;
 	}
 
+
+	.designH2 {
+		position: fixed;
+		margin: -1em 0 0 2em;
+        font-size: 1.8em;
+        flex-wrap: wrap;
+        text-shadow: #000000 3px 5px 2px;
+	}
+
+	.blue {
+/*		color: #006495;*/
+	}
+    
 	#studentsDiv2 {
 		/*border: 1px solid blue;*/
 		position: fixed;
 		margin-left: 3em;
-		margin-top: 2em;
+		margin-top: 3em;
 		float: left;
-		width: 35%;
+		width: 30%;
+		background-color: rgba(185, 185, 185, 0.20);
+		border-radius: 7px;
+		padding: 1em;
+        box-shadow: 3px 3px 3px rgba(140, 140, 140, 0.20);
 	}
 
-	h2 {
-		position: fixed;
-		margin: 0 0 0 1em;
+	#studentsDiv2 a:hover {
+		background-color: #2c2c09;
+		/*text-decoration: none;*/
+		text-transform: uppercase;
 	}
-
-	.blue {
-		color: #006495;
-	}
-
+    
 	#homeworkDiv {
 		/*border: 1px solid red;*/
 		position: relative;
@@ -201,19 +216,6 @@
 
 	.borderBottom {
 		border-bottom: 1px solid rgb(44, 44, 44);
-	}
-
-	#studentsDiv2 a:hover {
-		background-color: #333300;
-		/*text-decoration: none;*/
-		text-transform: uppercase;
-	}
-
-	#studentsDiv2 {
-		/*border: 1px solid black;*/
-		background-color: rgba(200, 200, 200, 0.20);
-		border-radius: 5px;
-		padding: 1em;
 	}
 
 	#studentsDiv {

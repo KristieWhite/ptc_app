@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>PTC - Homework</title>
-	<link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+<!--	<link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>-->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<link rel="stylesheet" type="text/css" href="css/homework.css">
@@ -30,13 +30,12 @@
 
 	<div id="assignContainer">
 		<div class="assignHeader">
-			<h2 class="">ASSIGNMENTS</h2>
+			<h2 class="designH2">ASSIGNMENTS</h2>
 		</div>
-		<div id="studentsDiv2" class=""></div>
-		<div id="homeworkDiv" class=""></div>
+		<div id="studentsDiv2"></div>
+		<div id="homeworkDiv"></div>
 		<p class="clearFloat"></p>
-		<div id="studentsDiv" class=""></div>
-
+		<div id="studentsDiv"></div>
 
 	</div>
 	<div class="footer">
@@ -73,13 +72,13 @@
 	<script type="x-tmpl-mustache" id="studentTpl">
 		<img src="{{picture_url}}">
 		<p><span class="uppercase">{{first_name}} {{last_name}}</span>  
-		<a class="StudentListItem-homeworkLink link"> - <span class="lightBlue underline pointer"><i>Show My Homework</i></span></a></p>
+		<a class="StudentListItem-homeworkLink"> - <span class="lightBlue underline pointer"><i>&nbsp;Show My Homework&nbsp;</i></span></a></p>
 	</script>
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
 		<p img src="{{picture_url}}"></p>
 		<p>DATE: {{due_date}}</p>
-		<p><a href="parentHomeworkDetail.html?id={{id}}"<span class="lightBlue"><i>Title</i></span>: {{title}}</a></p>
+		<p><span class="lightBlue"><a href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>: {{title}}</a></span></p>
 		<p>Description: {{description}}</p>
 		<div class="borderBottom"></div>
 	</script>

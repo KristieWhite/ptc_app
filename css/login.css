@@ -28,8 +28,9 @@
         /*padding: 0 0 0 4em;*/
     }
     .login {
-        margin: 1em;
-        width: 375px;
+        /*width: 375px;*/
+        width: 80%;
+        margin: auto;
         height: 250px;
         background-color: grey;
         padding: 1em 2em;
