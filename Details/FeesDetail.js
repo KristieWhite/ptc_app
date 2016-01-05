@@ -1,18 +1,18 @@
 $(document).ready(function () {
 	console.log(url("?id"));
 	//////////////***********Fees Detail**************//////////////////
-console.log(this.get("id"));
+
 	
 	
 	
 	var ParentModel = Backbone.Model.extend({
 		initialize: function () {},
 		Model: ParentModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_fees/' + this.get("id");
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_fees/'
 	});
 
 	var ParentsCollection = Backbone.Collection.extend({
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_fees/' + this.get("id");
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_fees/'
 	});
 	var parent = new ParentModel();
 	parent.fetch({
