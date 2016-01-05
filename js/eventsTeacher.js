@@ -42,11 +42,7 @@ $(document).ready(function () {
 		},
 		url: "https://murmuring-sands-9831.herokuapp.com/api/school_events/#{id}"
 	});
-	// var SchoolEventsDetailCollection = Backbone.Collection.extend({
-	// 	Model: SchoolEventsDetailModel,
-	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/school_events/#{id}"
-	// });
-
+	
 	var SchoolEventsDetail = new SchoolEventsDetailModel();
 	SchoolEventsDetail.fetch({
 		success: function (resp) {
