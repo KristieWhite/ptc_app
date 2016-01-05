@@ -26,12 +26,11 @@
     margin: 0;
     width: 85%;
     left: 18px;
-    bottom: 46px;
+    bottom: 38px;
     background: black;
     color: white;
     font-size: 20px;
     padding-left: 15px;
-    font-family: 'Walter Turncoat', cursive;
   }
   
   #homeContainer figure {
@@ -63,7 +62,6 @@
   #parentInfo {
     width: 90%;
     margin: auto;
-    font-family: 'Walter Turncoat';
     font-weight: normal;
     font-size: 22px;
   }
@@ -78,7 +76,7 @@
     height: 100%;
     display: inline-block;
     position: relative;
-    left: 5%;
+/*    left: 5%;*/
   }
 
   .rightContainer {
@@ -87,7 +85,7 @@
     display: inline-block;
     float: right;
     position: relative;
-    right: 3%;
+/*    right: 3%;*/
   }
 
 }/*closes laptop query*/

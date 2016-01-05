@@ -4,17 +4,24 @@ $(document).ready(function () {
 		return response.results;
 	};
 
+	//var LOGGED_IN_ID = 36;
 
 	var API_ROOT = 'https://murmuring-sands-9831.herokuapp.com/';
 
-	var HomeworkModel = Backbone.Model.extend({
+	// var StudentModel = Backbone.Model.extend({
+	// 	url: function(){
+	// 		return API_ROOT + 'api/students/' + this.get('id');
+	// 	}
+	// });
+
+	var FeeModel = Backbone.Model.extend({
 		url: function (argument) {
 			return '';
 		}
 	});
 
-	var StudentHomeworkCollection = Backbone.Collection.extend({
-		model: HomeworkModel,
+	var StudentFeeCollection = Backbone.Collection.extend({
+		model: FeeModel,
 		initialize: function (attributes, options) {
 			this.studentId = options.studentId;
 		},
@@ -22,13 +29,35 @@ $(document).ready(function () {
 		url: function () {
 			return API_ROOT + 'api/students/' + this.studentId + '/fees';
 		}
-	});
+	})
 
-	
+	/////////////////////lists of students homework///////////////////////////////
+	// var ParentStudentCollection = Backbone.Collection.extend({
+	// 	model: StudentModel,
+	// 	initialize: function (attributes, options) {
+	// 		console.log("hwParentViewModel initialized");
+	// 		this.parentId = options.parentId;
+	// 	},
+	// 	parse: parseListResponse,
+
+	// 	// defaults: {
+	// 	// 	name: null,
+	// 	// 	student: null,
+	// 	// 	title: null,
+	// 	// 	description: null,
+	// 	// 	image: null,
+	// 	// 	due_date: null,
+	// 	// 	points: "Not Graded Yet!"
+	// 	// },
+	// 	url: function () {
+	// 		//url: https://murmuring-sands-9831.herokuapp.com/api/students/id/homework
+	// 		return API_ROOT + 'api/parents/' + this.parentId + '/students';
+	// 	}
+	// });
 
 	// View for the Student
-	var StudentView = Backbone.View.extend({
-		tpl: $('#studentTpl').html(),
+	var StudentFeeView = Backbone.View.extend({
+		tpl: $('#feeTpl').html(),
 
 		initialize: function (options) {
 			this.app = options.app;
@@ -37,27 +66,27 @@ $(document).ready(function () {
 		events: {
 			// This adds an event listener to the click event, on anything matching '.StudentListItem-homeworkLink'
 			// on the this.$el(). It will run this.clickOnStudent().
-			"click .StudentListItem-homeworkLink": "clickOnStudent",
-			"click p": "alertMe",
-			'keyup input': 'onInput'
-		},
-		clickOnStudent: function (argument) {
-			this.app.clickOnStudent(this.model);
-		},
-		// onInput:function (event) {
-		// 	this.model.set('first_name', this.$el.find('input').val());
-		// }
-		// alertMe:function(){
-		// 	window.alert('me');
-		// },
-		render: function () {
-			this.$el.html('').append(Mustache.render(this.tpl, this.model.attributes));
-			//this.$el.find('input').val(this.model.get('first_name'));
-			// Model attributes
-			// {id, etc, first_name}
-			// Model
-			// {attributes, some, backbone, thing}
-		}
+			"click .StudentListItem-feeLink" : "clickOnStudent",
+			// "click p": "alertMe",
+			// 'keyup input': 'onInput'
+    	},
+    	clickOnStudent: function (argument) {
+    		this.app.clickOnStudent(this.model);
+  	 	},
+  	 	// onInput:function (event) {
+  	 	// 	this.model.set('first_name', this.$el.find('input').val());
+  	 	// }
+  	 	// alertMe:function(){
+  	 	// 	window.alert('me');
+  	 	// },
+    	render: function() {
+    		this.$el.html('').append(Mustache.render(this.tpl, this.model.attributes));
+    		//this.$el.find('input').val(this.model.get('first_name'));
+    		// Model attributes
+    		// {id, etc, first_name}
+    		// Model
+    		// {attributes, some, backbone, thing}
+    	}
 	});
 
 	// binding a view to a model
@@ -68,24 +97,23 @@ $(document).ready(function () {
 
 	*/
 
-	var ButtonView = Backbone.View.extend({
+// 	var ButtonView = Backbone.View.extend({
+// 		render: function(){
+// 			this.$el.html('<button></button>');
+// 		}
+// 	});
 
-		render: function () {
-			this.$el.html('<button></button>');
-		}
-	});
+// // Two 'buttons'
+// 	var button1 = new ButtonView();
+// 	var button2 = new ButtonView();
 
-	// Two 'buttons'
-	var button1 = new ButtonView();
-	var button2 = new ButtonView();
+// // Let's put it in the dom
+// var myDomRecepticle = $('<div></div>');
+// myDomRecepticle
+// 	.append(button1.$el)
+// 	.append(button2.$el);
 
-	// Let's put it in the dom
-	var myDomRecepticle = $('<div></div>');
-	myDomRecepticle
-		.append(button1.$el)
-		.append(button2.$el);
-
-	$('body').append(myDomRecepticle);
+// 	$('body').append(myDomRecepticle);
 
 
 	// View for the Students who are accesible by the parent
@@ -93,7 +121,7 @@ $(document).ready(function () {
 		initialize: function (options) {
 			this.collection.on('sync', this.render, this);
 			this.app = options.app;
-			this.targetDivId = options.targetDivId || '#studentsDiv';
+			this.targetDivId = options.targetDivId || '#feesDiv';
 		},
 		render: function () {
 			var app = this.app;
@@ -101,7 +129,7 @@ $(document).ready(function () {
 			// This is the same as
 			// _.map( this.collection.models, ... fn);
 			var views = this.collection.map(function (model) {
-				var view = new StudentView({
+				var view = new StudentFeeView({
 					model: model,
 					app: app
 				});
@@ -116,8 +144,8 @@ $(document).ready(function () {
 	});
 
 
-	var HomeworkView = Backbone.View.extend({
-		tpl: $('#homeworkTpl').html(),
+	var FeeView = Backbone.View.extend({
+		tpl: $('#feeDetailTpl').html(),
 		initialize: function () {
 			this.collection.on('sync', this.render, this);
 		},
@@ -128,7 +156,7 @@ $(document).ready(function () {
 				return Mustache.render(tpl, item.attributes);
 			}
 			var rendered = this.collection.map(makeSingleHtml);
-			$('#homeworkDiv').html('').append(rendered);
+			$('#feeDetailDiv').html('').append(rendered);
 		}
 	});
 
@@ -143,20 +171,20 @@ $(document).ready(function () {
 			var studentsView = new ParentStudentsView({
 				collection: this.students,
 				app: this,
-				targetDivId: '#studentsDiv2'
+				targetDivId: '#feesDiv2'
 			});
 
 
 			this.students.fetch();
 		},
 		clickOnStudent: function (studentModel) {
-			var homeworkCollection = new StudentHomeworkCollection([], {
+			var feeCollection = new StudentFeeCollection([], {
 				studentId: studentModel.get('id')
 			});
-			var homeworkView = new HomeworkView({
-				collection: homeworkCollection
+			var feeView = new FeeView({
+				collection: feeCollection
 			});
-			homeworkCollection.fetch();
+			feeCollection.fetch();
 		}
 	});
 
@@ -165,4 +193,6 @@ $(document).ready(function () {
 	});
 
 
+
 }); //document ready
+

@@ -33,7 +33,32 @@ $(document).ready(function () {
 		}
 	});
 
+	var ChildModel = Backbone.Model.extend({
+		initialize: function(){
+		},
+		Model: ChildModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
+	});
 
+	var ChildCollection = Backbone.Collection.extend({
+		url: "https://murmuring-sands-9831.herokuapp.com/api/parents/" + $.cookie('UserId') + "/students"
+	});
+	var child = new ChildModel();
+	child.fetch({
+		success: function(resp){
+			var childObj = {
+				"child": resp.toJSON().results
+			};
+			var childTemplate = $("#childTemplate").text();
+			var childHTML = Mustache.render(childTemplate, childObj);
+			$("#childList").html(childHTML);
+			console.log(childHTML);
+		}, error:function (err) {
+			console.log('error ', err);
+		}
+	});
+
+	
 });
 console.log("connected")
 

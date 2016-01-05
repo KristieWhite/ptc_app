@@ -1,107 +1,81 @@
-/*mobile query starts here*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-     
-      
+body {
+  margin-top: 120px;
+}
 
-}/*closes mobile query*/
-/****************************************************************************************************/
-/*tablet query starts here*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+#feeContainer {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
 
+#fixedH2 {
+  display: inline-block;
+  position: fixed;
+  margin-left: 1em;
+}
 
+.feeHeader h2{
+  color: #006495;
+  font-size: 35px;
+  text-decoration: underline;
+  margin: 0;
+  margin-top: 20px;
+}
 
-}/*closes tablet query*/
-/*****************************************************************************************************/
-/*laptop query starts here*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+.clearFloat {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
 
-
-	/*fees accordion*/
-
-	#feesAccordion {
-		width: 90%;
-		height: 900px;
-		margin: auto;
-		margin-top: 20px;
-	}
-
-	.main:before {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		z-index: -1;
-		content: '';
-		background: -webkit-radial-gradient(30%, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0)), url('img/body-bg.png');
-		background: -moz-radial-gradient(30%, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0)), url('img/body-bg.png');
-		background: -o-radial-gradient(30%, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0)), url('img/body-bg.png');
-		background: radial-gradient(30%, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0)), url('img/body-bg.png');
-	}
+#feesDiv2 {
+  /*border: 1px solid blue;*/
+  position: fixed;
+  margin-left: 50px;
+  display: inline-block;
+  width: 45%;
+  top: 200px;
+}
 
 
-	/*----- Accordion -----*/
+.color {
+  color: #006495;
+}
 
-	.accordion,
-	.accordion * {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		width:100%;
-	}
+#feeDetailDiv {
+  /*border: 1px solid red;*/
+  position: relative;
+  display: inline-block;
+  bottom: 120px;
+  float: right;
+  width: 45%;
+  height: 500px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  overflow: scroll;
+}
 
-	.accordion {
-		overflow: hidden;
-		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-		border-radius: 3px;
-		background: #141313;
-		border-bottom: 1px solid white;
-	}
+#feeDetailDiv p {
+  margin-left: 10px;
+}
 
+#feeDetailDiv p a {
+  color: #1a8cab;
+}
 
-	/*----- Section Titles -----*/
+/*  .lightBlue {
+  color: lightblue;
+}*/
 
-	.accordion-section-title {
-		width: 100%;
-		padding:25px;
-		padding-left:400px;
-		display: inline-block;
-		background: #333;
-		border-bottom: 1px solid white;
-		transition: all linear 0.15s;
-		/* Type */
-		font-size: 1.500em;
-		font-family: 'Walter Turncoat', cursive;
-		text-shadow: 0px 1px 0px #1a1a1a;
-		color: #fff;
-		text-decoration: none;
-	}
+.borderBottom {
+  border-bottom: 1px solid rgb(44, 44, 44);
+}
 
-	.accordion-section-title.active,
-	.accordion-section-title:hover {
-		background: #4c4c4c;
-		/* Type */
-		text-decoration: none;
-	}
+.StudentListItem-feeLink {
+  color: #1a8cab;
+}
 
-	.accordion-section:last-child .accordion-section-title {
-		border-bottom: none;
-	}
-
-
-	/*----- Section Content -----*/
-
-	.accordion-section-content {
-		text-align: center;
-		color: white;
-		display: none;
-	}
-	
-}/*closes laptop query*/
-/************************************************************************************************/
-/*large screen query starts here*/
-@media only screen  and (min-width : 1824px) {
-
-
-
-}/*closes large screen query*/
+.StudentListItem-feeLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

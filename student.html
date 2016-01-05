@@ -1,13 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>studentID</title>
+  <title>Student Profile</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/student.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/parent.css">
 </head>
+
 <body>
-  <script>
-    var studentId = window.location.search.match(/\d+/)[0];
-    console.log(studentId);
+
+  <div class="header">
+    <h1>Parent Teacher Connection</h1>
+    <div id="parentInfo"></div>
+  </div>
+
+  <div class="navbar">
+    <ul>
+      <li><a href="./homeParent.html">Home</a></li>
+      <li><a href="./hwparentview.html">Assignments</a></li>
+      <li><a href="./waiverParent.html">Waivers</a></li>
+      <li><a href="./feesListParent.html">Fees</a></li>
+      <li><a href="./eventsParent.html">Events</a></li>
+    </ul>
+  </div>
+
+  <div id="studentContainer">
+
+    <div id="back">
+      <a href="parentStudents.html">BACK</a>
+    </div>
+
+    <div class="studentImg">
+      <img src="http://placehold.it/200x200" />
+    </div>
+
+    <div id="studentInfoDiv">
+      <div id="studentInfo"></div>
+      <div id="teacherDiv"></div>
+      <div class="classesApiDiv"></div>
+    </div>
+
+    <div class="studentBehavior">
+      <p class="color">Student Behavior: </p>
+    </div>
+
+    <div class="studentAttendance">
+      <p class="color">Student Attendance: </p>
+    </div>
+    <hr class="hrSpecial2">
+
+    <div class="studentEvents">
+      <p class="color">Upcoming Student Events: </p>
+    </div>
+
+  </div>
+
+  <!-- end student profile parent view -->
+
+  <div class="footer">
+    <p>&copy; 2015 Parent Teacher Connection</p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+  <script src="js/url.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/students.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="js/parent.js"></script>
+
+  <script type="x-tmpl-mustache" id="parentInfoTemplate">
+    {{#parents}}
+      <p>{{first_name}} {{last_name}}</p>
+      <img src="{{picture_url}}"> 
+    {{/parents}}
   </script>
+
+  <script type="x-tmpl-mustache" id="studentInfoTemplate">
+    {{#students}}
+      <ul>
+        <li><i class="color">Student Number:</i> {{id}}</li>
+        <li><i class="color">Name:</i> {{first_name}} {{last_name}}</li>
+        <li><i class="color">School:</i> Walter V Long Elementary School</li>
+        <li><i class="color">School Address:</i> 2000 S Walnut Rd, Las Vegas, NV 89104</li>
+        <li><i class="color">Teachers:</i> </li>
+      </ul>
+    {{/students}}
+  </script>
+
 </body>
 </html>

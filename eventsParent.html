@@ -9,8 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="css/events.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/parent.css">
-  <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body>
@@ -19,6 +17,7 @@
 		<h1>Parent Teacher Connection</h1>
 		<div id="parentInfo"></div>
 	</div>
+	
 	<div class="navbar">
 		<ul>
 			<li><a href="./homeParent.html">Home</a></li>
@@ -28,7 +27,7 @@
 			<li><a href="./eventsParent.html">Events</a></li>
 		</ul>
 	</div>
-
+<!-- 
 	<div id="pageContainer">
 
 
@@ -38,16 +37,16 @@
 
 		<div id="eventParentDetailDiv"></div>
 
-		<div id="eventsDiv"></div>
+		<div id="eventsDiv"></div> -->
 
 		<!--This is for the mustache list data-->
-		<div id="eventsListDiv"></div>
+<!-- 		<div id="eventsListDiv"></div> -->
 
 		<!--This is for the mustach event list detail data-->
-		<div id="eventsDetailDiv"></div>
+<!-- 		<div id="eventsDetailDiv"></div> -->
 
 		<!--This is the tester dummy list below-->
-		<div class="centerView">
+<!-- 		<div class="centerView">
 			<ul>
 				<p>
 					<a href="eventsDetail"></a>
@@ -59,8 +58,8 @@
 			</ul>
 		</div>
 		
-	</div>
-	<div id="pageContainer">
+	</div> -->
+	<div id="eventsContainer">
 		<h2>EVENTS CALENDAR</h2>
 
 		<!--This is for the mustache school events list, api/schools/id/events-->
@@ -101,27 +100,25 @@
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
-		<p>{{first_name}} {{last_name}}</p>
-		<img src="{{picture_url}}"> {{/parents}}
+			<p>{{first_name}} {{last_name}}</p>
+			<img src="{{picture_url}}"> 
+		{{/parents}}
 	</script>
 
 
 	<script type="X-tmpl-mustache" id="schoolEventsDetailTemplate">
 		{{#events}}
-		<h3 class="yellow uppercase">{{name}}</h3>
-		<p>{{description}}</p>
+			<h3>{{name}}</h3>
+			<p>{{description}}</p>
 		{{/events}}
 	</script>
 
 	<script type="X-tmpl-mustache" id="eventsDetailListTeacherTemplate">
 		{{#events}}
-		<h3 class="yellow uppercase">{{name}}</h3>
-		<p>{{date}}
-			<br>
-			<br> {{description}}
-			<br>
-			<input id="button" type="button" value="Sign this Event" />
-		</p>
+		<h3>{{name}}</h3>
+		<p>{{date}} <br><br>
+		<span>{{description}}</span><br>
+		<input id="button" type="button" value="Sign Up for this Event" /> </p>
 		{{/events}}
 	</script>
 

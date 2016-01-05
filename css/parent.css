@@ -1,57 +1,55 @@
 /*mobile query starts here*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {*/
      
       
 
-}/*closes mobile query*/
+/*}*/		/*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+*/
 
 
-
-}/*closes tablet query*/
+/*}	*/	/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { */
 
   /*parent profile*/
 
 
 	#parentInfo{
 		position: fixed;
-		left: 1100px;
-		bottom: 545px;
-
+		display: inline-block;
+		margin-top: 25px;
+		margin-left: 50px;
+		font-family: serif;
 	}
 	
 	#parentInfo p{
 		position: absolute;
-		left:60px;
-		bottom: 10px;
-		font-size: 15px;
+		left:70px;
+
+		font-size: 18px;
 
 	}
 	
 	#parentInfo img{
-		width: 50px;
-		height: 50px;
-		
+		width: 60px;
+		height: 60px;
+		border-radius: 5px;
 	}
 
 
   /*end parent profile*/
 
 
-  /***************************start parent profile - teacher view************************/
 
-
-
-}/*closes laptop query*/
+/*}*/	/*closes laptop query*/
 /************************************************************************************************/
 /*large screen query starts here*/
 @media only screen  and (min-width : 1824px) {
 
 
 
-}/*closes large screen query*/
+}/*closes large screen query

@@ -1,27 +1,28 @@
 $(document).ready(function () {
 
-
+	var studentId = window.location.search.match(/\d+/)[0];
+  console.log(studentId);
 	//////////////***********Fees Detail**************//////////////////
 
-	var ParentModel = Backbone.Model.extend({
+	var ChildFeeModel = Backbone.Model.extend({
 		initialize: function () {},
-		Model: ParentModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_fees/25'
+		Model: ChildFeeModel,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_fees/' + studentId
 	});
 
-	var ParentsCollection = Backbone.Collection.extend({
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_fees/25'
+	var ChildFeeCollection = Backbone.Collection.extend({
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/class_fees/' + studentId
 	});
-	var parent = new ParentModel();
-	parent.fetch({
+	var fees = new ChildFeeModel();
+	fees.fetch({
 		success: function (resp) {
-			var parentObj = {
+			var feesObj = {
 				"feeDetail": resp.toJSON()
 			};
-			var parentTemplate = $("#feesDetail").text();
-			var parentHTML = Mustache.render(parentTemplate, parentObj);
-			$("#FeesDetail").html(parentHTML);
-			console.log(parentHTML);
+			var feesTemplate = $("#feesTemplate").text();
+			var feesHTML = Mustache.render(feesTemplate, feesObj);
+			$("#childFeeDetail").html(feesHTML);
+			console.log(feesHTML);
 		},
 		error: function (err) {
 			console.log('error', err);

@@ -1,5 +1,5 @@
 /*mobile query starts here*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 
     #filler1 {
         height: 2em;
@@ -25,8 +25,8 @@
     }
     #logInForm {
         width: 60%;
-        /*padding: 0 0 0 4em;*/
-    }
+*/        /*padding: 0 0 0 4em;*/
+/*    }
     .login {
         width: 375px;
         height: 250px;
@@ -36,7 +36,7 @@
     }
     .login p.submit {
         text-align: right;
-    }
+    }*/
     /*.login:before {
         content: '';
         position: absolute;
@@ -49,7 +49,7 @@
         border-radius: 4px;
     }*/
 
-    #usernameLogIn p { 
+/*    #usernameLogIn p { 
         width: 100%;
         text-align: center;
     }
@@ -58,9 +58,9 @@
         margin: auto;
         text-align: center;
     }
-    .login h2 {
+    .login h2 {*/
         /*margin: -20px -20px;*/
-        line-height: 40px;
+/*        line-height: 40px;
         font-size: 20px;
         font-weight: bold;
         color: #555;
@@ -72,21 +72,21 @@
     }
     .login input[type=text],
     .login input[type=password] {
-        /*width: 265px;*/
+        width: 265px;
     }
     p#usernameLogIn {
-        /*width: 100%;*/
+        width: 100%;
     }
     .login p.remember_me {
-        /*float: left;*/
-        /*line-height: 31px;*/
+        float: left;
+        line-height: 31px;
     }
     .login p.remember_me label {
         font-size: .75rem;
-        /*color: #777;*/
+        color: #777;
         cursor: pointer;
-    }
-    .login p.remember_me input {
+    }*/
+/*    .login p.remember_me input {
         position: relative;
         bottom: 1px;
         margin-right: 4px;
@@ -101,7 +101,7 @@
         margin: 5px;
         padding: 0 10px;
         /*width: 200px;*/
-        height: 34px;
+/*        height: 34px;
         color: #404040;
         background: white;
         border: 1px solid;
@@ -139,10 +139,10 @@
         height: 4em;
     }
         
-}/*closes mobile query*/
+} */      /*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
    
     body {
         font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
@@ -162,12 +162,12 @@
         height: 200px;
         background-color: grey;
         /*margin-top: 10em;*/
-    }
+/*    }
     .login p.submit {
         text-align: right;
     }
 
-    .login:before {
+    .login:before {*/
         /*content: '';
         position: absolute;
         top: -8px;
@@ -177,7 +177,7 @@
         z-index: -1;
         background-color: black;
         border-radius: 4px;*/
-    }
+/*    }
     .login h2 {
         margin: -20px -20px 21px;
         line-height: 40px;
@@ -196,22 +196,22 @@
     .login input[type=text],
     .login input[type=password] {
 /*        width: 370px;*/
-    }
+/*    }
     .login p.remember_me {
         float: left;
         line-height: 31px;
     }
     .login p.remember_me label {
-        font-size: 13px;
+        font-size: 13px;*/
         /*color: #777;*/
-        cursor: pointer;
+/*        cursor: pointer;
     }
-    .login p.remember_me input {
+    .login p.remember_me input {*/
         /*position: relative;*/
         /*bottom: 1px;*/
         /*margin-right: 4px;*/
         /*vertical-align: ßmiddle;*/
-    }
+/*    }
     #logInForm p {
         width: 80%;
         margin: 1.5em auto;
@@ -260,10 +260,10 @@
         box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
     }
 
-}/*closes tablet query*/
+}    */   /*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { */
 
     @font-face { 
         font-family: 'EraserDust'; 
@@ -383,12 +383,12 @@
     
     /*Add Comment Collapse*/
 
-}/*closes laptop query*/
+}   /*closes laptop query*/
 /****************************************************************************************/
 /*large screen query starts here*/
-@media only screen  and (min-width : 1824px) {
+/*@media only screen  and (min-width : 1824px) {
 
 
-}/*closes large screen query*/
+}*/   /*closes large screen query*/
 
 
