@@ -5,12 +5,7 @@
 	<meta charset="UTF-8">
 	<title>PTC - Assignments</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
-=======
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/parent.css">
->>>>>>> jai
 	<link rel="stylesheet" type="text/css" href="css/homework.css">
 </head>
 <style>
@@ -63,7 +58,6 @@
 
 
 	<script type="x-tmpl-mustache" id="studentTpl">
-<<<<<<< HEAD
 		<img src="{{picture_url}}">
 		<p><span class="uppercase">{{first_name}} {{last_name}}</span>  
 		<a class="StudentListItem-homeworkLink"> - <span class="lightBlue underline pointer"><i>&nbsp;Show My Homework&nbsp;</i></span></a></p>
@@ -71,28 +65,15 @@
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
 		<div class="borderBottom"></div>
-	<p>	Due Date: {{due_date}}
-	<br><br>
-	<a id="link" href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>:  {{title}}</a>
-	<br><br>
-		Description: {{description}}</p>
-=======
-		<p>{{picture_url}}</p>
-		<p><span class="uppercase">{{first_name}} {{last_name}} - </span>
-		<a class="StudentListItem-homeworkLink link"><span class="underline"><i>Show My Homework</i></span></a></p>
+			<p><span class="uppercase">{{first_name}} {{last_name}} - </span>		
+			<p><img src="{{picture_url}}"/></p>
+			<p>	Due Date: {{due_date}}
+			<p><span class="lightBlue"><a href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>: {{title}}</a></span></p>
+			<p>Description: {{description}}</p>
+			// <br><br>
+		// <a id="link" href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>:  {{title}}</a>
 	</script>
-
-	<script type="x-tmpl-mustache" id="homeworkTpl">
-		<p img src="{{picture_url}}"></p>
-		<p><u class="color"><b>DATE</b></u>: {{due_date}}</p>
-		<p><u class="color"><b>Title</b></u>: {{title}}</p>
-		<p><u class="color"><b>Description</b></u>: {{description}}</p>
->>>>>>> jai
-		<div class="borderBottom"></div>
-	</script>
-
-
-
+		
 </body>
 
 </html>

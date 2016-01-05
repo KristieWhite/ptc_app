@@ -7,11 +7,7 @@
 	<title>Events</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="css/events.css">
-=======
-	<link rel="stylesheet" type="text/css" href="css/parent.css">
->>>>>>> jai
 </head>
 
 <body>
@@ -54,14 +50,15 @@
 				<p>
 					<a href="eventsDetail"></a>
 				</p>
-
 				<div id="name"></div>
-
 				<div id="event"></div>
 			</ul>
 		</div>
+<<<<<<< HEAD
 		
 <<<<<<< HEAD
+=======
+>>>>>>> kristie
 	</div>
 	<div id="pageContainer">
 		<h2>YOUR CALENDER</h2>
@@ -109,8 +106,8 @@
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
-			<p>{{first_name}} {{last_name}}</p>
-			<img src="{{picture_url}}"> 
+		<p>{{first_name}} {{last_name}}</p>
+		<p><img src="{{picture_url}}"/></p>
 		{{/parents}}
 	</script>
 
@@ -130,18 +127,10 @@
 
 	<script type="X-tmpl-mustache" id="eventsDetailListTeacherTemplate">
 		{{#events}}
-<<<<<<< HEAD
-		<p>
-		<img src="{{picture_url}}"/>
-		<h3><a href="{{id}}"> {{name}}</a></h3>
-		<span>{{description}}</span>
-		</p>
-=======
-		<h3>{{name}}</h3>
-		<p>{{date}} <br><br>
-		<span>{{description}}</span><br>
-		<input id="button" type="button" value="Sign Up for this Event" /> </p>
->>>>>>> jai
+			<img src="{{picture_url}}"/>
+			<h3><a href="{{id}}"> {{name}}</a></h3>
+			<span>{{description}}</span>
+			<input id="button" type="button" value="Sign Up for this Event" /> </p>
 		{{/events}}
 	</script>
 
