@@ -4,10 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Waivers</title>
+	<title>PTC Waivers</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/waiver.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/parent.css">
 </head>
 
 <body>
@@ -28,20 +29,25 @@
 
 	</div>
 	<div id="pageContainer">
-		<div class="filler"></div>
-		<!--waiver list...retrieves from back end via backbone..mustache???-->
-		<div id="waiverListDiv" class="centerView">
-			<ul>
-				<p><a href="">Science Fair Project</a></p>
-				<p><a href="">Multiplcation Table </a></p>
-				<p><a href="">Assignemt-06</a></p>
-		
-			</ul>
+		<div class="waiverHeader">
+			<h2>Waivers</h2>
 		</div>
+<!-- 		<div class="filler"></div> -->
+		<!--waiver list...retrieves from back end via backbone..mustache???-->
+<!-- 		<div id="waiverListDiv" class="centerView">
+			<p><a href="">Science Fair Project</a></p>
+			<p><a href="">Multiplcation Table </a></p>
+			<p><a href="">Assignemt-06</a></p>
+		</div> -->
 
 		<!--waiver detail view-->
 		<div id="waiverDetailDiv">
-
+			<p>Waivers/Permission Slips that need to be signed:</p>
+			<ul>
+				<li><a href="">Field Trip to Discovery Children's Museum</a></li>
+				<li><a href="">Waiver for Sports</a></li>
+				<li><a href="">Field Trip to Wet N Wild</a></li>
+			</ul>
 			<button class="sexyButton">Sign A Waiver</button>
 		</div>
 
@@ -49,11 +55,11 @@
 	</div>
 	<!--closes page container-->
 
-	<div class="filler"></div>
 
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
@@ -65,12 +71,27 @@
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
-		<p>{{first_name}} {{last_name}}</p>
-		<img src="{{picture_url}}"> {{/parents}}
+			<p>{{first_name}} {{last_name}}</p>
+			<img src="{{picture_url}}"> 
+		{{/parents}}
 	</script>
 
-	<script type="x-tmpl-mustache" id="waiverListTemplate">
-		<h2>Waiver</h2> {{#waiver}} {{}} {{/waiver}}
+<!-- 
+	<script type="text/javascript">
+    HelloSign.init("{CLIENT_ID}");
+    HelloSign.open({
+        url: "SIGN_URL",     
+        allowCancel: true,
+        messageListener: function(eventData) {
+            alert("HelloSign event received");
+        }    
+    });
+	</script>
+ -->
+
+	<script type="x-tmpl-mustache" id="waiverListTemplate">{{#waiver}} 
+			{{}} 
+		{{/waiver}}
 	</script>
 
 	<script type="x-tmpl-mustache" id="waiverDetailTemplate">

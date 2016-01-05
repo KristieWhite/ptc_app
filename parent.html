@@ -3,18 +3,21 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>PTC - Homework</title>
+	<title>Parent</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/feesList.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/parent.css">
+
 </head>
+
 <body>
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
 		<div id="parentInfo"></div>
 	</div>
-
 	<div class="navbar">
 		<ul>
 			<li><a href="./homeParent.html">Home</a></li>
@@ -25,17 +28,7 @@
 		</ul>
 	</div>
 
-	<div id="feeContainer">
-		<div class="feeHeader">
-			<h2 id="fixedH2">FEES</h2>
-		</div>
 
-		<div id="feesDiv2" class=""></div>
-		<div id="feeDetailDiv" class=""></div>
-		<p class="clearFloat"></p>
-		<div id="feesDiv" class=""></div>
-
-	</div>
 
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
@@ -45,34 +38,19 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-	<script src="js/url.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<script type="text/javascript" src="js/appModels/StudentCollection.js"></script>
-	<script type="text/javascript" src="js/Feeslist.js"></script>
 	<script src="js/parent.js"></script>
 
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
 		<p>{{first_name}} {{last_name}}</p>
-		<img src="{{picture_url}}"> {{/parents}}
+		<img src="{{picture_url}}"> 
+		{{/parents}}
 	</script>
 
-
-	<script type="x-tmpl-mustache" id="feeTpl">
-		<p>{{picture_url}}</p>
-		<p><span class="uppercase">{{first_name}} {{last_name}} - </span>
-			<a class="StudentListItem-feeLink link">Show My Fees</a></p>
-	</script>
-
-	<script type="x-tmpl-mustache" id="feeDetailTpl">
-		<p img src="{{picture_url}}"></p>
-		<p><b>Payment:</b> ${{payment_amount}}</p>
-		<p><b>Amount Due:</b> ${{amount_needed}} by {{date}}</p> 
-		<p><a href="FeesListDetail.html?id={{id}}"><b>Details</b></a></p>
-		<div class="borderBottom"></div>
-	</script>
+ 
 
 
 </body>

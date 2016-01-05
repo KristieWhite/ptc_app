@@ -1,16 +1,44 @@
-//$(document).ready(function($){
-//
-////api key for hello sign
-////7456ca56e56b02148aa11e4a100bfc6c1c271682f2bdb277e3893a736dea65c9
-//
-//    HelloSign.init("{CLIENT_ID}");
-//    HelloSign.open({
-//        url: "SIGN_URL",     
-//        allowCancel: true,
-//        messageListener: function(eventData) {
-//            console.log("HelloSign event received");
-//        }    
-//    });
+$(document).ready(function($){
+
+//   var hellosign = require('./hellosign.js')({key: '0540921e7b26de3d78ee59fcec5a8b4279f90e2b86bb7d815c7ab2cf6a1c3edc'});
+
+//   var options = {
+//     test_mode : 1,
+//     clientId : 'YOUR_clientId',
+//     subject : 'My First embedded signature request',
+//     message : 'Awesome, right?',
+//     signers : [
+//         {
+//             email_address : 'jaimariev@gmail.com',
+//             name : 'Jaimarie Velasco'
+//         }
+//     ],
+//     files : ['NDA.pdf']
+// };
+
+//   hellosign.signatureRequest.createEmbedded(options)
+//     .then(function(response){
+//         //parse response
+//     })
+//     .catch(function(err){
+//         //catch error
+//     });
+
+  // var hellosign = require('./hellosign.js')({key: '0540921e7b26de3d78ee59fcec5a8b4279f90e2b86bb7d815c7ab2cf6a1c3edc'});
+  // hellosign.signatureRequest.createEmbedded(options)
+  //   .then(function(response){
+  //       var signatureId = response.signature_request.signatures[0].signature_id;
+  //       return hellosign.embedded.getSignUrl(signatureId);
+  //   })
+  //   .then(function(response){
+  //       console.log('URL = ' + response.embedded.sign_url);
+  //   });
+  //   .catch(function(err){
+  //       //catch error
+  //   });
+
+
+
 //    
 //    var Router = Backbone.Router.extend({
 //    	initialize: function() {

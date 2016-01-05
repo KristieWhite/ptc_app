@@ -7,7 +7,11 @@
 	<title>Events</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="css/events.css">
+=======
+	<link rel="stylesheet" type="text/css" href="css/parent.css">
+>>>>>>> jai
 </head>
 
 <body>
@@ -16,6 +20,7 @@
 		<h1>Parent Teacher Connection</h1>
 		<div id="parentInfo"></div>
 	</div>
+	
 	<div class="navbar">
 		<ul>
 			<li><a href="./homeParent.html">Home</a></li>
@@ -25,7 +30,7 @@
 			<li><a href="./eventsParent.html">Events</a></li>
 		</ul>
 	</div>
-
+<!-- 
 	<div id="pageContainer">
 
 
@@ -35,16 +40,16 @@
 
 		<div id="eventParentDetailDiv"></div>
 
-		<div id="eventsDiv"></div>
+		<div id="eventsDiv"></div> -->
 
 		<!--This is for the mustache list data-->
-		<div id="eventsListDiv"></div>
+<!-- 		<div id="eventsListDiv"></div> -->
 
 		<!--This is for the mustach event list detail data-->
-		<div id="eventsDetailDiv"></div>
+<!-- 		<div id="eventsDetailDiv"></div> -->
 
 		<!--This is the tester dummy list below-->
-		<div class="centerView">
+<!-- 		<div class="centerView">
 			<ul>
 				<p>
 					<a href="eventsDetail"></a>
@@ -56,9 +61,15 @@
 			</ul>
 		</div>
 		
+<<<<<<< HEAD
 	</div>
 	<div id="pageContainer">
 		<h2>YOUR CALENDER</h2>
+=======
+	</div> -->
+	<div id="eventsContainer">
+		<h2>EVENTS CALENDAR</h2>
+>>>>>>> jai
 
 		<!--This is for the mustache school events list, api/schools/id/events-->
 		<div id="schoolEventsDiv"></div>
@@ -98,26 +109,39 @@
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
-		<p>{{first_name}} {{last_name}}</p>
-		<img src="{{picture_url}}"> {{/parents}}
+			<p>{{first_name}} {{last_name}}</p>
+			<img src="{{picture_url}}"> 
+		{{/parents}}
 	</script>
 
 
 <!--
 	<script type="X-tmpl-mustache" id="schoolEventsDetailTemplate">
 		{{#events}}
+<<<<<<< HEAD
 <h3 class="yellow uppercase"><a href="{{id}}">{{name}}</h3>
+=======
+			<h3>{{name}}</h3>
+			<p>{{description}}</p>
+>>>>>>> jai
 		{{/events}}
 	</script>
 -->
 
 	<script type="X-tmpl-mustache" id="eventsDetailListTeacherTemplate">
 		{{#events}}
+<<<<<<< HEAD
 		<p>
 		<img src="{{picture_url}}"/>
 		<h3><a href="{{id}}"> {{name}}</a></h3>
 		<span>{{description}}</span>
 		</p>
+=======
+		<h3>{{name}}</h3>
+		<p>{{date}} <br><br>
+		<span>{{description}}</span><br>
+		<input id="button" type="button" value="Sign Up for this Event" /> </p>
+>>>>>>> jai
 		{{/events}}
 	</script>
 

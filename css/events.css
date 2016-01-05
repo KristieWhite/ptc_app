@@ -1,18 +1,28 @@
 /*mobile query starts here*/
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}*/
+
 
 
 
 /*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
+
+
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}*/
 
 
 
 /*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
+
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 	@font-face {
 		font-family: 'EraserDust';
@@ -21,26 +31,50 @@
 	body {
 		margin-top: 220px;
 	}
-	.uppercase {
+
+
+/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {*/
+
+/*	.uppercase {
+
 		text-transform: uppercase;
 	}
+
 	.black {
 		color: black;
 	}
+
 	a:visited {
 		color: white;
+
 	}
 	h2 {
+
+	}*/
+
+	#eventsContainer h2 {
 		margin-left: 50px;
+		color: #006495;
+		font-size: 30px;
 	}
+
+	#eventsContainer {
+		width: 80%;
+		margin: auto;
+		position: relative;
+		bottom: 70px;
+	}
+
 	#eventsListDiv {
 		width: 45%;
 		float: left;
 	}
+
 	#eventsDetailDiv {
 		width: 45%;
 		float: right;
 	}
+
 	#schoolEventsDetailDiv {
 		margin-left: 50px;
 	}
@@ -66,8 +100,16 @@
 		bottom: 120px;
 		width: 500px;
 	}
+
+	#schoolEventsDetailDiv{
+		margin-left: 50px;
+	}
 	
-	div.sexyLine {
+	#classEventsDetailDiv{
+		margin-left: 50px;
+	}
+	
+/*	div.sexyLine {
 		margin-top: 10px;
 	}
 	.sexyLine {
@@ -80,7 +122,7 @@
 	}
 	#EventName a {
 		color: yellow;
-	}
+	}*/
 	.eventsAdd {
 		margin-top: 30px;
 	}
@@ -96,11 +138,7 @@
 		width: 50%;
 		margin: auto;
 	}
-	#pageContainer {
-		width: 80%;
-		/*height: 900px;*/
-		margin: auto;
-	}
+
 	.filler {
 		height: 4em;
 	}
@@ -108,7 +146,7 @@
 		width: 60%;
 		margin: auto;
 	}
-	.sexyButton {
+/*	.sexyButton {
 		color: #08233e;
 		font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
 		padding: 8px;
@@ -125,15 +163,27 @@
 	}
 	button:hover {
 		background-color: rgba(255, 204, 0, 0, 8);
+	}*/
+	#addEvent {
+
 	}
-	#addEvent {}
+
 	.head {
 		width: 80%;
 		height: 900px;
 		margin: auto;
 		overflow: scroll;
 	}
-	/*style the event form*/
+
+	#button {
+		width: 200px;
+		margin: 10px;
+	}
+
+
+	/********style the event form*********/
+
+
 	#teacherAddEvent {
 		width: 50%;
 		margin: auto;
@@ -168,6 +218,7 @@
 	.form label {
 		margin-left: 10px;
 	}
+
 	#button {
 		width: 200px;
 		margin: 10px;
@@ -183,3 +234,24 @@
 
 
 /*closes large screen query*/
+
+	#classEventsDetailDiv p {
+		border: 1px solid #006495;
+		border-radius: 5px;
+		padding-left: 15px;
+		padding-top: 10px;
+	}
+
+
+/*}*/
+
+
+/*closes laptop query*/
+
+
+/****************************************************************************************/
+
+
+
+/*closes large screen query
+>>>>>>> jai
