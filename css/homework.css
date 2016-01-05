@@ -37,9 +37,6 @@
 	.lightBlue {
 		color: lightblue;
 	}
-	.borderBottom {
-		border-bottom: 1px solid rgb(44, 44, 44);
-	}
 	#studentsDiv2 a:hover {
 		background-color: #333300;
 		/*text-decoration: none;*/
@@ -108,9 +105,6 @@
 	.lightBlue {
 		color: lightblue;
 	}
-	.borderBottom {
-		border-bottom: 1px solid rgb(44, 44, 44);
-	}
 	#studentsDiv2 a:hover {
 		background-color: #333300;
 		/*text-decoration: none;*/
@@ -150,12 +144,15 @@
 	#studentsDiv2 {
 		position: fixed;
 		margin-left: 3em;
-		margin-top: em;
+		top: 9em;
 		float: left;
-		width: 35%;
+		width: 37%;
+		height: 20%;
 	}
+	
+	#studentsDiv2 p{margin-top: 40px;}
+	
 	#studentsDiv2 a:hover {
-		background-color: #333300;
 		text-transform: uppercase;
 	}
 	#studentsDiv2 {
@@ -174,11 +171,18 @@
 		width: 45%;
 		bottom: 5em;
 	}
+	#homeworkDiv p {
+		position: relative;
+		bottom:1em;
+		border: 5px solid gray;
+		border-radius: 5px;
+	}
 	.lightBlue {
 		color: gray;
 	}
-	.borderBottom {
-		border-bottom: 1px solid rgb(44, 44, 44);
+	#link {
+		color: yellow;
+		text-decoration: none;
 	}
 	#assignContainer {
 		width: 80%;
@@ -303,16 +307,10 @@
 /*large screen query starts here*/
 
 @media only screen and (min-width: 1824px) {
-	.clearFloat {
-		clear: both;
-		margin: 0;
-		padding: 0;
-	}
 	body {
 		margin-top: 220px;
 	}
 	#studentsDiv2 {
-		/*border: 1px solid blue;*/
 		position: fixed;
 		margin-left: 1em;
 		margin-top: 3.5em;
@@ -327,24 +325,13 @@
 		color: #006495;
 		text-decoration: underline;
 	}
-	.color {
-		color: #006495;
-	}
 	#homeworkDiv {
-		/*border: 1px solid red;*/
 		position: relative;
 		bottom: 40px;
 		float: right;
 		width: 45%;
 		height: 400px;
 		top: 10px;
-		overflow: scroll;
-	}
-	/*	.lightBlue {
-		color: lightblue;
-	}*/
-	.borderBottom {
-		border-bottom: 1px solid rgb(44, 44, 44);
 	}
 	#studentsDiv {
 		/*border: 1px solid yellow;*/
