@@ -6,6 +6,15 @@
         src: url('../fonts/EraserDust.ttf');
     }
 
+    body {
+        background: url("../images/greenChalkBoard.jpg");
+        background-attachment: fixed;
+        background-size: 100%;
+        font-family: serif;
+        color: white;
+        margin-bottom: 60px;
+    }
+
     .yellow { color: rgba(255, 225, 0, 0.90); }
 
     .header {
@@ -15,24 +24,25 @@
         font-family: 'EraserDust';
         color: white;
         background-position: center;  
-        /*top: 0; */
-        /*left: 0;*/
+        top: 0; 
+        left: 0;
     }
 
     .header h1 {
         margin: 0;
         position: relative;
-        /*font-size: 1.5em;*/
+        font-size: 1.5em;
         /*text-align: center;*/
         /*top: 10px;*/
         left: 20px;
-        width: 80%;
+        width: 100%;
         display: inline-block;
         margin: 0;
         padding: 1em 0;
     }
 
     h1 {
+        /*font-size: 1em;*/
     }
 
     .navbar {
@@ -74,14 +84,6 @@
         background-color: #141010;
     }
 
-    body {
-        background: url("../images/greenChalkBoard.jpg");
-        background-attachment: fixed;
-        background-size: 100%;
-        font-family: serif;
-        color: white;
-        margin-bottom: 60px;
-    }
 
     .footer {
         position: fixed;
@@ -114,7 +116,7 @@
         color: white;
     }*/
 	body {
-		background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
+		background: url("../images/greenChalkBoard.jpg");
 		background-size: 100%;
 		font-family: serif;
 		color: white;
@@ -125,7 +127,7 @@
 		border-bottom: 2px solid black;
 		font-family: 'EraserDust';
 		color: white;
-		background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+		background: url("../images/blackChalkBoard.jpg") repeat;
 		background-position: center;
 	}
 	.header h1 {
@@ -286,10 +288,9 @@
 
     .uppercase { text-transform: uppercase; }
     .pointer { cursor: pointer; }
-	}
 
 	body {
-		background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
+		background: url("../images/greenChalkBoard.jpg");
 		background-size: 100%;
 		/*font-family: 'Walter Turncoat', cursive;*/
 		color: white;
@@ -297,6 +298,7 @@
 		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
 		margin-bottom: 50px;
 	}
+
 	.header {
 		position: fixed;
 		top: 0;
@@ -305,10 +307,11 @@
 		border-bottom: 2px solid black;
 		font-family: 'EraserDust';
 		color: white;
-		background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+		background: url("../images/blackChalkBoard.jpg") repeat;
 		background-position: center;
 		z-index: 2;
 	}
+
 	.header h1 {
 		margin: 0;
 		position: relative;
@@ -318,6 +321,7 @@
 		width: 80%;
 		display: inline-block;
 	}
+
 	.navbar {
 		position:fixed;
 		left: 1px;
@@ -325,8 +329,8 @@
 		width: 10%;
 		height: 0px;
 		z-index: 2;
-
 	}
+
 	.navbar ul {
 		height: 100px;
 		list-style: none;

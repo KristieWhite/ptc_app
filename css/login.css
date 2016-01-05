@@ -28,6 +28,7 @@
         /*padding: 0 0 0 4em;*/
     }
     .login {
+        margin: 1em;
         width: 375px;
         height: 250px;
         background-color: grey;
@@ -59,7 +60,7 @@
         text-align: center;
     }
     .login h2 {
-        /*margin: -20px -20px;*/
+        width: 250px;
         line-height: 40px;
         font-size: 20px;
         font-weight: bold;
@@ -70,9 +71,10 @@
         border-radius: 3px 3px 0 0;
         box-shadow: 0 1px whitesmoke;
     }
+
     .login input[type=text],
     .login input[type=password] {
-        /*width: 265px;*/
+        /*width: 100px;*/
     }
     p#usernameLogIn {
         /*width: 100%;*/
@@ -140,7 +142,7 @@
     }
         
 }/*closes mobile query*/
-/****************************************************************************************************/
+/******************************************************************************************************************/
 /*tablet query starts here*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
    
@@ -261,7 +263,7 @@
     }
 
 }/*closes tablet query*/
-/*****************************************************************************************************/
+/***************************************************************************************************************/
 /*laptop query starts here*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
 
@@ -327,7 +329,8 @@
     }
     .login p.remember_me label {
         font-size: 13px;
-        color: #777;
+        /*color: #777;*/
+        color: black;
         cursor: pointer;
     }
     .login p.remember_me input {
@@ -384,9 +387,10 @@
     /*Add Comment Collapse*/
 
 }/*closes laptop query*/
-/****************************************************************************************/
+/************************************************************************************************/
 /*large screen query starts here*/
 @media only screen  and (min-width : 1824px) {
+
 
 
 }/*closes large screen query*/
