@@ -30,7 +30,7 @@
 		<p class="hrSpecial"></p>
 	</div>
 	<div id="pageContainer">
-		<h2>EVENTS CALENDAR</h2>
+		<h2>YOUR CALENDER</h2>
 
 		<!--This is for the mustache school events list, api/schools/id/events-->
 		<div id="schoolEventsDiv"></div>
@@ -74,21 +74,21 @@
 	</script>
 
 
+<!--
 	<script type="X-tmpl-mustache" id="schoolEventsDetailTemplate">
 		{{#events}}
-		<h3 class="yellow uppercase">{{name}}</h3>
-		<p>{{description}}</p>
+<h3 class="yellow uppercase"><a href="{{id}}">{{name}}</h3>
 		{{/events}}
 	</script>
+-->
 
 	<script type="X-tmpl-mustache" id="eventsDetailListTeacherTemplate">
 		{{#events}}
-		<h3 class="yellow uppercase">{{name}}</h3>
-		<p>{{date}}
-			<br>
-			<br> {{description}}
-			<br>
-			<input id="button" type="button" value="Sign this Event" />
+		<p>
+		<img src="{{picture_url}}"/>
+		<h3><a href="{{id}}"> {{name}}</a></h3>
+		<span>{{description}}</span>
+
 		</p>
 		{{/events}}
 	</script>

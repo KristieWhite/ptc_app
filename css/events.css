@@ -39,7 +39,7 @@
 	a:visited {
 		color: white;
 	}
-	h2{
+	h2 {
 		margin-left: 50px;
 	}
 	#eventsListDiv {
@@ -50,11 +50,30 @@
 		width: 45%;
 		float: right;
 	}
-	#schoolEventsDetailDiv{
+	#schoolEventsDetailDiv {
 		margin-left: 50px;
 	}
-	#classEventsDetailDiv{
+	#classEventsDetailDiv {
 		margin-left: 50px;
+	}
+	
+	#classEventsDetailDiv img {
+		width: 100px;
+		height: 100px;
+		border-radius: 5px;
+		margin-left: 10px;
+		margin-top: 5px;
+	}
+	#classEventsDetailDiv h3 {
+		position: relative;
+		left: 120px;
+		bottom: 120px;
+	}
+	#classEventsDetailDiv span {
+		position: relative;
+		left: 120px;
+		bottom: 120px;
+		width: 500px;
 	}
 	
 	div.sexyLine {
@@ -68,7 +87,7 @@
 		background: black;
 		background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
 	}
-	.yellow {
+	#EventName a {
 		color: yellow;
 	}
 	.eventsAdd {
@@ -160,10 +179,6 @@
 	#button {
 		width: 200px;
 		margin: 10px;
-	}
-	#classEventsDetailDiv p {
-		border: 1px solid blue;
-		border-radius: 5px;
 	}
 }
 
