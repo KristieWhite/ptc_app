@@ -4,10 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>PTC - Homework</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/homework.css">	
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/homework.css">
+
 </head>
 <style>
 
@@ -55,13 +56,14 @@
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
-		<p>{{first_name}} {{last_name}}</p>
-		<img src="{{picture_url}}"> {{/parents}}
+			<p>{{first_name}} {{last_name}}</p>
+			<img src="{{picture_url}}"> 
+		{{/parents}}
 	</script>
 
 
 	<script type="x-tmpl-mustache" id="studentTpl">
-		<p>{{picture_url}}</p>
+		<img src="{{picture_url}}">
 		<p><span class="uppercase">{{first_name}} {{last_name}}</span>  
 		<a class="StudentListItem-homeworkLink link"> - <span class="lightBlue underline pointer"><i>Show My Homework</i></span></a></p>
 	</script>
