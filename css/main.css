@@ -1,136 +1,75 @@
 /*mobile query starts here*/
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-
-    @font-face {
-        font-family: 'EraserDust';
-        src: url('../fonts/EraserDust.ttf');
-    }
-
-    body {
-        background: url("../images/greenChalkBoard.jpg");
-        background-attachment: fixed;
-        background-size: 100%;
-        font-family: serif;
-        color: white;
-        margin-bottom: 60px;
-    }
-
-    .yellow { color: rgba(255, 225, 0, 0.90); }
-
-    .header {
-        background: url("../images/blackChalkBoard.jpg") repeat;
-        width: 100%;
-        border-bottom: 2px solid black;
-        font-family: 'Firestater Z';
-        color: white;
-        background-position: center;  
-        top: 0; 
-        left: 0;
-    }
-
-    .header h1 {
-        margin: 0;
-        position: relative;
-        left: 20px;
-        width: 100%;
-        display: inline-block;
-        margin: 0;
-        padding: 1em 0;
-    }
-
-    h1 {
-		font-family: url("../fonts/Firestarter%20Z.ttf");
-    }
-
-    .navbar {
-        position: fixed;
-        /*top: 115px;*/
-        width: 100%;
-        /*height: 80px;*/
-        background: black;
-        z-index: 2;
-    }
-
-    .navbar ul {
-        height: 50px;
-        list-style: none;
-        text-align: center;
-        padding: 1em;
-        margin: 0;
-    }
-
-    .navbar li {
-        border-bottom: none;
-        /*line-height: 70px;*/
-        font-size: 2em;
-        font-family: 'EraserDust';
-        display: inline-block;
-        margin: 8px;
-        /*margin-left: 20px;*/
-    }
-
-    .navbar a {
-        text-decoration: none;
-        color: #fff;
-        display: block;
-        transition: .3s background-color;
-    }
-
-    .navbar a:hover {
-        border-bottom: 2px solid blue;
-        background-color: #141010;
-    }
-
-
-    .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 60px;
-        border-top: 2px solid black;
-        text-align: center;
-        background-color: black;
-    }
-
-}/*mobile query ends here*/
-/*********************************************************************************************************************/
-/*tablet query starts here*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-
-    a:visited { color: white; }
-    a:link { color: white; }
-
-    .yellow { color: rgba(255, 225, 0, 0.90); }
-
 	@font-face {
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
 	}
+	body {
+		background: url("images/greenChalkBoard.jpg");
+		background-size: 100%;
+		font-family: serif;
+		color: white;
+	}
+	.header {
+		background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+		background-repeat: repeat-x;
+		width: 100%;
+		border-bottom: 2px solid black;
+		font-family: 'EraserDust';
+		color: white;
+		background-position: center;
+	}
+	h1 {
+		margin: 0;
+		padding: .5em 0;
+		text-align: center;
+	}
+	.footer {
+		position: fixed;
+		width: 100%;
+		height: 60px;
+		border-top: 2px solid black;
+		text-align: center;
+		bottom: 0;
+	}
+}
 
+
+/*closes mobile query*/
+
+
+/****************************************************************************************************/
+
+
+/*tablet query starts here*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+	@font-face {
+		font-family: 'EraserDust';
+		src: url('../fonts/EraserDust.ttf');
+	}
 	/*a:visited{
         color: white;
     }
     a:link {
         color: white;
     }*/
-
 	body {
-		background: url("../images/greenChalkBoard.jpg");
+		background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
 		background-size: 100%;
 		font-family: serif;
 		color: white;
 	}
-
 	.header {
 		width: 100%;
 		height: 100px;
 		border-bottom: 2px solid black;
 		font-family: 'EraserDust';
 		color: white;
-		background: url("../images/blackChalkBoard.jpg") repeat;
+		background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
 		background-position: center;
 	}
-
 	.header h1 {
 		/*margin-top: 50px;*/
 		padding: 1em;
@@ -142,279 +81,24 @@
 		/*width: 80%;*/
 		/*display: inline-block;*/
 	}
-
 	.footer {
 		width: 100%;
 		height: 60px;
 		border-top: 2px solid black;
 		text-align: center;
 	}
-
-}/*closes tablet query*/
-/***************************************************************************************************************/   
-/*laptop query starts here*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
-
-    @font-face {
-        font-family: 'FirestarterZ';
-        src: url('../font/FirestarterZ.tff');
-    }
-
-    .yellow { color: rgba(255, 225, 0, 0.90); }
-    a:visited{ color: white; }
-    a:link { color: white; }
-
-    .uppercase { text-transform: uppercase; }
-    .pointer { cursor: pointer; }
-
-    body {
-    	background-image: url("../images/greenChalkBoard.jpg");
-        /*background-color: rgb(230, 230, 230);*/
-        background-attachment: fixed;
-        background-size: 100%;
-    	/*color: white;*/
-        margin-bottom: 50px;
-    }
-
-    /*body.img {
-        opacity: 0.20;
-    }*/
-
-    .header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 100px;
-        border-bottom: 2px solid black;
-        font-family: 'Firestarter Z';
-        color: white;
-        background: url("../images/blackChalkBoard.jpg") repeat;
-        background-position: center;
-        z-index: 2;
-    }
-
-    .header h1 {
-        margin: 0;
-        position: relative;
-        font-size: 3.5em;
-        top: 20px;
-        left: 40px;
-        width: 80%;
-        display: inline-block;
-		      font-family: url("../fonts/Firestarter%20Z.ttf");
-    }
-
-    #parentInfo {
-        position: relative;
-        left: 60em;
-        top: -30px;
-        width: 200px;
-    }
-
-    /*the user pic upper right corner*/
-    #parentInfo p {
-        position: absolute;
-        left: 60px;
-        bottom: 5px;
-        font-size: 20px;
-    }
-
-    #parentInfo img {
-        border-radius: 5px;
-        width: 50px;
-        height: 50px;
-    }
-
-    .navbar {
-        position: fixed;
-        top: 100px;
-        width: 10%;
-        height: 0px;
-        z-index: 2;
-    }
-
-    .navbar ul {
-        height: 90px;
-        list-style: none;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    .navbar li {
-        background: black;
-        border-bottom: none;
-        line-height: 6em;
-        font-size: 1em;
-        margin-left: -1px;
-    }
-
-    .navbar a {
-        background: black;
-        text-decoration: none;
-        color: #fff;
-        display: block;
-/*        transition: .3s background-color;*/
-    }
-
-    .navbar a:hover {
-        background-color: rgb(35, 31, 31);
-        text-transform: uppercase;
-    }
-
-	.footer {
-		position: fixed;
-		bottom: 0;
-		width: 100%;
-		height: 56px;
-		border-top: 2px solid black;
-		text-align: center;
-		background-color: black;
-	}
-
-}/*closes laptop query*/
-/*********************************************************************************************************************/
-/*large screen query starts here*/
-@media only screen and (min-width: 1824px) {
-	
-	@font-face {
-		font-family: 'EraserDust';
-		src: url('../fonts/EraserDust.ttf');
-	}
-    
-	.yellow { color: rgba(255, 225, 0, 0.90); }
-	.blueBorder { border: 1px solid blue; }
-    .redBorder { border: 1px solid red; }
-    .orangeBorder { border: 1px solid orange; }
-
-	a:visited{ color: white; }
-	a:link { color: white; }
-
-    .uppercase { text-transform: uppercase; }
-    .pointer { cursor: pointer; }
-
-	body {
-		background: url("../images/greenChalkBoard.jpg");
-		background-size: 100%;
-		/*font-family: 'Walter Turncoat', cursive;*/
-		color: white;
-		margin-top: 150px;
-		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
-		margin-bottom: 50px;
-	}
-
-	.header {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		height: 100px;
-		border-bottom: 2px solid black;
-		font-family: 'EraserDust';
-		color: white;
-		background: url("../images/blackChalkBoard.jpg") repeat;
-		background-position: center;
-		z-index: 2;
-	}
-
-	.header h1 {
-		margin: 0;
-		position: relative;
-		font-size: 3.5em;
-		top: 20px;
-		left: 40px;
-		width: 80%;
-		display: inline-block;
-	}
-
-	#parentInfo {
-		position: relative;
-		left: 60em;
-		top: -30px;
-		width: 200px;
-	}
-	#parentInfo p {
-		position: absolute;
-		left: 60px;
-		bottom: 5px;
-		font-size: 20px;
-	}
-	#parentInfo img {
-		border-radius: 5px;
-		width: 50px;
-		height: 50px;
-	}
-	.navbar {
-		position: fixed;
-		top: 100px;
-		width: 10%;
-		height: 0px;
-		z-index: 2;
-	}
-
-	.navbar ul {
-		height: 100px;
-		list-style: none;
-		text-align: center;
-		padding: 0;
-		margin: 0;
-	}
-
-	.navbar li {
-		background: black;
-		border-bottom: none;
-		line-height: 5.9em;
-		font-size: 1em;
-		margin-left: -1px;
-	}
-
-	.navbar a {
-		background: black;
-		text-decoration: none;
-		color: #fff;
-		display: block;
-		transition: .3s background-color;
-	}
-
-	.navbar a:hover {
-		background-color: #141010;
-	}
-    
-	.footer {
-		position: fixed;
-		bottom: 0;
-		width: 100%;
-		height: 56px;
-		border-top: 2px solid black;
-		text-align: center;
-		background-color: black;
-	}
-	#parentInfo {
-		position: fixed;
-		left: 1000px;
-		bottom: 545px;
-	}
-	#parentInfo p {
-		position: absolute;
-		left: 80px;
-		bottom: 2px;
-		font-size: 20px;
-	}
-	#parentInfo img {
-		border-radius: 5px;
-		width: 70px;
-		height: 70px;
-	}
 }
 
 
-
-/*closes laptop query*/
-/************************************************************************************************/
+/*closes tablet query*/
 
 
-/*large screen query starts here*/
+/*****************************************************************************************************/
 
-@media only screen and (min-width: 1824px) {
+
+/*laptop query starts here*/
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 	@font-face {
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
@@ -520,5 +204,117 @@
 }
 
 
+/*closes laptop query*/
 
-}/*closes large screen query*/
+
+/************************************************************************************************/
+
+
+/*large screen query starts here*/
+
+@media only screen and (min-width: 1824px) {
+	@font-face {
+		font-family: 'EraserDust';
+		src: url('../fonts/EraserDust.ttf');
+	}
+	.yellow {
+		color: rgba(255, 225, 0, 1);
+	}
+	a:visited {
+		color: white;
+	}
+	a:link {
+		color: white;
+	}
+	.uppercase {
+		text-transform: uppercase;
+	}
+	body {
+		background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
+		background-size: 100%;
+		/*font-family: 'Walter Turncoat', cursive;*/
+		color: white;
+		margin-top: 150px;
+		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+		margin-bottom: 50px;
+	}
+	.header {
+		position: fixed;
+		width: 100%;
+		height: 100px;
+		border-bottom: 2px solid black;
+		font-family: 'EraserDust';
+		color: white;
+		background: url("http://img04.deviantart.net/dd7c/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") repeat;
+		background-position: center;
+		z-index: 2;
+	}
+	.header h1 {
+		margin: 0;
+		position: relative;
+		font-size: 3.5em;
+		top: 20px;
+		left: 40px;
+		width: 80%;
+		display: inline-block;
+	}
+	.navbar {
+		position: fixed;
+		top: 100px;
+		width: 10%;
+		height: 0px;
+		z-index: 2;
+	}
+	.navbar ul {
+		height: 100px;
+		list-style: none;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+	}
+	.navbar li {
+		background: black;
+		border-bottom: none;
+		line-height: 5.9em;
+		font-size: 1em;
+		margin-left: -1px;
+	}
+	.navbar a {
+		background: black;
+		text-decoration: none;
+		color: #fff;
+		display: block;
+		transition: .3s background-color;
+	}
+	.navbar a:hover {
+		background-color: #141010;
+	}
+	.footer {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 56px;
+		border-top: 2px solid black;
+		text-align: center;
+		background-color: black;
+	}
+	#parentInfo {
+		position: fixed;
+		left: 1000px;
+		bottom: 545px;
+	}
+	#parentInfo p {
+		position: absolute;
+		left: 80px;
+		bottom: 2px;
+		font-size: 20px;
+	}
+	#parentInfo img {
+		border-radius: 5px;
+		width: 70px;
+		height: 70px;
+	}
+}
+
+
+/*closes large screen query*/
