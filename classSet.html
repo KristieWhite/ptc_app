@@ -34,7 +34,6 @@
 		</div>
 		
 		<div id="studentSetContainer">
-			<h2>Click student's name to view student's profile</h2>
 			<div id="studentSetDiv"></div>
 		</div>
 <!-- 		<div id="classesDiv" class=""></div>
@@ -65,24 +64,26 @@
 	<script src="js/url.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<script src="js/appModels/ClassesCollection.js"></script>
-	<script src="js/studentsTeacherView.js"></script> 
+	<script src="js/Teacher.js"></script>
+<!-- 	// <script src="js/appModels/ClassesCollection.js"></script>
+	// <script src="js/studentsTeacherView.js"></script>  -->
 
 
 	<script type="x-tmpl-mustache" id="classSetTemplate">
 		{{#classes}}
 			<ul>
-				<li class="classes" value= {{id}}>{{name}}</li>
+				<li class="classes"><a href="classSet.html?id={{id}}">{{name}}</a></li>
 			</ul>
 		{{/classes}}
 	</script>
 
 
 	<script type="x-tmpl-mustache" id="studentSetTemplate">
+		<h2>Click student's name to view student's profile</h2>
     {{#studentSet}}
       <ul>
         <li><a href="studentSet.html?id={{id}}">{{first_name}} {{last_name}}</a></li>
-      <ul>
+      </ul>
     {{/studentSet}}
 	</script>
 
