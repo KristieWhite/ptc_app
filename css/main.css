@@ -185,16 +185,10 @@
 /*this is the user icon*/
 	#parentInfo {
 		position: fixed;
-/*      top: 2px;*/
-/*		left: 1000px;*/
         right: 3em;
-/*		bottom: 545px;*/
 	}
 	#parentInfo p {
         float: right;
-/*		position: relative;*/
-/*		top: 5px;*/
-/*		bottom: 20px;*/
 		font-size: 20px;
 	}
 	#parentInfo img {

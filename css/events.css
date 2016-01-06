@@ -76,12 +76,13 @@
     
     #classEventsDetailDiv h3 a {
         text-decoration: none;
+        color: #33a0ff;
     }
     
     #classEventsDetailDiv h3 a:hover {
         cursor: pointer;
         text-decoration: none;
-        color: darkblue;
+        color: #7eb9fd;
     }
     
 	#classEventsDetailDiv span {
