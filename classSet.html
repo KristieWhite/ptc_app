@@ -27,6 +27,11 @@
 	<!-- start student profile teacher view -->
 
 	<div id="setContainer">
+
+		<div id="classSetContainer">
+			<h2>Click class to view students</h2>
+			<div id="classSetDiv"></div>
+		</div>
 		
 		<div id="studentSetContainer">
 			<h2>Click student's name to view student's profile</h2>
@@ -63,7 +68,7 @@
 	<script src="js/appModels/ClassesCollection.js"></script>
 	<script src="js/studentsTeacherView.js"></script> 
 
-<!-- 
+
 	<script type="x-tmpl-mustache" id="classSetTemplate">
 		{{#classes}}
 			<ul>
@@ -71,7 +76,7 @@
 			</ul>
 		{{/classes}}
 	</script>
- -->
+
 
 	<script type="x-tmpl-mustache" id="studentSetTemplate">
     {{#studentSet}}

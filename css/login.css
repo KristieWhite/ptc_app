@@ -277,8 +277,8 @@
 /*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { */
 
     @font-face { 
-        font-family: 'EraserDust'; 
-        src: url('../fonts/EraserDust.ttf'); 
+        font-family: 'Firestarter Z'; 
+        src: url('../fonts/Firestarter Z.ttf'); 
     }
     body {
         font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;

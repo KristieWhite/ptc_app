@@ -80,10 +80,12 @@ button:hover {
     width: 80%;
     margin: auto;
     position: relative;
-    bottom: 70px;
+    bottom: 90px;
+    right: 10px;
   }
 
   .waiverHeader h2 {
+    text-decoration: underline;
     position: relative;
     left: 60px;
     font-size: 40px;

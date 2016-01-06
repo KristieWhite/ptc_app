@@ -140,70 +140,67 @@ $(document).ready(function () {
 
 ////////////////////////////////////////**** TEACHER CLASS SET DATA ****/////////////////////////////////
 
-	// var ClassSetModel = Backbone.Model.extend({
-	// 	initialize: function () {
-	// 	},
-	// 	Model:ClassSetModel,
-	// 	url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
-	// });
+	var ClassSetModel = Backbone.Model.extend({
+		initialize: function () {
+		},
+		Model:ClassSetModel,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
+	});
 
-	// var ClassSetCollection = Backbone.Collection.extend({
-	// 	Model: ClassSetModel,
-	// 	url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
-	// });
+	var ClassSetCollection = Backbone.Collection.extend({
+		Model: ClassSetModel,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
+	});
 
-	// var classSet = new ClassSetModel();
-	// 	classSet.fetch({
-	// 		success: function(resp) {
-	// 			var classSetInfo = {
-	// 				'classes': resp.toJSON().results
-	// 			};
-	// 			console.log(resp.toJSON().results);
-	// 			var classSetTemplate = $("#classSetTemplate").text();
-	// 			var classSetHTML = Mustache.render(classSetTemplate, classSetInfo);
-	// 			$("#classSetDiv").html(classSetHTML);
-	// 		},
-	// 		error: function(err){
-	// 			console.log("error ", err);
-	// 		}
-	// 	});
+	var classSet = new ClassSetModel();
+		classSet.fetch({
+			success: function(resp) {
+				var classSetInfo = {
+					'classes': resp.toJSON().results
+				};
+				console.log(resp.toJSON().results);
+				var classSetTemplate = $("#classSetTemplate").text();
+				var classSetHTML = Mustache.render(classSetTemplate, classSetInfo);
+				$("#classSetDiv").html(classSetHTML);
+			},
+			error: function(err){
+				console.log("error ", err);
+			}
+		});
 
-	// $(".clickClass").on('click', function(){
-	// 	$("#studentSetContainer").show();
-	// });
 
 ///////////////////////////////////////*** TEACHER STUDENT SET DATA ***/////////////////////////////////////
 	
 
-	// var StudentSetModel = Backbone.Model.extend({
-	// 	initialize: function () {
-	// 	},
-	// 	Model:StudentSetModel,
-	// 	idAttribute: id,
-	// 	url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/#{id}/students'
-	// });
+	var StudentSetModel = Backbone.Model.extend({
+		initialize: function () {
+		},
+		Model:StudentSetModel,
+		idAttribute: id,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' +  + '/students'
+	});
 
-	// var StudentSetCollection = Backbone.Collection.extend({
-	// 	Model: StudentSetModel,
-	// 	idAttribute: id,
-	// 	url: 'https://murmuring-sands-9831.herokuapp.com/api/classes//students'
-	// });
+	var StudentSetCollection = Backbone.Collection.extend({
+		Model: StudentSetModel,
+		idAttribute: id,
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' +  + '/students'
+	});
 
 
-	// var studentSet = new StudentSetCollection();
-	// 	studentSet.fetch({
-	// 		success: function(resp) {
-	// 			var studentSetInfo = {
-	// 				'studentSet': resp.toJSON()
-	// 			};
-	// 			console.log(resp.toJSON().results);
-	// 			var studentSetTemplate = $("#studentSetTemplate").text();
-	// 			var studentSetHTML = Mustache.render(studentSetTemplate, studentSetInfo);
-	// 			$("#studentSetDiv").html(studentSetHTML);
-	// 		},
-	// 		error: function(err){
-	// 			console.log("error ", err);
-	// 		}
-	// 	});
+	var studentSet = new StudentSetCollection();
+		studentSet.fetch({
+			success: function(resp) {
+				var studentSetInfo = {
+					'studentSet': resp.toJSON()
+				};
+				console.log(resp.toJSON().results);
+				var studentSetTemplate = $("#studentSetTemplate").text();
+				var studentSetHTML = Mustache.render(studentSetTemplate, studentSetInfo);
+				$("#studentSetDiv").html(studentSetHTML);
+			},
+			error: function(err){
+				console.log("error ", err);
+			}
+		});
 
 }); //documentready

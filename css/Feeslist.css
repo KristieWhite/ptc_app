@@ -11,7 +11,7 @@ body {
 #fixedH2 {
   display: inline-block;
   position: fixed;
-  margin-left: 1em;
+  margin-left: 50px;
 }
 
 .feeHeader h2{

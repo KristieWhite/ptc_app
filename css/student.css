@@ -140,7 +140,7 @@
 /******************************* END STUDENT PROFILE PARENT VIEW *******************************/
 
 
-/*********************** STUDENT PROFILE - ATTENDANCE **************************/
+/*************************** STUDENT PROFILE - ATTENDANCE - PARENT *******************************/
 
   #studentBehavior {
     width: 50%;
@@ -166,12 +166,8 @@
     font-size: 18px;
   }
 
-  #studentBehavior hr {
-    width: 50%;
-  }
 
-
-/************************ STUDENT PROFILE - BEHAVIOR **************************/
+/**************************** STUDENT PROFILE - BEHAVIOR - PARENT ******************************/
 
 
   #studentAttendance {
@@ -197,7 +193,7 @@
     font-size: 18px;
   }
 
-/************************ STUDENT PROFILE - GRADES ****************************/
+/*************************** STUDENT PROFILE - GRADES - PARENT ********************************/
 
   #studentGrades {
     width: 100%;
