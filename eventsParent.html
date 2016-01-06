@@ -26,47 +26,10 @@
 			<li><a href="./eventsParent.html">Events</a></li>
 		</ul>
 	</div>
-<!-- 
-	<div id="pageContainer">
 
-
-		<div class="filler"></div>
-
-		<div id="eventsParentDiv"></div>
-
-		<div id="eventParentDetailDiv"></div>
-
-		<div id="eventsDiv"></div> -->
-
-		<!--This is for the mustache list data-->
-<!-- 		<div id="eventsListDiv"></div> -->
-
-		<!--This is for the mustach event list detail data-->
-<!-- 		<div id="eventsDetailDiv"></div> -->
-
-		<!--This is the tester dummy list below-->
-<!-- 		<div class="centerView">
-			<ul>
-				<p>
-					<a href="eventsDetail"></a>
-				</p>
-				<div id="name"></div>
-				<div id="event"></div>
-			</ul>
-		</div>
-<<<<<<< HEAD
-		
-<<<<<<< HEAD
-=======
->>>>>>> kristie
-	</div>
-	<div id="pageContainer">
-		<h2>YOUR CALENDER</h2>
-=======
-	</div> -->
 	<div id="eventsContainer">
 		<h2>EVENTS CALENDAR</h2>
->>>>>>> jai
+
 
 		<!--This is for the mustache school events list, api/schools/id/events-->
 		<div id="schoolEventsDiv"></div>
@@ -106,31 +69,18 @@
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
-		<p>{{first_name}} {{last_name}}</p>
-		<p><img src="{{picture_url}}"/></p>
+		<p><img src="{{picture_url}}"/> <span>{{first_name}} {{last_name}}</span></p>
 		{{/parents}}
 	</script>
 
 
-<!--
-	<script type="X-tmpl-mustache" id="schoolEventsDetailTemplate">
-		{{#events}}
-<<<<<<< HEAD
-<h3 class="yellow uppercase"><a href="{{id}}">{{name}}</h3>
-=======
-			<h3>{{name}}</h3>
-			<p>{{description}}</p>
->>>>>>> jai
-		{{/events}}
-	</script>
--->
-
 	<script type="X-tmpl-mustache" id="eventsDetailListTeacherTemplate">
 		{{#events}}
+		<p>
 			<img src="{{picture_url}}"/>
 			<h3><a href="{{id}}"> {{name}}</a></h3>
 			<span>{{description}}</span>
-			<input id="button" type="button" value="Sign Up for this Event" /> </p>
+		 </p>
 		{{/events}}
 	</script>
 
