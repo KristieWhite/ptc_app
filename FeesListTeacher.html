@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Events Detail</title>
+	<title>Fees</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/events.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -28,11 +28,31 @@
 	<div>
 
 		<form>
-		<h3>Upload A Fee</h3>
-			<input type="text" />
-			<input type="number"/>
+			<div>
+				<h1>Upload a Fee:</h1>
+				<label>
+					<span>Title</span>
+					<input id="name" type="text" name="name" />
+				</label>
+
+				<label>
+					<span>Date Due</span>
+					<input id="email" type="text" name="email" />
+				</label>
+
+				<label>
+					<span>Image(optional)</span>
+					<input id="subject" type="text" name="subject" />
+				</label>
+
+				<label>
+					<span>Description of Fee</span>
+					<textarea id="feedback" name="feedback"></textarea>
+					<input class="button" type="button" value="Submit Fee" />
+				</label>
+
+			</div>
 		</form>
-	</div>
 
 
 

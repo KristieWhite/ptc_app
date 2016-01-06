@@ -6,7 +6,6 @@
 	<title>PTC - Assignments</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/parent.css">
 	<link rel="stylesheet" type="text/css" href="css/homework.css">
 </head>
 <style>
@@ -58,18 +57,15 @@
 
 
 	<script type="x-tmpl-mustache" id="studentTpl">
-		<img src="{{picture_url}}">
 		<p><span class="uppercaseNames">{{first_name}} {{last_name}}</span>  
 		<a class="StudentListItem-homeworkLink"> - <span class=""><i>&nbsp;Show My Homework&nbsp;</i></span></a></p>
 	</script>
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
-		<div class="borderBottom"></div>
-			<p><span class="uppercase">{{first_name}} {{last_name}}</span></p>	
-			<p><img src="{{picture_url}}"/></p>
-			<p>Due Date: {{due_date}} </p>
-			<p><span class="lightBlue"><a href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>: {{title}}</a></span></p>
-			<p>Description: {{description}}</p>
+			<p><span class="uppercase">{{first_name}} {{last_name}}</span>	
+			Due Date: {{due_date}} <br><br>
+			<span class="lightBlue"><a href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>: {{title}}</a></span><br><br>
+			Description: {{description}}</p>
 			<br><br>
 	</script>
 
