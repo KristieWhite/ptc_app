@@ -2,8 +2,8 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 	
     @font-face {
-		font-family: 'EraserDust';
-		src: url('../fonts/EraserDust.ttf');
+/*		font-family: 'EraserDust';*/
+/*		src: url('../fonts/EraserDust.ttf');*/
 	}
 	body {
 		background: url("../images/greenChalkBoard.jpg");
@@ -33,9 +33,8 @@
 		text-align: center;
 		bottom: 0;
 	}
-}
-
-/*closes mobile query*/
+    
+}/*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -85,14 +84,11 @@
 /*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
-/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 
-@font-face {
+    @font-face {
 		font-family: 'Firestarter Z';
 		src: url('../fonts/Firestarter Z.ttf');
-	}
-	.yellow {
-		color: rgba(255, 225, 0, 1);
 	}
 
 	.uppercase {
@@ -103,8 +99,7 @@
 		position: relative;
 		top: 180px;
 		color: black;
-		background: url("../images/greenChalkBoard.jpg");
-		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+/*		background: url("../images/greenChalkBoard.jpg");*/
 	}
 
 	.header {
@@ -135,7 +130,7 @@
 	.navbar {
 		position: fixed;
 		top: 100px;
-		width: 10%;
+		width: 13%;
 		height: 0px;
 		z-index: 2;
 /*		z-index: 1;
@@ -151,26 +146,27 @@
 	}
 
 	.navbar li {
-		background: black;
+		background: rgb(71, 71, 74);
 		border-bottom: none;
-		/*line-height: 5.9em;*/
+		line-height: 5.9em;
 		font-size: 1em;
-/*		line-height: 7em;
-		font-size: 1.1em;*/
+		line-height: 7em;
+		font-size: 1.1em;
 		margin-left: -1px;
+        letter-spacing: 2px;
 	}
 
 	.navbar a {
-		background: #6e6e6e;
 		background-position: center;
 		text-decoration: none;
 		color: #fff;
-		/*display: block;*/
-		/*transition: .3s background-color;*/
+		display: block;
+		transition: .3s background-color;
 	}
 
 	.navbar a:hover {
-		background-color: #141010;
+		background-color: rgb(20, 20, 30);
+        text-transform: uppercase;
 	}
 
 	.footer {
@@ -202,16 +198,13 @@
 		width: 70px;
 		height: 70px;
 	}
-}
-/****/
-
-
-/*closes laptop query*/
+    
+}/*closes laptop query*/
 /************************************************************************************************/
 /*large screen query starts here*/
-
 @media only screen and (min-width: 1824px) {
-	@font-face {
+	
+    @font-face {
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
 	}
@@ -316,4 +309,4 @@
 	}
 }
 
-/*closes large screen query
+/*closes large screen query*/

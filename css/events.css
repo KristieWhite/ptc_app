@@ -1,57 +1,31 @@
 /*mobile query starts here*/
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
-
-
-/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 
 
 
-
-/*closes mobile query*/
+}/*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
-
-
-/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
 
 
-/*closes tablet query*/
+}/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
-
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 	@font-face {
-		font-family: 'EraserDust';
-		src: url('../fonts/EraserDust.ttf');
+		font-family: '';
+		src: url('');
 	}
 	body {
-		margin-top: 220px;
+		margin-top: -140px;
 	}
 
-
-/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {*/
-
-/*	.uppercase {
-
+	.uppercase {
 		text-transform: uppercase;
 	}
-
-	.black {
-		color: black;
-	}
-
-	a:visited {
-		color: white;
-
-	}
-	h2 {
-
-	}*/
-
+   
 	#eventsContainer h2 {
 		margin-left: 50px;
 		color: #006495;
@@ -78,40 +52,48 @@
 	#schoolEventsDetailDiv {
 		margin-left: 50px;
 	}
+    
+    /*events list on parent events page*/
 	#classEventsDetailDiv {
-		margin-left: 50px;
+		margin-left: 15em;
+        float: left;
+        width: 70%;
+        padding: 1em;
 	}
 	
 	#classEventsDetailDiv img {
-		width: 100px;
-		height: 100px;
+		width: 200px;
 		border-radius: 5px;
-		margin-left: 10px;
-		margin-top: 5px;
-	}
+    }
+    
 	#classEventsDetailDiv h3 {
+        width: 50%;
+        letter-spacing: .25px;
 		position: relative;
-		left: 120px;
-		bottom: 120px;
+		left: 230px;
+		bottom: 130px;
 	}
+    
 	#classEventsDetailDiv span {
+        letter-spacing: .30px;
 		position: relative;
-		left: 120px;
-		bottom: 120px;
-		width: 500px;
+		left: 230px;
+		bottom: 130px;
+		width: 100px;
 	}
+    
+    #addEventBtn {
+        width: 25%;
+    }
 
 	#schoolEventsDetailDiv{
 		margin-left: 50px;
 	}
 	
-	#classEventsDetailDiv{
-		margin-left: 50px;
-	}
-	
-/*	div.sexyLine {
+	div.sexyLine {
 		margin-top: 10px;
 	}
+    
 	.sexyLine {
 		display: block;
 		border: none;
@@ -120,9 +102,10 @@
 		background: black;
 		background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
 	}
+    
 	#EventName a {
 		color: yellow;
-	}*/
+	}
 	.eventsAdd {
 		margin-top: 30px;
 	}
@@ -164,10 +147,7 @@
 	button:hover {
 		background-color: rgba(255, 204, 0, 0, 8);
 	}*/
-	#addEvent {
-
-	}
-
+  
 	.head {
 		width: 80%;
 		height: 900px;
@@ -180,10 +160,7 @@
 		margin: 10px;
 	}
 
-
 	/********style the event form*********/
-
-
 	#teacherAddEvent {
 		width: 50%;
 		margin: auto;
@@ -191,6 +168,7 @@
 		background-color: black;
 		padding: 2em;
 	}
+    
 	input,
 	textarea {
 		padding: 9px;
@@ -223,17 +201,11 @@
 		width: 200px;
 		margin: 10px;
 	}
-}
 
-
-/*closes laptop query*/
+}/*closes laptop query*/
 /****************************************************************************************/
 /*large screen query starts here*/
-@media only screen and (min-width: 1824px) {}
-
-
-
-/*closes large screen query*/
+@media only screen and (min-width: 1824px) {
 
 	#classEventsDetailDiv p {
 		border: 1px solid #006495;
@@ -242,16 +214,5 @@
 		padding-top: 10px;
 	}
 
-
-/*}*/
-
-
-/*closes laptop query*/
-
-
+}/*closes laptop query*/
 /****************************************************************************************/
-
-
-
-/*closes large screen query
->>>>>>> jai
