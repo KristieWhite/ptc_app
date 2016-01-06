@@ -181,19 +181,26 @@
 		color: white;
 		z-index: 1;
 	}
-
+    
+/*this is the user icon*/
 	#parentInfo {
 		position: fixed;
-		left: 1000px;
-		bottom: 545px;
+/*      top: 2px;*/
+/*		left: 1000px;*/
+        right: 3em;
+/*		bottom: 545px;*/
 	}
 	#parentInfo p {
-		position: absolute;
-		left: 80px;
-		bottom: 2px;
+        float: right;
+/*		position: relative;*/
+/*		top: 5px;*/
+/*		bottom: 20px;*/
 		font-size: 20px;
 	}
 	#parentInfo img {
+        position: relative;
+        top: -3.5em;
+        right: -6em;
 		border-radius: 5px;
 		width: 70px;
 		height: 70px;

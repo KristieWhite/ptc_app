@@ -19,7 +19,7 @@
 		src: url('');
 	}
 	body {
-		margin-top: -140px;
+		margin-top: -80px;
 	}
 
 	.uppercase {
@@ -55,7 +55,7 @@
     
     /*events list on parent events page*/
 	#classEventsDetailDiv {
-		margin-left: 15em;
+		margin-left: 5em;
         float: left;
         width: 70%;
         padding: 1em;
