@@ -22,11 +22,11 @@ body {
   margin-top: 20px;
 }
 
-.clearFloat {
+/*.clearFloat {
   clear: both;
   margin: 0;
   padding: 0;
-}
+}*/
 
 #feesDiv2 {
   /*border: 1px solid blue;*/

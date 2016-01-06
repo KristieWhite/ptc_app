@@ -16,12 +16,10 @@ $(document).ready(function () {
 			"studenthomework_set":null
 	},
 		Model:studentInfoModel,
-		idAttribute: "id",
 		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId
 	});
 	var studentInfoCollection = Backbone.Collection.extend({
 		Model: studentInfoModel,
-		idAttribute: "id",
 		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId
 	}); 
 		var student = new studentInfoModel();
@@ -41,10 +39,98 @@ $(document).ready(function () {
 			}
 		});
 
-////////////////////////////////////// TEACHER VIEW /////////////////////////////////////////////////////
+///////////////////////////////////**** STUDENT ATTENDANCE ****////////////////////////////////////////
+
+	var AttendanceModel = Backbone.Model.extend({
+		intialize: function(){
+		},
+		Model: AttendanceModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId + "/attendance"
+	});
+
+	var AttendanceCollection = Backbone.Collection.extend({
+		Model: AttendanceModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId + "/attendance"
+	});
+
+	var attendance = new AttendanceModel();
+	attendance.fetch({
+		success: function(resp){
+			var attendanceInfo = {
+				'attendance': resp.toJSON().results
+			};
+			console.log(resp.toJSON().results);
+			var attendanceTemplate = $("#attendanceTemplate").text();
+			var attendanceHTML = Mustache.render(attendanceTemplate, attendanceInfo);
+			$("#attendanceDiv").html(attendanceHTML);
+		},
+		error: function(err){
+			console.log('error ', err);
+		}
+	});
+
+///////////////////////////////**** STUDENT BEHAVIOR ****/////////////////////////////////////////////////
+
+	var BehaviorModel = Backbone.Model.extend({
+		intialize: function(){
+		},
+		Model: BehaviorModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId + "/behavior"
+	});
+
+	var BehaviorCollection = Backbone.Collection.extend({
+		Model: BehaviorModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId + "/behavior"
+	});
+
+	var behavior = new BehaviorModel();
+	behavior.fetch({
+		success: function(resp){
+			var behaviorInfo = {
+				'behavior': resp.toJSON().results
+			};
+			console.log(resp.toJSON().results);
+			var behaviorTemplate = $("#behaviorTemplate").text();
+			var behaviorHTML = Mustache.render(behaviorTemplate, behaviorInfo);
+			$("#behaviorDiv").html(behaviorHTML);
+		},
+		error: function(err){
+			console.log('error ', err);
+		}
+	});
+
+////////////////////////////////**** STUDENT GRADES ****////////////////////////////////////////////////
+
+	var GradeModel = Backbone.Model.extend({
+		intialize: function(){
+		},
+		Model: GradeModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId + "/homework"
+	});
+
+	var GradeCollection = Backbone.Collection.extend({
+		Model: GradeModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId + "/homework"
+	});
+
+	var grade = new GradeModel();
+	grade.fetch({
+		success: function(resp){
+			var gradeInfo = {
+				'grades': resp.toJSON().results
+			};
+			console.log(resp.toJSON().results);
+			var gradeTemplate = $("#gradesTemplate").text();
+			var gradeHTML = Mustache.render(gradeTemplate, gradeInfo);
+			$("#gradesDiv").html(gradeHTML);
+		},
+		error: function(err){
+			console.log('error ', err);
+		}
+	});
 
 
-	}); // closes doc.ready
+}); // closes doc.ready
 
 
 
