@@ -155,7 +155,7 @@
 		line-height: 7em;
 		font-size: 1.1em;
 		margin-left: -1px;
-        letter-spacing: 2px;
+    letter-spacing: 2px;
 	}
 	.navbar a {
 		background-position: center;
@@ -183,6 +183,7 @@
 	}
     
 /*this is the user icon*/
+
 	#parentInfo {
 		position: fixed;
         right: 3em;
@@ -201,7 +202,8 @@
 		border-radius: 5px;
 	}
     
-}/*closes laptop query*/
+} /*closes laptop query*/
+
 /************************************************************************************************/
 /*large screen query starts here*/
 @media only screen and (min-width: 1824px) {
@@ -305,6 +307,7 @@
 		height: 70px;
 		border-radius: 5px;
 	}
+
 	#parentInfo span {
 		position:absolute;
 		left: 80px;
@@ -313,4 +316,5 @@
 	
 	}
     
-}/*closes large screen query*/
+} /*closes large screen query*/
+

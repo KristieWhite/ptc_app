@@ -83,6 +83,7 @@
     }
     
   .waiverHeader h2 {
+    text-decoration: underline;
     position: relative;
       text-align: center;
       margin: -1em 0 0 0;

@@ -43,17 +43,20 @@
       <div class="classesApiDiv"></div>
     </div>
 
-    <div class="studentBehavior">
+    <div id="studentBehavior">
       <p class="color">Student Behavior: </p>
+      <div id="behaviorDiv"></div>
     </div>
 
-    <div class="studentAttendance">
+    <div id="studentAttendance">
       <p class="color">Student Attendance: </p>
+      <div id="attendanceDiv"></div>
     </div>
     <hr class="hrSpecial2">
 
-    <div class="studentEvents">
+    <div id="studentGrades">
       <p class="color">Upcoming Student Events: </p>
+      <div id="gradesDiv"></div>
     </div>
 
   </div>
@@ -93,6 +96,36 @@
       </ul>
     {{/students}}
   </script>
+
+  <script type="x-tmpl-mustache" id="behaviorTemplate">
+  {{#behavior}}
+    <ul>
+      <li>{{date}}</li>
+      <li>{{description}}</li>
+    </ul>
+  {{/behavior}}
+
+  </script>
+
+  <script type="x-tmpl-mustache" id="attendanceTemplate">
+  {{#attendance}}
+    <ul>
+      <li>{{date}}</li>
+    </ul>
+  {{/attendance}}
+  </script>
+
+  <script type="x-tmpl-mustache" id="gradesTemplate">
+  {{#grades}}
+    <ul>
+      <li>Homework: {{title}}</li>
+      <li>Due Date: {{due_date}}</li>
+      <li>Points: {{points}}/{{total_points}}</li>
+      <li>Grade: {{grade}}</li>
+    </ul>
+  {{/grades}}
+  </script>
+  
 
 </body>
 </html>

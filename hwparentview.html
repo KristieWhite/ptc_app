@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<title>PTC - Assignments</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/parent.css">
 	<link rel="stylesheet" type="text/css" href="css/homework.css">
 </head>
 <style>
@@ -29,7 +30,7 @@
 
 	<div id="assignContainer">
 		<div class="assignHeader">
-			<h2 class="designH2">ASSIGNMENTS</h2>
+			<h2>ASSIGNMENTS</h2>
 		</div>
 		<div id="studentsDiv2" class=""></div>
 		<div id="homeworkDiv" class=""></div>
@@ -66,12 +67,12 @@
 		<div class="borderBottom"></div>
 			<p><span class="uppercase">{{first_name}} {{last_name}}</span></p>	
 			<p><img src="{{picture_url}}"/></p>
-			<p>	Due Date: {{due_date}}
+			<p>Due Date: {{due_date}} </p>
 			<p><span class="lightBlue"><a href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>: {{title}}</a></span></p>
 			<p>Description: {{description}}</p>
 			<br><br>
 	</script>
-		
+
 </body>
 
 </html>

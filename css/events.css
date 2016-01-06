@@ -10,18 +10,16 @@
 
 
 
+
 }/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
+
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 
     @font-face {
 		font-family: '';
 		src: url('');
-	}
-    
-	body {
-		margin-top: -80px;
 	}
 
 	.uppercase {
@@ -221,16 +219,18 @@
 	a:visited {
 		color: white;
 	}
+
 	#eventsContainer h2 {
 		margin-left: 50px;
 		color: #006495;
 		font-size: 30px;
+		margin-top: 60px;
 	}
 	#eventsContainer {
 		width: 80%;
 		margin: auto;
 		position: relative;
-		bottom: 70px;
+		bottom: 120px;
 	}
 	#eventsListDiv {
 		width: 45%;
@@ -240,6 +240,7 @@
 		width: 45%;
 		float: right;
 	}
+
 	#schoolEventsDetailDiv {
 		margin-left: 50px;
 
@@ -285,6 +286,7 @@
 	#schoolEventsDetailDiv {
 		margin-left: 50px;
 	}
+
 	#classEventsDetailDiv {
 		margin-left: 50px;
 	}
@@ -317,9 +319,18 @@
 		width: 50%;
 		margin: auto;
 	}
+
 	.filler {
 		height: 4em;
 	}
+
+	#classEventsDetailDiv p {
+		border: 1px solid #006495;
+		border-radius: 5px;
+		padding-left: 15px;
+		padding-top: 10px;
+	}
+
 	.centerView {
 		width: 60%;
 		margin: auto;
@@ -341,8 +352,10 @@
 	}
 	button:hover {
 		background-color: rgba(255, 204, 0, 0, 8);
+
 	}
 	#addEvent {}
+
 	.head {
 		width: 80%;
 		height: 900px;
@@ -391,6 +404,8 @@
 		width: 200px;
 		margin: 10px;
 	}
+<<<<<<< HEAD
     
 }/*closes large screen query*/
+
 
