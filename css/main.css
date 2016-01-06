@@ -94,6 +94,12 @@
 	.uppercase {
 		text-transform: uppercase;
 	}
+    
+    .uppercaseNames {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .25px;
+    }
 
 	body {
 		position: relative;

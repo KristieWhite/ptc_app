@@ -1,65 +1,61 @@
 
 /*mobile query starts here*/
-/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
    
+    div.sexyLine {
+      margin-top: 50px;
+    }
+
+    .sexyLine { 
+      display: block;
+      border: none;
+      color: white;
+      height: 1px;
+      background: black;
+      background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+    }
+
+    .filler {
+      height: 4em;
+    }
+
+    .centerView {
+      width: 40%;
+      margin: auto;
+      border: 1px solid rgb(62, 62, 62);
+    }
+
+    .sexyButton {
+    margin-left: 800px;
+      color: #08233e;
+      font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
+      padding: 8px;
+      border: 1px solid #ffcc00;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      border-bottom: 1px solid #9f9f9f;
+      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      -webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      background-color: rgba(255, 204, 0, 1);
+    }
+    button:hover {
+          background-color: rgba(255, 204, 0, 0, 8);
+    }
     
-
-/*@font-face { font-family: 'EraserDust'; src: url('../fonts/EraserDust.ttf'); } 
-
-div.sexyLine {
-  margin-top: 50px;
-}
-
-.sexyLine { 
-  display: block;
-  border: none;
-  color: white;
-  height: 1px;
-  background: black;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
-}
-
-.filler {
-  height: 4em;
-}
-
-.centerView {
-  width: 40%;
-  margin: auto;
-  border: 1px solid rgb(62, 62, 62);
-}
-
-.sexyButton {
-margin-left: 800px;
-  color: #08233e;
-  font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
-  padding: 8px;
-  border: 1px solid #ffcc00;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  border-bottom: 1px solid #9f9f9f;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  background-color: rgba(255, 204, 0, 1);
-}
-button:hover {
-      background-color: rgba(255, 204, 0, 0, 8);
-}*/
-
-/*}*/       /*closes mobile query*/
+}/*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
-/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
 
 
-/*} */  /*closes tablet query*/
+}/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
-/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {   */ 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 
   @font-face { font-family: 'Firestarter Z'; src: url('../fonts/Firestarter Z.ttf'); } 
 
@@ -79,18 +75,20 @@ button:hover {
   #pageContainer {
     width: 80%;
     margin: auto;
-    position: relative;
     bottom: 70px;
   }
 
+    #h2Parent {
+        padding: .5em;
+    }
+    
   .waiverHeader h2 {
     position: relative;
-    left: 60px;
+      text-align: center;
+      margin: -1em 0 0 0;
     font-size: 40px;
-    color: #006495;
+    color: #0089cc;
   } 
-
-
 
   .filler {
     height: 4em;
@@ -115,11 +113,15 @@ button:hover {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
     cursor: pointer;
     background-color: #006495;
+      margin: 2em 0 0 0;
   }
 
   #waiverDetailDiv {
-    width: 70%;
+    width: 60%;
     margin: auto;
+      padding: 1em;
+      border: 4px solid lightgray;
+      border: 1px solid black;
   }
 
   #waiverDetailDiv p {
@@ -148,12 +150,12 @@ button:hover {
     width: 18%;
     margin: auto;
   }
-
-/*}*/   /*closes laptop query*/
+    
+}/*closes laptop query*/
 /************************************************************************************************/
 /*large screen query starts here*/
-/*@media only screen  and (min-width : 1824px) {*/
+@media only screen  and (min-width : 1824px) {
 
 
 
-/*}*/   /*closes large screen query*/    
+}/*closes large screen query*/    
