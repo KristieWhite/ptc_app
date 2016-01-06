@@ -1,81 +1,154 @@
 body {
-  margin-top: 120px;
+	margin-top: 120px;
 }
 
 #feeContainer {
-  width: 70%;
-  height: 100%;
-  margin: auto;
+	width: 70%;
+	height: 100%;
+	margin: auto;
 }
 
 #fixedH2 {
-  display: inline-block;
-  position: fixed;
-  margin-left: 1em;
+	display: inline-block;
+	position: fixed;
+	margin-left: 1em;
 }
 
-.feeHeader h2{
-  color: #006495;
-  font-size: 35px;
-  text-decoration: underline;
-  margin: 0;
-  margin-top: 20px;
+.feeHeader h2 {
+	color: #006495;
+	font-size: 35px;
+	text-decoration: underline;
+	margin: 0;
+	margin-top: 20px;
 }
 
 .clearFloat {
-  clear: both;
-  margin: 0;
-  padding: 0;
+	clear: both;
+	margin: 0;
+	padding: 0;
 }
 
 #feesDiv2 {
-  /*border: 1px solid blue;*/
-  position: fixed;
-  margin-left: 50px;
-  display: inline-block;
-  width: 45%;
-  top: 200px;
+	/*border: 1px solid blue;*/
+	position: fixed;
+	margin-left: 50px;
+	display: inline-block;
+	width: 45%;
+	top: 200px;
 }
 
-
 .color {
-  color: #006495;
+	color: #006495;
 }
 
 #feeDetailDiv {
-  /*border: 1px solid red;*/
-  position: relative;
-  display: inline-block;
-  bottom: 120px;
-  float: right;
-  width: 45%;
-  height: 500px;
-  border: 1px solid gray;
-  border-radius: 5px;
-  overflow: scroll;
+	/*border: 1px solid red;*/
+	position: relative;
+	display: inline-block;
+	bottom: 120px;
+	float: right;
+	width: 45%;
+	height: 500px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	overflow: scroll;
 }
 
 #feeDetailDiv p {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 #feeDetailDiv p a {
-  color: #1a8cab;
+	color: #1a8cab;
 }
+
 
 /*  .lightBlue {
   color: lightblue;
 }*/
 
 .borderBottom {
-  border-bottom: 1px solid rgb(44, 44, 44);
+	border-bottom: 1px solid rgb(44, 44, 44);
 }
 
 .StudentListItem-feeLink {
-  color: #1a8cab;
+	color: #1a8cab;
 }
 
 .StudentListItem-feeLink:hover {
-  text-decoration: underline;
-  cursor: pointer;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/*@media only screen and (min-width: 1824px) {
+	body {
+		margin-top: 120px;
+	}
+	#feeContainer {
+		width: 70%;
+		height: 100%;
+		margin: auto;
+	}
+	#fixedH2 {
+		display: inline-block;
+		position: fixed;
+		margin-left: 1em;
+	}
+	.feeHeader h2 {
+		color: #006495;
+		font-size: 35px;
+		text-decoration: underline;
+		margin: 0;
+		margin-top: 20px;
+	}
+	.clearFloat {
+		clear: both;
+		margin: 0;
+		padding: 0;
+	}
+	#feesDiv2 {
+		/*border: 1px solid blue;*/
+		position: fixed;
+		margin-left: 50px;
+		display: inline-block;
+		width: 45%;
+		top: 200px;
+	}
+	
+	#feesDiv2 p{
+		font-size: 25px
+	}
+	
+	.color {
+		color: #006495;
+	}
+	#feeDetailDiv {
+		position: relative;
+		display: inline-block;
+		left: 90px;
+		bottom: 120px;
+		float: right;
+		width: 65%;
+		height:300px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		overflow: scroll;
+	}
+
+	#feeDetailDiv p a {
+		color: #1a8cab;
+	}
+	/*  .lightBlue {
+  color: lightblue;
+}*/
+	.borderBottom {
+		border-bottom: 1px solid rgb(44, 44, 44);
+	}
+	.StudentListItem-feeLink {
+		color: #1a8cab;
+	}
+	.StudentListItem-feeLink:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
 }

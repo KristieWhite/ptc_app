@@ -191,11 +191,12 @@
 		margin-left: 3em;
 		top: 9em;
 		float: left;
-		width: 37%;
+		width: 31%;
 		height: 20%;
 	}
 	#studentsDiv2 p {
 		margin-top: 40px;
+		color: black;
 	}
 	#studentsDiv2 a:hover {
 		text-transform: uppercase;
@@ -207,8 +208,7 @@
 	}
 	h2 {
 		position: fixed;
-		bottom: 18em;
-		left: 8em;
+		left: 8.6em;
 	}
 	#homeworkDiv {
 		position: relative;
@@ -221,10 +221,9 @@
 		bottom: 1em;
 		border: 5px solid gray;
 		border-radius: 5px;
+		color:#7EBADF;
 	}
-	.lightBlue {
-		color: gray;
-	}
+
 	#link {
 		color: yellow;
 		text-decoration: none;
@@ -237,10 +236,7 @@
 	.StudentListItem-homeworkLink {
 		color: #1a8cab;
 	}
-	.StudentListItem-homeworkLink:hover {
-		/*text-decoration: underline;*/
-		cursor: pointer;
-	}
+
 	#mainAssignments {
 		width: 45%;
 		height: 800px;
