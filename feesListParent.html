@@ -5,9 +5,8 @@
 	<meta charset="UTF-8">
 	<title>PTC - Homework</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/feesList.css">
+	<link rel="stylesheet" type="text/css" href="css/Feeslist.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/parent.css">
 </head>
 <body>
 	<div class="header">
@@ -54,16 +53,14 @@
 
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
-        {{#parents}}
-		<p>{{first_name}} {{last_name}}</p>
-		<img src="{{picture_url}}"/>
+		{{#parents}}
+		<p><img src="{{picture_url}}"/> <span>{{first_name}} {{last_name}}</span></p>
 		{{/parents}}
 	</script>
 
 
 	<script type="x-tmpl-mustache" id="feeTpl">
-		<p>{{picture_url}}</p>
-		<p><span class="uppercaseNames">{{first_name}} {{last_name}} - </span>
+		<p><span class="uppercase">{{first_name}} {{last_name}} - </span>
 			<a class="StudentListItem-feeLink link">Show My Fees</a></p>
 	</script>
 
