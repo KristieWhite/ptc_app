@@ -51,8 +51,7 @@
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
-			<p>{{first_name}} {{last_name}}</p>
-			<img src="{{picture_url}}"> 
+		<p><img src="{{picture_url}}"/> <span>{{first_name}} {{last_name}}</span></p>
 		{{/parents}}
 	</script>
 
@@ -65,13 +64,11 @@
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
 		<div class="borderBottom"></div>
-			<p><span class="uppercase">{{first_name}} {{last_name}} - </span>		
-			<p><img src="{{picture_url}}"/></p>
-			<p>	Due Date: {{due_date}}
-			<p><span class="lightBlue"><a href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>: {{title}}</a></span></p>
-			<p>Description: {{description}}</p>
-			// <br><br>
-		// <a id="link" href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>:  {{title}}</a>
+			<p>	Due Date: {{due_date}}<br><br>
+		<a href="parentHomeworkDetail.html?id={{id}}"<i>Title: {{title}}</a><br><br>
+			Description: {{description}}</p>
+			 <br><br>
+
 	</script>
 		
 </body>

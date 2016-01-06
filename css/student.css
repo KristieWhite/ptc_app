@@ -182,7 +182,7 @@
 /*}*/ /*closes laptop query
 /************************************************************************************************/
 /*large screen query starts here*/
-/*@media only screen  and (min-width : 1824px) {
+@media only screen  and (min-width : 1824px) {
 
   a:visited { color: white; }
   a:link { color: white; }
@@ -198,7 +198,7 @@
   /*student profile - parent view*/
 
 
-/*  #studentContainer {
+  #studentContainer {
       width: 80%;
       margin: auto;
   }
@@ -289,4 +289,4 @@
      top: 20px;
   }
 
-} */  /*closes large screen query*/
+}  /*closes large screen query*/

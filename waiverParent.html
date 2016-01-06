@@ -68,26 +68,12 @@
 	<script src="js/waiver.js"></script>
 	<script src="js/parent.js"></script>
 
-	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
-			<p>{{first_name}} {{last_name}}</p>
-			<img src="{{picture_url}}"> 
+		<p><img src="{{picture_url}}"/> <span>{{first_name}} {{last_name}}</span></p>
 		{{/parents}}
 	</script>
 
-<!-- 
-	<script type="text/javascript">
-    HelloSign.init("{CLIENT_ID}");
-    HelloSign.open({
-        url: "SIGN_URL",     
-        allowCancel: true,
-        messageListener: function(eventData) {
-            alert("HelloSign event received");
-        }    
-    });
-	</script>
- -->
 
 	<script type="x-tmpl-mustache" id="waiverListTemplate">{{#waiver}} 
 			{{}} 

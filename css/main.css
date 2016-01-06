@@ -1,7 +1,6 @@
 /*mobile query starts here*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-	
-    @font-face {
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+	@font-face {
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
 	}
@@ -38,9 +37,9 @@
 /*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-	
-    @font-face {
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+	@font-face {
+
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
 	}
@@ -85,28 +84,25 @@
 /*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
-/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {*/
 
-@font-face {
+/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	@font-face {
 		font-family: 'Firestarter Z';
 		src: url('../fonts/Firestarter Z.ttf');
 	}
 	.yellow {
 		color: rgba(255, 225, 0, 1);
 	}
-
 	.uppercase {
 		text-transform: uppercase;
 	}
-
 	body {
 		position: relative;
 		top: 180px;
 		color: black;
-		background: url("../images/greenChalkBoard.jpg");
-		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
+		background: white;
+		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages
 	}
-
 	.header {
 		position: fixed;
 		display: inline-block;
@@ -116,11 +112,9 @@
 		border-bottom: 2px solid black;
 		font-family: 'Firestarter Z';
 		color: white;
-		background: url("../images/blackChalkBoard.jpg");
-		background-position: center;
+		background-color: #525252;
 		z-index: 2;
 	}
-
 	.header h1 {
 		margin: 0;
 		font-weight: normal;
@@ -131,17 +125,13 @@
 		width: 80%;
 		display: inline-block;
 	}
-
 	.navbar {
 		position: fixed;
 		top: 100px;
-		width: 10%;
+		width: 9%;
 		height: 0px;
 		z-index: 2;
-/*		z-index: 1;
-		display: inline-block;*/
 	}
-
 	.navbar ul {
 		height: 100px;
 		list-style: none;
@@ -149,28 +139,25 @@
 		padding: 0;
 		margin: 0;
 	}
-
 	.navbar li {
 		background: black;
 		border-bottom: none;
-		/*line-height: 5.9em;*/
-		font-size: 1em;
-/*		line-height: 7em;
-		font-size: 1.1em;*/
+		line-height: 5.9em;
+		line-height: 8em;
+		font-size: 1.3em;
 		margin-left: -1px;
 	}
-
 	.navbar a {
-		background: #6e6e6e;
+		background:#336699;
 		background-position: center;
 		text-decoration: none;
 		color: #fff;
 		/*display: block;*/
 		/*transition: .3s background-color;*/
 	}
-
 	.navbar a:hover {
-		background-color: #141010;
+		background-color: #195189;
+		text-transform: uppercase;
 	}
 
 	.footer {
@@ -181,29 +168,28 @@
 		border-top: 2px solid black;
 		text-align: center;
 		font-size: 20px;
-		background-color: black;
-		color: white;
+		background-color: #525252;
+		color: #ff0000;
 		z-index: 1;
 	}
-
 	#parentInfo {
-		position: fixed;
-		left: 1000px;
-		bottom: 545px;
-	}
-	#parentInfo p {
 		position: absolute;
-		left: 80px;
-		bottom: 2px;
-		font-size: 20px;
+		left: 1300px;
+		top: 5px;
 	}
 	#parentInfo img {
-		border-radius: 5px;
 		width: 70px;
 		height: 70px;
+		border-radius: 5px;
 	}
-}
-/****/
+	#parentInfo span {
+		position:absolute;
+		left: 80px;
+		bottom: 50px;
+	
+	}
+}*/
+
 
 
 /*closes laptop query*/
@@ -212,54 +198,48 @@
 
 @media only screen and (min-width: 1824px) {
 	@font-face {
-		font-family: 'EraserDust';
-		src: url('../fonts/EraserDust.ttf');
+		font-family: 'Firestarter Z';
+		src: url('../fonts/Firestarter Z.ttf');
 	}
 	.yellow {
 		color: rgba(255, 225, 0, 1);
-	}
-	a:visited {
-		color: white;
-	}
-	a:link {
-		color: white;
 	}
 	.uppercase {
 		text-transform: uppercase;
 	}
 	body {
-		background: url("../images/greenChalkBoard.jpg");
-		background-size: 100%;
-		/*font-family: 'Walter Turncoat', cursive;*/
-		color: white;
-		margin-top: 150px;
+		position: relative;
+		top: 180px;
+		color: black;
+		background: #ebe7e7;
 		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
-		margin-bottom: 50px;
 	}
 	.header {
 		position: fixed;
+		display: inline-block;
+		top: 0;
 		width: 100%;
 		height: 100px;
 		border-bottom: 2px solid black;
-		font-family: 'EraserDust';
+		font-family: 'Firestarter Z';
 		color: white;
-		background: url("../images/blackChalkBoard.jpg") repeat;
-		background-position: center;
+		background-color: #525252;
 		z-index: 2;
 	}
 	.header h1 {
 		margin: 0;
+		font-weight: normal;
 		position: relative;
-		font-size: 3.5em;
+		font-size: 3.0em;
 		top: 20px;
-		left: 40px;
+		left: 30px;
 		width: 80%;
 		display: inline-block;
 	}
 	.navbar {
 		position: fixed;
 		top: 100px;
-		width: 10%;
+		width: 9%;
 		height: 0px;
 		z-index: 2;
 	}
@@ -275,44 +255,52 @@
 		background: black;
 		border-bottom: none;
 		line-height: 5.9em;
-		font-size: 1em;
+		line-height: 8.2em;
+		font-size: 1.3em;
 		margin-left: -1px;
 	}
 	.navbar a {
-		background: black;
+		background:#336699;
+		background-position: center;
 		text-decoration: none;
 		color: #fff;
+		letter-spacing:4px;
 		display: block;
 		transition: .3s background-color;
 	}
 	.navbar a:hover {
-		background-color: rgb(35, 24, 24);
-        text-transform: uppercase;
+		background-color: #195189;
+		text-transform: uppercase;
+
 	}
 	.footer {
 		position: fixed;
-		bottom: 0;
+		bottom: -1em;
 		width: 100%;
-		height: 56px;
+		height: 80px;
 		border-top: 2px solid black;
 		text-align: center;
-		background-color: black;
+		font-size: 20px;
+		background-color: #525252;
+		color: #ffffff;
+		z-index: 1;
 	}
 	#parentInfo {
-		position: fixed;
-		left: 1000px;
-		bottom: 545px;
-	}
-	#parentInfo p {
 		position: absolute;
-		left: 80px;
-		bottom: 2px;
-		font-size: 20px;
+		left: 1640px;
+		top: 5px;
 	}
 	#parentInfo img {
-		border-radius: 5px;
 		width: 70px;
 		height: 70px;
+		border-radius: 5px;
+	}
+	#parentInfo span {
+		position:absolute;
+		left: 80px;
+		bottom: 40px;
+		font-size: 20px;
+	
 	}
 }
 

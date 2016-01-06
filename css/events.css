@@ -6,10 +6,12 @@
 /*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}*/
 
 
-
-
 /*closes mobile query*/
+
+
 /****************************************************************************************************/
+
+
 /*tablet query starts here*/
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
@@ -18,63 +20,44 @@
 /*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}*/
 
 
-
 /*closes tablet query*/
+
+
 /*****************************************************************************************************/
+
+
 /*laptop query starts here*/
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-	@font-face {
-		font-family: 'EraserDust';
-		src: url('../fonts/EraserDust.ttf');
-	}
-	body {
-		margin-top: 220px;
-	}
-
-
-/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {*/
-
-/*	.uppercase {
-
+	.uppercase {
 		text-transform: uppercase;
 	}
-
 	.black {
 		color: black;
 	}
-
 	a:visited {
 		color: white;
-
 	}
-	h2 {
-
-	}*/
-
+	h2 {}
 	#eventsContainer h2 {
 		margin-left: 50px;
 		color: #006495;
 		font-size: 30px;
 	}
-
 	#eventsContainer {
 		width: 80%;
 		margin: auto;
 		position: relative;
 		bottom: 70px;
 	}
-
 	#eventsListDiv {
 		width: 45%;
 		float: left;
 	}
-
 	#eventsDetailDiv {
 		width: 45%;
 		float: right;
 	}
-
 	#schoolEventsDetailDiv {
 		margin-left: 50px;
 	}
@@ -100,16 +83,13 @@
 		bottom: 120px;
 		width: 500px;
 	}
-
-	#schoolEventsDetailDiv{
+	#schoolEventsDetailDiv {
 		margin-left: 50px;
 	}
-	
-	#classEventsDetailDiv{
+	#classEventsDetailDiv {
 		margin-left: 50px;
 	}
-	
-/*	div.sexyLine {
+	div.sexyLine {
 		margin-top: 10px;
 	}
 	.sexyLine {
@@ -122,7 +102,7 @@
 	}
 	#EventName a {
 		color: yellow;
-	}*/
+	}
 	.eventsAdd {
 		margin-top: 30px;
 	}
@@ -138,7 +118,6 @@
 		width: 50%;
 		margin: auto;
 	}
-
 	.filler {
 		height: 4em;
 	}
@@ -146,7 +125,7 @@
 		width: 60%;
 		margin: auto;
 	}
-/*	.sexyButton {
+	.sexyButton {
 		color: #08233e;
 		font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
 		padding: 8px;
@@ -163,27 +142,19 @@
 	}
 	button:hover {
 		background-color: rgba(255, 204, 0, 0, 8);
-	}*/
-	#addEvent {
-
 	}
-
+	#addEvent {}
 	.head {
 		width: 80%;
 		height: 900px;
 		margin: auto;
 		overflow: scroll;
 	}
-
 	#button {
 		width: 200px;
 		margin: 10px;
 	}
-
-
 	/********style the event form*********/
-
-
 	#teacherAddEvent {
 		width: 50%;
 		margin: auto;
@@ -207,7 +178,6 @@
 		height: 150px;
 		line-height: 150%;
 	}
-
 	input:hover,
 	textarea:hover,
 	input:focus,
@@ -218,7 +188,6 @@
 	.form label {
 		margin-left: 10px;
 	}
-
 	#button {
 		width: 200px;
 		margin: 10px;
@@ -227,20 +196,197 @@
 
 
 /*closes laptop query*/
-/****************************************************************************************/
-/*large screen query starts here*/
-@media only screen and (min-width: 1824px) {}
 
+
+/****************************************************************************************/
+
+
+/*large screen query starts here*/
+
+@media only screen and (min-width: 1824px) {
+	.uppercase {
+		text-transform: uppercase;
+	}
+	.black {
+		color: black;
+	}
+	a:visited {
+		color: white;
+	}
+	#eventsContainer h2 {
+		margin-left: 50px;
+		color: #006495;
+		font-size: 30px;
+	}
+	#eventsContainer {
+		width: 80%;
+		margin: auto;
+		position: relative;
+		bottom: 70px;
+	}
+	#eventsListDiv {
+		width: 45%;
+		float: left;
+	}
+	#eventsDetailDiv {
+		width: 45%;
+		float: right;
+	}
+	#schoolEventsDetailDiv {
+		margin-left: 50px;
+
+	}
+	#classEventsDetailDiv {
+		margin-top: 50px;
+		margin-left: 50px;
+		width: 810px;
+
+	}
+	#classEventsDetailDiv p{
+		background-color: #909090;
+		width: 975px;
+		border-radius: 5px;
+		margin-bottom: -30px;
+		
+	}
+	#classEventsDetailDiv img {
+		width: 140px;
+		height: 140px;
+		border-radius: 5px;
+		margin-left: 10px;
+		margin-top: 5px;
+	}
+	#classEventsDetailDiv h3 {
+		position: relative;
+		left: 160px;
+		bottom: 182px;
+		font-size: 30px;
+	}
+	#classEventsDetailDiv span {
+		position: relative;
+		left: 160px;
+		bottom: 210px;
+		color:#ffffff;
+		font-size: 25px;
+	}
+	
+	#classEventsDetailDiv a{
+		color:#ff0000;
+		text-decoration: none;
+	}
+	#schoolEventsDetailDiv {
+		margin-left: 50px;
+	}
+	#classEventsDetailDiv {
+		margin-left: 50px;
+	}
+	div.sexyLine {
+		margin-top: 10px;
+	}
+	.sexyLine {
+		display: block;
+		border: none;
+		color: white;
+		height: 1px;
+		background: black;
+		background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+	}
+	#EventName a {
+		color: yellow;
+	}
+	.eventsAdd {
+		margin-top: 30px;
+	}
+	#formContainer {
+		/*margin: auto;*/
+		width: 100%;
+		margin-right: 0;
+		background-color: black;
+		padding: 1em 0 5em 0;
+	}
+	.addEventForm {
+		background-color: black;
+		width: 50%;
+		margin: auto;
+	}
+	.filler {
+		height: 4em;
+	}
+	.centerView {
+		width: 60%;
+		margin: auto;
+	}
+	.sexyButton {
+		color: #08233e;
+		font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
+		padding: 8px;
+		border: 1px solid #ffcc00;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		border-bottom: 1px solid #9f9f9f;
+		-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+		-webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+		cursor: pointer;
+		background-color: rgba(255, 204, 0, 1);
+	}
+	button:hover {
+		background-color: rgba(255, 204, 0, 0, 8);
+	}
+	#addEvent {}
+	.head {
+		width: 80%;
+		height: 900px;
+		margin: auto;
+		overflow: scroll;
+	}
+	#button {
+		width: 200px;
+		margin: 10px;
+	}
+	/********style the event form*********/
+	#teacherAddEvent {
+		width: 50%;
+		margin: auto;
+		text-align: center;
+		background-color: black;
+		padding: 2em;
+	}
+	input,
+	textarea {
+		padding: 9px;
+		border: solid 1px #e5e5e5;
+		outline: 0;
+		font: normal 13px/100% Verdana, Tahoma, sans-serif;
+		width: 400px;
+		background: #ffffff;
+		color: black;
+	}
+	textarea {
+		width: 400px;
+		max-width: 400px;
+		height: 150px;
+		line-height: 150%;
+	}
+	input:hover,
+	textarea:hover,
+	input:focus,
+	textarea:focus {
+		border-color: #c9c9c9;
+		-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	}
+	.form label {
+		margin-left: 10px;
+	}
+	#button {
+		width: 200px;
+		margin: 10px;
+	}
+}
 
 
 /*closes large screen query*/
-
-	#classEventsDetailDiv p {
-		border: 1px solid #006495;
-		border-radius: 5px;
-		padding-left: 15px;
-		padding-top: 10px;
-	}
 
 
 /*}*/
@@ -252,6 +398,4 @@
 /****************************************************************************************/
 
 
-
 /*closes large screen query
->>>>>>> jai
