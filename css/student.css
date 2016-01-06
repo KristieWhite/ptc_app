@@ -2,9 +2,9 @@
 /*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { */
 
 
-  #studentsTeacherDetailDiv {
+/*  #studentsTeacherDetailDiv {
       padding: 5em;
-  }
+  }*/
 
 /*  a:visited { color: white; }
   a:link { color: white; }*/
@@ -18,7 +18,7 @@
     color: lightBlue; 
   }*/
 
-  /******* student profile - list view *******/
+/*********************** STUDENT PROFILE - LIST PARENT VIEW ******************************************/
 
   #pickStudentContainer {
     width: 75%;
@@ -33,7 +33,7 @@
   }
 
 
-  /***** student profile - detail view ******/
+/***************************** STUDENT PROFILE - DETAIL PARENT VIEW ********************************/
 
   #studentContainer {
     width: 75%;
@@ -41,12 +41,6 @@
     position: relative;
     bottom: 60px;
   }
-
-/*  .clearFloat {
-    clear: both;
-    margin: 0;
-    padding: 0;
-  }*/
 
   #back a{
     font-size: 20px;
@@ -86,6 +80,7 @@
       position: relative;
       display: inline-block;
       margin-top: 15px;
+      margin-left: 30px
   }
 
   .studentImg img {
@@ -96,7 +91,7 @@
   }
 
   #studentInfoDiv {
-    width: 65%;
+    width: 70%;
     height: 200px;
     margin: auto;
     position: relative;
@@ -177,7 +172,180 @@
      top: 30px;
   }
 
-  /*end student profile parent view*/
+/******************************* END STUDENT PROFILE PARENT VIEW *******************************/
+
+
+/********************* START STUDENT PROFILE - LIST TEACHER VIEW ***********************/
+
+  #setContainer {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    left: 10px;
+  }
+
+  #classContainer {
+    width: 45%;
+    display: inline-block;
+    position: relative;
+    bottom: 60px;
+  }
+
+  #studentSetContainer {
+    display: none;
+    width: 45%;
+    display: inline-block;
+    position: relative;
+    float: right;
+    bottom: 60px;
+  }
+
+  #studentSetContainer a {
+    color: black;
+    text-decoration: none;
+  }
+
+
+/******************************** START STUDENT PROFILE - DETAIL TEACHER VIEW ********************/
+
+  #studentContainer {
+    width: 75%;
+    margin: auto;
+    position: relative;
+    bottom: 60px;
+  }
+
+  #back a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+  }
+
+  #back a:hover {
+    color: white;
+    background: #006495;
+  }
+
+  #childList {
+    width: 25%;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+
+  }
+
+  #childList ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #childList a {
+    font-size: 25px;
+  }
+
+  #childList a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .studentImg {
+      position: relative;
+      display: inline-block;
+      margin-top: 15px;
+      margin-left: 30px
+  }
+
+  .studentImg img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      display: inline-block;
+  }
+
+  #studentInfoDiv {
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    display: inline-block;
+    top: 15px;
+    float: right;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: scroll;
+  }
+
+  #studentInfo ul {
+    list-style: none;
+  }
+
+  #studentInfo li {
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  .classesApiDiv ul {
+    list-style: none;
+  }
+
+  .classesApiDiv li {
+    margin-left: 30px;
+  }
+
+  .studentBehavior {
+    width: 50%;
+    height: 325px;
+    font-size: 20px;
+    display: inline-block;
+    overflow: scroll;
+    border-right: 1px solid black;
+    position: relative;
+    top: 40px;
+  }
+
+  .studentBehavior p {
+    margin: 0;
+  }
+
+  .studentAttendance {
+    width: 40%;
+    height: 325px;
+    font-size: 20px;
+    display: inline-block;
+    overflow: scroll;
+    position: relative;
+    top: 40px;
+    left: 10px;
+  }
+
+  .studentAttendance p {
+    margin: 0;
+  }
+
+  .studentEvents {
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+  }
+
+  .color {
+    color: #006495;
+  }
+
+  .hrSpecial2 {
+     border: 0;
+     height: 1px;
+     background: #333;
+     background-image: linear-gradient(to right, #ccc, #333, #ccc);
+     position: relative;
+     top: 30px;
+  }
+
+
   
 /*}*/ /*closes laptop query
 /************************************************************************************************/

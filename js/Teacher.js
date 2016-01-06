@@ -1,107 +1,110 @@
 $(document).ready(function () {
-	var studentsModel = Backbone.Model.extend({
-		initialize: function () {},
-		defaults: {
-			"name": null,
-			"school_class": null,
-			"description": null
-		},
-		Model: studentsModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/"
-	});
-	var studentsCollection = Backbone.Collection.extend({
-		Model: studentsModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/students/"
-	});
 
-	var students = new studentsModel();
-	students.fetch({
-		success: function (resp) {
-			var studentsInfo = {
-				"students": resp.toJSON().results
-			};
-			var studentsTemplate = $("#studentsTemplate").text();
-			var studentsHTML = Mustache.render(studentsTemplate, studentsInfo);
-			$("#student").html(studentsHTML);
-			console.log(resp);
-		},
-		error: function (err) {
-			conole.log(error, err);
-		}
-	});
+	// var studentsModel = Backbone.Model.extend({
+	// 	initialize: function () {},
+	// 	defaults: {
+	// 		"name": null,
+	// 		"school_class": null,
+	// 		"description": null
+	// 	},
+	// 	Model: studentsModel,
+	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/students/"
+	// });
+	// var studentsCollection = Backbone.Collection.extend({
+	// 	Model: studentsModel,
+	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/students/"
+	// });
+
+	// var students = new studentsModel();
+	// students.fetch({
+	// 	success: function (resp) {
+	// 		var studentsInfo = {
+	// 			"students": resp.toJSON().results
+	// 		};
+	// 		var studentsTemplate = $("#studentsTemplate").text();
+	// 		var studentsHTML = Mustache.render(studentsTemplate, studentsInfo);
+	// 		$("#student").html(studentsHTML);
+	// 		console.log(resp);
+	// 	},
+	// 	error: function (err) {
+	// 		conole.log(error, err);
+	// 	}
+	// });
 
 	////////////////////////////Student Events/////////////////////////////////
-	var studentEventsModel = Backbone.Model.extend({
-		initialize: function () {},
-		defaults: {
-			"name": null,
-			"school_class": null,
-			"description": null,
-			"school_class": null,
-			"date": null,
-			"image": null,
-			"id": null
-		},
-		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
-	});
 
-	var studentEventsCollection = Backbone.Collection.extend({
-		Model: studentEventsModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
-	});
+	// var studentEventsModel = Backbone.Model.extend({
+	// 	initialize: function () {},
+	// 	defaults: {
+	// 		"name": null,
+	// 		"school_class": null,
+	// 		"description": null,
+	// 		"school_class": null,
+	// 		"date": null,
+	// 		"image": null,
+	// 		"id": null
+	// 	},
+	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
+	// });
 
-	var Events = new studentEventsModel();
-	Events.fetch({
-		success: function (resp) {
-			var eventsInfo = {
-				"events": resp.toJSON().results
-			};
+	// var studentEventsCollection = Backbone.Collection.extend({
+	// 	Model: studentEventsModel,
+	// 	url: "https://murmuring-sands-9831.herokuapp.com/api/class_events/"
+	// });
 
-			var eventsTemplate = $("#eventsTemplate").text();
-			var eventsHTML = Mustache.render(eventsTemplate, eventsInfo);
-			$("#event").html(eventsHTML);
-			console.log(resp);
+	// var Events = new studentEventsModel();
+	// Events.fetch({
+	// 	success: function (resp) {
+	// 		var eventsInfo = {
+	// 			"events": resp.toJSON().results
+	// 		};
+
+	// 		var eventsTemplate = $("#eventsTemplate").text();
+	// 		var eventsHTML = Mustache.render(eventsTemplate, eventsInfo);
+	// 		$("#event").html(eventsHTML);
+	// 		console.log(resp);
 
 
-		},
+	// 	},
 
-		error: function (err) {
-			console.log(error, err);
-		}
-	});
+	// 	error: function (err) {
+	// 		console.log(error, err);
+	// 	}
+	// });
 
-	$("#addEvent").on('click', function (e) {
-		e.preventDefault();
-		var eventSave = new studentEventsModel();
-		eventSave.set({
-			name: $("#name").val(),
-			date: $("#date").val(),
-			description: $("#description").val(),
-			school_class: $("#class").val(),
-			image: $("#image").val()
-		})
-		$("#name").val(""),
-			$("#date").val(""),
-			$("#description").val(""),
-			$("#class").val(""),
-			$("#image").val("");
-		eventSave.save(null, {
-			success: function (response) {
-				studentEventsCollection.fetch({
-					success: function () {
-						console.log("success");
-					}
-				})
-				console.log("success", response);
-			},
-			error: function (problem) {
-				console.log("error ", problem);
-			}
-		});
-		location.href = "./eventsTeacher.html";
-	});
+	// $("#addEvent").on('click', function (e) {
+	// 	e.preventDefault();
+	// 	var eventSave = new studentEventsModel();
+	// 	eventSave.set({
+	// 		name: $("#name").val(),
+	// 		date: $("#date").val(),
+	// 		description: $("#description").val(),
+	// 		school_class: $("#class").val(),
+	// 		image: $("#image").val()
+	// 	})
+	// 	$("#name").val(""),
+	// 		$("#date").val(""),
+	// 		$("#description").val(""),
+	// 		$("#class").val(""),
+	// 		$("#image").val("");
+	// 	eventSave.save(null, {
+	// 		success: function (response) {
+	// 			studentEventsCollection.fetch({
+	// 				success: function () {
+	// 					console.log("success");
+	// 				}
+	// 			})
+	// 			console.log("success", response);
+	// 		},
+	// 		error: function (problem) {
+	// 			console.log("error ", problem);
+	// 		}
+	// 	});
+	// 	location.href = "./eventsTeacher.html";
+	// });
 
-	///////////////////////////////////teacher detail/////////////////////////////////
+//////////////////////////////////////**** TEACHER DETAIL DATA ****////////////////////////////////////////
+
 	var TeacherModel = Backbone.Model.extend({
 		initialize: function () {},
 		defaults: {
@@ -118,20 +121,89 @@ $(document).ready(function () {
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId')
 	});
 
-	var TeacherTaught = new TeacherModel();
+	var teacher = new TeacherModel();
 
-	TeacherTaught.fetch({
+	teacher.fetch({
 		success: function (resp) {
 			console.log('success', resp.toJSON());
-			var TeacherObj = {
-				"ProImg": resp.toJSON().results
+			var teacherObj = {
+				"teacher": resp.toJSON()
 			};
-			var TeacherTemplate = $("#imageProfileTemplate").text();
-			var TeacherHTML = Mustache.render(TeacherTemplate, TeacherObj);
-			$("#TeacherImg").html(TeacherHTML);
+			var teacherTemplate = $("#teacherTemplate").text();
+			var teacherHTML = Mustache.render(teacherTemplate, teacherObj);
+			$("#teachHome").html(teacherHTML);
 		},
 		error: function (err) {
 			console.log('error', err);
 		}
 	});
+
+////////////////////////////////////////**** TEACHER CLASS SET DATA ****/////////////////////////////////
+
+	// var ClassSetModel = Backbone.Model.extend({
+	// 	initialize: function () {
+	// 	},
+	// 	Model:ClassSetModel,
+	// 	url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
+	// });
+
+	// var ClassSetCollection = Backbone.Collection.extend({
+	// 	Model: ClassSetModel,
+	// 	url: 'https://murmuring-sands-9831.herokuapp.com/api/teachers/' + $.cookie('UserId') + '/classes'
+	// });
+
+	// var classSet = new ClassSetModel();
+	// 	classSet.fetch({
+	// 		success: function(resp) {
+	// 			var classSetInfo = {
+	// 				'classes': resp.toJSON().results
+	// 			};
+	// 			console.log(resp.toJSON().results);
+	// 			var classSetTemplate = $("#classSetTemplate").text();
+	// 			var classSetHTML = Mustache.render(classSetTemplate, classSetInfo);
+	// 			$("#classSetDiv").html(classSetHTML);
+	// 		},
+	// 		error: function(err){
+	// 			console.log("error ", err);
+	// 		}
+	// 	});
+
+	// $(".clickClass").on('click', function(){
+	// 	$("#studentSetContainer").show();
+	// });
+
+///////////////////////////////////////*** TEACHER STUDENT SET DATA ***/////////////////////////////////////
+	
+
+	// var StudentSetModel = Backbone.Model.extend({
+	// 	initialize: function () {
+	// 	},
+	// 	Model:StudentSetModel,
+	// 	idAttribute: id,
+	// 	url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/#{id}/students'
+	// });
+
+	// var StudentSetCollection = Backbone.Collection.extend({
+	// 	Model: StudentSetModel,
+	// 	idAttribute: id,
+	// 	url: 'https://murmuring-sands-9831.herokuapp.com/api/classes//students'
+	// });
+
+
+	// var studentSet = new StudentSetCollection();
+	// 	studentSet.fetch({
+	// 		success: function(resp) {
+	// 			var studentSetInfo = {
+	// 				'studentSet': resp.toJSON()
+	// 			};
+	// 			console.log(resp.toJSON().results);
+	// 			var studentSetTemplate = $("#studentSetTemplate").text();
+	// 			var studentSetHTML = Mustache.render(studentSetTemplate, studentSetInfo);
+	// 			$("#studentSetDiv").html(studentSetHTML);
+	// 		},
+	// 		error: function(err){
+	// 			console.log("error ", err);
+	// 		}
+	// 	});
+
 }); //documentready

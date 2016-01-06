@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Student - Parents View</title>
+	<title>Students</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/student.css">
@@ -26,28 +26,25 @@
 
 	<!-- start student profile teacher view -->
 
-	<div id="studentContainer" class="opaDiv">
-		<div class="studentImg"></div>
-
-		<div id="studentsTeacherDetailDiv"></div>
+	<div id="setContainer">
 		
-		<div id="classesDiv" class=""></div>
-		<div id="classesDiv2" class=""></div>
-		<div id="studentsDiv" class=""></div>
-
-		<div class="studentBehavior">
-			<!-- <p>Student Behavior: </p>
-			<input type="text" class="behavior" placeholder="Enter Description Here" /> -->
+		<div id="studentSetContainer">
+			<h2>Click student's name to view student's profile</h2>
+			<div id="studentSetDiv"></div>
 		</div>
+<!-- 		<div id="classesDiv" class=""></div>
+		<div id="classesDiv2" class=""></div>
+		<div id="studentsDiv" class=""></div> -->
 
-
-
-		<!-- <hr class="hrSpecial2"> -->
+<!-- 		<div class="studentBehavior">
+			<p>Student Behavior: </p>
+			<input type="text" class="behavior" placeholder="Enter Description Here" />
+		</div>
 
 		<div class="studentEvents">
-			<!-- <p>Upcoming Student Events: </p>
-			<a href="">Example</a> -->
-		</div>
+			<p>Upcoming Student Events: </p>
+			<a href="">Example</a>
+		</div> -->
 
 	</div>
 	<!-- end student profile teacher view -->
@@ -55,17 +52,37 @@
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+	<script src="js/url.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
-	<!--<script src="js/students.js"></script> -->
-	<script src="js/classes.js"></script>
-	<script src="js/appModels/classesCollection.js"></script>
-	<script src="js/studentsTeacherView.js"></script>
+	<script src="js/appModels/ClassesCollection.js"></script>
+	<script src="js/studentsTeacherView.js"></script> 
 
+<!-- 
+	<script type="x-tmpl-mustache" id="classSetTemplate">
+		{{#classes}}
+			<ul>
+				<li class="classes" value= {{id}}>{{name}}</li>
+			</ul>
+		{{/classes}}
+	</script>
+ -->
+
+	<script type="x-tmpl-mustache" id="studentSetTemplate">
+    {{#studentSet}}
+      <ul>
+        <li><a href="studentSet.html?id={{id}}">{{first_name}} {{last_name}}</a></li>
+      <ul>
+    {{/studentSet}}
+	</script>
+
+
+<!-- 
 	<script type="x-tmpl-mustache" id="studentsTeacherDetailTemplate">
 		<h3 class="black">List of the students for teachers, api/students/id</h3>
 		{{#students}}
@@ -89,7 +106,7 @@
 		<h4>Students in that class</h4>
 		<p>{{first_name}} {{last_name}}</p>
 	</script>
+ -->
 
 </body>
-
 </html>

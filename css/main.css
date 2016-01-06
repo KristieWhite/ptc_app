@@ -147,9 +147,8 @@
 		top: 100px;
 		width: 10%;
 		height: 0px;
-		z-index: 2;
-/*		z-index: 1;
-		display: inline-block;*/
+		z-index: 1;
+		display: inline-block;
 	}
 
 	.navbar ul {
@@ -163,10 +162,8 @@
 	.navbar li {
 		background: black;
 		border-bottom: none;
-		line-height: 5.9em;
-		font-size: 1em;
-/*		line-height: 7em;
-		font-size: 1.1em;*/
+		line-height: 7em;
+		font-size: 1.1em;
 		margin-left: -1px;
 	}
 
@@ -197,7 +194,7 @@
 		z-index: 1;
 	}
 
-	#parentInfo {
+/*	#parentInfo {
 		position: fixed;
 		left: 1000px;
 		bottom: 545px;
@@ -212,8 +209,8 @@
 		border-radius: 5px;
 		width: 70px;
 		height: 70px;
-	}
-}
+	}*/
+/*}*/
 /****/
 
 
@@ -225,7 +222,7 @@
 
 /*large screen query starts here*/
 
-@media only screen and (min-width: 1824px) {
+/*@media only screen and (min-width: 1824px) {
 	@font-face {
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
@@ -244,14 +241,14 @@
 	}
 	body {
 		background: url("http://orig03.deviantart.net/4a97/f/2011/328/c/7/chalk_board_texture_by_blueamnesiac-d4h76qm.png");
-		background-size: 100%;
+		background-size: 100%;*/
 		/*font-family: 'Walter Turncoat', cursive;*/
-		color: white;
-		margin-top: 150px;
+/*		color: white;
+		margin-top: 150px;*/
 		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages*/
-		margin-bottom: 50px;
-	}
-	.header {
+/*		margin-bottom: 50px;
+	}*/
+/*	.header {
 		position: fixed;
 		width: 100%;
 		height: 100px;
@@ -327,7 +324,7 @@
 		width: 70px;
 		height: 70px;
 	}
-}
+}*/
 
 
 /*closes large screen query

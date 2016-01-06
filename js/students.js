@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	  var studentId = window.location.search.match(/\d+/)[0];
+	var studentId = window.location.search.match(/\d+/)[0];
     console.log(studentId);
 
 	var studentInfoModel = Backbone.Model.extend({
@@ -28,7 +28,7 @@ $(document).ready(function () {
 		student.fetch({
 			success: function (resp) {
 				var studentInfo = {
-					'students': resp.toJSON()
+					'students': resp.toJSON().results
 				};
 				console.log(resp.toJSON());
 				var studentInfoTemplate = $("#studentInfoTemplate").text();
@@ -41,8 +41,10 @@ $(document).ready(function () {
 			}
 		});
 
+////////////////////////////////////// TEACHER VIEW /////////////////////////////////////////////////////
 
-	});
+
+	}); // closes doc.ready
 
 
 

@@ -1,8 +1,5 @@
 /*mobile query starts here*/
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
-
-
 /*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}*/
 
 
@@ -12,9 +9,6 @@
 /****************************************************************************************************/
 /*tablet query starts here*/
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
-
-
 /*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}*/
 
 
@@ -23,14 +17,14 @@
 /*****************************************************************************************************/
 /*laptop query starts here*/
 
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-	@font-face {
+/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {*/
+/*	@font-face {
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
 	}
 	body {
 		margin-top: 220px;
-	}
+	}*/
 
 
 /*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {*/
@@ -48,21 +42,20 @@
 		color: white;
 
 	}
-	h2 {
-
-	}*/
+*/
 
 	#eventsContainer h2 {
 		margin-left: 50px;
 		color: #006495;
 		font-size: 30px;
+		margin-top: 60px;
 	}
 
 	#eventsContainer {
 		width: 80%;
 		margin: auto;
 		position: relative;
-		bottom: 70px;
+		bottom: 120px;
 	}
 
 	#eventsListDiv {
@@ -75,7 +68,7 @@
 		float: right;
 	}
 
-	#schoolEventsDetailDiv {
+/*	#schoolEventsDetailDiv {
 		margin-left: 50px;
 	}
 	#classEventsDetailDiv {
@@ -100,12 +93,12 @@
 		bottom: 120px;
 		width: 500px;
 	}
-
-	#schoolEventsDetailDiv{
+*/
+	#schoolEventsDetailDiv {
 		margin-left: 50px;
 	}
 	
-	#classEventsDetailDiv{
+	#classEventsDetailDiv {
 		margin-left: 50px;
 	}
 	
@@ -138,10 +131,18 @@
 		width: 50%;
 		margin: auto;
 	}
-
+/*
 	.filler {
 		height: 4em;
+	}*/
+
+	#classEventsDetailDiv p {
+		border: 1px solid #006495;
+		border-radius: 5px;
+		padding-left: 15px;
+		padding-top: 10px;
 	}
+
 	.centerView {
 		width: 60%;
 		margin: auto;
@@ -164,9 +165,6 @@
 	button:hover {
 		background-color: rgba(255, 204, 0, 0, 8);
 	}*/
-	#addEvent {
-
-	}
 
 	.head {
 		width: 80%;
@@ -229,18 +227,12 @@
 /*closes laptop query*/
 /****************************************************************************************/
 /*large screen query starts here*/
-@media only screen and (min-width: 1824px) {}
+/*@media only screen and (min-width: 1824px) {}*/
 
 
 
 /*closes large screen query*/
 
-	#classEventsDetailDiv p {
-		border: 1px solid #006495;
-		border-radius: 5px;
-		padding-left: 15px;
-		padding-top: 10px;
-	}
 
 
 /*}*/

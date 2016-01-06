@@ -1,81 +1,41 @@
-/*mobile query starts here*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+mobile query starts here*/
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
      
       
 
-}/*closes mobile query*/
+}*//*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
 
 
-}/*closes tablet query*/
+}*//*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {*/ 
 
   /*teacher profile*/
-li{list-style: none;}
 
-  #teacherContainer {
-  	width: 80%;
-  	height: 900px;
-  	margin: auto;
+  #teachHome{
+    position: fixed;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 50px;
+    font-family: serif;
   }
+  
+  #teachHome p{
+    position: absolute;
+    left:70px;
+    font-size: 18px;
 
-  .hrSpecial {
-      border: 0;
-      height: 1px;
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   }
-
-  .teacherImg {
-  	position: relative;
-  	display: inline-block;
-  	margin-top: 15px;
-  }
-
-  .teacherImg img {
-  	width: 200px;
-  	height: 200px;
-  	border-radius: 10px;
-  	display: inline-block;
-  }
-
-  .teacherInfo {
-  	width: 75%;
-  	height: 200px;
-  	margin-top: 10px;
-  	position: relative;
-  	display: inline-block;
-  	float: right;
-  	top: 5px;
-  	border: 1px solid black;
-  	border-radius: 5px;
-  	overflow: scroll;
-  }
-
-  .teacherInfo ul {
-  	list-style: none;
-  	margin: 0;
-  }
-
-  .teacherInfo li {
-  	margin-top: 10px;
-  }
-
-  .teacherEvents {
-  	width: 100%;
-  	height: 200px;
-  	overflow: scroll;
-  }
-
-  .hrSpecial2 {
-      border: 0;
-      height: 1px;
-      background: #333;
-      background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  
+  #teachHome img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
   }
 
   /*end teacher profile*/
@@ -127,11 +87,11 @@ li{list-style: none;}
     border: 1px solid black;
   }
 
-}/*closes laptop query*/
+/*}*//*closes laptop query*/
 /************************************************************************************************/
 /*large screen query starts here*/
-@media only screen  and (min-width : 1824px) {
+/*@media only screen  and (min-width : 1824px) {
 
 
 
-}/*closes large screen query*/
+}*//*closes large screen query
