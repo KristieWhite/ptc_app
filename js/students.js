@@ -28,7 +28,7 @@ $(document).ready(function () {
 		student.fetch({
 			success: function (resp) {
 				var studentInfo = {
-					'students': resp.toJSON().results
+					'students': resp.toJSON()
 				};
 				console.log(resp.toJSON());
 				var studentInfoTemplate = $("#studentInfoTemplate").text();
