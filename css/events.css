@@ -74,6 +74,16 @@
 		bottom: 130px;
 	}
     
+    #classEventsDetailDiv h3 a {
+        text-decoration: none;
+    }
+    
+    #classEventsDetailDiv h3 a:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: darkblue;
+    }
+    
 	#classEventsDetailDiv span {
         letter-spacing: .30px;
 		position: relative;
