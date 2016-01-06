@@ -216,7 +216,12 @@
     font-size: 18px;
   }
 
+/**********************************  TEACHER VIEW -  CLASSSET.HTML ****************************/
 
+  #setContainer {
+    width: 70%;
+    margin: auto;
+  }
 
   
 /*}*/ /*closes laptop query

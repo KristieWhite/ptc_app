@@ -170,20 +170,21 @@ $(document).ready(function () {
 
 
 ///////////////////////////////////////*** TEACHER STUDENT SET DATA ***/////////////////////////////////////
+
+var classId = window.location.search.match(/\d+/)[0];
+console.log(classId);
 	
 
 	var StudentSetModel = Backbone.Model.extend({
 		initialize: function () {
 		},
 		Model:StudentSetModel,
-		idAttribute: id,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' +  + '/students'
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' + classId + '/students'
 	});
 
 	var StudentSetCollection = Backbone.Collection.extend({
 		Model: StudentSetModel,
-		idAttribute: id,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' +  + '/students'
+		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' + classId + '/students'
 	});
 
 
@@ -191,9 +192,9 @@ $(document).ready(function () {
 		studentSet.fetch({
 			success: function(resp) {
 				var studentSetInfo = {
-					'studentSet': resp.toJSON()
+					'studentSet': resp.toJSON()[0].results
 				};
-				console.log(resp.toJSON().results);
+				console.log(resp.toJSON()[0].results);
 				var studentSetTemplate = $("#studentSetTemplate").text();
 				var studentSetHTML = Mustache.render(studentSetTemplate, studentSetInfo);
 				$("#studentSetDiv").html(studentSetHTML);
