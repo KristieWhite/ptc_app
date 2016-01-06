@@ -1,8 +1,9 @@
 /*mobile query starts here*/
-/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-	@font-face {
-		font-family: 'EraserDust';
-		src: url('../fonts/EraserDust.ttf');
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+	
+    @font-face {
+/*		font-family: 'EraserDust';*/
+/*		src: url('../fonts/EraserDust.ttf');*/
 	}
 	body {
 		background: url("../images/greenChalkBoard.jpg");
@@ -32,17 +33,19 @@
 		text-align: center;
 		bottom: 0;
 	}
-}
-
-/*closes mobile query*/
+    
+}/*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
-/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-	@font-face {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+	
+@font-face {
+/*
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
+*/
 	}
+    
 	a:visited{
         color: white;
     }
@@ -84,25 +87,30 @@
 /*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 
-/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-	@font-face {
+    @font-face {
 		font-family: 'Firestarter Z';
 		src: url('../fonts/Firestarter Z.ttf');
 	}
-	.yellow {
-		color: rgba(255, 225, 0, 1);
-	}
+
 	.uppercase {
 		text-transform: uppercase;
 	}
+    
+    .uppercaseNames {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .25px;
+    }
+
 	body {
 		position: relative;
 		top: 180px;
 		color: black;
-		background: white;
-		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages
+/*		background: url("../images/greenChalkBoard.jpg");*/
 	}
+    
 	.header {
 		position: fixed;
 		display: inline-block;
@@ -128,7 +136,7 @@
 	.navbar {
 		position: fixed;
 		top: 100px;
-		width: 9%;
+		width: 13%;
 		height: 0px;
 		z-index: 2;
 	}
@@ -140,24 +148,25 @@
 		margin: 0;
 	}
 	.navbar li {
-		background: black;
+		background: rgb(71, 71, 74);
 		border-bottom: none;
 		line-height: 5.9em;
-		line-height: 8em;
-		font-size: 1.3em;
+		font-size: 1em;
+		line-height: 7em;
+		font-size: 1.1em;
 		margin-left: -1px;
+        letter-spacing: 2px;
 	}
 	.navbar a {
-		background:#336699;
 		background-position: center;
 		text-decoration: none;
 		color: #fff;
-		/*display: block;*/
-		/*transition: .3s background-color;*/
+		display: block;
+		transition: .3s background-color;
 	}
 	.navbar a:hover {
-		background-color: #195189;
-		text-transform: uppercase;
+		background-color: rgb(20, 20, 30);
+        text-transform: uppercase;
 	}
 
 	.footer {
@@ -172,35 +181,36 @@
 		color: #ff0000;
 		z-index: 1;
 	}
+    
+/*this is the user icon*/
 	#parentInfo {
-		position: absolute;
-		left: 1300px;
-		top: 5px;
+		position: fixed;
+        right: 3em;
+	}
+	#parentInfo p {
+        float: right;
+		font-size: 20px;
 	}
 	#parentInfo img {
+        position: relative;
+        top: -3.5em;
+        right: -6em;
+		border-radius: 5px;
 		width: 70px;
 		height: 70px;
 		border-radius: 5px;
 	}
-	#parentInfo span {
-		position:absolute;
-		left: 80px;
-		bottom: 50px;
-	
-	}
-}*/
-
-
-
-/*closes laptop query*/
+    
+}/*closes laptop query*/
 /************************************************************************************************/
 /*large screen query starts here*/
-
 @media only screen and (min-width: 1824px) {
-	@font-face {
+
+    @font-face {
 		font-family: 'Firestarter Z';
 		src: url('../fonts/Firestarter Z.ttf');
 	}
+    
 	.yellow {
 		color: rgba(255, 225, 0, 1);
 	}
@@ -302,6 +312,5 @@
 		font-size: 20px;
 	
 	}
-}
-
-/*closes large screen query
+    
+}/*closes large screen query*/

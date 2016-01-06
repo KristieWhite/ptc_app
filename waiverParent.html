@@ -30,7 +30,7 @@
 	</div>
 	<div id="pageContainer">
 		<div class="waiverHeader">
-			<h2>Waivers</h2>
+			<h2 id="h2Parent">Waivers</h2>
 		</div>
 <!-- 		<div class="filler"></div> -->
 		<!--waiver list...retrieves from back end via backbone..mustache???-->
@@ -42,7 +42,7 @@
 
 		<!--waiver detail view-->
 		<div id="waiverDetailDiv">
-			<p>Waivers/Permission Slips that need to be signed:</p>
+			<p class="uppercase">Waivers/Permission Slips that need to be signed:</p>
 			<ul>
 				<li><a href="">Field Trip to Discovery Children's Museum</a></li>
 				<li><a href="">Waiver for Sports</a></li>
@@ -69,8 +69,14 @@
 	<script src="js/parent.js"></script>
 
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
+<<<<<<< HEAD
 		{{#parents}}
 		<p><img src="{{picture_url}}"/> <span>{{first_name}} {{last_name}}</span></p>
+=======
+        {{#parents}}
+		<p>{{first_name}} {{last_name}}</p>
+		<img src="{{picture_url}}"/>
+>>>>>>> kristie
 		{{/parents}}
 	</script>
 

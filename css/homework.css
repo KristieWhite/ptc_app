@@ -1,7 +1,7 @@
 /*mobile query starts here*/
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-	.clearFloat {
+	
+    .clearFloat {
 		clear: both;
 		margin: 0;
 		padding: 0;
@@ -59,38 +59,13 @@
 		/*text-decoration: underline;*/
 		cursor: pointer;
 	}
-}
-
-
-/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-     
-      
-
-}*/
-
-
-/*closes mobile query*/
-
-
+    
+}/*ends mobile query*/
 /****************************************************************************************************/
-
-
 /*tablet query starts here*/
-
-
-/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-
-
-/*closes mobile query*/
-
-
-/****************************************************************************************************/
-
-
-/*****************************************************************************************************/
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-	.clearFloat {
+	
+    .clearFloat {
 		clear: both;
 		margin: 0;
 		padding: 0;
@@ -163,35 +138,31 @@
 		/*text-decoration: underline;*/
 		cursor: pointer;
 	}
-}
-
-
-/*closes tablet query*/
-
-
-/*****************************************************************************************************/
-
-
+    
+}/*closes tablet query*/
+/**************************************************************************************************************/
 /*laptop query starts here*/
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-	body {
+	
+    body {
 		margin-top: 180px;
-		color: #f2f2f2;
+/*        color: #f2f2f2;*/
 	}
+
 	.designH2 {
 		position: fixed;
-		top: 4.5em;
-		font-size: 1.8em;
-		flex-wrap: wrap;
-		text-shadow: #000000 3px 5px 2px;
+		top: 5em;
+        font-size: 1.8em;
+        letter-spacing: 1px;
+        text-shadow: #d0cccc 1px 1px 1px;
 	}
+    
 	#studentsDiv2 {
 		position: fixed;
-		margin-left: 3em;
-		top: 9em;
+        margin: 3em 0 0 3em;
 		float: left;
-		width: 37%;
+		width: 28%;
 		height: 20%;
 	}
 	#studentsDiv2 p {
@@ -211,20 +182,36 @@
 		left: 8em;
 	}
 	#homeworkDiv {
-		position: relative;
+        margin: -11em -5em 0 0;
 		float: right;
 		width: 45%;
-		bottom: 5em;
 	}
+    
+    #homeworkDiv a {
+        text-decoration: none;
+        color: rgb(11, 139, 172);
+    }
+    
+    #homeworkDiv a:hover {
+        text-transform: uppercase;
+        color: rgb(21, 149, 182);
+    }
+    
 	#homeworkDiv p {
-		position: relative;
-		bottom: 1em;
-		border: 5px solid gray;
-		border-radius: 5px;
+/*		position: relative;*/
+/*		bottom:1em;*/
+/*		border-radius: 5px;*/
 	}
 	.lightBlue {
-		color: gray;
+		color: lightBlue;
 	}
+    
+    .uppercaseNames {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .25px;
+    }
+
 	#link {
 		color: yellow;
 		text-decoration: none;
@@ -238,26 +225,9 @@
 		color: #1a8cab;
 	}
 	.StudentListItem-homeworkLink:hover {
-		/*text-decoration: underline;*/
 		cursor: pointer;
 	}
-	#mainAssignments {
-		width: 45%;
-		height: 800px;
-		position: relative;
-		display: inline-block;
-		border-right: 1px solid gray;
-	}
-	.assignments {
-		width: 100%;
-		height: 45%;
-		overflow: scroll;
-	}
-	.assignments2 {
-		width: 100%;
-		height: 45%;
-		overflow: scroll;
-	}
+
 	/*///////////teacher view styling//////////*/
 	.file {
 		visibility: hidden;
@@ -342,18 +312,13 @@
 		left: 10px;
 	}
 	/*detail styling*/
-}
-
-
-/*closes laptop query*/
-
-
-/************************************************************************************************/
-
-
+    
+}/*closes laptop query*/
+/*****************************************************************************************************/
 /*large screen query starts here*/
 
-@media only screen and (min-width: 1824px) {
+@media only screen  and (min-width : 1824px) {
+
 	body {
 		margin-top: 180px;
 		color: #f2f2f2;
@@ -408,146 +373,141 @@
 	#homeworkDiv a{
 		color: #1a8cab;
 		font-size:20px;
-	}
-	
+	}	
 
-#link {
-	color: yellow;
-	text-decoration: none;
-}
+    #link {
+        color: yellow;
+        text-decoration: none;
+    }
 
-#assignContainer {
-	width: 70%;
-	height: 100%;
-	margin: auto;
-}
+    #assignContainer {
+        width: 70%;
+        height: 100%;
+        margin: auto;
+    }
 
-.StudentListItem-homeworkLink {
-	color: #1a8cab;
-}
+    .StudentListItem-homeworkLink {
+        color: #1a8cab;
+    }
 
-.StudentListItem-homeworkLink:hover {
-	text-decoration: underline;
-	cursor: pointer;
-}
+    .StudentListItem-homeworkLink:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 
-#mainAssignments {
-	width: 45%;
-	height: 800px;
-	position: relative;
-	display: inline-block;
-	border-right: 1px solid gray;
-}
+    #mainAssignments {
+        width: 45%;
+        height: 800px;
+        position: relative;
+        display: inline-block;
+        border-right: 1px solid gray;
+    }
 
-.assignments {
-	width: 100%;
-	height: 45%;
-	overflow: scroll;
-}
+    .assignments {
+        width: 100%;
+        height: 45%;
+        overflow: scroll;
+    }
 
-.assignments2 {
-	width: 100%;
-	height: 45%;
-	overflow: scroll;
-}
+    .assignments2 {
+        width: 100%;
+        height: 45%;
+        overflow: scroll;
+    }
 
+    /*///////////teacher view styling//////////*/
 
-/*///////////teacher view styling//////////*/
+    .file {
+        visibility: hidden;
+    }
 
-.file {
-	visibility: hidden;
-}
+    .upload {
+        width: 40%;
+        height: 40px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 14px;
+        outline: none;
+    }
 
-.upload {
-	width: 40%;
-	height: 40px;
-	border: 2px solid gray;
-	border-radius: 10px;
-	font-size: 14px;
-	outline: none;
-}
+    .helpLinks {
+        width: 50%;
+        height: 30px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: 1px solid gray;
+        padding-left: 10px;
+        outline: none;
+        font-size: 14px;
+    }
 
-.helpLinks {
-	width: 50%;
-	height: 30px;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border: 1px solid gray;
-	padding-left: 10px;
-	outline: none;
-	font-size: 14px;
-}
+    .dueDate {
+        width: 35%;
+        height: 25px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding-left: 20px;
+    }
 
-.dueDate {
-	width: 35%;
-	height: 25px;
-	border: 1px solid gray;
-	border-radius: 5px;
-	padding-left: 20px;
-}
+    .subBtn {
+        width: 15%;
+        height: 34px;
+        border: 1px solid gray;
+        position: relative;
+        right: 6px;
+        bottom: 1px;
+        color: white;
+        font-size: 14px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
 
-.subBtn {
-	width: 15%;
-	height: 34px;
-	border: 1px solid gray;
-	position: relative;
-	right: 6px;
-	bottom: 1px;
-	color: white;
-	font-size: 14px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
+    .studentAssign:hover {
+        background: gray;
+        color: white;
+    }
 
-.studentAssign:hover {
-	background: gray;
-	color: white;
-}
+    #checkBoxContainer {
+        width: 30%;
+        height: 30%;
+        border: 2px solid gray;
+        box-shadow: 5px 5px 5px black;
+        display: inline-block;
+        display: none;
+    }
 
-#checkBoxContainer {
-	width: 30%;
-	height: 30%;
-	border: 2px solid gray;
-	box-shadow: 5px 5px 5px black;
-	display: inline-block;
-	display: none;
-}
+    #checkBoxContainer input[type=checkbox] {
+        width: 20%;
+        height: 20%;
+        position: relative;
+        left: 10px;
+        top: 5px;
+    }
 
-#checkBoxContainer input[type=checkbox] {
-	width: 20%;
-	height: 20%;
-	position: relative;
-	left: 10px;
-	top: 5px;
-}
+    #checkBoxContainer span {
+        margin: 0;
+        position: relative;
+        top: 1px;
+    }
 
-#checkBoxContainer span {
-	margin: 0;
-	position: relative;
-	top: 1px;
-}
+    .turnedIn {
+        width: 60%;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 20px;
+        background: red;
+        color: white;
+        position: relative;
+        top: 10px;
+        left: 20px;
+    }
 
-.turnedIn {
-	width: 60%;
-	height: 30px;
-	border: 1px solid black;
-	border-radius: 20px;
-	background: red;
-	color: white;
-	position: relative;
-	top: 10px;
-	left: 20px;
-}
+    #projects {
+        width: 45%;
+        height: 800px;
+        position: relative;
+        display: inline-block;
+        left: 10px;
+    }
 
-#projects {
-	width: 45%;
-	height: 800px;
-	position: relative;
-	display: inline-block;
-	left: 10px;
-}
-
-
-}
-
-/*closes large screen query*/
+}/*closes large screen query*/
