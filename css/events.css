@@ -22,18 +22,28 @@
         text-transform: uppercase;
     }
     .container {
-/*        width: 80%;*/
+/*        margin-top: 8em;*/
     }
     
-    #eventsContainer {
-/*        width: 80%;*/
+    #eventsContainer h3 {
+        margin-left: 1em;
+    }
+    
+    .margin {
+        padding: 1em;
     }
     
     #eventsParent {
 /*        width: 80%;*/
     }
     
-    #eventsParentDetailDiv {
+    #eventsParentDetailDiv h3 a {
+/*        width: 80%;*/
+/*        padding: 2em;*/
+        margin-left: 1em;
+        color: white;
+        
+/*        margin-top: 9em;*/
 /*        width: 80%;*/
     }
 
