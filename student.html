@@ -33,7 +33,7 @@
     </div>
 
     <div class="studentImg">
-      <img src="http://placehold.it/200x200" />
+      <div id="studentPicture"></div>
     </div>
 
     <div id="studentInfoDiv">
@@ -84,6 +84,12 @@
     {{/parents}}
   </script>
 
+  <script type="x-tmpl-mustache" id="studentPicTemplate">
+  {{#studentPic}}
+    <img src="{{picture_url}}"/>
+  {{/studentPic}}
+  </script>
+
   <script type="x-tmpl-mustache" id="studentInfoTemplate">
     {{#students}}
       <ul>
@@ -91,7 +97,6 @@
         <li><i class="color">Name:</i> {{first_name}} {{last_name}}</li>
         <li><i class="color">School:</i> Walter V Long Elementary School</li>
         <li><i class="color">School Address:</i> 2000 S Walnut Rd, Las Vegas, NV 89104</li>
-        <li><i class="color">Teachers:</i> </li>
       </ul>
     {{/students}}
   </script>
@@ -109,7 +114,7 @@
   <script type="x-tmpl-mustache" id="attendanceTemplate">
   {{#attendance}}
     <ul>
-      <li>{{date}}</li>
+      <li>{{absent}} {{tardy}} on {{date}}</li>
     </ul>
   {{/attendance}}
   </script>
