@@ -19,45 +19,44 @@
     color: lightBlue; 
   }*/
 
+/*--------------------- STUDENT PROFILE - LIST PARENT VIEW - parentStudent.html ------------------------*/
 
-/*********************** STUDENT PROFILE - LIST PARENT VIEW ******************************************/
+  #pickStudentContainer {
+    width: 75%;
+    margin: auto;
+    position: relative;
+    bottom: 60px;
+  }
 
-#pickStudentContainer {
-	width: 75%;
-	margin: auto;
-	position: relative;
-	bottom: 60px;
-}
+  #pickStudentContainer a {
+    color: black;
+    text-decoration: none;
+  }
 
-#pickStudentContainer a {
-	color: black;
-	text-decoration: none;
-}
+  #childList {
+    width: 25%;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+  }
 
-#childList {
-	width: 25%;
-	height: 200px;
-	position: relative;
-	display: inline-block;
-	margin-top: 15px;
-}
+  #childList ul {
+    list-style: none;
+    padding: 0;
+  }
 
-#childList ul {
-	list-style: none;
-	padding: 0;
-}
+  #childList a {
+  	font-size: 25px;
+  }
 
-#childList a {
-	font-size: 25px;
-}
-
-#childList a:hover {
-	text-decoration: underline;
-	cursor: pointer;
-}
+  #childList a:hover {
+  	text-decoration: underline;
+  	cursor: pointer;
+  }
 
 
-/***************************** STUDENT PROFILE - DETAIL PARENT VIEW ********************************/
+/*--------------------- STUDENT PROFILE - DETAIL PARENT VIEW - student.html --------------------*/
 
 #studentContainer {
 	width: 75%;
@@ -138,10 +137,8 @@
 }
 
 
-/******************************* END STUDENT PROFILE PARENT VIEW *******************************/
 
-
-/*************************** STUDENT PROFILE - ATTENDANCE - PARENT *******************************/
+/*--------------------------- STUDENT PROFILE - ATTENDANCE - PARENT - student.html -------------------------*/
 
 #studentBehavior {
 	width: 50%;
@@ -168,7 +165,7 @@
 }
 
 
-/**************************** STUDENT PROFILE - BEHAVIOR - PARENT ******************************/
+/*------------------------ STUDENT PROFILE - BEHAVIOR - PARENT - student.html -------------------------------*/
 
 #studentAttendance {
 	width: 45%;
@@ -194,7 +191,7 @@
 }
 
 
-/*************************** STUDENT PROFILE - GRADES - PARENT ********************************/
+/*-------------------------- STUDENT PROFILE - GRADES - PARENT - student.html ----------------------------*/
 
 
   #studentGrades {
@@ -218,12 +215,6 @@
     font-size: 18px;
   }
 
-/**********************************  TEACHER VIEW -  CLASSSET.HTML ****************************/
-
-  #setContainer {
-    width: 70%;
-    margin: auto;
-  }
 
   
 /*}*/ /*closes laptop query

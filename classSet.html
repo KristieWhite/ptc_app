@@ -6,7 +6,7 @@
 	<title>Students</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/student.css">
+	<link rel="stylesheet" type="text/css" href="css/student_teacher.css">
 </head>
 
 <body>
@@ -69,7 +69,7 @@
 		<h2>Click student's name to view student's profile</h2>
     {{#studentSet}}
       <ul>
-        <li><a href="studentSet.html?id={{id}}">{{first_name}} {{last_name}}</a></li>
+        <li><a href="studentProfile.html?id={{id}}">{{first_name}} {{last_name}}</a></li>
       </ul>
     {{/studentSet}}
 	</script>

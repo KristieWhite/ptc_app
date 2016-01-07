@@ -58,6 +58,26 @@ $(document).ready(function () {
 		}
 	});
 
+
+//////////////////////////** For Parent View to Waivers - waiverParent.html **//////////////////////////////
+
+
+	var studentWaiver = new ChildModel();
+		studentWaiver.fetch({
+			success:function(resp){
+				var studentWaiverData = {
+					'waiverStudents': resp.toJSON().results
+				};
+				console.log(resp.toJSON().results);
+				var studentWaiverTemplate = $("#studentWaiverTemplate").text();
+				var studentWaiverHTML = Mustache.render(studentWaiverTemplate, studentWaiverData);
+				$("#studentWaiver").html(studentWaiverHTML);
+			},
+			error:function(err){
+				console.log('error ', err);
+			}
+		});
+
 	
 });
 console.log("connected")

@@ -39,6 +39,22 @@ $(document).ready(function () {
 			}
 		});
 
+/////////////////////////////** For Teacher View Student Profile **//////////////////////////////////////
+
+		var studentProfile = new studentInfoModel();
+		studentProfile.fetch({
+			success: function(resp){
+				var studentData = {
+					'teacherView': resp.toJSON()
+				};
+				console.log(resp.toJSON());
+				var studentDataTemplate = $("#studentDataTemplate").text();
+				var studentDataHTML = Mustache.render(studentDataTemplate, studentData);
+				$("#studentData").html(studentDataHTML);
+				console.log(studentDataHTML);
+			}
+		});
+
 ///////////////////////////////////**** STUDENT ATTENDANCE ****////////////////////////////////////////
 
 	var AttendanceModel = Backbone.Model.extend({
