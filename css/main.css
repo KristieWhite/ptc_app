@@ -22,14 +22,36 @@
 		color: white;
 		background-position: center;
 	}
-
 	h1 {
         font-size: 1.5em;
 		margin: 0;
 		padding: .5em 0;
 		text-align: center;
 	}
+    .navbar {
+        
+    }
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+/*        width: 60px;*/
+    }
     
+    .navbar ul li {
+/*        width: 60px;*/
+    }
+    .navbar li a {
+/*        display: inline;*/
+/*        width: 33%;*/
+        background-color: gray;
+        padding: 2px;
+    }
+    .navbar a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+    }
 	.footer {
         margin: 1em 0 0 0;
 		width: 100%;
