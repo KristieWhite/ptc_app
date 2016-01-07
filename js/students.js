@@ -6,15 +6,6 @@ $(document).ready(function () {
 	var studentInfoModel = Backbone.Model.extend({
 		initialize: function () {
 		},
-		defaults: {
-			"id": null,
-			"first_name": null,
-			"last_name": null,
-			"parent": null,
-			"school_class": null,
-			"classfeepayment_set": null,
-			"studenthomework_set":null
-	},
 		Model:studentInfoModel,
 		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId
 	});
@@ -22,6 +13,11 @@ $(document).ready(function () {
 		Model: studentInfoModel,
 		url: "https://murmuring-sands-9831.herokuapp.com/api/students/" + studentId
 	}); 
+
+
+
+/////////////////////////////**** STUDENT PROFILE - PARENT VIEW ****/////////////////////////////////
+
 		var student = new studentInfoModel();
 		student.fetch({
 			success: function (resp) {
@@ -39,7 +35,37 @@ $(document).ready(function () {
 			}
 		});
 
-///////////////////////////////////**** STUDENT ATTENDANCE ****////////////////////////////////////////
+/////////////////////////////**** For Teacher View Student Profile ****///////////////////////////////////
+
+		var studentProfile = new studentInfoModel();
+		studentProfile.fetch({
+			success: function(resp){
+				var studentData = {
+					'teacherView': resp.toJSON()
+				};
+				console.log(resp.toJSON());
+				var studentDataTemplate = $("#studentDataTemplate").text();
+				var studentDataHTML = Mustache.render(studentDataTemplate, studentData);
+				$("#studentData").html(studentDataHTML);
+				console.log(studentDataHTML);
+			}
+		});
+
+		var studentImage = new studentInfoModel();
+		studentImage.fetch({
+			success: function(resp){
+				var studentImg = {
+					'studentPic': resp.toJSON()
+				};
+				console.log(resp.toJSON());
+				var studentPicTemplate = $("#studentPicTemplate").text();
+				var studentPicHTML = Mustache.render(studentPicTemplate, studentImg);
+				$("#studentPicture").html(studentPicHTML);
+				console.log(studentPicHTML);
+			}
+		});
+
+////////////////////////////////**** STUDENT ATTENDANCE ****////////////////////////////////////
 
 	var AttendanceModel = Backbone.Model.extend({
 		intialize: function(){
@@ -63,10 +89,47 @@ $(document).ready(function () {
 			var attendanceTemplate = $("#attendanceTemplate").text();
 			var attendanceHTML = Mustache.render(attendanceTemplate, attendanceInfo);
 			$("#attendanceDiv").html(attendanceHTML);
+			if (resp.absent == true) {
+			console.log("Child was absent");
+			return ("Child was absent")
+			} else if (resp.tardy == true) {
+			console.log("Child was tardy");
+			return ("Child was tardy");
+			}
 		},
 		error: function(err){
 			console.log('error ', err);
 		}
+	});
+
+
+//////////////////// TEACHER SUBMIT ATTENDANCE ////////////////////
+
+
+	$("#attendBtn").on('click',function(e){
+		e.preventDefault();
+	var attendSave = new AttendanceModel();
+	attendSave.set({
+		id: $(".mainId").val(),
+		date: $(".attendDate").val(),
+		absent: $(".absent").val(),
+		tardy: $(".tardy").val()
+	})
+	$(".attendDate").val(""),
+	$(".absent").val(""),
+	$(".tardy").val("");
+		attendSave.save(null,{
+			success:function(resp){
+				AttendanceCollection.fetch({
+					success: function(resp){
+						alert("This has been submitted");
+					}, error: function(err){	
+					}
+				})
+			}, error: function(err){
+				console.log("error ", err);
+		}
+	})
 	});
 
 ///////////////////////////////**** STUDENT BEHAVIOR ****/////////////////////////////////////////////////
@@ -93,13 +156,46 @@ $(document).ready(function () {
 			var behaviorTemplate = $("#behaviorTemplate").text();
 			var behaviorHTML = Mustache.render(behaviorTemplate, behaviorInfo);
 			$("#behaviorDiv").html(behaviorHTML);
+			if($(".badBehavior").is(":checked")){
+				return ("Child was not on best behavior today");
+			}
 		},
 		error: function(err){
 			console.log('error ', err);
 		}
 	});
 
-////////////////////////////////**** STUDENT GRADES ****////////////////////////////////////////////////
+
+
+/////////////////////////////////// TEACHER SUBMIT BEHAVIOR /////////////////////////////
+
+
+	$("#behaveBtn").on('click',function(e){
+			e.preventDefault();
+		var behaveSave = new BehaviorModel();
+		behaveSave.set({
+			id: $(".mainId").val(),
+			date: $(".datePick").val(),
+			description: $(".behaveDescrip").val()
+		})
+		$(".datePick").val(""),
+		$(".behaveDescrip").val("");
+			behaveSave.save(null,{
+				success:function(resp){
+					BehaviorCollection.fetch({
+						success: function(resp){
+							console.log('success ', resp);
+						}, error: function(err){	
+						}
+					})
+				}, error: function(err){
+					console.log("error ", err);
+			}
+		})
+			alert("This has been submitted");
+		});
+
+///////////////////////////////////**** STUDENT GRADES ****////////////////////////////////////////////
 
 	var GradeModel = Backbone.Model.extend({
 		intialize: function(){
@@ -129,9 +225,50 @@ $(document).ready(function () {
 		}
 	});
 
+///////////////////////////////// TEACHER SUBMIT GRADES ////////////////////////
+
+
+	var StudentGradeModel = Backbone.Model.extend({
+		intialize: function(){
+		},
+		Model: StudentGradeModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/homework/" + id
+	});
+
+	var StudentGradeCollection = Backbone.Collection.extend({
+		Model: StudentGradeModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/homework/" + id
+	});
+
+	$("#gradesBtn").on('click',function(e){
+			e.preventDefault();
+		var gradesSave = new StudentGradeModel();
+		gradesSave.set({
+			id: $(".mainId").val(),
+			title: $(".hwTitle").val(),
+			date: $(".dueDate").val(),
+			points: $(".points").val(),
+			total_points: $(".total_points").val()
+		})
+		$(".hwTitle").val(""),
+		$(".dueDate").val(""),
+		$(".points").val(""),
+		$(".total_points").val("");
+			gradesSave.save(null,{
+				success:function(resp){
+					GradeCollection.fetch({
+						success: function(resp){
+						}, error: function(err){	
+						}
+					})
+				}, error: function(err){
+					console.log("error ", err);
+			}
+		})
+			alert("This has been submitted");
+		});
 
 }); // closes doc.ready
-
 
 
 
