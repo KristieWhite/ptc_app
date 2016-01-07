@@ -1,105 +1,114 @@
 /*mobile query starts here*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 
-
-/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 	@font-face {
-
+		font-family: 'Firestarter Z';
+		src: url('../fonts/Firestarter Z.ttf');
 	}
+
 	body {
+        width: 100%;
 		background: url("../images/greenChalkBoard.jpg");
-		background-size: 100%;
+        background-position: center;
 		font-family: serif;
 		color: white;
 	}
+
 	.header {
 		background: url("../images/blackChalkBoard.jpg") repeat;
-		background-repeat: repeat-x;
+		background-repeat: repeat;
 		width: 100%;
 		border-bottom: 2px solid black;
-		font-family: 'EraserDust';
 		color: white;
 		background-position: center;
 	}
+
 	h1 {
+        font-size: 1.5em;
 		margin: 0;
 		padding: .5em 0;
 		text-align: center;
 	}
+    
 	.footer {
-		position: fixed;
+        margin: 1em 0 0 0;
 		width: 100%;
-		height: 60px;
+		height: 40px;
 		border-top: 2px solid black;
 		text-align: center;
-		bottom: 0;
+		background-color: black;
 	}
-}*/
 
-
-/*closes mobile query*/
-
+}/*closes mobile query
 
 /****************************************************************************************************/
 
-
 /*tablet query starts here*/
 
-
-/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 	@font-face {
-		/*
 		font-family: 'EraserDust';
 		src: url('../fonts/EraserDust.ttf');
-
 	}
-	a:visited {
-		color: white;
+	.navbar li {
+		background: rgb(71, 71, 74);
+		border-bottom: none;
+		line-height: 7em;
+		font-size: 1.5em;
+		margin-left: -1px;
+        letter-spacing: 2px;
 	}
-	a:link {
-		color: white;
-	}
-	body {
-		font-family: serif;
-		color: black;
-	}
-	.header {
-		width: 100%;
-		height: 100px;
-		border-bottom: 2px solid black;
-		font-family: 'EraserDust';
-		color: white;
-		background: url("../images/blackChalkBoard.jpg") repeat;
+	.navbar a {
 		background-position: center;
+		text-decoration: none;
+		color: #fff;
+		display: block;
+		transition: .3s background-color;
 	}
-	.header h1 {
-		margin-top: 50px;
-		padding: 1em;
-		position: relative;
-		text-align: center;
-		font-size: 3em;
-		top: 20px;
-		left: 40px;
-		width: 80%;
-		display: inline-block;
+	.navbar a:hover {
+		background-color: rgb(20, 20, 30);
+        text-transform: uppercase;
 	}
+
 	.footer {
+		position: fixed;
+		bottom: 0;
 		width: 100%;
-		height: 60px;
+		height: 80px;
 		border-top: 2px solid black;
 		text-align: center;
+		font-size: 20px;
+		background-color: #525252;
+		color: white;
+		z-index: 1;
 	}
-}*/
+    
+/*this is the user icon*/
+	#parentInfo {
+		position: fixed;
+        right: 3em;
+	}
+	#parentInfo p {
+        float: right;
+		font-size: 20px;
+	}
+	#parentInfo img {
+        position: relative;
+        top: -3.5em;
+        right: -6em;
+		border-radius: 5px;
+		width: 70px;
+		height: 70px;
+		border-radius: 5px;
+	}
 
-
-/*closes tablet query*/
-
-
+}/*closes tablet query*/
 /*****************************************************************************************************/
-
 
 /*laptop query starts here*/
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	
 	@font-face {
 		font-family: 'Firestarter Z';
 		src: url('../fonts/Firestarter Z.ttf');
@@ -143,7 +152,7 @@
 	.navbar {
 		position: fixed;
 		top: 82px;
-		width: 9%;
+		width: 11%;
 		z-index: 2;
 	}
 	.navbar ul {
@@ -156,7 +165,7 @@
 	.navbar li {
 		background: rgb(71, 71, 74);
 		border-bottom: none;
-		line-height: 96px;
+		line-height: 80px;
 		font-size: 15px;
 		margin-left: -1px;
 		letter-spacing: 2px;
@@ -175,7 +184,7 @@
 	}
 	.footer {
 		position: fixed;
-		top:562px;
+		top: 562px;
 		width: 100%;
 		height: 63px;
 		border-top: 2px solid black;
@@ -186,7 +195,7 @@
 		z-index: 1;
 		right: 0px;
 	}
-	/*this is the user icon*/
+	/*user icon*/
 	#parentInfo {
 		position: fixed;
 		left: 1000px;
@@ -204,29 +213,39 @@
 	#parentInfo span {
 		position: absolute;
 		left: 180px;
-		bottom: 90px;
+		bottom: 80px;
 	}
-}
+	#teachHome {
+		position: fixed;
+		bottom: 490px ;
+		left: 1000px;
+	}
+	#teachHome img {
+		position: relative;
+		top: -3.5em;
+		right: -6em;
+		border-radius: 5px;
+		width: 70px;
+		height: 70px;
+		border-radius: 5px;
+	}
+	#teachHome p {
+		position: absolute;
+		left: 180px;
+		bottom: 60px;
+	}
 
-
-/*closes laptop query*/
-
+}/*closes laptop query*/
 
 /************************************************************************************************/
-
-
 /*large screen query starts here*/
-
-
-/*@media only screen and (min-width: 1824px) {
+@media only screen and (min-width: 1824px) {
 	@font-face {
-
 		font-family: 'Firestarter Z';
 		src: url('../fonts/Firestarter Z.ttf');
 	}
-    
 	.yellow {
-		color: rgba(255, 225, 0, 1);
+		color: rgba(255, 225, 0, 0.01);
 	}
 	.uppercase {
 		text-transform: uppercase;
@@ -236,7 +255,6 @@
 		top: 180px;
 		color: black;
 		background: #ebe7e7;
-		/*this works great for a fixed header and nav bar situation on some (not sure about all) pages
 	}
 	.header {
 		position: fixed;
@@ -269,7 +287,7 @@
 	}
 	.navbar ul {
 		height: 100px;
-        width: 30px;
+		width: 30px;
 		list-style: none;
 		text-align: center;
 		padding: 1em;
@@ -279,22 +297,21 @@
 		background: black;
 		border-bottom: none;
 		line-height: 8em;
-		font-size: 1.3em;
+		font-size: 1em;
 		margin-left: -1px;
 	}
 	.navbar a {
-		background:#336699;
+		background: #336699;
 		background-position: center;
 		text-decoration: none;
 		color: #fff;
-		letter-spacing:4px;
+		letter-spacing: 4px;
 		display: block;
 		transition: .3s background-color;
 	}
 	.navbar a:hover {
 		background-color: #195189;
 		text-transform: uppercase;
-
 	}
 	.footer {
 		position: fixed;
@@ -319,13 +336,12 @@
 		height: 70px;
 		border-radius: 5px;
 	}
-
 	#parentInfo span {
-		position:absolute;
+		position: absolute;
 		left: 80px;
 		bottom: 40px;
 		font-size: 20px;
-	
 	}
-}
-/*
+
+}/*closes large screen*/
+

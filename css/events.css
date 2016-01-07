@@ -28,7 +28,7 @@
 	}
 	#eventsContainer h2 {
 		margin-top: 50px;
-		margin-left: 0px;
+		margin-left: 30px;
 		color: #006495;
 		font-size: 30px;
 	}
@@ -48,14 +48,14 @@
 		width: 200px;
 		border-radius: 5px;
 		position: relative;
-		right: 200px;
+		right: 65px;
     }
     
 	#classEventsDetailDiv h3 {
         width: 50%;
         letter-spacing: .25px;
 		position: relative;
-		left: 80px;
+		left: 190px;
 		bottom: 130px;
 	}
     
@@ -73,7 +73,7 @@
 	#classEventsDetailDiv span {
         letter-spacing: .30px;
 		position: relative;
-		left: 80px;
+		left: 190px;
 		bottom: 120px;
 		width: 500px;
 	}
@@ -157,10 +157,10 @@
 		cursor: pointer;
 		background-color: rgba(255, 204, 0, 1);
 	}
-}
-/*closes laptop query*/
+
+}/*closes laptop query*/
 /****************************************************************************************/
-/*large screen query starts here
+/*large screen query starts here*/
 
 /*@media only screen and (min-width: 1824px) {
 	.uppercase {
@@ -265,7 +265,6 @@
 		/*margin: auto;
 		width: 100%;
 		margin-right: 0;
-		background-color: black;
 		padding: 1em 0 5em 0;
 	}
 	.addEventForm {
@@ -321,7 +320,7 @@
 		margin: 10px;
 	}
 	/********style the event form********
-	#teacherAddEvent {
+	/*#teacherAddEvent {
 		width: 50%;
 		margin: auto;
 		text-align: center;
@@ -358,7 +357,6 @@
 		width: 200px;
 		margin: 10px;
 	}
-}
-
-/*closes large screen query*/
+	
+}/*closes large screen query*/
 

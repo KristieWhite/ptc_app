@@ -1,6 +1,5 @@
-
 /*mobile query starts here*/
-/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
    
     div.sexyLine {
       margin-top: 50px;
@@ -42,7 +41,7 @@
     }
     button:hover {
           background-color: rgba(255, 204, 0, 0, 8);
-    }*/
+    }
     
 }/*closes mobile query*/
 /****************************************************************************************************/

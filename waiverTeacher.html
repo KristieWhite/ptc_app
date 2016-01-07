@@ -13,6 +13,7 @@
 <body>
 	<div class="header">
 		<h1>Waivers</h1>
+		<div id="teachHome"></div>
 	</div>
 	<div class="navbar">
 		<ul>
@@ -21,6 +22,7 @@
 			<li><a href="./waiverTeacher.html">Waivers</a></li>
 			<li><a href="./FeesListTeacher.html">Fees</a></li>
 			<li><a href="./eventsTeacher.html">Events</a></li>
+			<li><a href="./eventsTeacher.html">Classes</a></li>
 
 		</ul>
 	</div>
@@ -53,12 +55,13 @@
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-  <script src="js/jquery.cookie.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
 	<script src="js/waiver.js"></script>
-	
+	<script src="js/Teacher.js"></script>
+
 	<script type="x-tmpl-mustache" id="waiverListTemplate">
 		<h2>Waiver</h2> {{#waiver}} {{}} {{/waiver}}
 	</script>
@@ -67,6 +70,13 @@
 		<h2>Waiver Detail</h2> {{#waiverDetail}}
 		<button class="sexyButton">Sign This Waiver</button>
 		{{}} {{/waiverDetail}}
+	</script>
+
+	<script type="x-tmpl-mustache" id="teacherTemplate">
+		{{#teacher}}
+		<img src="{{picture_url}}" />
+		<p>{{first_name}} {{last_name}}</p>
+		{{/teacher}}
 	</script>
 
 

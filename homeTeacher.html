@@ -9,16 +9,18 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
+		<div id="teachHome"></div>
+
 	</div>
 
 	<div id="homeContainer">
-		<div id="teachHome"></div>
 		<div class="hover07 column">
 			<div class="centerContainer">
-			<!--Students-->
+				<!--Students-->
 				<div>
 					<figure class="homeStudent">
 						<a href="./classSet.html">
@@ -29,7 +31,7 @@
 				</div>
 			</div>
 			<div class="leftContainer">
-			<!--Assignmnents-->
+				<!--Assignmnents-->
 				<div>
 					<figure>
 						<a href="./hwteachview.html">
@@ -38,27 +40,17 @@
 					</figure>
 					<p>Assignments</p>
 				</div>
-			<!--Fees-->
+				<!--Fees-->
 				<div>
 					<figure>
 						<a href="./FeesListTeacher.html">
 							<img src="./images/fees.gif" />
 						</a>
 					</figure>
-					<p>Upcoming Fees</p>
+					<p>Fees</p>
 				</div>
 			</div>
 			<div class="rightContainer">
-			<!--PROFILE-->
-<!-- 				<div>
-					<figure>
-						<a href="./teacher.html">
-							<img src="https://raw.githubusercontent.com/jaimariev/ptc_app/master/images/5personIcon.png">
-						</a>
-					</figure>
-					<p>My Profile</p>
-				</div> -->
-			<!--Waiver-->
 				<div>
 					<figure>
 						<a href="./waiverTeacher.html">
@@ -67,14 +59,14 @@
 					</figure>
 					<p>Waivers</p>
 				</div>
-			<!--Calender-->
+				<!--Calender-->
 				<div>
 					<figure>
 						<a href="./eventsTeacher.html">
 							<img src="./images/calendar.jpg">
 						</a>
 					</figure>
-					<p>Events Calendar</p>
+					<p>Events</p>
 				</div>
 			</div>
 		</div>
@@ -85,19 +77,18 @@
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-  <script src="js/url.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+	<script src="js/url.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/Teacher.js"></script>
 
 	<script type="x-tmpl-mustache" id="teacherTemplate">
-    {{#teacher}}
-      <h2>Hello, {{first_name}} {{last_name}}. </h2>
-    {{/teacher}}
+		{{#teacher}}
+		<p>Hello, {{first_name}} {{last_name}}. </p> {{/teacher}}
 	</script>
 </body>
-  
+
 </html>

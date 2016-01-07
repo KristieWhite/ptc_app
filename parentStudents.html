@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Student Profile</title>
@@ -7,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/student.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
 
 	<div class="header">
@@ -14,20 +16,21 @@
 		<div id="parentInfo"></div>
 	</div>
 
-  <div class="navbar">
-    <ul>
-      <li><a href="./homeParent.html">Home</a></li>
-		  <li><a href="./hwparentview.html">Assignments</a></li>
-      <li><a href="./waiverParent.html">Waivers</a></li>
-      <li><a href="./feesListParent.html">Fees</a></li>
-      <li><a href="./eventsParent.html">Events</a></li>
-    </ul>
-  </div>
+	<div class="navbar">
+		<ul>
+			<li><a href="./homeParent.html">Home</a></li>
+			<li><a href="./hwparentview.html">Assignments</a></li>
+			<li><a href="./waiverParent.html">Waivers</a></li>
+			<li><a href="./feesListParent.html">Fees</a></li>
+			<li><a href="./eventsParent.html">Events</a></li>
+			<li><a href="./parentStudents.html">Students</a></li>
+		</ul>
+	</div>
 
-  <div id="pickStudentContainer">
-    <h2 class="childView">Which student profile would you like to view?</h2>
-    <div id="childList"></div>
-  </div>
+	<div id="pickStudentContainer">
+		<h2 class="childView">Which student profile would you like to view?</h2>
+		<div id="childList"></div>
+	</div>
 
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
@@ -37,27 +40,26 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-  <script src="js/url.min.js"></script>
+	<script src="js/url.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/classes.js"></script>
-  <script src="js/parent.js"></script>
+	<script src="js/parent.js"></script>
 
 
-  <script type="x-tmpl-mustache" id="parentInfoTemplate">
-    {{#parents}}
-      <p>{{first_name}} {{last_name}}</p>
-      <img src="{{picture_url}}"> 
-    {{/parents}}
-  </script>
+		<script type="x-tmpl-mustache" id="parentInfoTemplate">
+		{{#parents}}
+		<p><img src="{{picture_url}}" /> <span>{{first_name}} {{last_name}}</span></p>
+		{{/parents}}
+	</script>
 
-  <script type="x-tmpl-mustache" id="childTemplate">
-    {{#child}}
-      <ul>
-        <li><a href='/student.html?id={{id}}' class="studentName">{{first_name}} {{last_name}}</a></li>
-      </ul>
-    {{/child}}
-  </script>
+	<script type="x-tmpl-mustache" id="childTemplate">
+		{{#child}}
+		<ul>
+			<li><a href='/student.html?id={{id}}' class="studentName">{{first_name}} {{last_name}}</a></li>
+		</ul>
+		{{/child}}
+	</script>
 </body>
 
 </html>
