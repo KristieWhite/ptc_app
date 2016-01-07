@@ -13,6 +13,7 @@
 
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
+		<div id="teachHome"></div>
 	</div>
 	<div class="navbar">
 		<ul>
@@ -21,6 +22,7 @@
 			<li><a href="./waiverTeacher.html">Waivers</a></li>
 			<li><a href="./FeesListTeacher.html">Fees</a></li>
 			<li><a href="./eventsTeacher.html">Events</a></li>
+			<li><a href="./eventsTeacher.html">Classes</a></li>
 		</ul>
 	</div>
 
@@ -32,24 +34,11 @@
 			<h2>Click class to view students</h2>
 			<div id="classSetDiv"></div>
 		</div>
-		
+
 		<div id="studentSetContainer">
 			<h2>Click student's name to view student's profile</h2>
 			<div id="studentSetDiv"></div>
 		</div>
-<!-- 		<div id="classesDiv" class=""></div>
-		<div id="classesDiv2" class=""></div>
-		<div id="studentsDiv" class=""></div> -->
-
-<!-- 		<div class="studentBehavior">
-			<p>Student Behavior: </p>
-			<input type="text" class="behavior" placeholder="Enter Description Here" />
-		</div>
-
-		<div class="studentEvents">
-			<p>Upcoming Student Events: </p>
-			<a href="">Example</a>
-		</div> -->
 
 	</div>
 	<!-- end student profile teacher view -->
@@ -66,28 +55,34 @@
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/appModels/ClassesCollection.js"></script>
-	<script src="js/studentsTeacherView.js"></script> 
-
+	<!--<script src="js/studentsTeacherView.js"></script>-->
+	<script src="js/Teacher.js"></script>
+	
+	<script type="x-tmpl-mustache" id="teacherTemplate">
+		{{#teacher}}
+		<img src="{{picture_url}}" />
+		<p>{{first_name}} {{last_name}}</p> 
+		{{/teacher}}
+	</script>
 
 	<script type="x-tmpl-mustache" id="classSetTemplate">
 		{{#classes}}
-			<ul>
-				<li class="classes" value= {{id}}>{{name}}</li>
-			</ul>
+		<ul>
+			<li class="classes" value={ {id}}>{{name}}</li>
+		</ul>
 		{{/classes}}
 	</script>
 
 
 	<script type="x-tmpl-mustache" id="studentSetTemplate">
-    {{#studentSet}}
-      <ul>
-        <li><a href="studentSet.html?id={{id}}">{{first_name}} {{last_name}}</a></li>
-      <ul>
-    {{/studentSet}}
+		{{#studentSet}}
+		<ul>
+			<li><a href="studentSet.html?id={{id}}">{{first_name}} {{last_name}}</a></li>
+			<ul>
+			{{/studentSet}}
 	</script>
 
-
-<!-- 
+	<!-- 
 	<script type="x-tmpl-mustache" id="studentsTeacherDetailTemplate">
 		<h3 class="black">List of the students for teachers, api/students/id</h3>
 		{{#students}}
@@ -114,4 +109,5 @@
  -->
 
 </body>
+
 </html>

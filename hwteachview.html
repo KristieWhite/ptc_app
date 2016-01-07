@@ -12,6 +12,7 @@
 <body>
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
+		<div id="teachHome"></div>
 	</div>
 
 	<div class="navbar">
@@ -21,12 +22,13 @@
 			<li><a href="./waiverTeacher.html">Waivers</a></li>
 			<li><a href="./FeesListTeacher.html">Fees</a></li>
 			<li><a href="./eventsTeacher.html">Events</a></li>
+			<li><a href="./eventsTeacher.html">Classes</a></li>
 		</ul>
 	</div>
 
 	<div id="assignmentContainer">
 		<div class="assignmentHeader">
-			<h2>Assignments</h2>
+			<h2>Upload an Assignment</h2>
 		</div>
 		<div id="uploadAssignments">
 			<div class="assignments">
@@ -48,8 +50,7 @@
 					<li><a href="">Assignment 1</a></li>
 				</ul>
 			</div>
-		</div>
-		<div id="projects">
+
 			<div class="assignments">
 				<p>Weekend Assigments/Projects: </p>
 				<button class="upload">Upload Project</button>
@@ -90,11 +91,13 @@
 	<script type="text/javascript" src="js/hwParentView.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
 
-	<script type="x-tmpl-mustache" id="studentsTemplate">
+	<script src="js/Teacher.js"></script>
 
-		{{#students}}
-		<p><a href="">{{name}}</a></p>
-		{{/students}}
+	<script type="x-tmpl-mustache" id="teacherTemplate">
+		{{#teacher}}
+		<img src="{{picture_url}}" />
+		<p>{{first_name}} {{last_name}}</p>
+		{{/teacher}}
 	</script>
 
 </body>

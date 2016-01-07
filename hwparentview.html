@@ -24,6 +24,7 @@
 			<li><a href="./waiverParent.html">Waivers</a></li>
 			<li><a href="./feesListParent.html">Fees</a></li>
 			<li><a href="./eventsParent.html">Events</a></li>
+			<li><a href="./parentStudents.html">Children</a></li>
 		</ul>
 	</div>
 
@@ -51,22 +52,25 @@
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
-		<p><img src="{{picture_url}}"/> <span>{{first_name}} {{last_name}}</span></p>
+		<p><img src="{{picture_url}}" /> <span>{{first_name}} {{last_name}}</span></p>
 		{{/parents}}
 	</script>
 
 
 	<script type="x-tmpl-mustache" id="studentTpl">
-		<p><span class="uppercaseNames">{{first_name}} {{last_name}}</span>  
-		<a class="StudentListItem-homeworkLink"> - <span class=""><i>&nbsp;Show My Homework&nbsp;</i></span></a></p>
+		<p><span class="uppercaseNames">{{first_name}} {{last_name}}</span>
+			<a class="StudentListItem-homeworkLink"> - <span class=""><i>&nbsp;Show My Homework&nbsp;</i></span></a></p>
 	</script>
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
-			<p><span class="uppercase">{{first_name}} {{last_name}}</span>	
-			Due Date: {{due_date}} <br><br>
-			<span class="lightBlue"><a href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>: {{title}}</a></span><br><br>
-			Description: {{description}}</p>
-			<br><br>
+		<p><span class="uppercase">{{first_name}} {{last_name}}</span> Due Date: {{due_date}}
+			<br>
+			<br>
+			<span class="lightBlue"><a href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>: {{title}}</a></span>
+			<br>
+			<br> Description: {{description}}</p>
+		<br>
+		<br>
 	</script>
 
 </body>
