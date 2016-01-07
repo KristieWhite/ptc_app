@@ -1,62 +1,82 @@
+
 /*mobile query starts here*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 	
-    .clearFloat {
+  .clearFloat {
 		clear: both;
 		margin: 0;
 		padding: 0;
 	}
+/*	body {
+		margin-top: 120px;
+	}*/
+
+	#assignContainer {
+		width: 80%;
+		height: 100%;
+		margin: auto;
+		position: relative;
+		bottom: 70px;
+	}
+
 	body {
 		margin-top: 220px;
 	}
+
 	#studentsDiv2 {
 		/*border: 1px solid blue;*/
 		position: fixed;
-		margin: 15em 0 0 0;
-		float: left;
+		margin-left: 70px;
+		display: inline-block;
 		width: 45%;
+		top: 190px;
 	}
-	h2 {
-		position: fixed;
-		margin-top: 7em;
+
+	.assignHeader h2{
+		color: #006495;
+		font-size: 35px;
+		text-decoration: underline;
+		margin: 0;
+		margin-top: 20px;
+		margin-left: 50px;
 	}
-	.blue {
-		/*color: #006495;*/
+
+	.color {
+		color: #006495;
 	}
+
 	#homeworkDiv {
 		/*border: 1px solid red;*/
 		position: relative;
-		bottom: 40px;
+		display: inline-block;
+		bottom: 120px;
 		float: right;
 		width: 45%;
-		margin-top: 15em;
-		/*height: 400px;*/
+		height: 400px;
 		top: 10px;
-		/*overflow: scroll;*/
+		height: 500px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		overflow: scroll;
 	}
-	.lightBlue {
+
+	#homeworkDiv p {
+		margin-left: 10px;
+	}
+
+/*	.lightBlue {
 		color: lightblue;
-	}
-	#studentsDiv2 a:hover {
-		background-color: #333300;
-		/*text-decoration: none;*/
-		text-transform: uppercase;
-	}
-	#studentsDiv2 {
-		/*border: 1px solid black;*/
-		/*background-color: rgba(100, 200, 200, 0.20);*/
-	}
+	}*/
+
 	#studentsDiv {
 		/*border: 1px solid yellow;*/
 	}
-	#assignContainer {
-		width: 80%;
-		/*height: 100%;*/
-		margin: auto;
-		/*margin-top: 40px;*/
+
+	.StudentListItem-homeworkLink {
+		color: #006495;
 	}
 	.StudentListItem-homeworkLink:hover {
-		/*text-decoration: underline;*/
+		text-decoration: underline;
 		cursor: pointer;
 	}
     
@@ -85,11 +105,26 @@
 		width: 28%;
 		height: 20%;
 	}
+
 	#studentsDiv2 p {
 		margin-top: 40px;
 	}
 	#studentsDiv2 a:hover {
 		text-transform: uppercase;
+	}
+	#fixedH2 {
+		display: inline-block;
+		width: 45%;
+		top: 190px;
+	}
+
+	.assignHeader h2 {
+		color: #006495;
+		font-size: 35px;
+		text-decoration: underline;
+		margin: 0;
+		margin-top: 20px;
+		margin-left: 50px;
 	}
 	#studentsDiv2 {
 		background-color: rgba(200, 200, 200, 0.20);
@@ -105,6 +140,12 @@
         margin: -11em -5em 0 0;
 		float: right;
 		width: 45%;
+		height: 400px;
+		top: 10px;
+		height: 500px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		overflow: scroll;
 	}
     
     #homeworkDiv a {
@@ -145,6 +186,21 @@
 		color: #1a8cab;
 	}
 	.StudentListItem-homeworkLink:hover {
+		margin-left: 10px;
+	}
+	/*	.lightBlue {
+		color: lightblue;
+	}*/
+
+	#studentsDiv {
+		/*border: 1px solid yellow;*/
+	}
+
+	.StudentListItem-homeworkLink {
+		color: #006495;
+	}
+	.StudentListItem-homeworkLink:hover {
+		text-decoration: underline;
 		cursor: pointer;
 	}
 
@@ -407,9 +463,11 @@
 		left: 10px;
 	}
 	/*detail styling*/
+
     
 }/*closes laptop query*/
 /*****************************************************************************************************/
+
 /*large screen query starts here*/
 
 @media only screen  and (min-width : 1824px) {
@@ -465,6 +523,7 @@
 		padding: 5px;
 		font-size:20px;
 	}
+
 	#homeworkDiv a{
 		color: #1a8cab;
 		font-size:20px;
@@ -606,3 +665,4 @@
     }
 
 }/*closes large screen query*/
+

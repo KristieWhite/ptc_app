@@ -10,26 +10,25 @@
 
 
 
+
 }/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
+
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-
-    @font-face {
-		font-family: '';
-		src: url('');
-	}
-    
-	body {
-		margin-top: -80px;
-	}
-
 	.uppercase {
 		text-transform: uppercase;
 	}
-   
+
+	.black {
+		color: black;
+	}
+	a:visited {
+		color: white;
+	}
 	#eventsContainer h2 {
-		margin-left: 50px;
+		margin-top: 50px;
+		margin-left: 0px;
 		color: #006495;
 		font-size: 30px;
 	}
@@ -39,36 +38,24 @@
 		position: relative;
 		bottom: 70px;
 	}
-	#eventsListDiv {
-		width: 45%;
-		float: left;
-	}
-	#eventsDetailDiv {
-		width: 45%;
-		float: right;
-	}
-	#schoolEventsDetailDiv {
-		margin-left: 50px;
-	}
-    
+
     /*events list on parent events page*/
 	#classEventsDetailDiv {
-		margin-left: 5em;
         float: left;
         width: 70%;
-        padding: 1em;
 	}
-	
 	#classEventsDetailDiv img {
 		width: 200px;
 		border-radius: 5px;
+		position: relative;
+		right: 200px;
     }
     
 	#classEventsDetailDiv h3 {
         width: 50%;
         letter-spacing: .25px;
 		position: relative;
-		left: 230px;
+		left: 80px;
 		bottom: 130px;
 	}
     
@@ -86,133 +73,98 @@
 	#classEventsDetailDiv span {
         letter-spacing: .30px;
 		position: relative;
-		left: 230px;
-		bottom: 130px;
-		width: 100px;
+		left: 80px;
+		bottom: 120px;
+		width: 500px;
 	}
-    
-    #addEventBtn {
-        width: 25%;
-    }
-
-	#schoolEventsDetailDiv{
-		margin-left: 50px;
+	#classEventsDetailDiv {
+		margin-left: 150px;
 	}
-	
-	div.sexyLine {
-		margin-top: 10px;
+	#teacherHeader {
+		margin-left: 200px;
+		color: #006495;
+		font-size: 30px;
 	}
-    
-	.sexyLine {
+	/********style the event form*********/
+	form {
+		background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+		margin: auto;
+		position: relative;
+		width: 550px;
+		height: 450px;
+		bottom: 83px;
+		font-family: Tahoma, Geneva, sans-serif;
+		font-size: 14px;
+		font-style: italic;
+		line-height: 24px;
+		font-weight: bold;
+		color:black;
+		text-decoration: none;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		padding: 10px;
+		border: 1px solid #999;
+		border: inset 1px solid #333;
+		-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	}
+	input {
+		width: 375px;
 		display: block;
-		border: none;
-		color: white;
-		height: 1px;
-		background: black;
-		background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+		border: 1px solid #999;
+		height: 25px;
+		-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 	}
-    
-	#EventName a {
-		color: yellow;
+	textarea#feedback {
+		width: 375px;
+		height: 150px;
 	}
-	.eventsAdd {
-		margin-top: 30px;
+	textarea#feedback {
+		display: block;
 	}
-	#formContainer {
-		/*margin: auto;*/
-		width: 100%;
-		margin-right: 0;
-		background-color: black;
-		padding: 1em 0 5em 0;
+	input.button {
+		width: 120px;
+		position: absolute;
+		right: 20px;
+		bottom: 60px;
+		background: #336699;
+		color: #fff;
+		font-family: Tahoma, Geneva, sans-serif;
+		height: 30px;
+		-webkit-border-radius: 15px;
+		border-radius: 15px;
+		border: 1p solid #999;
 	}
-	.addEventForm {
-		background-color: black;
-		width: 50%;
-		margin: auto;
+	input.button:hover {
+		background: #fff;
+		color: #09C;
 	}
-	.filler {
-		height: 4em;
-	}
-	.centerView {
-		width: 60%;
-		margin: auto;
+	textarea:focus,
+	input:focus {
+		border: 1px solid #09C;
 	}
 	.sexyButton {
 		color: #08233e;
 		font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
-		padding: 8px;
+		padding: 5px;
 		border: 1px solid #ffcc00;
-		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px;
 		border-radius: 10px;
 		border-bottom: 1px solid #9f9f9f;
-		-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
 		-webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
 		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
 		cursor: pointer;
 		background-color: rgba(255, 204, 0, 1);
 	}
-	button:hover {
-		background-color: rgba(255, 204, 0, 0, 8);
-	}
-  
-	.head {
-		width: 80%;
-		height: 900px;
-		margin: auto;
-		overflow: scroll;
-	}
-	#button {
-		width: 200px;
-		margin: 10px;
-	}
-
-	/********style the event form*********/
-	#teacherAddEvent {
-		width: 50%;
-		margin: auto;
-		text-align: center;
-		background-color: black;
-		padding: 2em;
-	}
-    
-	input,
-	textarea {
-		padding: 9px;
-		border: solid 1px #e5e5e5;
-		outline: 0;
-		font: normal 13px/100% Verdana, Tahoma, sans-serif;
-		width: 400px;
-		background: #ffffff;
-		color: black;
-	}
-	textarea {
-		width: 400px;
-		max-width: 400px;
-		height: 150px;
-		line-height: 150%;
-	}
-	input:hover,
-	textarea:hover,
-	input:focus,
-	textarea:focus {
-		border-color: #c9c9c9;
-		-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
-	}
-	.form label {
-		margin-left: 10px;
-	}
-	#button {
-		width: 200px;
-		margin: 10px;
-	}
 
 }/*closes laptop query*/
 /****************************************************************************************/
 /*large screen query starts here*/
-@media only screen and (min-width: 1824px) {
-	
-    .uppercase {
+
+/*/*@media only screen and (min-width: 1824px) {*/
+	.uppercase {
+
 		text-transform: uppercase;
 	}
 	.black {
@@ -221,16 +173,18 @@
 	a:visited {
 		color: white;
 	}
+
 	#eventsContainer h2 {
 		margin-left: 50px;
 		color: #006495;
 		font-size: 30px;
+		margin-top: 60px;
 	}
 	#eventsContainer {
 		width: 80%;
 		margin: auto;
 		position: relative;
-		bottom: 70px;
+		bottom: 120px;
 	}
 	#eventsListDiv {
 		width: 45%;
@@ -240,6 +194,7 @@
 		width: 45%;
 		float: right;
 	}
+
 	#schoolEventsDetailDiv {
 		margin-left: 50px;
 
@@ -285,6 +240,7 @@
 	#schoolEventsDetailDiv {
 		margin-left: 50px;
 	}
+
 	#classEventsDetailDiv {
 		margin-left: 50px;
 	}
@@ -309,7 +265,7 @@
 		/*margin: auto;*/
 		width: 100%;
 		margin-right: 0;
-		background-color: black;
+		/*background-color: black;*/
 		padding: 1em 0 5em 0;
 	}
 	.addEventForm {
@@ -317,9 +273,18 @@
 		width: 50%;
 		margin: auto;
 	}
+
 	.filler {
 		height: 4em;
 	}
+
+	#classEventsDetailDiv p {
+		border: 1px solid #006495;
+		border-radius: 5px;
+		padding-left: 15px;
+		padding-top: 10px;
+	}
+
 	.centerView {
 		width: 60%;
 		margin: auto;
@@ -341,8 +306,10 @@
 	}
 	button:hover {
 		background-color: rgba(255, 204, 0, 0, 8);
+
 	}
 	#addEvent {}
+
 	.head {
 		width: 80%;
 		height: 900px;
@@ -353,8 +320,8 @@
 		width: 200px;
 		margin: 10px;
 	}
-	/********style the event form*********/
-	#teacherAddEvent {
+	/********style the event form********
+	/*#teacherAddEvent {*/
 		width: 50%;
 		margin: auto;
 		text-align: center;
@@ -391,6 +358,6 @@
 		width: 200px;
 		margin: 10px;
 	}
-    
-}/*closes large screen query*/
+	
+}/*closes large screen query
 
