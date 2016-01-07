@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*********************** STUDENT PROFILE - LIST PARENT VIEW ******************************************/
 
 #pickStudentContainer {
@@ -7,37 +7,6 @@
 	position: relative;
 	bottom: 60px;
 }
-=======
-
-/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { */
-
-
-
-/*  #studentsTeacherDetailDiv {
-      padding: 5em;
-  }
-
- a:visited { color: white; }
-  a:link { color: white; }
-
-
-  .black { 
-    color: black; 
-  }
-
-  .lightBlue { 
-    color: lightBlue; 
-  }*/
-
-/*--------------------- STUDENT PROFILE - LIST PARENT VIEW - parentStudent.html ------------------------*/
-
-  #pickStudentContainer {
-    width: 75%;
-    margin: auto;
-    position: relative;
-    bottom: 60px;
-  }
->>>>>>> master
 
   #pickStudentContainer a {
     color: black;
@@ -226,45 +195,4 @@
     font-size: 18px;
   }
 
-
-  
-/*}*/ /*closes laptop query
-/************************************************************************************************/
-/*large screen query starts here*/
-@media only screen  and (min-width : 1824px) {
-
-  a:visited { color: white; }
-  a:link { color: white; }
-
-  .black { color: black; }
-  .lightBlue { color: lightBlue; }
-
-  body {
-    margin-top: 200px;
-    margin-bottom: 100px;
-  }
-
-  /*student profile - parent view*/
-
-#studentGrades p {
-	margin: 0;
-}
-
-#studentGrades ul {
-	list-style: none;
-}
-
-#studentGrades li {
-	font-size: 18px;
-}
-
-#classSetContainer {
-	position: relative;
-	left: 300px;
-}
-
-#studentSetContainer {
-	position: relative;
-	left: 300px;
-}
 
