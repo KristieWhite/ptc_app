@@ -11,20 +11,17 @@
 </head>
 
 <body>
-
-	<div class="header">
-		<h1>Parent Teacher Connection</h1>
+<div class="header">
+		<a href="classSet.html"><h1>Parent Teacher Connection</h1></a>
 		<div id="teachHome"></div>
 	</div>
 	<div class="navbar">
 		<ul>
-
-			<li><a href="./homeTeacher.html">Home</a></li>
 			<li><a href="./hwteachview.html">Assignments</a></li>
 			<li><a href="./waiverTeacher.html">Waivers</a></li>
 			<li><a href="./FeesListTeacher.html">Fees</a></li>
 			<li><a href="./eventsTeacher.html">Events</a></li>
-			<li><a href="./eventsTeacher.html">Classes</a></li>
+			<li><a href="./classSet.html">Classes</a></li>
 		</ul>
 	</div>
 	<div>
@@ -72,7 +69,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 	<script src="js/Teacher.js"></script>
 
-	<script type="x-tmpl-mustache" id="teacherTemplate">
+		<script type="x-tmpl-mustache" id="teacherTemplate">
 		{{#teacher}}
 		<img src="{{picture_url}}" />
 		<p>{{first_name}} {{last_name}}</p> 

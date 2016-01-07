@@ -11,18 +11,16 @@
 
 <body>
 	<div class="header">
-		<h1>Parent Teacher Connection</h1>
+		<a href="classSet.html"><h1>Parent Teacher Connection</h1></a>
 		<div id="teachHome"></div>
 	</div>
-
 	<div class="navbar">
 		<ul>
-			<li><a href="./homeTeacher.html">Home</a></li>
 			<li><a href="./hwteachview.html">Assignments</a></li>
 			<li><a href="./waiverTeacher.html">Waivers</a></li>
 			<li><a href="./FeesListTeacher.html">Fees</a></li>
 			<li><a href="./eventsTeacher.html">Events</a></li>
-			<li><a href="./eventsTeacher.html">Classes</a></li>
+			<li><a href="./classSet.html">Classes</a></li>
 		</ul>
 	</div>
 
@@ -93,10 +91,10 @@
 
 	<script src="js/Teacher.js"></script>
 
-	<script type="x-tmpl-mustache" id="teacherTemplate">
+		<script type="x-tmpl-mustache" id="teacherTemplate">
 		{{#teacher}}
 		<img src="{{picture_url}}" />
-		<p>{{first_name}} {{last_name}}</p>
+		<p>{{first_name}} {{last_name}}</p> 
 		{{/teacher}}
 	</script>
 
