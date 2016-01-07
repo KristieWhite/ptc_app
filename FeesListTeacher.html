@@ -14,6 +14,7 @@
 
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
+		<div id="teachHome"></div>
 	</div>
 	<div class="navbar">
 		<ul>
@@ -23,6 +24,7 @@
 			<li><a href="./waiverTeacher.html">Waivers</a></li>
 			<li><a href="./FeesListTeacher.html">Fees</a></li>
 			<li><a href="./eventsTeacher.html">Events</a></li>
+			<li><a href="./eventsTeacher.html">Classes</a></li>
 		</ul>
 	</div>
 	<div>
@@ -53,6 +55,7 @@
 
 			</div>
 		</form>
+	</div>
 
 
 
@@ -67,7 +70,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<script src="js/Teacher.js"></script>
 
+	<script type="x-tmpl-mustache" id="teacherTemplate">
+		{{#teacher}}
+		<img src="{{picture_url}}" />
+		<p>{{first_name}} {{last_name}}</p> 
+		{{/teacher}}
+	</script>
 
 
 

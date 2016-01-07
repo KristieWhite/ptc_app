@@ -176,13 +176,11 @@ $(document).ready(function () {
 		initialize: function () {
 		},
 		Model:StudentSetModel,
-		idAttribute: id,
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' +  + '/students'
 	});
 
 	var StudentSetCollection = Backbone.Collection.extend({
 		Model: StudentSetModel,
-		idAttribute: id,
 		url: 'https://murmuring-sands-9831.herokuapp.com/api/classes/' +  + '/students'
 	});
 

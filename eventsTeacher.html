@@ -14,6 +14,7 @@
 
 	<div class="header">
 		<h1>Parent Teacher Connection</h1>
+		<div id="teachHome"></div>
 	</div>
 	<div class="navbar">
 		<ul>
@@ -22,6 +23,7 @@
 			<li><a href="./waiverTeacher.html">Waivers</a></li>
 			<li><a href="./FeesListTeacher.html">Fees</a></li>
 			<li><a href="./eventsTeacher.html">Events</a></li>
+			<li><a href="./eventsTeacher.html">Classes</a></li>
 		</ul>
 	</div>
 	<div id="pageContainer">
@@ -71,14 +73,13 @@
 	<script src="js/eventsTeacher.js"></script>
 
 
-	<script type="X-tmpl-mustache" id="eventsDetailListTeacherTemplate">
-		{{#events}}
-		<p>
-			<img src="{{picture_url}}" />
-			<h3><a href="{{id}}"> {{name}}</a></h3>
-			<span>{{description}}</span>
-		</p>
-		{{/events}}
+<script src="js/Teacher.js"></script>
+
+	<script type="x-tmpl-mustache" id="teacherTemplate">
+		{{#teacher}}
+		<img src="{{picture_url}}" />
+		<p>{{first_name}} {{last_name}}</p> 
+		{{/teacher}}
 	</script>
 
 </body>
