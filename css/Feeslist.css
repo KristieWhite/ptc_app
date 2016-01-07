@@ -2,12 +2,10 @@ body {
 	margin-top: 120px;
 }
 
-
 #fixedH2 {
 	display: inline-block;
 	position: fixed;
 	margin-left: 6em;
-
 }
 
 .feeHeader h2 {
@@ -22,14 +20,15 @@ body {
 	/*border: 1px solid blue;*/
 	position: fixed;
 	margin-left: 200px;
-	display: block;play: inline-block;
+	display: block;
+	play: inline-block;
 	width: 23%;
 	top: 200px;
 	background-color: lightgray;
 	border-radius: 5px;
 }
 
-#feesDiv2 span{
+#feesDiv2 span {
 	padding: 10px;
 }
 
@@ -46,7 +45,6 @@ body {
 	width: 500px;
 	border: 1px solid gray;
 	border-radius: 5px;
-	overflow: scroll;
 }
 
 #feeDetailDiv p {
@@ -69,6 +67,7 @@ body {
 	text-decoration: underline;
 	cursor: pointer;
 }
+
 
 /*@media only screen and (min-width: 1824px) {
 	body {
