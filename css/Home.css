@@ -1,187 +1,64 @@
+h2 {
+	position: fixed;
+	right: 60px;
+	font-size: 30px;
+}
 
-/*mobile query starts here*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-    
-	#homeContainer {
-		width: 100%;
-	}
-	
-	#homeContainer figure img{
-		width: 100%;
-	}
+#homeContainer figure {
+	width: 55%;
+	height: 180px;
+	position: relative;
+	border: 1px solid gray;
+	border-radius: 100%;
+	overflow: hidden;
+	text-align: center;
+	margin: 10px;
+	bottom: 70px;
+	left: 10px;
+}
+.hover07 figure img {
+	background-position: center;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	margin: auto;
+}
+#homeContainer p {
+	position: relative;
+	margin-left: 90px;
+	margin-top: 10px;
+	padding: 5px;
+	height: 25px;
+	width: 70px;
+	bottom: 75px;
+	background: gray;
+	color: white;
+	font-size: 20px;
+	border-radius: 5px;
+}
 
-	#homeContainer p {
-		width: 80%;
-		background-color: rgba(25, 25, 25, 0.85);
-		padding: .5em;
-		text-align: center;
-		font-size: 1em;
-		text-transform: uppercase;
-        margin: -1.75em 0 0 1.5em;
-	}
-
-}/*closes mobile query*/
-/****************************************************************************************************/
-/*tablet query starts here*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
 
+#centerContainer {
+	position:fixed;
+	left: 500px;
+	top: 250px;
+	width: 410px;
+	display: inline-block;
+}
 
-}/*closes tablet query*/
-/*****************************************************************************************************/
-/*laptop query starts here*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-	#homeContainer {
-		width: 100%;
-		height: 100%;
-		position: relative;
-		bottom: 80px;
-	}
-	#homeContainer figure {
-		width: 25%;
-		height: 170px;
-		position: relative;
-		border: 1px solid gray;
-		border-radius: 100%;
-		overflow: hidden;
-		text-align: center;
-		margin: 10px;
-		bottom: 60px;
-		left: 10px;
-	}
-	
-		#homeContainer p {
-		position: relative;
-		margin-left: 40px;
-		margin-top: 10px;
-		padding-left:10px ;
-		width: 20%;
-		bottom: 65px;
-		background: gray;
-		color: white;
-		font-size: 25px;
-		padding-left: 15px;
-		border-radius: 5px;
-	}
-	.hover07 figure img {
-		background-position: center;
-		width: 100%;
-		height: 220px;
-		-webkit-transition: .3s ease-in-out;
-		transition: .3s ease-in-out;
-		text-align: center;
-		margin: auto;
-	}
+.leftContainer {
+	position:fixed;
+	top: 150px;
+	left: 100px;
+	width: 420px;
+	display: inline-block;
+}
 
-	h2 {
-		position: fixed;
-		right: 60px;
-		font-size: 30px;
-	}
-	.centerContainer {
-		position: fixed;
-		left: 500px;
-		top:300px;
-		width: 65%;
-		height: 65%;
-		margin: auto;
-		background-image: center;
-	}
-	.leftContainer {
-		width: 65%;
-		height: 100%;
-		display: inline-block;
-		position: fixed;
-		left: 10%;
-		top: 150px;
-
-	}
-	.rightContainer {
-		width: 65%;
-		height: 100%;
-		display: inline-block;
-		float: right;
-		position: fixed;
-		left: 70%;
-		top: 150px;
-	}
-
-}/*closes laptop query*/
-/************************************************************************************************/
-/*large screen query starts here*/
-@media only screen and (min-width: 1824px) {
-	#homeContainer {
-		width: 100%;
-		height: 100%;
-		position: relative;
-		bottom: 80px;
-	}
-	#homeContainer p {
-		position: relative;
-		margin-left: 15px;
-		margin-top: 30px;
-		padding-left:10px ;
-		width: 14%;
-		left: 75px;
-		bottom: 38px;
-		background: gray;
-		color: white;
-		font-size: 30px;
-		padding-left: 15px;
-		border-radius: 5px;
-	}
-	#homeContainer figure {
-		width: 30%;
-		height: 300px;
-		position: relative;
-		border: 1px solid gray;
-		border-radius: 100%;
-		overflow: hidden;
-		text-align: center;
-		margin: 10px;
-	}
-	.hover07 figure img {
-		background-position: center;
-		width: 100%;
-		height: 100%;
-
-		-webkit-transition: .3s ease-in-out;
-		transition: .3s ease-in-out;
-		text-align: center;
-		margin: auto;
-	}
-
-	h2 {
-		position: fixed;
-		right: 60px;
-		font-size: 30px;
-	}
-	.centerContainer {
-		position: fixed;
-		left: 760px;
-		top: 300px;
-		width: 65%;
-		height: 65%;
-		margin: auto;
-		background-image: center;
-	}
-	.leftContainer {
-		width: 65%;
-		height: 100%;
-		display: inline-block;
-		position: fixed;
-		left: 10%;
-		top: 150px;
-	}
-	.rightContainer {
-		width: 65%;
-		height: 100%;
-		display: inline-block;
-		float: right;
-		position: fixed;
-		left: 70%;
-		top: 150px;
-	}
-
-}/*closes large screen query*/
+.rightContainer {
+	position:fixed;
+	left: 900px;
+	top: 150px;
+	display: inline-block;
+}
 

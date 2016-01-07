@@ -23,6 +23,7 @@
       <li><a href="./waiverParent.html">Waivers</a></li>
       <li><a href="./feesListParent.html">Fees</a></li>
       <li><a href="./eventsParent.html">Events</a></li>
+      <li><a href="./parentStudents.html">Children</a></li>
     </ul>
   </div>
 
@@ -78,11 +79,10 @@
   <script src="js/parent.js"></script>
 
   <script type="x-tmpl-mustache" id="parentInfoTemplate">
-    {{#parents}}
-      <p>{{first_name}} {{last_name}}</p>
-      <img src="{{picture_url}}"> 
-    {{/parents}}
-  </script>
+		{{#parents}}
+		<p><img src="{{picture_url}}" /> <span>{{first_name}} {{last_name}}</span></p>
+		{{/parents}}
+	</script>
 
   <script type="x-tmpl-mustache" id="studentInfoTemplate">
     {{#students}}

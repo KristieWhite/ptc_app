@@ -16,20 +16,16 @@
 		<h1>Parent Teacher Connection</h1>
 	</div>
 
-	<!-- Home Page -->
-
+	<!--HomePage-->
 	<div id="homeContainer">
 		<div class="hover07 column">
-			<div class="centerContainer">
-				<!-- Students -->
-				<div>
-					<figure class="homeStudent">
-						<a href="/parentStudents.html">
-							<img src="./images/children.jpg" />
-						</a>
-					</figure>
-					<p>Profiles</p>
-				</div>
+			<div id="centerContainer">
+				<figure>
+					<a href="/parentStudents.html">
+						<img src="./images/children.jpg">
+					</a>
+				</figure>
+				<p>Profiles</p>
 			</div>
 			<div class="leftContainer">
 				<!--Assignmnents-->
@@ -39,7 +35,7 @@
 							<img src="./images/assignment.jpeg" />
 						</a>
 					</figure>
-					<p>Assignments</p>
+					<p>Asgmnt.</p>
 				</div>
 				<!--Fees-->
 				<div>
@@ -48,7 +44,7 @@
 							<img src="./images/fees.gif" />
 						</a>
 					</figure>
-					<p>Fees</p>
+					<p id="fee">Fees</p>
 				</div>
 			</div>
 			<div class="rightContainer">
@@ -91,10 +87,11 @@
 	<script src="js/parent.js"></script>
 
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
-    {{#parents}}
-		  <p>Hello, {{first_name}} {{last_name}}.</p>
+		{{#parents}}
+		<p>Hello, {{first_name}} {{last_name}}.</p>
 		{{/parents}}
 	</script>
 
 </body>
+
 </html>
