@@ -18,7 +18,7 @@
 
 	<!--HomePage-->
 	<div id="homeContainer">
-		<div class="hover07 column">
+		<div class="hover07 column"> 
 			<div id="centerContainer">
 				<figure>
 					<a href="/parentStudents.html">
@@ -31,7 +31,7 @@
 				<!--Assignmnents-->
 				<div>
 					<figure>
-						<a href="/hwparentview.html">
+						<a href="./hwparentview.html">
 							<img src="./images/assignment.jpeg" />
 						</a>
 					</figure>
@@ -40,7 +40,7 @@
 				<!--Fees-->
 				<div>
 					<figure>
-						<a href="/feesListParent.html">
+						<a href="./feesListParent.html">
 							<img src="./images/fees.gif" />
 						</a>
 					</figure>
@@ -52,7 +52,7 @@
 				<!--Waiver-->
 				<div>
 					<figure>
-						<a href="/waiverParent.html">
+						<a href="./waiverParent.html" id="waiverId">
 							<img src="./images/waivers.jpg">
 						</a>
 					</figure>
@@ -61,7 +61,7 @@
 				<!--Calender-->
 				<div>
 					<figure>
-						<a href="/eventsParent.html">
+						<a href="./eventsParent.html">
 							<img src="./images/calendar.jpg">
 						</a>
 					</figure>
@@ -82,15 +82,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+	<script src="js/url.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/parent.js"></script>
+	<script src="js/waiver.js"></script>
 
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
 		{{#parents}}
 		<p>Hello, {{first_name}} {{last_name}}.</p>
 		{{/parents}}
 	</script>
+
 
 </body>
 

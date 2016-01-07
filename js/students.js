@@ -226,6 +226,50 @@ $(document).ready(function () {
 	});
 
 ///////////////////////////////// TEACHER SUBMIT GRADES ////////////////////////
+<<<<<<< HEAD
+=======
+
+
+	var StudentGradeModel = Backbone.Model.extend({
+		intialize: function(){
+		},
+		Model: StudentGradeModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/homework/" + id
+	});
+
+	var StudentGradeCollection = Backbone.Collection.extend({
+		Model: StudentGradeModel,
+		url: "https://murmuring-sands-9831.herokuapp.com/api/homework/" + id
+	});
+
+	$("#gradesBtn").on('click',function(e){
+			e.preventDefault();
+		var gradesSave = new StudentGradeModel();
+		gradesSave.set({
+			id: $(".mainId").val(),
+			title: $(".hwTitle").val(),
+			date: $(".dueDate").val(),
+			points: $(".points").val(),
+			total_points: $(".total_points").val()
+		})
+		$(".hwTitle").val(""),
+		$(".dueDate").val(""),
+		$(".points").val(""),
+		$(".total_points").val("");
+			gradesSave.save(null,{
+				success:function(resp){
+					GradeCollection.fetch({
+						success: function(resp){
+						}, error: function(err){	
+						}
+					})
+				}, error: function(err){
+					console.log("error ", err);
+			}
+		})
+			alert("This has been submitted");
+		});
+>>>>>>> master
 
 
 	var StudentGradeModel = Backbone.Model.extend({

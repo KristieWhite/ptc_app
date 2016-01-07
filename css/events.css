@@ -2,6 +2,7 @@
 	text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 .black {
 	color: black;
 }
@@ -9,6 +10,43 @@
 a:visited {
 	color: white;
 }
+=======
+    img {
+        width: 100%;
+    }
+    
+    p { 
+        padding: 0 1em;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    h2 {
+        color: yellow;
+        text-align: center;
+    }
+    
+    h3 {
+        text-transform: uppercase;
+    }
+    .container {
+/*        width: 80%;*/
+    }
+    
+    #eventsContainer {
+/*        width: 80%;*/
+    }
+    
+    #eventsParent {
+/*        width: 80%;*/
+    }
+    
+    #eventsParentDetailDiv {
+/*        width: 80%;*/
+    }
+>>>>>>> master
 
  h2 {
 	margin-top: 10px;
