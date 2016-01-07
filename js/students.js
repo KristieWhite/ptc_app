@@ -226,10 +226,6 @@ $(document).ready(function () {
 	});
 
 ///////////////////////////////// TEACHER SUBMIT GRADES ////////////////////////
-<<<<<<< HEAD
-=======
-
-
 	var StudentGradeModel = Backbone.Model.extend({
 		intialize: function(){
 		},
@@ -269,8 +265,6 @@ $(document).ready(function () {
 		})
 			alert("This has been submitted");
 		});
->>>>>>> master
-
 
 	var StudentGradeModel = Backbone.Model.extend({
 		intialize: function(){
