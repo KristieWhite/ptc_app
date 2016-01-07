@@ -14,7 +14,7 @@ h2 {
 	text-align: center;
 	margin: 10px;
 	bottom: 70px;
-	left: 10px;
+	left:300px;
 }
 .hover07 figure img {
 	background-position: center;
@@ -25,7 +25,7 @@ h2 {
 }
 #homeContainer p {
 	position: relative;
-	margin-left: 90px;
+	margin-left: 390px;
 	margin-top: 10px;
 	padding: 5px;
 	height: 25px;

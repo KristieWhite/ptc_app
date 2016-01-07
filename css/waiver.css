@@ -1,150 +1,89 @@
-/*mobile query starts here*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-   
-    div.sexyLine {
-      margin-top: 50px;
-    }
+@font-face {
+	font-family: 'Firestarter Z';
+	src: url('../fonts/Firestarter Z.ttf');
+}
 
-    .sexyLine { 
-      display: block;
-      border: none;
-      color: white;
-      height: 1px;
-      background: black;
-      background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
-    }
+div.sexyLine {
+	margin-top: 50px;
+}
 
-    .filler {
-      height: 4em;
-    }
+.sexyLine {
+	display: block;
+	border: none;
+	color: white;
+	height: 1px;
+	background: black;
+	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+}
 
-    .centerView {
-      width: 40%;
-      margin: auto;
-      border: 1px solid rgb(62, 62, 62);
-    }
+#pageContainer {
+	width: 80%;
+	margin: auto;
+	bottom: 70px;
+}
 
-    .sexyButton {
-      color: #08233e;
-      font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
-      padding: 8px;
-      border: 1px solid #ffcc00;
-      -moz-border-radius: 10px;
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
-      border-bottom: 1px solid #9f9f9f;
-      -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-      -webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-      cursor: pointer;
-      background-color: rgba(255, 204, 0, 1);
-    }
-    button:hover {
-          background-color: rgba(255, 204, 0, 0, 8);
-    }
-    
-}/*closes mobile query*/
-/****************************************************************************************************/
-/*tablet query starts here*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+#h2Parent {
+	padding: .5em;
+}
 
+.waiverHeader h2 {
+	text-decoration: underline;
+	position: relative;
+	text-align: center;
+	margin: -1em 0 0 0;
+	font-size: 40px;
+	color: #0089cc;
+}
 
+.sexyButton {
+	position: relative;
+	left: 40px;
+	color: white;
+	font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
+	padding: px;
+	border: 1px solid #006495;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	background-color: #006495;
+	margin: 2em 0 0 0;
+}
 
-}/*closes tablet query*/
-/*****************************************************************************************************/
-/*laptop query starts here*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+#waiverDetailDiv {
+	width: 60%;
+	margin: auto;
+	padding: 1em;
+	border: 4px solid lightgray;
+	border: 1px solid black;
+}
 
-  @font-face { font-family: 'Firestarter Z'; src: url('../fonts/Firestarter Z.ttf'); } 
-    div.sexyLine {
-      margin-top: 50px;
-  }
+#waiverDetailDiv p {
+	font-size: 20px;
+}
 
-  .sexyLine { 
-      display: block;
-      border: none;
-      color: white;
-      height: 1px;
-      background: black;
-      background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
-  }
-  
-  #pageContainer {
-    width: 80%;
-    margin: auto;
-    bottom: 70px;
-  }
+#waiverDetailDiv ul {
+	list-style: none;
+}
 
-    #h2Parent {
-        padding: .5em;
-    }
-    
-  .waiverHeader h2 {
-    text-decoration: underline;
-    position: relative;
-      text-align: center;
-      margin: -1em 0 0 0;
-    font-size: 40px;
-    color: #0089cc;
-  } 
+#waiverDetailDiv a {
+	text-decoration: none;
+	color: #006495;
+}
 
-  .sexyButton {position: relative;
-	   left: 40px;
-    color: white;
-    font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
-    padding: px;
-    border: 1px solid #006495;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    background-color: #006495;
-     margin: 2em 0 0 0;
-  }
+.center {
+	text-align: center;
+}
 
-  #waiverDetailDiv {
-    width: 60%;
-    margin: auto;
-      padding: 1em;
-      border: 4px solid lightgray;
-      border: 1px solid black;
-  }
+#waiverBtnDiv {
+	width: 30%;
+	margin: auto;
+}
 
-  #waiverDetailDiv p {
-    font-size: 20px;
-  }
-
-  #waiverDetailDiv ul {
-    list-style: none;
-  }
-
-  #waiverDetailDiv a {
-    text-decoration: none;
-    color: #006495;
-  }
-
- .center {
-    text-align: center;
-  }
-
-  #waiverBtnDiv {
-    width:30%;
-    margin: auto;
-  }
-
-  #signThisWaiver {
-    width: 18%;
-    margin: auto;
-  }
-    
-}/*closes laptop query*/
-/************************************************************************************************/
-/*large screen query starts here*/
-@media only screen  and (min-width : 1824px) {
-
-
-
-}/*closes large screen query*/    
+#signThisWaiver {
+	width: 18%;
+	margin: auto;
+}
