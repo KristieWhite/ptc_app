@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Student Profile</title>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/student.css">
+  <link rel="stylesheet" type="text/css" href="css/student_teacher.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
@@ -18,44 +18,56 @@
 
   <div class="navbar">
     <ul>
-      <li><a href="./homeParent.html">Home</a></li>
-      <li><a href="./hwparentview.html">Assignments</a></li>
-      <li><a href="./waiverParent.html">Waivers</a></li>
-      <li><a href="./feesListParent.html">Fees</a></li>
-      <li><a href="./eventsParent.html">Events</a></li>
+      <li><a href="./homeTeacher.html">Home</a></li>
+      <li><a href="./hwteachview.html">Assignments</a></li>
+      <li><a href="./waiverTeacher.html">Waivers</a></li>
+      <li><a href="./FeesListTeacher.html">Fees</a></li>
+      <li><a href="./eventsTeacher.html">Events</a></li>
     </ul>
   </div>
 
-  <div id="studentContainer">
+  <div id="studentDataContainer">
 
-    <div id="back">
-      <a href="parentStudents.html">BACK</a>
+    <div id="backBtn">
+      <a href="classSet.html">BACK</a>
     </div>
 
     <div class="studentImg">
       <img src="http://placehold.it/200x200" />
     </div>
 
-    <div id="studentInfoDiv">
-      <div id="studentInfo"></div>
-      <div id="teacherDiv"></div>
-      <div class="classesApiDiv"></div>
+    <div id="studentDataDiv">
+      <div id="studentData"></div>
+      <p>Grades: </p>
     </div>
 
-    <div id="studentBehavior">
-      <p class="color">Student Behavior: </p>
-      <div id="behaviorDiv"></div>
+    <div id="enterBehavior">
+      <p class="color">Enter Student Behavior: </p>
+      <br/>
+      <input type="date" class="datePick" /><br/>
+      <textarea rows="3" cols="50"></textarea> <br/>
+      <span>Check here if student was not on best behavior</span><br/>
+      <input type="checkbox" class="badBehavior" /><br/>
+      <input type="button" class="submitBtn" value="Submit"/> 
     </div>
 
-    <div id="studentAttendance">
-      <p class="color">Student Attendance: </p>
-      <div id="attendanceDiv"></div>
+    <div id="enterAttendance">
+      <p class="color">Enter Student Attendance: </p>
+      <br/>
+      <input type="date" class="attendDate" /><br/>
+      <span>Was student: </span>
+      <input type="checkbox" class="present" /> <span>Present</span>
+      <input type="checkbox" class="absent" value="Absent" /> <span>Absent</span> 
+      <input type="checkbox" class="tardy" /> <span>Tardy</span><br/>
+      <input type="button" class="submitBtn" value="Submit" />
     </div>
     <hr class="hrSpecial2">
 
-    <div id="studentGrades">
-      <p class="color">Student Grades: </p>
-      <div id="gradesDiv"></div>
+    <div id="enterGrades">
+      <p class="color">Enter Student Grades: </p>
+      <input type="text" class="hwTitle" placeholder="Homework Title" /><br/>
+      <span>Due Date: <input type="date" class="dueDate" /></span><br/>
+      <span>Points: <input type="text" class="points" placeholder="00"/> / <input type="text" class="total_points" placeholder="100" value="100" /></span><br/>
     </div>
 
   </div>
@@ -74,28 +86,25 @@
   <script src="js/jquery.cookie.js"></script>
   <script src="js/login.js"></script>
   <script src="js/students.js"></script>
-  <script src="js/classes.js"></script>
-  <script src="js/parent.js"></script>
 
-  <script type="x-tmpl-mustache" id="parentInfoTemplate">
-    {{#parents}}
+  <script type="x-tmpl-mustache" id="teacherInfoTemplate">
+    {{#teachers}}
       <p>{{first_name}} {{last_name}}</p>
       <img src="{{picture_url}}"> 
-    {{/parents}}
+    {{/teachers}}
   </script>
 
-  <script type="x-tmpl-mustache" id="studentInfoTemplate">
-    {{#students}}
+  <script type="x-tmpl-mustache" id="studentDataTemplate">
+    {{#teacherView}}
       <ul>
         <li><i class="color">Student Number:</i> {{id}}</li>
         <li><i class="color">Name:</i> {{first_name}} {{last_name}}</li>
         <li><i class="color">School:</i> Walter V Long Elementary School</li>
         <li><i class="color">School Address:</i> 2000 S Walnut Rd, Las Vegas, NV 89104</li>
-        <li><i class="color">Teachers:</i> </li>
       </ul>
-    {{/students}}
+    {{/teacherView}}
   </script>
-
+<!-- 
   <script type="x-tmpl-mustache" id="behaviorTemplate">
   {{#behavior}}
     <ul>
@@ -125,6 +134,6 @@
   {{/grades}}
   </script>
   
-
+ -->
 </body>
 </html>

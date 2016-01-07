@@ -18,7 +18,7 @@
     color: lightBlue; 
   }*/
 
-/*********************** STUDENT PROFILE - LIST PARENT VIEW ******************************************/
+/*--------------------- STUDENT PROFILE - LIST PARENT VIEW - parentStudent.html ------------------------*/
 
   #pickStudentContainer {
     width: 75%;
@@ -55,7 +55,7 @@
   }
 
 
-/***************************** STUDENT PROFILE - DETAIL PARENT VIEW ********************************/
+/*--------------------- STUDENT PROFILE - DETAIL PARENT VIEW - student.html --------------------*/
 
   #studentContainer {
     width: 75%;
@@ -137,10 +137,8 @@
   }
 
 
-/******************************* END STUDENT PROFILE PARENT VIEW *******************************/
 
-
-/*************************** STUDENT PROFILE - ATTENDANCE - PARENT *******************************/
+/*--------------------------- STUDENT PROFILE - ATTENDANCE - PARENT - student.html -------------------------*/
 
   #studentBehavior {
     width: 50%;
@@ -167,7 +165,7 @@
   }
 
 
-/**************************** STUDENT PROFILE - BEHAVIOR - PARENT ******************************/
+/*------------------------ STUDENT PROFILE - BEHAVIOR - PARENT - student.html -------------------------------*/
 
 
   #studentAttendance {
@@ -193,7 +191,7 @@
     font-size: 18px;
   }
 
-/*************************** STUDENT PROFILE - GRADES - PARENT ********************************/
+/*-------------------------- STUDENT PROFILE - GRADES - PARENT - student.html ----------------------------*/
 
   #studentGrades {
     width: 100%;
@@ -216,12 +214,6 @@
     font-size: 18px;
   }
 
-/**********************************  TEACHER VIEW -  CLASSSET.HTML ****************************/
-
-  #setContainer {
-    width: 70%;
-    margin: auto;
-  }
 
   
 /*}*/ /*closes laptop query
