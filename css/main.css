@@ -1,6 +1,10 @@
 /*mobile query starts here*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-	@font-face {}
+
+	@font-face {
+		font-family: 'Firestarter Z';
+		src: url('../fonts/Firestarter Z.ttf');
+	}
 
 	body {
         width: 100%;
@@ -13,8 +17,7 @@
 	.header {
 		background: url("../images/blackChalkBoard.jpg") repeat;
 		background-repeat: repeat;
-		width: 98%;
-        margin: auto;
+		width: 100%;
 		border-bottom: 2px solid black;
 		color: white;
 		background-position: center;
@@ -23,30 +26,25 @@
 	h1 {
         font-size: 1.5em;
 		margin: 0;
-		padding: .75em 1.5em;
+		padding: .5em 0;
 		text-align: center;
 	}
     
 	.footer {
-		position: fixed;
+        margin: 1em 0 0 0;
 		width: 100%;
 		height: 40px;
 		border-top: 2px solid black;
 		text-align: center;
-		bottom: 0;
 		background-color: black;
 	}
 
-}
-
-
-/*closes mobile query*/
-
-
-
 }/*closes mobile query
+
 /****************************************************************************************************/
+
 /*tablet query starts here*/
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 	@font-face {
 		font-family: 'EraserDust';
@@ -108,10 +106,8 @@
 	.navbar li {
 		background: rgb(71, 71, 74);
 		border-bottom: none;
-		line-height: 5.9em;
-		font-size: 1em;
 		line-height: 7em;
-		font-size: 1.1em;
+		font-size: 1.5em;
 		margin-left: -1px;
         letter-spacing: 2px;
 	}
@@ -159,12 +155,18 @@
 		border-radius: 5px;
 	}
 
+<<<<<<< HEAD
 }
 
 
 
 /*closes tablet query*/
+=======
+}/*closes tablet query*/
+
+>>>>>>> kristie
 /*****************************************************************************************************/
+
 /*laptop query starts here*/
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -212,7 +214,11 @@
 	.navbar {
 		position: fixed;
 		top: 82px;
+<<<<<<< HEAD
 		width: 11%;
+=======
+		width: 13%;
+>>>>>>> kristie
 		z-index: 2;
 	}
 	.navbar ul {
@@ -255,8 +261,13 @@
 		z-index: 1;
 		right: 0px;
 	}
+<<<<<<< HEAD
 	/*user icon*/
 	#parentInfo {
+=======
+	/*this is the user icon*/
+	/*#parentInfo {
+>>>>>>> kristie
 		position: fixed;
 		left: 1000px;
 		bottom: 475px
@@ -273,6 +284,7 @@
 	#parentInfo span {
 		position: absolute;
 		left: 180px;
+<<<<<<< HEAD
 		bottom: 80px;
 	}
 	#teachHome {
@@ -294,18 +306,45 @@
 		left: 180px;
 		bottom: 60px;
 	}
+=======
+		bottom: 90px;
+	}*/
+
+	/*this is the user icon*/
+    #parentInfo {
+        position: fixed;
+       right: 3em;
+    }
+    #parentInfo p {
+       float: right;
+        font-size: 20px;
+    }
+    #parentInfo img {
+       position: relative;
+       top: -2.5em;
+       right: -6em;
+       border-radius: 5px;
+       width: 70px;
+       height: 70px;
+    }
+>>>>>>> kristie
 
 }/*closes laptop query*/
+
 /************************************************************************************************/
 /*large screen query starts here*/
 @media only screen and (min-width: 1824px) {
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> kristie
 	@font-face {
 		font-family: 'Firestarter Z';
 		src: url('../fonts/Firestarter Z.ttf');
 	}
 	.yellow {
-		color: rgba(255, 225, 0, 1);
+		color: rgba(255, 225, 0, 0.01);
 	}
 	.uppercase {
 		text-transform: uppercase;

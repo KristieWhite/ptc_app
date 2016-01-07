@@ -1,17 +1,37 @@
 
 /*mobile query starts here*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    
+	#homeContainer {
+		width: 100%;
+	}
+	
+	#homeContainer figure img{
+		width: 100%;
+	}
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
-/*closes mobile query*/
+	#homeContainer p {
+		width: 80%;
+		background-color: rgba(25, 25, 25, 0.85);
+		padding: .5em;
+		text-align: center;
+		font-size: 1em;
+		text-transform: uppercase;
+        margin: -1.75em 0 0 1.5em;
+	}
+
+}/*closes mobile query*/
 /****************************************************************************************************/
 /*tablet query starts here*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
-/*closes tablet query*/
+
+
+}/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
-
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	
 	#homeContainer {
 		width: 100%;
 		height: 100%;
@@ -44,7 +64,7 @@
 		width: 100%;
 		height: 220px;
 		/*    -webkit-filter: blur(1px);
-filter: blur(2px);*/
+		filter: blur(2px);*/
 		-webkit-transition: .3s ease-in-out;
 		transition: .3s ease-in-out;
 		text-align: center;
@@ -79,12 +99,12 @@ filter: blur(2px);*/
 		position: relative;
 		/*    right: 3%;*/
 	}
-}
-/*closes laptop query*/
+
+}/*closes laptop query*/
 /************************************************************************************************/
 /*large screen query starts here*/
-
 @media only screen and (min-width: 1824px) {
+	
 	#homeContainer {
 		width: 100%;
 		height: 100%;
@@ -149,7 +169,6 @@ filter: blur(2px);*/
 		position: fixed;
 		left: 10%;
 		top: 150px;
-
 	}
 	.rightContainer {
 		width: 65%;
@@ -160,6 +179,6 @@ filter: blur(2px);*/
 		left: 70%;
 		top: 150px;
 	}
-	/*closes laptop query*/
-	/************************************************************************************************/
+
+}/*closes large screen query*/
 

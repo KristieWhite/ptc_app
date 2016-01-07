@@ -1,5 +1,77 @@
 
 	body {
+<<<<<<< HEAD
+=======
+		margin-top: 220px;
+	}
+
+	#studentsDiv2 {
+		/*border: 1px solid blue;*/
+		position: fixed;
+		margin-left: 70px;
+		display: inline-block;
+		width: 45%;
+		top: 190px;
+	}
+
+	.assignHeader h2{
+		color: #006495;
+		font-size: 35px;
+		text-decoration: underline;
+		margin: 0;
+		margin-top: 20px;
+		margin-left: 50px;
+	}
+
+	.color {
+		color: #006495;
+	}
+
+	#homeworkDiv {
+		/*border: 1px solid red;*/
+		position: relative;
+		display: inline-block;
+		bottom: 120px;
+		float: right;
+		width: 45%;
+		height: 400px;
+		top: 10px;
+		height: 500px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		overflow: scroll;
+	}
+
+	#homeworkDiv p {
+		margin-left: 10px;
+	}
+
+/*	.lightBlue {
+		color: lightblue;
+	}*/
+
+	#studentsDiv {
+		/*border: 1px solid yellow;*/
+	}
+
+	.StudentListItem-homeworkLink {
+		color: #006495;
+	}
+	.StudentListItem-homeworkLink:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+    
+}/*ends mobile query*/
+
+/****************************************************************************************************/
+
+/*tablet query starts here*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+	
+    body {
+>>>>>>> kristie
 		margin-top: 180px;
 		color: black;
 	}
@@ -38,7 +110,146 @@
 		text-decoration: none;
 		color: rgb(11, 139, 172);
 	}
+<<<<<<< HEAD
 	#homeworkDiv a:hover {
+=======
+	#assignContainer {
+		width: 70%;
+		height: 100%;
+		margin: auto;
+	}
+	.StudentListItem-homeworkLink {
+		color: #1a8cab;
+	}
+	.StudentListItem-homeworkLink:hover {
+		margin-left: 10px;
+	}
+	/*	.lightBlue {
+		color: lightblue;
+	}*/
+
+	#studentsDiv {
+		/*border: 1px solid yellow;*/
+	}
+
+	.StudentListItem-homeworkLink {
+		color: #006495;
+	}
+	.StudentListItem-homeworkLink:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	/*///////////teacher view styling//////////*/
+	.file {
+		visibility: hidden;
+	}
+	.upload {
+		width: 40%;
+		height: 40px;
+		border: 2px solid gray;
+		border-radius: 10px;
+		font-size: 14px;
+		outline: none;
+	}
+	.helpLinks {
+		width: 50%;
+		height: 30px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border: 1px solid gray;
+		padding-left: 10px;
+		outline: none;
+		font-size: 14px;
+	}
+	.dueDate {
+		width: 35%;
+		height: 25px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		padding-left: 20px;
+	}
+	.subBtn {
+		width: 15%;
+		height: 34px;
+		border: 1px solid gray;
+		position: relative;
+		right: 6px;
+		bottom: 1px;
+		color: white;
+		font-size: 14px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+	.studentAssign:hover {
+		background: gray;
+		color: white;
+	}
+	#checkBoxContainer {
+		width: 30%;
+		height: 30%;
+		border: 2px solid gray;
+		box-shadow: 5px 5px 5px black;
+		display: inline-block;
+		display: none;
+	}
+	#checkBoxContainer input[type=checkbox] {
+		width: 20%;
+		height: 20%;
+		position: relative;
+		left: 10px;
+		top: 5px;
+	}
+	#checkBoxContainer span {
+		margin: 0;
+		position: relative;
+		top: 1px;
+	}
+	.turnedIn {
+		width: 60%;
+		height: 30px;
+		border: 1px solid black;
+		border-radius: 20px;
+		background: red;
+		color: white;
+		position: relative;
+		top: 10px;
+		left: 20px;
+	}
+	#projects {
+		width: 45%;
+		height: 800px;
+		position: relative;
+		display: inline-block;
+		left: 10px;
+	}
+    
+}/*closes tablet query*/
+
+/**************************************************************************************************************/
+
+/*laptop query starts here*/
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+		
+    body {
+		margin-top: 180px;
+    color: #f2f2f2;
+	}
+    
+	#studentsDiv2 {
+		position: fixed;
+        margin: 3em 0 0 3em;
+		float: left;
+		width: 31%;
+		height: 20%;
+	}
+	#studentsDiv2 p {
+		margin-top: 40px;
+		color: black;
+	}
+	#studentsDiv2 a:hover {
+>>>>>>> kristie
 		text-transform: uppercase;
 		color: rgb(21, 149, 182);
 	}
@@ -174,7 +385,26 @@
 		display: inline-block;
 		left: 10px;
 	}
+<<<<<<< HEAD
 	#teachHome2{
+=======
+	/*detail styling*/
+
+   
+}/*closes laptop query*/
+
+/*****************************************************************************************************/
+
+/*large screen query starts here*/
+
+@media only screen  and (min-width : 1824px) {
+
+	body {
+		margin-top: 180px;
+		color: #f2f2f2;
+	}
+	.designH2 {
+>>>>>>> kristie
 		position: fixed;
 		left: 1000px;
 		bottom: 535px;
