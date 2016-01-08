@@ -1,4 +1,4 @@
-//var id = window.location.search.match(/\d+/)[0];
+
 
 function setToken(token) {
 	var _sync = Backbone.sync;
@@ -48,11 +48,11 @@ $("#logInForm").submit(function (e) {
 		console.log(resp);
 		if (resp.user_type == "parent") {
 			console.log("redirect to the parents home page");
-			window.location.href = "./homeParent.html";
+			window.location.href = "./parentStudents.html";
 
 		} else if (resp.user_type == "teacher") {
 			console.log("redirect to the teachers home page");
-			window.location.href = "./homeTeacher.html";
+			window.location.href = "./classSet.html";
 		}
 
 		$.cookie('UserId', userId);
