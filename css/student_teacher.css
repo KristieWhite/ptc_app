@@ -8,7 +8,19 @@
     margin: auto;
   }
 
+  .classes a {
+    text-decoration: none;
+    color: 1a8cab;
+  }
 
+  .classes a:hover {
+    text-transform: uppercase;
+  }
+
+  #classSetDiv ul {
+    list-style: none;
+  
+  }
 
 /*--------------------- STUDENT PROFILE - DETAIL TEACHER VIEW - student_teacher.html --------------------*/
 

@@ -40,6 +40,7 @@
 	  #pickStudentContainer a {
 	    color: black;
 	    text-decoration: none;
+	    width: 80%;
 	  }
 
 	  #childList {
@@ -47,7 +48,7 @@
 	    height: 200px;
 	    position: relative;
 	    display: inline-block;
-	    margin-top: 15px;
+	    margin: 15px 0 0 2em;
 	  }
 
 	  #childList ul {
@@ -56,12 +57,13 @@
 	  }
 
 	  #childList a {
-	  	font-size: 25px;
+	  	font-size: 1.5em;
+	  	color: #1a8cab;
 	  }
 
 	  #childList a:hover {
-	  	text-decoration: underline;
 	  	cursor: pointer;
+	  	text-transform: uppercase;
 	  }
 
 

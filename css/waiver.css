@@ -143,6 +143,10 @@
       margin-top: 50px;
   }
 
+  #waiverHeader a {
+    text-decoration: none;
+  }
+
   .sexyLine { 
       display: block;
       border: none;
@@ -187,7 +191,7 @@
     }
     
   .waiverHeader h2 {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     position: relative;
       text-align: center;
       margin: -1em 0 0 0;

@@ -24,3 +24,53 @@
 			<li><a href="./eventsTeacher.html">Events</a></li>
 			<li><a href="./classSet.html">Classes</a></li>
 		</ul>
+	</div>
+
+	<div id="pageContainer">
+		<div class="waiverHeader">
+			<h2 id="h2Teacher">Waivers</h2>
+		</div>
+
+		<div class="filler"></div>
+
+
+		<!--waiver list...retrieves from back end via backbone..mustache???-->
+		<div id="waiverListDiv" class="centerView">
+			<form method="post">
+				<div id="waiverDetailDiv">
+					<input type="file" accept="pdf/*" id="FILE" />
+					<p></p>
+					<input type="submit" class="sexyButton" value="Upload Wavier" />
+				</div>
+			</form>
+		</div>
+
+		<!--waiver detail view-->
+
+	</div>
+	<!--closes page container-->
+
+	<div class="filler"></div>
+
+	<div class="footer">
+		<p>&copy; 2015 Parent Teacher Connection</p>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+	<script src="js/url.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/Teacher.js"></script>
+
+	<script type="x-tmpl-mustache" id="teacherTemplate">
+		{{#teacher}}
+			<p><img src="{{picture_url}}" /> <span>{{first_name}} {{last_name}}</span></p>
+		{{/teacher}}
+	</script>
+
+
+
+</body>
+
+</html>

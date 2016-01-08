@@ -18,10 +18,47 @@
 		margin-top: 120px;
 	}
 
+	/*#parentInfo {
+       position: fixed;
+       right: 3em;
+    }
+    #parentInfo p {
+    	display: inline-block;
+       float: right;
+       font-size: 20px;
+    }
+    #parentInfo img {
+       position: relative;
+       display: inline-block;
+       top: -2.5em;
+       right: -8em;
+       border-radius: 5px;
+       width: 70px;
+       height: 70px;
+    }*/
+
+    #parentInfo {
+       position: fixed;
+       right: -3em;
+    }
+    #parentInfo p {
+       float: right;
+       font-size: 20px;
+    }
+    #parentInfo img {
+       position: relative;
+       top: -3.5em;
+       right: 6em;
+       border-radius: 5px;
+       width: 70px;
+       height: 70px;
+    }
+
 	#fixedH2 {
 		display: inline-block;
 		position: fixed;
 		margin-left: 9em;
+		text-decoration: none;
 	}
 
 	.feeHeader h2 {
@@ -29,18 +66,17 @@
 		font-size: 35px;
 		text-decoration: underline;
 		margin: 0;
-		margin-top: 20px;
+		margin-top: 30px;
 	}
 
 	#feesDiv2 {
-		/*border: 1px solid blue;*/
 		position: fixed;
 		margin-left: 200px;
-		display: block;
-		play: inline-block;
+		display: inline-block;
 		width: 23%;
 		left: 100px;
-		top: 200px;
+		top: 150px;
+		margin-top: 7em;
 		background-color: rgba(200, 200, 200, 0.20);
 		border-radius: 5px;
 	}
@@ -59,11 +95,12 @@
 
 	#feeDetailDiv {
 		position: relative;
-		right: 300px;
+		/*margin: -4em 0 0 13em;*/
+		right: 150px;
 		bottom: 150px;
 		float: right;
 		height: 400px;
-		width: 500px;
+		/*width: 500px;*/
 		width: 30%;
 		border: 1px solid gray;
 		border-radius: 5px;
