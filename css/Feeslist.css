@@ -5,28 +5,22 @@
 	margin: auto;
 	position: relative;
 	left: 80px;
+	top: 110px;
 }
 
-#fixedH2 {
-	display: inline-block;
-	position: fixed;
-	margin-left: 6em;
-
-}
 
 .feeHeader h2 {
 	color: #006495;
 	font-size: 35px;
-	text-decoration: underline;
-	margin: 0;
+	margin: 10px;
 }
 
 #feesDiv2 {
 	/*border: 1px solid blue;*/
-	position: fixed;
+	position: relative;
 	display: inline-block;
-	width: 30%;
-	background-color: lightgray;
+	width: 35%;
+  background-color: rgba(200, 200, 200, 0.20);
 	border-radius: 5px;
 }
 
@@ -41,8 +35,8 @@
 #feeDetailDiv {
 	position: relative;
 	display: inline-block;
-	right: 100px;
 	float: right;
+	right: 100px;
 	height: 400px;
 	width: 40%;
 	border: 1px solid gray;
@@ -51,7 +45,7 @@
 }
 
 #feeDetailDiv p {
-	margin-left: 0px;
+	margin: 10px;
 }
 
 #feeDetailDiv p a {
@@ -71,75 +65,87 @@
 	cursor: pointer;
 }
 
-/*@media only screen and (min-width: 1824px) {
-	body {
-		margin-top: 120px;
-	}
-	#feeContainer {
-		width: 70%;
-		height: 100%;
-		margin: auto;
-	}
-	#fixedH2 {
-		display: inline-block;
-		position: fixed;
-		margin-left: 1em;
-	}
-	.feeHeader h2 {
-		color: #006495;
-		font-size: 35px;
-		text-decoration: underline;
-		margin: 0;
-		margin-top: 20px;
-	}
-	.clearFloat {
-		clear: both;
-		margin: 0;
-		padding: 0;
-	}
-	#feesDiv2 {
-		/*border: 1px solid blue;
-		position: fixed;
-		margin-left: 50px;
-		display: inline-block;
-		width: 45%;
-		top: 200px;
-	}
-	
-	#feesDiv2 p{
-		font-size: 25px
-	}
-	
-	.color {
-		color: #006495;
-	}
-	#feeDetailDiv {
-		position: relative;
-		display: inline-block;
-		left: 90px;
-		bottom: 120px;
-		float: right;
-		width: 65%;
-		height:300px;
-		border: 1px solid gray;
-		border-radius: 5px;
-		overflow: scroll;
-	}
 
-	#feeDetailDiv p a {
-		color: #1a8cab;
-	}
-	/*  .lightBlue {
-  color: lightblue;
+
+
+/********** Teacher View ************/
+
+#teacherFeeContainer {
+	width: 70%;
+	margin: auto;
+	position: relative;
+	top: 220px;
 }
-	.borderBottom {
-		border-bottom: 1px solid rgb(44, 44, 44);
-	}
-	.StudentListItem-feeLink {
-		color: #1a8cab;
-	}
-	.StudentListItem-feeLink:hover {
-		text-decoration: underline;
-		cursor: pointer;
-	}
-}*/
+
+
+form {
+	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+	margin: auto;
+	position: relative;
+	width: 550px;
+	height: 450px;
+	bottom: 83px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 24px;
+	font-weight: bold;
+	color:black;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+input {
+	width: 375px;
+	display: block;
+	border: 1px solid #999;
+	height: 25px;
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+textarea#feedback {
+	width: 375px;
+	height: 150px;
+}
+textarea#feedback {
+	display: block;
+}
+input.button {
+	width: 120px;
+	position: absolute;
+	right: 20px;
+	bottom: 60px;
+	background: #336699;
+	color: #fff;
+	font-family: Tahoma, Geneva, sans-serif;
+	height: 30px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 1p solid #999;
+}
+input.button:hover {
+	background: #fff;
+	color: #09C;
+}
+textarea:focus,
+input:focus {
+	border: 1px solid #09C;
+}
+.sexyButton {
+	color: #08233e;
+	font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
+	padding: 5px;
+	border: 1px solid #ffcc00;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border-bottom: 1px solid #9f9f9f;
+	-webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	background-color: rgba(255, 204, 0, 1);
+}

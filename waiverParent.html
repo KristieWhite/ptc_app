@@ -34,11 +34,7 @@
 		
 		<div id="studentWaiverDiv">
 			<h2>Click on student name to view their waivers/permission forms</h2>
-			<div id="studentWaiver"></div>
-		</div>
-
-		<!--waiver detail view-->
-		<div id="waiverDetailDiv">
+			<div id="studentWaiver"></div><br/>
 			<div id="waiverDiv"></div>
 		</div>
 
@@ -75,7 +71,7 @@
 
 
 	<script type="x-tmpl-mustache" id="waiverHomeTemplate">
-		<p class="uppercase">Waivers/Permission Slips that need to be signed:</p>
+		<h2 class="uppercase">Waivers/Permission Slips that need to be signed:</h2>
 		{{#waiver}} 
 			<ul>
 				<li><a href="{{sign_url}}">{{title}}</a></li>

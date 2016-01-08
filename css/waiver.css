@@ -1,43 +1,85 @@
 
   @font-face { font-family: 'Firestarter Z'; src: url('../fonts/Firestarter Z.ttf'); } 
-    div.sexyLine {
-      margin-top: 50px;
-  }
 
-  .sexyLine { 
-      display: block;
-      border: none;
-      color: white;
-      height: 1px;
-      background: black;
-      background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
-  }
   
   #pageContainer {
-    width: 80%;
+    width: 70%;
+    height: 100%;
     margin: auto;
-    bottom: 70px;
+    position: relative;
+    top: 60px;
   }
 
-    #h2Parent {
-        padding: .5em;
-    }
+  #h2Parent {
+    padding: .5em;
+  }
     
   .waiverHeader h2 {
-    text-decoration: underline;
     position: relative;
-      text-align: center;
-      margin: -1em 0 0 0;
+    text-align: center;
     font-size: 40px;
-    color: #0089cc;
   } 
 
-  .sexyButton {position: relative;
-	   left: 40px;
-    color: white;
+  #waiverDiv {
+    border: 4px solid lightgray;
+    margin-top: 60px;
+  }
+
+  #waiverDiv h2 {
+    margin: 20px;
+  }
+
+  #waiverDiv ul {
+    list-style: none;
+  }
+
+  #waiverDiv li {
+    margin: 20px;
+  }
+
+  #waiverDiv a {
+    text-decoration: none;
+    color: rgb(21, 149, 182);
+    font-size: 21px;
+  }
+
+  #waiverDiv a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  #studentWaiverDiv {
+    width: 80%;
+    margin: auto;
+  }
+
+  #studentWaiver ul {
+    list-style: none;
+  }
+  
+  #studentWaiver a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    color: rgb(21, 149, 182);
+  }
+
+  #studentWaiver a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  #waiverContainer {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    top: 100px;
+  }
+    
+  .sexyButton {
+    color: #08233e;
     font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
-    padding: px;
-    border: 1px solid #006495;
+    padding: 8px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -45,43 +87,6 @@
     -webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    background-color: #006495;
-     margin: 2em 0 0 0;
-  }
-
-  #waiverDetailDiv {
-    width: 60%;
-    margin: auto;
-    padding: 1em;
-    border: 4px solid lightgray;
-    border: 1px solid black;
-  }
-
-  #waiverDetailDiv p {
-    font-size: 20px;
-  }
-
-  #waiverDetailDiv ul {
-    list-style: none;
-  }
-
-  #waiverDetailDiv a {
-    text-decoration: none;
-    color: #006495;
-  }
-
- .center {
-    text-align: center;
-  }
-
-  #waiverBtnDiv {
-    width:30%;
-    margin: auto;
-  }
-
-  #signThisWaiver {
-    width: 18%;
-    margin: auto;
-  }
-    
+    color: rgb(21, 149, 182);
+   }
 

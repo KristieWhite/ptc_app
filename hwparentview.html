@@ -35,9 +35,11 @@
 		<div id="homeworkDiv" class=""></div>
 		<div id="studentsDiv" class=""></div>
 	</div>
+
 	<div class="footer">
 		<p>&copy; 2015 Parent Teacher Connection</p>
 	</div>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
@@ -62,12 +64,12 @@
 	</script>
 
 	<script type="x-tmpl-mustache" id="homeworkTpl">
-		<p><span class="uppercase">{{first_name}} {{last_name}}</span> Due Date: {{due_date}}
+		<p><span class="uppercase"><b>Due Date:</b> {{due_date}}</span>
 			<br>
 			<br>
-			<span class="lightBlue"><a href="parentHomeworkDetail.html?id={{id}}"<i>Title</i>: {{title}}</a></span>
+			<span class="lightBlue"><b>Title:</b> {{title}}</span>
 			<br>
-			<br> Description: {{description}}</p>
+			<br><span><b>Description:</b> {{description}}</span></p>
 		<br>
 		<br>
 	</script>

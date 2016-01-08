@@ -8,32 +8,34 @@
 	a:visited {
 		color: white;
 	}
+	#eventsContainer {
+		width: 80%;
+		margin: auto;
+		position: relative;
+		top: 80px;
+	}
 	#eventsContainer h2 {
 /*		margin-top: 50px;*/
 		margin-left: 30px;
 		color: #006495;
 		font-size: 30px;
 	}
-	#eventsContainer {
-		width: 80%;
-		margin: auto;
-		position: relative;
-	}
 
     /*events list on parent events page*/
 	#classEventsDetailDiv {
-    float: left;
     width: 70%;
+    margin: auto;
 	}
 	#classEventsDetailDiv img {
 		width: 200px;
+		height: 180px;
 		border-radius: 5px;
 		position: relative;
-		right: 65px;
+		right: 55px;
+		display: inline-block;
     }
     
 	#classEventsDetailDiv h3 {
-    width: 50%;
     letter-spacing: .25px;
 		position: relative;
 		left: 190px;
@@ -41,8 +43,12 @@
 	}
     
   #classEventsDetailDiv h3 a {
+  	width: 40%;
     text-decoration: none;
     color: #33a0ff;
+    display: inline-block;
+    position: relative;
+    bottom: 30px;
   }
   
   #classEventsDetailDiv h3 a:hover {
@@ -58,9 +64,7 @@
 		bottom: 120px;
 		width: 500px;
 	}
-	#classEventsDetailDiv {
-		margin-left: 150px;
-	}
+	
 	#teacherHeader {
 		margin-left: 200px;
 		color: #006495;
@@ -68,6 +72,14 @@
 	}
 	
 	/********style the event form*********/
+	
+	#teacherEventsContainer {
+		width: 70%;
+		margin: auto;
+		position: relative;
+		top: 210px;
+	}
+
 	form {
 		background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
 		margin: auto;

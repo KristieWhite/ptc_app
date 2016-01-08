@@ -6,18 +6,50 @@
   #setContainer {
     width: 70%;
     margin: auto;
+    position: relative;
+    top: 120px;
   }
 
 
+  #classSetContainer ul {
+    list-style: none;
+  }
 
-/*--------------------- STUDENT PROFILE - DETAIL TEACHER VIEW - student_teacher.html --------------------*/
+  #classSetContainer a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(21, 149, 182);
+  }
+  
+  #classSetContainer a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  #studentSetContainer ul {
+    list-style: none;
+  }
+
+  #studentSetContainer a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(21, 149, 182);
+  }
+
+  #studentSetContainer a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+/*--------------------- STUDENT PROFILE - DETAIL TEACHER VIEW - studentProfile.html --------------------*/
 
   #studentDataContainer {
     width: 75%;
     height: 800px;
     margin: auto;
     position: relative;
-    bottom: 50px;
+    top: 110px;
+    margin-bottom: 80px;
   }
 
   #backBtn a{
@@ -66,20 +98,10 @@
   }
 
   #studentData li {
-    margin: 10px;
+    margin: 20px;
     font-size: 20px;
-  }
-
-  .classesApiDiv ul {
-    list-style: none;
-  }
-
-  .classesApiDiv li {
-    margin-left: 30px;
-  }
-
-  .color {
-    color: #006495;
+    position: relative;
+    right: 30px;
   }
 
   .hrSpecial2 {
@@ -93,7 +115,7 @@
 
 
 
-/*--------------------------- STUDENT PROFILE - ATTENDANCE - TEACHER - student_teacher.html -------------------------*/
+/*--------------------------- STUDENT PROFILE - ATTENDANCE - TEACHER - studentProfile.html -------------------------*/
 
   #enterBehavior {
     width: 50%;
@@ -102,71 +124,44 @@
     overflow: scroll;
     border-right: 1px solid black;
     position: relative;
-    top: 40px;
+    top: 30px;
   }
 
   #enterBehavior p {
     font-size: 20px;
-    margin: 0;
-  }
-
-  #enterBehavior ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  #enterBehavior li {
-    font-size: 18px;
   }
 
 
-/*------------------------ STUDENT PROFILE - BEHAVIOR - TEACHER - student_teacher.html -------------------------------*/
+
+/*------------------------ STUDENT PROFILE - BEHAVIOR - TEACHER - studentProfile.html -------------------------------*/
 
 
   #enterAttendance {
     width: 45%;
     height: 250px;
-    font-size: 20px;
     display: inline-block;
     overflow: scroll;
     position: relative;
-    top: 40px;
+    top: 30px;
     left: 10px;
   }
 
   #enterAttendance p {
-    margin: 0;
+    font-size: 20px;
   }
 
-  #enterAttendance ul {
-    list-style: none;
-  }
-
-  #enterAttendance li {
-    font-size: 18px;
-  }
-
-/*-------------------------- STUDENT PROFILE - GRADES - TEACHER - student_teacher.html ----------------------------*/
+/*-------------------------- STUDENT PROFILE - GRADES - TEACHER - studentProfile.html ----------------------------*/
 
   #enterGrades {
     width: 100%;
     height: 200px;
-    overflow: scroll;
-    font-size: 20px;
     position: relative;
     top: 30px;
+    left: 30px;
   }
 
   #enterGrades p {
-    margin: 0;
-  }
-
-  #enterGrades ul {
-    list-style: none;
-  }
-  
-  #enterGrades li {
-    font-size: 18px;
+    font-size: 20px;
   }
 
 

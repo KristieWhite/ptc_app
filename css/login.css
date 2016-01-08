@@ -3,14 +3,14 @@
       font-family: 'Firestarter Z'; 
       src: url('../fonts/Firestarter Z.ttf'); 
   }
-  body {
+
+  .LoginContainer {
       font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
       color: #404040;
-  }
-  .LoginContainer {
       margin: 50px auto;
       width: 640px;
-      height: 900px;
+      position: relative;
+      top: 80px;
   }
   .login {
       position: relative;
