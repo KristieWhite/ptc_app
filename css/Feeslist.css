@@ -1,89 +1,29 @@
-body {
-	margin-top: 120px;
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 
 
-#fixedH2 {
-	display: inline-block;
-	position: fixed;
-	margin-left: 6em;
 
-}
+}/*mobile query ends here*/
+/****************************************************************************************************/
+/*tablet query starts here*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
-.feeHeader h2 {
-	color: #006495;
-	font-size: 35px;
-	text-decoration: underline;
-	margin: 0;
-	margin-top: 20px;
-}
 
-#feesDiv2 {
-	/*border: 1px solid blue;*/
-	position: fixed;
-	margin-left: 200px;
-	display: block;play: inline-block;
-	width: 23%;
-	top: 200px;
-	background-color: lightgray;
-	border-radius: 5px;
-}
 
-#feesDiv2 span{
-	padding: 10px;
-}
+}/*closes tablet query*/
+/*****************************************************************************************************/
+/*laptop query starts here*/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 
-.color {
-	color: #006495;
-}
-
-#feeDetailDiv {
-	position: relative;
-	right: 100px;
-	bottom: 150px;
-	float: right;
-	height: 400px;
-	width: 500px;
-	border: 1px solid gray;
-	border-radius: 5px;
-	overflow: scroll;
-}
-
-#feeDetailDiv p {
-	margin-left: 0px;
-}
-
-#feeDetailDiv p a {
-	color: #1a8cab;
-}
-
-.borderBottom {
-	border-bottom: 1px solid rgb(44, 44, 44);
-}
-
-.StudentListItem-feeLink {
-	color: #1a8cab;
-}
-
-.StudentListItem-feeLink:hover {
-	text-decoration: underline;
-	cursor: pointer;
-}
-
-/*@media only screen and (min-width: 1824px) {
 	body {
 		margin-top: 120px;
 	}
-	#feeContainer {
-		width: 70%;
-		height: 100%;
-		margin: auto;
-	}
+
 	#fixedH2 {
 		display: inline-block;
 		position: fixed;
-		margin-left: 1em;
+		margin-left: 9em;
 	}
+
 	.feeHeader h2 {
 		color: #006495;
 		font-size: 35px;
@@ -91,54 +31,140 @@ body {
 		margin: 0;
 		margin-top: 20px;
 	}
-	.clearFloat {
-		clear: both;
-		margin: 0;
-		padding: 0;
-	}
+
 	#feesDiv2 {
-		/*border: 1px solid blue;
+		/*border: 1px solid blue;*/
 		position: fixed;
-		margin-left: 50px;
-		display: inline-block;
-		width: 45%;
+		margin-left: 200px;
+		display: block;
+		play: inline-block;
+		width: 23%;
+		left: 100px;
 		top: 200px;
+		background-color: lightgray;
+		border-radius: 5px;
 	}
-	
-	#feesDiv2 p{
-		font-size: 25px
+
+	#feesDiv2 span {
+		padding: 10px;
 	}
-	
+
 	.color {
 		color: #006495;
 	}
+
+	#feeContainer {
+		width: 80%;
+	}
+
 	#feeDetailDiv {
 		position: relative;
-		display: inline-block;
-		left: 90px;
-		bottom: 120px;
+		right: 300px;
+		bottom: 150px;
 		float: right;
-		width: 65%;
-		height:300px;
+		height: 400px;
+		/*width: 500px;*/
+		width: 30%;
 		border: 1px solid gray;
 		border-radius: 5px;
-		overflow: scroll;
+	}
+
+	#feeDetailDiv p {
+		margin-left: 0px;
 	}
 
 	#feeDetailDiv p a {
 		color: #1a8cab;
 	}
-	/*  .lightBlue {
-  color: lightblue;
-}
+
 	.borderBottom {
 		border-bottom: 1px solid rgb(44, 44, 44);
 	}
+
 	.StudentListItem-feeLink {
 		color: #1a8cab;
 	}
+
 	.StudentListItem-feeLink:hover {
 		text-decoration: underline;
 		cursor: pointer;
 	}
-}*/
+
+}/*closes laptop query*/
+/************************************************************************************************/
+/*large screen query starts here*/
+@media only screen and (min-width: 1824px) {
+	
+		body {
+			margin-top: 120px;
+		}
+		#feeContainer {
+			width: 70%;
+			height: 100%;
+			margin: auto;
+		}
+		#fixedH2 {
+			display: inline-block;
+			position: fixed;
+			margin-left: 1em;
+		}
+		.feeHeader h2 {
+			color: #006495;
+			font-size: 35px;
+			text-decoration: underline;
+			margin: 0;
+			margin-top: 20px;
+		}
+		.clearFloat {
+			clear: both;
+			margin: 0;
+			padding: 0;
+		}
+		#feesDiv2 {
+			/*border: 1px solid blue;*/
+			position: fixed;
+			margin-left: 50px;
+			display: inline-block;
+			width: 45%;
+			top: 200px;
+		}
+		
+		#feesDiv2 p{
+			font-size: 25px
+		}
+		
+		.color {
+			color: #006495;
+		}
+		#feeDetailDiv {
+			position: relative;
+			display: inline-block;
+			left: 90px;
+			bottom: 120px;
+			float: right;
+			width: 65%;
+			height:300px;
+			border: 1px solid gray;
+			border-radius: 5px;
+			overflow: scroll;
+		}
+
+		#feeDetailDiv p a {
+			color: #1a8cab;
+		}
+	    .lightBlue {
+	  color: lightblue;
+		}
+		.borderBottom {
+			border-bottom: 1px solid rgb(44, 44, 44);
+		}
+		.StudentListItem-feeLink {
+			color: #1a8cab;
+		}
+		.StudentListItem-feeLink:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+
+}/*closes large screen*/
+

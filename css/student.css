@@ -1,273 +1,226 @@
-
-/*@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { */
-
-
-
-/*  #studentsTeacherDetailDiv {
-      padding: 5em;
-  }
-
- a:visited { color: white; }
-  a:link { color: white; }
-
-
-  .black { 
-    color: black; 
-  }
-
-  .lightBlue { 
-    color: lightBlue; 
-  }*/
-
-/*--------------------- STUDENT PROFILE - LIST PARENT VIEW - parentStudent.html ------------------------*/
-
-  #pickStudentContainer {
-    width: 75%;
-    margin: auto;
-    position: relative;
-    bottom: 60px;
-  }
-
-  #pickStudentContainer a {
-    color: black;
-    text-decoration: none;
-  }
-
-  #childList {
-    width: 25%;
-    height: 200px;
-    position: relative;
-    display: inline-block;
-    margin-top: 15px;
-  }
-
-  #childList ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  #childList a {
-  	font-size: 25px;
-  }
-
-  #childList a:hover {
-  	text-decoration: underline;
-  	cursor: pointer;
-  }
-
-
-/*--------------------- STUDENT PROFILE - DETAIL PARENT VIEW - student.html --------------------*/
-
-#studentContainer {
-	width: 75%;
-	height: 800px;
-	margin: auto;
-	position: relative;
-	bottom: 50px;
-}
-
-#back a {
-	font-size: 20px;
-	color: black;
-	text-decoration: none;
-	position: relative;
-}
-
-#back a:hover {
-	color: white;
-	background: #006495;
-}
-
-.studentImg {
-	position: relative;
-	display: inline-block;
-	margin-top: 15px;
-	margin-left: 30px
-}
-
-.studentImg img {
-	width: 200px;
-	height: 200px;
-	border-radius: 10px;
-	display: inline-block;
-}
-
-#studentInfoDiv {
-	width: 70%;
-	height: 200px;
-	margin: auto;
-	position: relative;
-	display: inline-block;
-	top: 15px;
-	float: right;
-	border: 1px solid black;
-	border-radius: 5px;
-	margin-right: 20px;
-	overflow: scroll;
-}
-
-#studentInfo ul {
-	list-style: none;
-}
-
-#studentInfo li {
-	margin: 10px;
-	font-size: 20px;
-}
-
-.classesApiDiv ul {
-	list-style: none;
-}
-
-.classesApiDiv li {
-	margin-left: 30px;
-}
-
-.color {
-	color: #006495;
-}
-
-.hrSpecial2 {
-	border: 0;
-	height: 1px;
-	background: #333;
-	background-image: linear-gradient(to right, #ccc, #333, #ccc);
-	position: relative;
-	top: 30px;
-}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 
 
 
-/*--------------------------- STUDENT PROFILE - ATTENDANCE - PARENT - student.html -------------------------*/
-
-#studentBehavior {
-	width: 50%;
-	height: 250px;
-	display: inline-block;
-	overflow: scroll;
-	border-right: 1px solid black;
-	position: relative;
-	top: 40px;
-}
-
-#studentBehavior p {
-	font-size: 20px;
-	margin: 0;
-}
-
-#studentBehavior ul {
-	list-style: none;
-	padding: 0;
-}
-
-#studentBehavior li {
-	font-size: 18px;
-}
+}/*closes mobile query*/
+/******************************************************************************************************************/
+/*tablet query starts here*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
 
-/*------------------------ STUDENT PROFILE - BEHAVIOR - PARENT - student.html -------------------------------*/
 
-#studentAttendance {
-	width: 45%;
-	height: 250px;
-	font-size: 20px;
-	display: inline-block;
-	overflow: scroll;
-	position: relative;
-	top: 40px;
-	left: 10px;
-}
+}/*tablet query ends here*/
+/******************************************************************************************************************/
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 
-#studentAttendance p {
-	margin: 0;
-}
+	/*  #studentsTeacherDetailDiv {
+	      padding: 5em;
+	  }
 
-#studentAttendance ul {
-	list-style: none;
-}
-
-#studentAttendance li {
-	font-size: 18px;
-}
+	 a:visited { color: white; }
+	  a:link { color: white; }
 
 
-/*-------------------------- STUDENT PROFILE - GRADES - PARENT - student.html ----------------------------*/
+	  .black { 
+	    color: black; 
+	  }
+
+	  .lightBlue { 
+	    color: lightBlue; 
+	  }*/
+
+	/*--------------------- STUDENT PROFILE - LIST PARENT VIEW - parentStudent.html ------------------------*/
+	  #pickStudentContainer {
+	    width: 75%;
+	    margin: auto;
+	    position: relative;
+	    bottom: 60px;
+	  }
+
+	  #pickStudentContainer a {
+	    color: black;
+	    text-decoration: none;
+	  }
+
+	  #childList {
+	    width: 25%;
+	    height: 200px;
+	    position: relative;
+	    display: inline-block;
+	    margin-top: 15px;
+	  }
+
+	  #childList ul {
+	    list-style: none;
+	    padding: 0;
+	  }
+
+	  #childList a {
+	  	font-size: 25px;
+	  }
+
+	  #childList a:hover {
+	  	text-decoration: underline;
+	  	cursor: pointer;
+	  }
 
 
-  #studentGrades {
-    width: 100%;
-    height: 200px;
-    overflow: scroll;
-    font-size: 20px;
-    position: relative;
-    top: 30px;
-  }
+	/*--------------------- STUDENT PROFILE - DETAIL PARENT VIEW - student.html --------------------*/
 
-  #studentGrades p {
-    margin: 0;
-  }
+	#studentContainer {
+		width: 75%;
+		height: 800px;
+		margin: auto;
+		position: relative;
+		bottom: 50px;
+	}
 
-  #studentGrades ul {
-    list-style: none;
-  }
-  
-  #studentGrades li {
-    font-size: 18px;
-  }
+	#back a {
+		font-size: 20px;
+		color: black;
+		text-decoration: none;
+		position: relative;
+	}
 
+	#back a:hover {
+		color: white;
+		background: #006495;
+	}
 
-  
-/*}*/ /*closes laptop query
+	.studentImg {
+		position: relative;
+		display: inline-block;
+		margin-top: 15px;
+		margin-left: 30px
+	}
+
+	.studentImg img {
+		width: 210px;
+		height: 200px;
+		border-radius: 10px;
+		display: inline-block;
+	}
+
+	#studentInfoDiv {
+		width: 70%;
+		height: 200px;
+		margin: auto;
+		position: relative;
+		display: inline-block;
+		top: 15px;
+		float: right;
+		border: 1px solid black;
+		border-radius: 5px;
+		margin-right: 20px;
+		overflow: scroll;
+	}
+
+	#studentInfo ul {
+		list-style: none;
+	}
+
+	#studentInfo li {
+		margin: 10px;
+		font-size: 20px;
+	}
+
+	.classesApiDiv ul {
+		list-style: none;
+	}
+
+	.classesApiDiv li {
+		margin-left: 30px;
+	}
+
+	.color {
+		color: #006495;
+	}
+
+	.hrSpecial2 {
+		border: 0;
+		height: 1px;
+		background: #333;
+		background-image: linear-gradient(to right, #ccc, #333, #ccc);
+		position: relative;
+		top: 30px;
+	}
+
+	/*--------------------------- STUDENT PROFILE - ATTENDANCE - PARENT - student.html -------------------------*/
+	#studentBehavior {
+		width: 50%;
+		height: 250px;
+		display: inline-block;
+		overflow: scroll;
+		border-right: 1px solid black;
+		position: relative;
+		top: 40px;
+	}
+
+	#studentBehavior p {
+		font-size: 20px;
+		margin: 0;
+	}
+
+	#studentBehavior ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	#studentBehavior li {
+		font-size: 18px;
+	}
+
+	/*------------------------ STUDENT PROFILE - BEHAVIOR - PARENT - student.html -------------------------------*/
+	#studentAttendance {
+		width: 45%;
+		height: 250px;
+		font-size: 20px;
+		display: inline-block;
+		overflow: scroll;
+		position: relative;
+		top: 40px;
+		left: 10px;
+	}
+
+	#studentAttendance p {
+		margin: 0;
+	}
+
+	#studentAttendance ul {
+		list-style: none;
+	}
+
+	#studentAttendance li {
+		font-size: 18px;
+	}
+
+	/*-------------------------- STUDENT PROFILE - GRADES - PARENT - student.html ----------------------------*/
+	  #studentGrades {
+	    width: 100%;
+	    height: 200px;
+	    overflow: scroll;
+	    font-size: 20px;
+	    position: relative;
+	    top: 30px;
+	  }
+
+	  #studentGrades p {
+	    margin: 0;
+	  }
+
+	  #studentGrades ul {
+	    list-style: none;
+	  }
+	  
+	  #studentGrades li {
+	    font-size: 18px;
+	  }
+
+}/*closes laptop query*/
 /************************************************************************************************/
 /*large screen query starts here*/
 @media only screen  and (min-width : 1824px) {
 
-  a:visited { color: white; }
-  a:link { color: white; }
-
-  .black { color: black; }
-  .lightBlue { color: lightBlue; }
-
-  body {
-    margin-top: 200px;
-    margin-bottom: 100px;
-  }
-
-  /*student profile - parent view*/
-
-#studentGrades p {
-	margin: 0;
-}
-
-#studentGrades ul {
-	list-style: none;
-}
-
-#studentGrades li {
-	font-size: 18px;
-}
-
-#classSetContainer {
-	position: relative;
-	left: 300px;
-}
-
-#studentSetContainer {
-	position: relative;
-	left: 300px;
-}
-
-
-/*}*/
-
-
-/*closes laptop query
-/************************************************************************************************/
-
-
-/*large screen query starts here*/
-
-@media only screen and (min-width: 1824px) {
 	a:visited {
 		color: white;
 	}
@@ -362,7 +315,5 @@
 		position: relative;
 		top: 20px;
 	}
-}
 
-
-/*closes large screen query*/
+}/*closes large screen query*/

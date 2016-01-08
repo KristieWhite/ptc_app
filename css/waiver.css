@@ -48,7 +48,90 @@
 /*tablet query starts here*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
+  @font-face { font-family: 'Firestarter Z'; src: url('../fonts/Firestarter Z.ttf'); } 
+    div.sexyLine {
+      margin-top: 50px;
+  }
 
+  .sexyLine { 
+      display: block;
+      border: none;
+      color: white;
+      height: 1px;
+      background: black;
+      background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+  }
+  
+  #pageContainer {
+    width: 80%;
+    margin: auto;
+    bottom: 70px;
+  }
+
+    #h2Parent {
+        padding: .5em;
+    }
+    
+  .waiverHeader h2 {
+    text-decoration: underline;
+    position: relative;
+      text-align: center;
+      margin: -1em 0 0 0;
+    font-size: 40px;
+    color: #0089cc;
+  } 
+
+  .sexyButton {position: relative;
+     left: 40px;
+    color: white;
+    font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
+    padding: px;
+    border: 1px solid #006495;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: inset 0 1px 0 rgba (255, 255, 255, 0.5);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    background-color: #006495;
+     margin: 2em 0 0 0;
+  }
+
+  #waiverDetailDiv {
+    width: 60%;
+    margin: auto;
+      padding: 1em;
+      border: 4px solid lightgray;
+      border: 1px solid black;
+  }
+
+  #waiverDetailDiv p {
+    font-size: 20px;
+  }
+
+  #waiverDetailDiv ul {
+    list-style: none;
+  }
+
+  #waiverDetailDiv a {
+    text-decoration: none;
+    color: #006495;
+  }
+
+ .center {
+    text-align: center;
+  }
+
+  #waiverBtnDiv {
+    width:30%;
+    margin: auto;
+  }
+
+  #signThisWaiver {
+    width: 18%;
+    margin: auto;
+  }
 
 }/*closes tablet query*/
 /*****************************************************************************************************/
@@ -89,7 +172,7 @@
   } 
 
   .sexyButton {position: relative;
-	   left: 40px;
+     left: 40px;
     color: white;
     font: 1.5em Futura, 'Century Gothic', AppleGothic, sans-serif;
     padding: px;
@@ -108,9 +191,9 @@
   #waiverDetailDiv {
     width: 60%;
     margin: auto;
-    padding: 1em;
-    border: 4px solid lightgray;
-    border: 1px solid black;
+      padding: 1em;
+      border: 4px solid lightgray;
+      border: 1px solid black;
   }
 
   #waiverDetailDiv p {

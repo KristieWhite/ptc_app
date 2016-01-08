@@ -30,7 +30,9 @@
 }/*closes tablet query*/
 /*****************************************************************************************************/
 /*laptop query starts here*/
+
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+
 	#homeContainer {
 		width: 100%;
 		height: 100%;
@@ -109,7 +111,9 @@
 }/*closes laptop query*/
 /************************************************************************************************/
 /*large screen query starts here*/
+
 @media only screen and (min-width: 1824px) {
+
 	#homeContainer {
 		width: 100%;
 		height: 100%;
@@ -144,7 +148,6 @@
 		background-position: center;
 		width: 100%;
 		height: 100%;
-
 		-webkit-transition: .3s ease-in-out;
 		transition: .3s ease-in-out;
 		text-align: center;
