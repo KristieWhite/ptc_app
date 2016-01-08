@@ -91,11 +91,10 @@
   <script src="js/login.js"></script>
   <script src="js/students.js"></script>
 
-  <script type="x-tmpl-mustache" id="teacherInfoTemplate">
-    {{#teachers}}
-      <p>{{first_name}} {{last_name}}</p>
-      <img src="{{picture_url}}"> 
-    {{/teachers}}
+  <script type="x-tmpl-mustache" id="teacherTemplate">
+    {{#teacher}}
+      <p><img src="{{picture_url}}" /> <span>{{first_name}} {{last_name}}</span></p>
+    {{/teacher}}
   </script>
 
   <script type="x-tmpl-mustache" id="studentPicTemplate">

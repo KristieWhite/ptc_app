@@ -63,14 +63,18 @@
 	}
 	
 	#assignContainer {
-		widows: ;
-		dth: 70%;
+		width: 70%;
 		height: 100%;
 		margin: auto;
 	}
 	
 	.StudentListItem-homeworkLink {
 		color: #1a8cab;
+	}
+
+	.StudentListItem-homeworkLink:hover{
+		color: #1a8cab;
+		cursor: pointer;
 	}
 	
 	#mainAssignments {
@@ -203,23 +207,7 @@
 		left: 10px;
 	}
 	
-	#teachHome2 {
-		position: fixed;
-		left: 1000px;
-		bottom: 535px;
-	}
-	
-	#teachHome2 img {
-		width: 70px;
-		height: 70px;
-		border-radius: 5px;
-	}
-	
-	#teachHome2 p {
-		position: absolute;
-		left: 100px;
-		bottom: 10px;
-	}
+
 
 
 

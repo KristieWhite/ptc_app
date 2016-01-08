@@ -121,19 +121,21 @@
 		position: relative;
 		display: inline-block;
 		font-family: serif;
+		float: right;
 		bottom: 5px;
+		right: 80px;
 	}
 
 	#teachHome img {
-		position: relative;
-		font-size: 18px;
-		float: left;
-	}
-
-	#teachHome p {
 		width: 60px;
 		height: 60px;
 		border-radius: 5px;
+	}
+
+	#teachHome p {
+		position: relative;
+		font-size: 18px;
+		float: right;
 	}
 
 
