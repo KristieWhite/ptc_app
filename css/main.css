@@ -54,18 +54,18 @@
 		position: fixed;
 		top: 80px;
 		width: 10%;
+		height: 100%;
+		background: #336699;
 	}
 	.navbar ul {
-		height: 110px;
 		list-style: none;
 		text-align: center;
 		padding: 0;
 		margin: 0;
 	}
 	.navbar li {
-		background: rgb(71, 71, 74);
 		border-bottom: none;
-		line-height: 130px;
+		line-height: 125px;
 		font-size: 15px;
 		letter-spacing: 2px;
 	}
