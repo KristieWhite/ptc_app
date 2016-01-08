@@ -10,21 +10,19 @@
 </head>
 
 <body>
-
-  <div class="header">
-    <h1>Parent Teacher Connection</h1>
-    <div id="parentInfo"></div>
-  </div>
-
-  <div class="navbar">
-    <ul>
-      <li><a href="./homeTeacher.html">Home</a></li>
-      <li><a href="./hwteachview.html">Assignments</a></li>
-      <li><a href="./waiverTeacher.html">Waivers</a></li>
-      <li><a href="./FeesListTeacher.html">Fees</a></li>
-      <li><a href="./eventsTeacher.html">Events</a></li>
-    </ul>
-  </div>
+	<div class="header">
+		<a href="classSet.html"><h1>Parent Teacher Connection</h1></a>
+		<div id="teachHome"></div>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="./hwteachview.html">Assignments</a></li>
+			<li><a href="./waiverTeacher.html">Waivers</a></li>
+			<li><a href="./FeesListTeacher.html">Fees</a></li>
+			<li><a href="./eventsTeacher.html">Events</a></li>
+			<li><a href="./classSet.html">Classes</a></li>
+		</ul>
+	</div>
 
   <div id="studentDataContainer">
 
@@ -90,13 +88,14 @@
   <script src="js/jquery.cookie.js"></script>
   <script src="js/login.js"></script>
   <script src="js/students.js"></script>
-
-  <script type="x-tmpl-mustache" id="teacherInfoTemplate">
-    {{#teachers}}
-      <p>{{first_name}} {{last_name}}</p>
-      <img src="{{picture_url}}"> 
-    {{/teachers}}
-  </script>
+ <script src="js/Teacher.js"></script>
+ 
+		<script type="x-tmpl-mustache" id="teacherTemplate">
+		{{#teacher}}
+		<img src="{{picture_url}}" />
+		<p>{{first_name}} {{last_name}}</p> 
+		{{/teacher}}
+	</script>
 
   <script type="x-tmpl-mustache" id="studentPicTemplate">
   {{#studentPic}}
@@ -114,36 +113,5 @@
       </ul>
     {{/teacherView}}
   </script>
-<!-- 
-  <script type="x-tmpl-mustache" id="behaviorTemplate">
-  {{#behavior}}
-    <ul>
-      <li>{{date}}</li>
-      <li>{{description}}</li>
-    </ul>
-  {{/behavior}}
-
-  </script>
-
-  <script type="x-tmpl-mustache" id="attendanceTemplate">
-  {{#attendance}}
-    <ul>
-      <li>{{date}}</li>
-    </ul>
-  {{/attendance}}
-  </script>
-
-  <script type="x-tmpl-mustache" id="gradesTemplate">
-  {{#grades}}
-    <ul>
-      <li>Homework: {{title}}</li>
-      <li>Due Date: {{due_date}}</li>
-      <li>Points: {{points}}/{{total_points}}</li>
-      <li>Grade: {{grade}}</li>
-    </ul>
-  {{/grades}}
-  </script>
-  
- -->
 </body>
 </html>

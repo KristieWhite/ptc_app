@@ -23,6 +23,7 @@
 	
 	#studentsDiv2 a:hover {
 		text-transform: uppercase;
+		cursor: pointer;
 	}
 	
 	h2 {

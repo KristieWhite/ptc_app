@@ -11,20 +11,23 @@
   <link rel="stylesheet" type="text/css" href="css/parent.css">
 </head>
 <body>
-  <div class="header">
-    <h1>Parent Teacher Connection</h1>
-    <div id="parentInfo"></div>
-  </div>
+	<div class="header">
+		<a href="./parentStudents.html"><h1>Parent Teacher Connection</h1></a>
+		<div id="parentInfo"></div>
+	</div>
 
-  <div class="navbar">
-    <ul>
-      <li><a href="./homeParent.html">Home</a></li>
-      <li><a href="./hwparentview.html">Assignments</a></li>
-      <li><a href="./waiverParent.html">Waivers</a></li>
-      <li><a href="./feesListParent.html">Fees</a></li>
-      <li><a href="./eventsParent.html">Events</a></li>
-    </ul>
-  </div>
+	<div class="navbar">
+		<ul>
+			<li>
+				<a href="./homeParent.html"></a>
+			</li>
+			<li><a href="./hwparentview.html">Assignments</a></li>
+			<li><a href="./waiverParent.html">Waivers</a></li>
+			<li><a href="./feesListParent.html">Fees</a></li>
+			<li><a href="./eventsParent.html">Events</a></li>
+			<li><a href="./parentStudents.html">Children</a></li>
+		</ul>
+	</div>
   <div id="feeContainer">
 
     <div id="backBtn">
@@ -75,11 +78,7 @@
 	<script src="Details/FeesDetail.js"></script>
   <script src="js/parent.js"></script>
 
-  <script type="x-tmpl-mustache" id="parentInfoTemplate">
-    {{#parents}}
-    <p>{{first_name}} {{last_name}}</p>
-    <img src="{{picture_url}}"> {{/parents}}
-  </script>
+
 
 
 	<script type="x-tmpl-mustache" id="feesTemplate">
@@ -88,7 +87,6 @@
 		<p>Amount Due: ${{amount_needed}}</p>
     <p>Total Paid: ${{payment_amount}}</p>
     <p>Due Date: {{date}}</p>
-		<p><img src="{{picture_url}}"/></p>
 		{{/feeDetail}}
 	</script>
 	
