@@ -1,7 +1,11 @@
-body {
-	margin-top: 120px;
-}
 
+#feeContainer {
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	left: 80px;
+}
 
 #fixedH2 {
 	display: inline-block;
@@ -15,16 +19,13 @@ body {
 	font-size: 35px;
 	text-decoration: underline;
 	margin: 0;
-	margin-top: 20px;
 }
 
 #feesDiv2 {
 	/*border: 1px solid blue;*/
 	position: fixed;
-	margin-left: 200px;
-	display: block;play: inline-block;
-	width: 23%;
-	top: 200px;
+	display: inline-block;
+	width: 30%;
 	background-color: lightgray;
 	border-radius: 5px;
 }
@@ -39,11 +40,11 @@ body {
 
 #feeDetailDiv {
 	position: relative;
+	display: inline-block;
 	right: 100px;
-	bottom: 150px;
 	float: right;
 	height: 400px;
-	width: 500px;
+	width: 40%;
 	border: 1px solid gray;
 	border-radius: 5px;
 	overflow: scroll;
