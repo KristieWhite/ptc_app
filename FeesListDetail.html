@@ -12,7 +12,7 @@
 </head>
 <body>
   <div class="header">
-    <h1><a href="./homeParent.html">Teacher to Parent</a>></h1>
+    <h1><a href="./homeParent.html">Teacher to Parent</a></h1>
     <div id="parentInfo"></div>
   </div>
 
@@ -22,12 +22,14 @@
       <li><a href="./waiverParent.html">Waivers</a></li>
       <li><a href="./feesListParent.html">Fees</a></li>
       <li><a href="./eventsParent.html">Events</a></li>
+      <li><a href="./parentStudents.html">Children</a></li>
+
     </ul>
   </div>
   <div id="feeContainer">
 
     <div id="backBtn">
-      <a href="feesListParent.html">BACK</a>
+      <button><a href="feesListParent.html">BACK</a></button>
     </div>
 
     <div id="childFeeDetail"></div>
@@ -76,8 +78,8 @@
 
   <script type="x-tmpl-mustache" id="parentInfoTemplate">
     {{#parents}}
-    <p>{{first_name}} {{last_name}}</p>
-    <img src="{{picture_url}}"> {{/parents}}
+    <p><img src="{{picture_url}}"/> <span>{{first_name}} {{last_name}}</span></p>
+    {{/parents}}
   </script>
 
 

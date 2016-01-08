@@ -198,7 +198,8 @@
 	.navbar li {
 		background: rgb(71, 71, 74);
 		border-bottom: none;
-		line-height: 80px;
+		/*line-height: 80px;*/
+		line-height: 8.80em;
 		font-size: 15px;
 		margin-left: -1px;
 		letter-spacing: 2px;
@@ -250,20 +251,22 @@
 		bottom: 80px;
 	}*/
 	#parentInfo {
-        position: fixed;
+       position: fixed;
        right: 3em;
     }
     #parentInfo p {
+    	display: inline-block;
        float: right;
-        font-size: 20px;
+       font-size: 20px;
     }
     #parentInfo img {
        position: relative;
-       top: -3.5em;
-       right: -6em;
-        border-radius: 5px;
-        width: 70px;
-        height: 70px;
+       display: inline-block;
+       top: -2.5em;
+       right: -8em;
+       border-radius: 5px;
+       width: 70px;
+       height: 70px;
     }
 	#teachHome {
 		position: fixed;

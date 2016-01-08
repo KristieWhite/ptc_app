@@ -59,16 +59,15 @@
 
 	<!-- Parent Data -->
 	<script type="x-tmpl-mustache" id="parentInfoTemplate">
-
 		{{#parents}}
-		<p><img src="{{picture_url}}" /> <span>{{first_name}} {{last_name}}</span></p>
+		<p><img src="{{picture_url}}"/> <span>{{first_name}} {{last_name}}</span></p>
 		{{/parents}}
 	</script>
 
 	<script type="x-tmpl-mustache" id="studentWaiverTemplate">
 		{{#waiverStudents}}
 			<ul>
-				<li><a href="./waiverParent.html?id={{id}}">{{first_name}} {{last_name}}</a></li>
+				<li><a href="./waiverParent.html?id={{id}}"><span className="nameStyle">{{first_name}} {{last_name}}</span></a></li>
 			</ul>
 		{{/waiverStudents}}
 	</script>

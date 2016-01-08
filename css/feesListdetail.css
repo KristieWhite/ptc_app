@@ -18,7 +18,8 @@
   width: 40%;
   display: inline-block;
   position: relative;
-  left: 40px;
+  /*left: 40px;*/
+  margin-left: 11em; 
 }
 
 #feeForm {
@@ -30,7 +31,8 @@
 
 #feeForm form {
   position: relative;
-  top: 20px;
+  /*top: 20px;*/
+  margin: 2em 0 0 0;
   border: 1px solid black;
   height: 170px;
 }

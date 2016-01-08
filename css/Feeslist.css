@@ -41,7 +41,7 @@
 		width: 23%;
 		left: 100px;
 		top: 200px;
-		background-color: lightgray;
+		background-color: rgba(200, 200, 200, 0.20);
 		border-radius: 5px;
 	}
 

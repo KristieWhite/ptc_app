@@ -244,7 +244,6 @@
 /*laptop query starts here*/
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 	
-
 	body {
 		margin-top: 180px;
 		color: black;
@@ -253,7 +252,7 @@
 	#studentsDiv2 {
 		position: fixed;
 		left: 150px;
-		margin: 3em 0 0 3em;
+		margin: 5em 0 0 2em;
 		float: left;
 		width: 31%;
 		height: 20%;
@@ -273,8 +272,8 @@
 	
 	h2 {
 		position: fixed;
-		left: 8em;
 		color: black;
+		text-shadow: 1px 1px rgb(100, 100, 100);
 	}
 	
 	#homeworkDiv {
@@ -297,6 +296,7 @@
 	
 	#homeworkDiv p {
 		position: relative;
+		padding: 1em;
 		bottom: 1em;
 		border: 5px solid gray;
 		border-radius: 5px;
