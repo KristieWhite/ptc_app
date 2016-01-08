@@ -1,3 +1,4 @@
+
 /*********************** STUDENT PROFILE - LIST PARENT VIEW ******************************************/
 
 #pickStudentContainer {
@@ -7,35 +8,35 @@
 	bottom: 60px;
 }
 
-#pickStudentContainer a {
-	color: black;
-	text-decoration: none;
-}
+  #pickStudentContainer a {
+    color: black;
+    text-decoration: none;
+  }
 
-#childList {
-	width: 25%;
-	height: 200px;
-	position: relative;
-	display: inline-block;
-	margin-top: 15px;
-}
+  #childList {
+    width: 25%;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+  }
 
-#childList ul {
-	list-style: none;
-	padding: 0;
-}
+  #childList ul {
+    list-style: none;
+    padding: 0;
+  }
 
-#childList a {
-	font-size: 25px;
-}
+  #childList a {
+  	font-size: 25px;
+  }
 
-#childList a:hover {
-	text-decoration: underline;
-	cursor: pointer;
-}
+  #childList a:hover {
+  	text-decoration: underline;
+  	cursor: pointer;
+  }
 
 
-/***************************** STUDENT PROFILE - DETAIL PARENT VIEW ********************************/
+/*--------------------- STUDENT PROFILE - DETAIL PARENT VIEW - student.html --------------------*/
 
 #studentContainer {
 	width: 75%;
@@ -65,7 +66,7 @@
 }
 
 .studentImg img {
-	width: 200px;
+	width: 210px;
 	height: 200px;
 	border-radius: 10px;
 	display: inline-block;
@@ -116,10 +117,8 @@
 }
 
 
-/******************************* END STUDENT PROFILE PARENT VIEW *******************************/
 
-
-/*************************** STUDENT PROFILE - ATTENDANCE - PARENT *******************************/
+/*--------------------------- STUDENT PROFILE - ATTENDANCE - PARENT - student.html -------------------------*/
 
 #studentBehavior {
 	width: 50%;
@@ -146,7 +145,7 @@
 }
 
 
-/**************************** STUDENT PROFILE - BEHAVIOR - PARENT ******************************/
+/*------------------------ STUDENT PROFILE - BEHAVIOR - PARENT - student.html -------------------------------*/
 
 #studentAttendance {
 	width: 45%;
@@ -172,36 +171,28 @@
 }
 
 
-/*************************** STUDENT PROFILE - GRADES - PARENT ********************************/
+/*-------------------------- STUDENT PROFILE - GRADES - PARENT - student.html ----------------------------*/
 
-#studentGrades {
-	width: 100%;
-	height: 200px;
-	overflow: scroll;
-	font-size: 20px;
-	position: relative;
-	top: 30px;
-}
 
-#studentGrades p {
-	margin: 0;
-}
+  #studentGrades {
+    width: 100%;
+    height: 200px;
+    overflow: scroll;
+    font-size: 20px;
+    position: relative;
+    top: 30px;
+  }
 
-#studentGrades ul {
-	list-style: none;
-}
+  #studentGrades p {
+    margin: 0;
+  }
 
-#studentGrades li {
-	font-size: 18px;
-}
+  #studentGrades ul {
+    list-style: none;
+  }
+  
+  #studentGrades li {
+    font-size: 18px;
+  }
 
-#classSetContainer {
-	position: relative;
-	left: 300px;
-}
-
-#studentSetContainer {
-	position: relative;
-	left: 300px;
-}
 

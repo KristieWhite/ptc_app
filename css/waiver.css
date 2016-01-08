@@ -87,3 +87,9 @@ div.sexyLine {
 	width: 18%;
 	margin: auto;
 }
+
+#studentWaiverDiv{
+	position: relative;
+	top: 45px;
+	left: 130px;
+}
