@@ -154,8 +154,28 @@
   
   #pageContainer {
     width: 80%;
+    /*width: 100%;*/
     margin: auto;
     bottom: 70px;
+  }
+
+  #studentWaiverDiv {
+    /*display: inline-block;*/
+    width: 80%;
+    margin: auto;
+  }
+
+  #studentWaiverDiv ul {
+    list-style: none;
+  }
+
+  #studentWaiver a {
+    text-decoration: none;
+    color: #1a8cab;
+  }
+
+  #studentWaiverDiv a:hover {
+    text-transform: uppercase;
   }
 
     #h2Parent {
@@ -188,12 +208,25 @@
      margin: 2em 0 0 0;
   }
 
+   #studentWaiver {
+    width: 30%;
+    float: left;
+   } 
+  
+  #waiverDiv {
+    display: inline-block;
+    border: 4px solid lightgray;
+    padding: 1em;
+    width: 70%;
+    float: right;
+    height: 300px;
+    overflow: scroll;
+  }
+
   #waiverDetailDiv {
     width: 60%;
     margin: auto;
-      padding: 1em;
-      border: 4px solid lightgray;
-      border: 1px solid black;
+    padding: 1em;
   }
 
   #waiverDetailDiv p {

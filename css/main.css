@@ -29,6 +29,9 @@
 		padding: .4em 0;
 		text-align: center;
 	}
+	h1 a {
+		text-decoration: none;
+	}
     .navbar {
     }
     .navbar ul {
@@ -173,6 +176,11 @@
 		left: 30px;
 		width: 80%;
 		display: inline-block;
+		color: white;
+	}
+	h1 a {
+		text-decoration: none;
+		color: white;
 	}
 	.navbar {
 		position: fixed;
@@ -222,7 +230,7 @@
 		right: 0px;
 	}
 	/*user icon*/
-	#parentInfo {
+	/*#parentInfo {
 		position: fixed;
 		left: 1000px;
 		bottom: 475px
@@ -240,7 +248,23 @@
 		position: absolute;
 		left: 180px;
 		bottom: 80px;
-	}
+	}*/
+	#parentInfo {
+        position: fixed;
+       right: 3em;
+    }
+    #parentInfo p {
+       float: right;
+        font-size: 20px;
+    }
+    #parentInfo img {
+       position: relative;
+       top: -3.5em;
+       right: -6em;
+        border-radius: 5px;
+        width: 70px;
+        height: 70px;
+    }
 	#teachHome {
 		position: fixed;
 		bottom: 490px ;
