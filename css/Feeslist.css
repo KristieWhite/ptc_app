@@ -45,6 +45,7 @@ body {
 	width: 500px;
 	border: 1px solid gray;
 	border-radius: 5px;
+	overflow: scroll;
 }
 
 #feeDetailDiv p {
