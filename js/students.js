@@ -232,12 +232,12 @@ $(document).ready(function () {
 		intialize: function(){
 		},
 		Model: StudentGradeModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/homework/" + id
+		url: "https://murmuring-sands-9831.herokuapp.com/api/homework/" + studentId
 	});
 
 	var StudentGradeCollection = Backbone.Collection.extend({
 		Model: StudentGradeModel,
-		url: "https://murmuring-sands-9831.herokuapp.com/api/homework/" + id
+		url: "https://murmuring-sands-9831.herokuapp.com/api/homework/" + studentId
 	});
 
 	$("#gradesBtn").on('click',function(e){
